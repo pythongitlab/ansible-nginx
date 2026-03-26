@@ -15874,4 +15874,1693 @@ Retrying.
 
 --2026-03-26 14:40:46--  (try:19)  https://kb.opentechnology.ru/pdf.php?cat=41&id=375&artlang=ru
 Reusing existing connection to kb.opentechnology.ru:443.
+HTTP request sent, awaiting response... 504 Gateway Timeout
+Retrying.
+
+--2026-03-26 14:48:56--  (try:20)  https://kb.opentechnology.ru/pdf.php?cat=41&id=375&artlang=ru
+Reusing existing connection to kb.opentechnology.ru:443.
+HTTP request sent, awaiting response... 504 Gateway Timeout
+Giving up.
+
+--2026-03-26 14:56:56--  https://kb.opentechnology.ru/content/27/480/ru/personal%CA%B9naa-informacia-pol%CA%B9zovatela-stranicy-%C2%ABo-pol%CA%B9zovatele%C2%BB-i-%C2%ABlicnyj-kabinet%C2%BB.html?action=login&auth_driver=rm3kl
+Reusing existing connection to kb.opentechnology.ru:443.
+HTTP request sent, awaiting response... 504 Gateway Timeout
+Retrying.
+
+--2026-03-26 15:04:58--  (try: 2)  https://kb.opentechnology.ru/content/27/480/ru/personal%CA%B9naa-informacia-pol%CA%B9zovatela-stranicy-%C2%ABo-pol%CA%B9zovatele%C2%BB-i-%C2%ABlicnyj-kabinet%C2%BB.html?action=login&auth_driver=rm3kl
+Reusing existing connection to kb.opentechnology.ru:443.
+HTTP request sent, awaiting response... 302 Found
+Location: https://moodle.opentechnology.ru/local/oauth/login.php?type=web_server&client_id=phpMyFAQ3KL&redirect_uri=https%3A%2F%2Fkb.opentechnology.ru%2F%3Fauth_driver%3Drm3kl&response_type=code&scope=user_info+user_courses [following]
+--2026-03-26 15:12:05--  https://moodle.opentechnology.ru/local/oauth/login.php?type=web_server&client_id=phpMyFAQ3KL&redirect_uri=https%3A%2F%2Fkb.opentechnology.ru%2F%3Fauth_driver%3Drm3kl&response_type=code&scope=user_info+user_courses
+Connecting to moodle.opentechnology.ru (moodle.opentechnology.ru)|185.178.208.138|:443... connected.
+HTTP request sent, awaiting response... 303 See Other
+Location: https://moodle.opentechnology.ru/login/index.php [following]
+--2026-03-26 15:12:05--  https://moodle.opentechnology.ru/login/index.php
+Reusing existing connection to moodle.opentechnology.ru:443.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [text/html]
+Saving to: ‘kb.opentechnology.ru/content/27/480/ru/personalʹnaa-informacia-polʹzovatela-stranicy-«o-polʹzovatele»-i-«licnyj-kabinet».html?action=login&auth_driver=rm3kl.html’
+
+     0K .......... .......... .......... .......... .....      1.80M=0.02s
+
+2026-03-26 15:12:05 (1.80 MB/s) - ‘kb.opentechnology.ru/content/27/480/ru/personalʹnaa-informacia-polʹzovatela-stranicy-«o-polʹzovatele»-i-«licnyj-kabinet».html?action=login&auth_driver=rm3kl.html’ saved [47005]
+
+--2026-03-26 15:12:05--  https://kb.opentechnology.ru/index.php?solution_id=1480
+Connecting to kb.opentechnology.ru (kb.opentechnology.ru)|186.2.171.14|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [text/html]
+Saving to: ‘kb.opentechnology.ru/index.php?solution_id=1480.html’
+
+     0K .......... .......... .......... .......... .......... 1.52M
+    50K .......... .......... .......... .......... .......... 4.69M
+   100K .......... .......... .......... .......... .......... 60.1M
+   150K .......... .......... .......... .......... .......... 13.2M
+   200K .......... ........                                     185M=0.05s
+
+2026-03-26 15:12:09 (4.53 MB/s) - ‘kb.opentechnology.ru/index.php?solution_id=1480.html’ saved [223473]
+
+--2026-03-26 15:12:09--  https://kb.opentechnology.ru/index.php?action=attachment&id=9755
+Reusing existing connection to kb.opentechnology.ru:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 389532 (380K) [image/png]
+Saving to: ‘kb.opentechnology.ru/index.php?action=attachment&id=9755’
+
+     0K .......... .......... .......... .......... .......... 13% 2.21M 0s
+    50K .......... .......... .......... .......... .......... 26% 4.28M 0s
+   100K .......... .......... .......... .......... .......... 39% 72.3M 0s
+   150K .......... .......... .......... .......... .......... 52% 4.72M 0s
+   200K .......... .......... .......... .......... .......... 65%  109M 0s
+   250K .......... .......... .......... .......... .......... 78% 86.9M 0s
+   300K .......... .......... .......... .......... .......... 92% 43.0M 0s
+   350K .......... .......... ..........                      100% 52.5M=0.05s
+
+Last-modified header missing -- time-stamps turned off.
+2026-03-26 15:12:10 (7.87 MB/s) - ‘kb.opentechnology.ru/index.php?action=attachment&id=9755’ saved [389532/389532]
+
+--2026-03-26 15:12:10--  https://kb.opentechnology.ru/index.php?solution_id=1681
+Reusing existing connection to kb.opentechnology.ru:443.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [text/html]
+Saving to: ‘kb.opentechnology.ru/index.php?solution_id=1681.html’
+
+     0K .......... .......... .......... .......... .......... 1.41M
+    50K ........                                               49.7M=0.03s
+
+2026-03-26 15:12:13 (1.65 MB/s) - ‘kb.opentechnology.ru/index.php?solution_id=1681.html’ saved [60342]
+
+--2026-03-26 15:12:13--  https://kb.opentechnology.ru/index.php?solution_id=1830
+Reusing existing connection to kb.opentechnology.ru:443.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [text/html]
+Saving to: ‘kb.opentechnology.ru/index.php?solution_id=1830.html’
+
+     0K .......... .......... .......... .......... .......... 1.60M
+    50K .......... ...                                         18.0M=0.03s
+
+2026-03-26 15:12:15 (1.98 MB/s) - ‘kb.opentechnology.ru/index.php?solution_id=1830.html’ saved [64888]
+
+--2026-03-26 15:12:15--  https://kb.opentechnology.ru/index.php?solution_id=1832
+Reusing existing connection to kb.opentechnology.ru:443.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [text/html]
+Saving to: ‘kb.opentechnology.ru/index.php?solution_id=1832.html’
+
+     0K .......... .......... .......... .......... .......... 1.53M
+    50K .......... .......... ......                            156M=0.03s
+
+2026-03-26 15:12:17 (2.34 MB/s) - ‘kb.opentechnology.ru/index.php?solution_id=1832.html’ saved [78741]
+
+--2026-03-26 15:12:17--  https://kb.opentechnology.ru/index.php?solution_id=1833
+Reusing existing connection to kb.opentechnology.ru:443.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [text/html]
+Saving to: ‘kb.opentechnology.ru/index.php?solution_id=1833.html’
+
+     0K .......... .......... .......... .......... .......... 1.47M
+    50K .......... ......                                      14.1M=0.03s
+
+2026-03-26 15:12:19 (1.89 MB/s) - ‘kb.opentechnology.ru/index.php?solution_id=1833.html’ saved [68368]
+
+--2026-03-26 15:12:19--  https://kb.opentechnology.ru/index.php?solution_id=1834
+Reusing existing connection to kb.opentechnology.ru:443.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [text/html]
+Saving to: ‘kb.opentechnology.ru/index.php?solution_id=1834.html’
+
+     0K .......... .......... .......... .......... .......... 1.43M
+    50K .......... .....                                       26.5M=0.03s
+
+2026-03-26 15:12:21 (1.84 MB/s) - ‘kb.opentechnology.ru/index.php?solution_id=1834.html’ saved [67233]
+
+--2026-03-26 15:12:21--  https://kb.opentechnology.ru/index.php?solution_id=1835
+Reusing existing connection to kb.opentechnology.ru:443.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [text/html]
+Saving to: ‘kb.opentechnology.ru/index.php?solution_id=1835.html’
+
+     0K .......... .......... .......... .......... .......... 1.47M
+    50K .......... .......... ......                            159M=0.03s
+
+2026-03-26 15:12:24 (2.24 MB/s) - ‘kb.opentechnology.ru/index.php?solution_id=1835.html’ saved [78634]
+
+--2026-03-26 15:12:24--  https://kb.opentechnology.ru/index.php?solution_id=1318
+Reusing existing connection to kb.opentechnology.ru:443.
+HTTP request sent, awaiting response... 302 Found
+Location: https://kb.opentechnology.ru/?action=login&auth_driver=rm3kl [following]
+--2026-03-26 15:12:27--  https://kb.opentechnology.ru/?action=login&auth_driver=rm3kl
+Reusing existing connection to kb.opentechnology.ru:443.
+HTTP request sent, awaiting response... 302 Found
+Location: https://moodle.opentechnology.ru/local/oauth/login.php?type=web_server&client_id=phpMyFAQ3KL&redirect_uri=https%3A%2F%2Fkb.opentechnology.ru%2F%3Fauth_driver%3Drm3kl&response_type=code&scope=user_info+user_courses [following]
+--2026-03-26 15:12:29--  https://moodle.opentechnology.ru/local/oauth/login.php?type=web_server&client_id=phpMyFAQ3KL&redirect_uri=https%3A%2F%2Fkb.opentechnology.ru%2F%3Fauth_driver%3Drm3kl&response_type=code&scope=user_info+user_courses
+Connecting to moodle.opentechnology.ru (moodle.opentechnology.ru)|185.178.208.138|:443... connected.
+HTTP request sent, awaiting response... 303 See Other
+Location: https://moodle.opentechnology.ru/login/index.php [following]
+--2026-03-26 15:12:29--  https://moodle.opentechnology.ru/login/index.php
+Reusing existing connection to moodle.opentechnology.ru:443.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [text/html]
+Saving to: ‘kb.opentechnology.ru/index.php?solution_id=1318.html’
+
+     0K .......... .......... .......... .......... .....      1.89M=0.02s
+
+2026-03-26 15:12:29 (1.89 MB/s) - ‘kb.opentechnology.ru/index.php?solution_id=1318.html’ saved [47005]
+
+--2026-03-26 15:12:29--  https://kb.opentechnology.ru/index.php?solution_id=1369
+Connecting to kb.opentechnology.ru (kb.opentechnology.ru)|186.2.171.14|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: https://kb.opentechnology.ru/?action=login&auth_driver=rm3kl [following]
+--2026-03-26 15:12:33--  https://kb.opentechnology.ru/?action=login&auth_driver=rm3kl
+Reusing existing connection to kb.opentechnology.ru:443.
+HTTP request sent, awaiting response... 302 Found
+Location: https://moodle.opentechnology.ru/local/oauth/login.php?type=web_server&client_id=phpMyFAQ3KL&redirect_uri=https%3A%2F%2Fkb.opentechnology.ru%2F%3Fauth_driver%3Drm3kl&response_type=code&scope=user_info+user_courses [following]
+--2026-03-26 15:12:34--  https://moodle.opentechnology.ru/local/oauth/login.php?type=web_server&client_id=phpMyFAQ3KL&redirect_uri=https%3A%2F%2Fkb.opentechnology.ru%2F%3Fauth_driver%3Drm3kl&response_type=code&scope=user_info+user_courses
+Connecting to moodle.opentechnology.ru (moodle.opentechnology.ru)|185.178.208.138|:443... connected.
+HTTP request sent, awaiting response... 303 See Other
+Location: https://moodle.opentechnology.ru/login/index.php [following]
+--2026-03-26 15:12:34--  https://moodle.opentechnology.ru/login/index.php
+Reusing existing connection to moodle.opentechnology.ru:443.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [text/html]
+Saving to: ‘kb.opentechnology.ru/index.php?solution_id=1369.html’
+
+     0K .......... .......... .......... .......... .....      2.10M=0.02s
+
+2026-03-26 15:12:34 (2.10 MB/s) - ‘kb.opentechnology.ru/index.php?solution_id=1369.html’ saved [47005]
+
+--2026-03-26 15:12:34--  https://kb.opentechnology.ru/index.php?solution_id=1401
+Connecting to kb.opentechnology.ru (kb.opentechnology.ru)|186.2.171.14|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: https://kb.opentechnology.ru/?action=login&auth_driver=rm3kl [following]
+--2026-03-26 15:12:38--  https://kb.opentechnology.ru/?action=login&auth_driver=rm3kl
+Reusing existing connection to kb.opentechnology.ru:443.
+HTTP request sent, awaiting response... 302 Found
+Location: https://moodle.opentechnology.ru/local/oauth/login.php?type=web_server&client_id=phpMyFAQ3KL&redirect_uri=https%3A%2F%2Fkb.opentechnology.ru%2F%3Fauth_driver%3Drm3kl&response_type=code&scope=user_info+user_courses [following]
+--2026-03-26 15:12:39--  https://moodle.opentechnology.ru/local/oauth/login.php?type=web_server&client_id=phpMyFAQ3KL&redirect_uri=https%3A%2F%2Fkb.opentechnology.ru%2F%3Fauth_driver%3Drm3kl&response_type=code&scope=user_info+user_courses
+Connecting to moodle.opentechnology.ru (moodle.opentechnology.ru)|185.178.208.138|:443... connected.
+HTTP request sent, awaiting response... 303 See Other
+Location: https://moodle.opentechnology.ru/login/index.php [following]
+--2026-03-26 15:12:39--  https://moodle.opentechnology.ru/login/index.php
+Reusing existing connection to moodle.opentechnology.ru:443.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [text/html]
+Saving to: ‘kb.opentechnology.ru/index.php?solution_id=1401.html’
+
+     0K .......... .......... .......... .......... .....      2.39M=0.02s
+
+2026-03-26 15:12:40 (2.39 MB/s) - ‘kb.opentechnology.ru/index.php?solution_id=1401.html’ saved [47005]
+
+--2026-03-26 15:12:40--  https://kb.opentechnology.ru/index.php?solution_id=1189
+Connecting to kb.opentechnology.ru (kb.opentechnology.ru)|186.2.171.14|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: https://kb.opentechnology.ru/?action=login&auth_driver=rm3kl [following]
+--2026-03-26 15:12:43--  https://kb.opentechnology.ru/?action=login&auth_driver=rm3kl
+Reusing existing connection to kb.opentechnology.ru:443.
+HTTP request sent, awaiting response... 302 Found
+Location: https://moodle.opentechnology.ru/local/oauth/login.php?type=web_server&client_id=phpMyFAQ3KL&redirect_uri=https%3A%2F%2Fkb.opentechnology.ru%2F%3Fauth_driver%3Drm3kl&response_type=code&scope=user_info+user_courses [following]
+--2026-03-26 15:12:45--  https://moodle.opentechnology.ru/local/oauth/login.php?type=web_server&client_id=phpMyFAQ3KL&redirect_uri=https%3A%2F%2Fkb.opentechnology.ru%2F%3Fauth_driver%3Drm3kl&response_type=code&scope=user_info+user_courses
+Connecting to moodle.opentechnology.ru (moodle.opentechnology.ru)|185.178.208.138|:443... connected.
+HTTP request sent, awaiting response... 303 See Other
+Location: https://moodle.opentechnology.ru/login/index.php [following]
+--2026-03-26 15:12:45--  https://moodle.opentechnology.ru/login/index.php
+Reusing existing connection to moodle.opentechnology.ru:443.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [text/html]
+Saving to: ‘kb.opentechnology.ru/index.php?solution_id=1189.html’
+
+     0K .......... .......... .......... .......... .....      2.19M=0.02s
+
+2026-03-26 15:12:45 (2.19 MB/s) - ‘kb.opentechnology.ru/index.php?solution_id=1189.html’ saved [47005]
+
+--2026-03-26 15:12:45--  https://kb.opentechnology.ru/index.php?solution_id=1118
+Connecting to kb.opentechnology.ru (kb.opentechnology.ru)|186.2.171.14|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: https://kb.opentechnology.ru/?action=login&auth_driver=rm3kl [following]
+--2026-03-26 15:12:49--  https://kb.opentechnology.ru/?action=login&auth_driver=rm3kl
+Reusing existing connection to kb.opentechnology.ru:443.
+HTTP request sent, awaiting response... 302 Found
+Location: https://moodle.opentechnology.ru/local/oauth/login.php?type=web_server&client_id=phpMyFAQ3KL&redirect_uri=https%3A%2F%2Fkb.opentechnology.ru%2F%3Fauth_driver%3Drm3kl&response_type=code&scope=user_info+user_courses [following]
+--2026-03-26 15:12:50--  https://moodle.opentechnology.ru/local/oauth/login.php?type=web_server&client_id=phpMyFAQ3KL&redirect_uri=https%3A%2F%2Fkb.opentechnology.ru%2F%3Fauth_driver%3Drm3kl&response_type=code&scope=user_info+user_courses
+Connecting to moodle.opentechnology.ru (moodle.opentechnology.ru)|185.178.208.138|:443... connected.
+HTTP request sent, awaiting response... 303 See Other
+Location: https://moodle.opentechnology.ru/login/index.php [following]
+--2026-03-26 15:12:50--  https://moodle.opentechnology.ru/login/index.php
+Reusing existing connection to moodle.opentechnology.ru:443.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [text/html]
+Saving to: ‘kb.opentechnology.ru/index.php?solution_id=1118.html’
+
+     0K .......... .......... .......... .......... .....      2.19M=0.02s
+
+2026-03-26 15:12:50 (2.19 MB/s) - ‘kb.opentechnology.ru/index.php?solution_id=1118.html’ saved [47005]
+
+--2026-03-26 15:12:50--  https://kb.opentechnology.ru/index.php?solution_id=1459
+Connecting to kb.opentechnology.ru (kb.opentechnology.ru)|186.2.171.14|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: https://kb.opentechnology.ru/?action=login&auth_driver=rm3kl [following]
+--2026-03-26 15:12:54--  https://kb.opentechnology.ru/?action=login&auth_driver=rm3kl
+Reusing existing connection to kb.opentechnology.ru:443.
+HTTP request sent, awaiting response... 302 Found
+Location: https://moodle.opentechnology.ru/local/oauth/login.php?type=web_server&client_id=phpMyFAQ3KL&redirect_uri=https%3A%2F%2Fkb.opentechnology.ru%2F%3Fauth_driver%3Drm3kl&response_type=code&scope=user_info+user_courses [following]
+--2026-03-26 15:12:55--  https://moodle.opentechnology.ru/local/oauth/login.php?type=web_server&client_id=phpMyFAQ3KL&redirect_uri=https%3A%2F%2Fkb.opentechnology.ru%2F%3Fauth_driver%3Drm3kl&response_type=code&scope=user_info+user_courses
+Connecting to moodle.opentechnology.ru (moodle.opentechnology.ru)|185.178.208.138|:443... connected.
+HTTP request sent, awaiting response... 303 See Other
+Location: https://moodle.opentechnology.ru/login/index.php [following]
+--2026-03-26 15:12:55--  https://moodle.opentechnology.ru/login/index.php
+Reusing existing connection to moodle.opentechnology.ru:443.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [text/html]
+Saving to: ‘kb.opentechnology.ru/index.php?solution_id=1459.html’
+
+     0K .......... .......... .......... .......... .....      2.58M=0.02s
+
+2026-03-26 15:12:55 (2.58 MB/s) - ‘kb.opentechnology.ru/index.php?solution_id=1459.html’ saved [47005]
+
+--2026-03-26 15:12:55--  https://kb.opentechnology.ru/index.php?action=attachment&id=9758
+Connecting to kb.opentechnology.ru (kb.opentechnology.ru)|186.2.171.14|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 422045 (412K) [image/png]
+Saving to: ‘kb.opentechnology.ru/index.php?action=attachment&id=9758’
+
+     0K .......... .......... .......... .......... .......... 12% 2.28M 0s
+    50K .......... .......... .......... .......... .......... 24% 4.36M 0s
+   100K .......... .......... .......... .......... .......... 36% 59.6M 0s
+   150K .......... .......... .......... .......... .......... 48% 4.77M 0s
+   200K .......... .......... .......... .......... .......... 60%  107M 0s
+   250K .......... .......... .......... .......... .......... 72% 37.8M 0s
+   300K .......... .......... .......... .......... .......... 84% 17.4M 0s
+   350K .......... .......... .......... .......... .......... 97% 5.68M 0s
+   400K .......... ..                                         100%  139M=0.06s
+
+Last-modified header missing -- time-stamps turned off.
+2026-03-26 15:12:56 (7.07 MB/s) - ‘kb.opentechnology.ru/index.php?action=attachment&id=9758’ saved [422045/422045]
+
+--2026-03-26 15:12:56--  https://kb.opentechnology.ru/index.php?action=attachment&id=12552
+Reusing existing connection to kb.opentechnology.ru:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 398312 (389K) [image/png]
+Saving to: ‘kb.opentechnology.ru/index.php?action=attachment&id=12552’
+
+     0K .......... .......... .......... .......... .......... 12% 2.14M 0s
+    50K .......... .......... .......... .......... .......... 25% 4.48M 0s
+   100K .......... .......... .......... .......... .......... 38% 95.4M 0s
+   150K .......... .......... .......... .......... .......... 51% 4.61M 0s
+   200K .......... .......... .......... .......... .......... 64%  130M 0s
+   250K .......... .......... .......... .......... .......... 77%  119M 0s
+   300K .......... .......... .......... .......... .......... 89% 98.1M 0s
+   350K .......... .......... .......... ........             100% 11.9M=0.05s
+
+Last-modified header missing -- time-stamps turned off.
+2026-03-26 15:12:57 (7.71 MB/s) - ‘kb.opentechnology.ru/index.php?action=attachment&id=12552’ saved [398312/398312]
+
+--2026-03-26 15:12:57--  https://kb.opentechnology.ru/index.php?action=attachment&id=12553
+Reusing existing connection to kb.opentechnology.ru:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 416045 (406K) [image/png]
+Saving to: ‘kb.opentechnology.ru/index.php?action=attachment&id=12553’
+
+     0K .......... .......... .......... .......... .......... 12% 1.94M 0s
+    50K .......... .......... .......... .......... .......... 24% 5.28M 0s
+   100K .......... .......... .......... .......... .......... 36% 17.4M 0s
+   150K .......... .......... .......... .......... .......... 49% 5.17M 0s
+   200K .......... .......... .......... .......... .......... 61% 8.89M 0s
+   250K .......... .......... .......... .......... .......... 73%  213M 0s
+   300K .......... .......... .......... .......... .......... 86%  279M 0s
+   350K .......... .......... .......... .......... .......... 98%  947K 0s
+   400K ......                                                100% 11.7T=0.1s
+
+Last-modified header missing -- time-stamps turned off.
+2026-03-26 15:12:59 (3.77 MB/s) - ‘kb.opentechnology.ru/index.php?action=attachment&id=12553’ saved [416045/416045]
+
+--2026-03-26 15:12:59--  https://kb.opentechnology.ru/index.php?solution_id=1284
+Reusing existing connection to kb.opentechnology.ru:443.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [text/html]
+Saving to: ‘kb.opentechnology.ru/index.php?solution_id=1284.html’
+
+     0K .......... .......... .......... .......... .......... 1.51M
+    50K .......... ..........                                   132M=0.03s
+
+2026-03-26 15:13:01 (2.11 MB/s) - ‘kb.opentechnology.ru/index.php?solution_id=1284.html’ saved [71894]
+
+--2026-03-26 15:13:01--  https://kb.opentechnology.ru/index.php?solution_id=1377
+Reusing existing connection to kb.opentechnology.ru:443.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [text/html]
+Saving to: ‘kb.opentechnology.ru/index.php?solution_id=1377.html’
+
+     0K .......... .......... .......... .......... .......... 1.51M
+    50K .......... .......... .                                26.9M=0.03s
+
+2026-03-26 15:13:04 (2.11 MB/s) - ‘kb.opentechnology.ru/index.php?solution_id=1377.html’ saved [73513]
+
+--2026-03-26 15:13:04--  https://kb.opentechnology.ru/index.php?action=attachment&id=10947
+Reusing existing connection to kb.opentechnology.ru:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 656 [image/png]
+Saving to: ‘kb.opentechnology.ru/index.php?action=attachment&id=10947’
+
+     0K                                                       100%  412M=0s
+
+Last-modified header missing -- time-stamps turned off.
+2026-03-26 15:13:05 (412 MB/s) - ‘kb.opentechnology.ru/index.php?action=attachment&id=10947’ saved [656/656]
+
+--2026-03-26 15:13:05--  https://kb.opentechnology.ru/index.php?action=attachment&id=10948
+Reusing existing connection to kb.opentechnology.ru:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 203753 (199K) [image/png]
+Saving to: ‘kb.opentechnology.ru/index.php?action=attachment&id=10948’
+
+     0K .......... .......... .......... .......... .......... 25% 2.21M 0s
+    50K .......... .......... .......... .......... .......... 50% 4.36M 0s
+   100K .......... .......... .......... .......... .......... 75% 56.0M 0s
+   150K .......... .......... .......... .......... ........  100% 33.1M=0.04s
+
+Last-modified header missing -- time-stamps turned off.
+2026-03-26 15:13:06 (5.45 MB/s) - ‘kb.opentechnology.ru/index.php?action=attachment&id=10948’ saved [203753/203753]
+
+--2026-03-26 15:13:06--  https://kb.opentechnology.ru/index.php?action=attachment&id=12554
+Reusing existing connection to kb.opentechnology.ru:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 210653 (206K) [image/png]
+Saving to: ‘kb.opentechnology.ru/index.php?action=attachment&id=12554’
+
+     0K .......... .......... .......... .......... .......... 24% 1.96M 0s
+    50K .......... .......... .......... .......... .......... 48% 6.06M 0s
+   100K .......... .......... .......... .......... .......... 72% 15.4M 0s
+   150K .......... .......... .......... .......... .......... 97% 3.91M 0s
+   200K .....                                                 100% 45.6M=0.05s
+
+Last-modified header missing -- time-stamps turned off.
+2026-03-26 15:13:07 (4.12 MB/s) - ‘kb.opentechnology.ru/index.php?action=attachment&id=12554’ saved [210653/210653]
+
+--2026-03-26 15:13:07--  https://kb.opentechnology.ru/index.php?action=attachment&id=12555
+Reusing existing connection to kb.opentechnology.ru:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 417185 (407K) [image/png]
+Saving to: ‘kb.opentechnology.ru/index.php?action=attachment&id=12555’
+
+     0K .......... .......... .......... .......... .......... 12% 2.20M 0s
+    50K .......... .......... .......... .......... .......... 24% 4.40M 0s
+   100K .......... .......... .......... .......... .......... 36%  187M 0s
+   150K .......... .......... .......... .......... .......... 49% 4.60M 0s
+   200K .......... .......... .......... .......... .......... 61%  206M 0s
+   250K .......... .......... .......... .......... .......... 73% 42.7M 0s
+   300K .......... .......... .......... .......... .......... 85% 12.2M 0s
+   350K .......... .......... .......... .......... .......... 98% 8.99M 0s
+   400K .......                                               100% 13.8T=0.05s
+
+Last-modified header missing -- time-stamps turned off.
+2026-03-26 15:13:08 (7.23 MB/s) - ‘kb.opentechnology.ru/index.php?action=attachment&id=12555’ saved [417185/417185]
+
+--2026-03-26 15:13:08--  https://kb.opentechnology.ru/index.php?action=attachment&id=9797
+Reusing existing connection to kb.opentechnology.ru:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 117163 (114K) [image/png]
+Saving to: ‘kb.opentechnology.ru/index.php?action=attachment&id=9797’
+
+     0K .......... .......... .......... .......... .......... 43% 2.20M 0s
+    50K .......... .......... .......... .......... .......... 87% 3.84M 0s
+   100K .......... ....                                       100%  120M=0.04s
+
+Last-modified header missing -- time-stamps turned off.
+2026-03-26 15:13:09 (3.19 MB/s) - ‘kb.opentechnology.ru/index.php?action=attachment&id=9797’ saved [117163/117163]
+
+--2026-03-26 15:13:09--  https://kb.opentechnology.ru/index.php?action=attachment&id=9554
+Reusing existing connection to kb.opentechnology.ru:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 216411 (211K) [image/png]
+Saving to: ‘kb.opentechnology.ru/index.php?action=attachment&id=9554’
+
+     0K .......... .......... .......... .......... .......... 23% 1.76M 0s
+    50K .......... .......... .......... .......... .......... 47% 4.12M 0s
+   100K .......... .......... .......... .......... .......... 70% 17.0M 0s
+   150K .......... .......... .......... .......... .......... 94% 5.48M 0s
+   200K .......... .                                          100%  120M=0.05s
+
+Last-modified header missing -- time-stamps turned off.
+2026-03-26 15:13:10 (4.01 MB/s) - ‘kb.opentechnology.ru/index.php?action=attachment&id=9554’ saved [216411/216411]
+
+--2026-03-26 15:13:10--  https://kb.opentechnology.ru/index.php?solution_id=1522
+Reusing existing connection to kb.opentechnology.ru:443.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [text/html]
+Saving to: ‘kb.opentechnology.ru/index.php?solution_id=1522.html’
+
+     0K .......... .......... .......... .......... .......... 1.47M
+    50K .......... .........                                   40.4M=0.03s
+
+2026-03-26 15:13:12 (2.02 MB/s) - ‘kb.opentechnology.ru/index.php?solution_id=1522.html’ saved [71415]
+
+--2026-03-26 15:13:12--  https://kb.opentechnology.ru/index.php?action=attachment&id=9798
+Reusing existing connection to kb.opentechnology.ru:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 126097 (123K) [image/png]
+Saving to: ‘kb.opentechnology.ru/index.php?action=attachment&id=9798’
+
+     0K .......... .......... .......... .......... .......... 40% 2.12M 0s
+    50K .......... .......... .......... .......... .......... 81% 4.26M 0s
+   100K .......... .......... ...                             100% 47.8M=0.03s
+
+Last-modified header missing -- time-stamps turned off.
+2026-03-26 15:13:14 (3.44 MB/s) - ‘kb.opentechnology.ru/index.php?action=attachment&id=9798’ saved [126097/126097]
+
+--2026-03-26 15:13:14--  https://kb.opentechnology.ru/index.php?action=attachment&id=12556
+Reusing existing connection to kb.opentechnology.ru:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 200347 (196K) [image/png]
+Saving to: ‘kb.opentechnology.ru/index.php?action=attachment&id=12556’
+
+     0K .......... .......... .......... .......... .......... 25% 2.18M 0s
+    50K .......... .......... .......... .......... .......... 51% 4.41M 0s
+   100K .......... .......... .......... .......... .......... 76% 46.0M 0s
+   150K .......... .......... .......... .......... .....     100% 42.5M=0.04s
+
+Last-modified header missing -- time-stamps turned off.
+2026-03-26 15:13:15 (5.37 MB/s) - ‘kb.opentechnology.ru/index.php?action=attachment&id=12556’ saved [200347/200347]
+
+--2026-03-26 15:13:15--  https://kb.opentechnology.ru/index.php?action=attachment&id=12200
+Reusing existing connection to kb.opentechnology.ru:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 192190 (188K) [image/png]
+Saving to: ‘kb.opentechnology.ru/index.php?action=attachment&id=12200’
+
+     0K .......... .......... .......... .......... .......... 26% 2.10M 0s
+    50K .......... .......... .......... .......... .......... 53% 4.11M 0s
+   100K .......... .......... .......... .......... .......... 79% 47.1M 0s
+   150K .......... .......... .......... .......              100% 6.73M=0.04s
+
+Last-modified header missing -- time-stamps turned off.
+2026-03-26 15:13:16 (4.40 MB/s) - ‘kb.opentechnology.ru/index.php?action=attachment&id=12200’ saved [192190/192190]
+
+--2026-03-26 15:13:16--  https://kb.opentechnology.ru/index.php?action=attachment&id=12557
+Reusing existing connection to kb.opentechnology.ru:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 343801 (336K) [image/png]
+Saving to: ‘kb.opentechnology.ru/index.php?action=attachment&id=12557’
+
+     0K .......... .......... .......... .......... .......... 14% 2.13M 0s
+    50K .......... .......... .......... .......... .......... 29% 4.74M 0s
+   100K .......... .......... .......... .......... .......... 44% 45.7M 0s
+   150K .......... .......... .......... .......... .......... 59% 5.14M 0s
+   200K .......... .......... .......... .......... .......... 74% 42.2M 0s
+   250K .......... .......... .......... .......... .......... 89% 46.3M 0s
+   300K .......... .......... .......... .....                100% 4.23M=0.05s
+
+Last-modified header missing -- time-stamps turned off.
+2026-03-26 15:13:17 (6.04 MB/s) - ‘kb.opentechnology.ru/index.php?action=attachment&id=12557’ saved [343801/343801]
+
+--2026-03-26 15:13:17--  https://kb.opentechnology.ru/index.php?solution_id=1012
+Reusing existing connection to kb.opentechnology.ru:443.
+HTTP request sent, awaiting response... 302 Found
+Location: https://kb.opentechnology.ru/?action=login&auth_driver=rm3kl [following]
+--2026-03-26 15:13:21--  https://kb.opentechnology.ru/?action=login&auth_driver=rm3kl
+Reusing existing connection to kb.opentechnology.ru:443.
+HTTP request sent, awaiting response... 302 Found
+Location: https://moodle.opentechnology.ru/local/oauth/login.php?type=web_server&client_id=phpMyFAQ3KL&redirect_uri=https%3A%2F%2Fkb.opentechnology.ru%2F%3Fauth_driver%3Drm3kl&response_type=code&scope=user_info+user_courses [following]
+--2026-03-26 15:13:22--  https://moodle.opentechnology.ru/local/oauth/login.php?type=web_server&client_id=phpMyFAQ3KL&redirect_uri=https%3A%2F%2Fkb.opentechnology.ru%2F%3Fauth_driver%3Drm3kl&response_type=code&scope=user_info+user_courses
+Connecting to moodle.opentechnology.ru (moodle.opentechnology.ru)|185.178.208.138|:443... connected.
+HTTP request sent, awaiting response... 303 See Other
+Location: https://moodle.opentechnology.ru/login/index.php [following]
+--2026-03-26 15:13:22--  https://moodle.opentechnology.ru/login/index.php
+Reusing existing connection to moodle.opentechnology.ru:443.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [text/html]
+Saving to: ‘kb.opentechnology.ru/index.php?solution_id=1012.html’
+
+     0K .......... .......... .......... .......... .....      1.67M=0.03s
+
+2026-03-26 15:13:22 (1.67 MB/s) - ‘kb.opentechnology.ru/index.php?solution_id=1012.html’ saved [47005]
+
+--2026-03-26 15:13:22--  https://kb.opentechnology.ru/index.php?action=attachment&id=12559
+Connecting to kb.opentechnology.ru (kb.opentechnology.ru)|186.2.171.14|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 219212 (214K) [image/png]
+Saving to: ‘kb.opentechnology.ru/index.php?action=attachment&id=12559’
+
+     0K .......... .......... .......... .......... .......... 23% 2.68M 0s
+    50K .......... .......... .......... .......... .......... 46% 4.75M 0s
+   100K .......... .......... .......... .......... .......... 70% 51.6M 0s
+   150K .......... .......... .......... .......... .......... 93% 5.07M 0s
+   200K .......... ....                                       100%  132M=0.04s
+
+Last-modified header missing -- time-stamps turned off.
+2026-03-26 15:13:23 (5.34 MB/s) - ‘kb.opentechnology.ru/index.php?action=attachment&id=12559’ saved [219212/219212]
+
+--2026-03-26 15:13:23--  https://kb.opentechnology.ru/index.php?solution_id=1273
+Reusing existing connection to kb.opentechnology.ru:443.
+HTTP request sent, awaiting response... 302 Found
+Location: https://kb.opentechnology.ru/?action=login&auth_driver=rm3kl [following]
+--2026-03-26 15:13:27--  https://kb.opentechnology.ru/?action=login&auth_driver=rm3kl
+Reusing existing connection to kb.opentechnology.ru:443.
+HTTP request sent, awaiting response... 302 Found
+Location: https://moodle.opentechnology.ru/local/oauth/login.php?type=web_server&client_id=phpMyFAQ3KL&redirect_uri=https%3A%2F%2Fkb.opentechnology.ru%2F%3Fauth_driver%3Drm3kl&response_type=code&scope=user_info+user_courses [following]
+--2026-03-26 15:13:28--  https://moodle.opentechnology.ru/local/oauth/login.php?type=web_server&client_id=phpMyFAQ3KL&redirect_uri=https%3A%2F%2Fkb.opentechnology.ru%2F%3Fauth_driver%3Drm3kl&response_type=code&scope=user_info+user_courses
+Connecting to moodle.opentechnology.ru (moodle.opentechnology.ru)|185.178.208.138|:443... connected.
+HTTP request sent, awaiting response... 303 See Other
+Location: https://moodle.opentechnology.ru/login/index.php [following]
+--2026-03-26 15:13:28--  https://moodle.opentechnology.ru/login/index.php
+Reusing existing connection to moodle.opentechnology.ru:443.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [text/html]
+Saving to: ‘kb.opentechnology.ru/index.php?solution_id=1273.html’
+
+     0K .......... .......... .......... .......... .....      2.30M=0.02s
+
+2026-03-26 15:13:28 (2.30 MB/s) - ‘kb.opentechnology.ru/index.php?solution_id=1273.html’ saved [47005]
+
+--2026-03-26 15:13:28--  https://kb.opentechnology.ru/index.php?action=attachment&id=9623
+Connecting to kb.opentechnology.ru (kb.opentechnology.ru)|186.2.171.14|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 52727 (51K) [image/png]
+Saving to: ‘kb.opentechnology.ru/index.php?action=attachment&id=9623’
+
+     0K .......... .......... .......... .......... .......... 97% 2.47M 0s
+    50K .                                                     100% 2.78T=0.02s
+
+Last-modified header missing -- time-stamps turned off.
+2026-03-26 15:13:30 (2.55 MB/s) - ‘kb.opentechnology.ru/index.php?action=attachment&id=9623’ saved [52727/52727]
+
+--2026-03-26 15:13:30--  https://kb.opentechnology.ru/index.php?action=attachment&id=12203
+Reusing existing connection to kb.opentechnology.ru:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 219663 (215K) [image/png]
+Saving to: ‘kb.opentechnology.ru/index.php?action=attachment&id=12203’
+
+     0K .......... .......... .......... .......... .......... 23% 2.38M 0s
+    50K .......... .......... .......... .......... .......... 46% 4.59M 0s
+   100K .......... .......... .......... .......... .......... 69% 83.1M 0s
+   150K .......... .......... .......... .......... .......... 93% 4.90M 0s
+   200K .......... ....                                       100% 92.0M=0.04s
+
+Last-modified header missing -- time-stamps turned off.
+2026-03-26 15:13:31 (5.01 MB/s) - ‘kb.opentechnology.ru/index.php?action=attachment&id=12203’ saved [219663/219663]
+
+--2026-03-26 15:13:31--  https://kb.opentechnology.ru/index.php?action=attachment&id=12560
+Reusing existing connection to kb.opentechnology.ru:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 187132 (183K) [image/png]
+Saving to: ‘kb.opentechnology.ru/index.php?action=attachment&id=12560’
+
+     0K .......... .......... .......... .......... .......... 27% 2.30M 0s
+    50K .......... .......... .......... .......... .......... 54% 4.67M 0s
+   100K .......... .......... .......... .......... .......... 82%  137M 0s
+   150K .......... .......... .......... ..                   100% 47.4M=0.03s
+
+Last-modified header missing -- time-stamps turned off.
+2026-03-26 15:13:32 (5.45 MB/s) - ‘kb.opentechnology.ru/index.php?action=attachment&id=12560’ saved [187132/187132]
+
+--2026-03-26 15:13:32--  https://kb.opentechnology.ru/index.php?action=attachment&id=9574
+Reusing existing connection to kb.opentechnology.ru:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 211352 (206K) [image/png]
+Saving to: ‘kb.opentechnology.ru/index.php?action=attachment&id=9574’
+
+     0K .......... .......... .......... .......... .......... 24% 2.34M 0s
+    50K .......... .......... .......... .......... .......... 48% 4.78M 0s
+   100K .......... .......... .......... .......... .......... 72%  116M 0s
+   150K .......... .......... .......... .......... .......... 96% 5.22M 0s
+   200K ......                                                100% 9.64M=0.04s
+
+Last-modified header missing -- time-stamps turned off.
+2026-03-26 15:13:33 (4.86 MB/s) - ‘kb.opentechnology.ru/index.php?action=attachment&id=9574’ saved [211352/211352]
+
+--2026-03-26 15:13:33--  https://kb.opentechnology.ru/index.php?action=attachment&id=9667
+Reusing existing connection to kb.opentechnology.ru:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 69966 (68K) [image/png]
+Saving to: ‘kb.opentechnology.ru/index.php?action=attachment&id=9667’
+
+     0K .......... .......... .......... .......... .......... 73% 2.19M 0s
+    50K .......... ........                                   100%  174M=0.02s
+
+Last-modified header missing -- time-stamps turned off.
+2026-03-26 15:13:34 (2.98 MB/s) - ‘kb.opentechnology.ru/index.php?action=attachment&id=9667’ saved [69966/69966]
+
+--2026-03-26 15:13:34--  https://kb.opentechnology.ru/index.php?action=attachment&id=9576
+Reusing existing connection to kb.opentechnology.ru:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 18825 (18K) [image/png]
+Saving to: ‘kb.opentechnology.ru/index.php?action=attachment&id=9576’
+
+     0K .......... ........                                   100% 1.47M=0.01s
+
+Last-modified header missing -- time-stamps turned off.
+2026-03-26 15:13:35 (1.47 MB/s) - ‘kb.opentechnology.ru/index.php?action=attachment&id=9576’ saved [18825/18825]
+
+--2026-03-26 15:13:35--  https://kb.opentechnology.ru/index.php?action=attachment&id=9584
+Reusing existing connection to kb.opentechnology.ru:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 19982 (20K) [image/png]
+Saving to: ‘kb.opentechnology.ru/index.php?action=attachment&id=9584’
+
+     0K .......... .........                                  100% 1.82M=0.01s
+
+Last-modified header missing -- time-stamps turned off.
+2026-03-26 15:13:36 (1.82 MB/s) - ‘kb.opentechnology.ru/index.php?action=attachment&id=9584’ saved [19982/19982]
+
+--2026-03-26 15:13:36--  https://kb.opentechnology.ru/index.php?action=attachment&id=9589
+Reusing existing connection to kb.opentechnology.ru:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 85009 (83K) [image/png]
+Saving to: ‘kb.opentechnology.ru/index.php?action=attachment&id=9589’
+
+     0K .......... .......... .......... .......... .......... 60% 2.18M 0s
+    50K .......... .......... .......... ...                  100%  387M=0.02s
+
+Last-modified header missing -- time-stamps turned off.
+2026-03-26 15:13:38 (3.60 MB/s) - ‘kb.opentechnology.ru/index.php?action=attachment&id=9589’ saved [85009/85009]
+
+--2026-03-26 15:13:38--  https://kb.opentechnology.ru/index.php?action=attachment&id=9597
+Reusing existing connection to kb.opentechnology.ru:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 61634 (60K) [image/png]
+Saving to: ‘kb.opentechnology.ru/index.php?action=attachment&id=9597’
+
+     0K .......... .......... .......... .......... .......... 83% 2.13M 0s
+    50K ..........                                            100% 13.1M=0.02s
+
+Last-modified header missing -- time-stamps turned off.
+2026-03-26 15:13:39 (2.48 MB/s) - ‘kb.opentechnology.ru/index.php?action=attachment&id=9597’ saved [61634/61634]
+
+--2026-03-26 15:13:39--  https://kb.opentechnology.ru/index.php?action=attachment&id=9598
+Reusing existing connection to kb.opentechnology.ru:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 123840 (121K) [image/png]
+Saving to: ‘kb.opentechnology.ru/index.php?action=attachment&id=9598’
+
+     0K .......... .......... .......... .......... .......... 41% 2.28M 0s
+    50K .......... .......... .......... .......... .......... 82% 4.93M 0s
+   100K .......... ..........                                 100% 23.7M=0.03s
+
+Last-modified header missing -- time-stamps turned off.
+2026-03-26 15:13:40 (3.67 MB/s) - ‘kb.opentechnology.ru/index.php?action=attachment&id=9598’ saved [123840/123840]
+
+--2026-03-26 15:13:40--  https://kb.opentechnology.ru/index.php?action=attachment&id=9599
+Reusing existing connection to kb.opentechnology.ru:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 78949 (77K) [image/png]
+Saving to: ‘kb.opentechnology.ru/index.php?action=attachment&id=9599’
+
+     0K .......... .......... .......... .......... .......... 64% 2.35M 0s
+    50K .......... .......... .......                         100%  164M=0.02s
+
+Last-modified header missing -- time-stamps turned off.
+2026-03-26 15:13:41 (3.59 MB/s) - ‘kb.opentechnology.ru/index.php?action=attachment&id=9599’ saved [78949/78949]
+
+--2026-03-26 15:13:41--  https://kb.opentechnology.ru/index.php?action=attachment&id=9600
+Reusing existing connection to kb.opentechnology.ru:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 211389 (206K) [image/png]
+Saving to: ‘kb.opentechnology.ru/index.php?action=attachment&id=9600’
+
+     0K .......... .......... .......... .......... .......... 24% 2.34M 0s
+    50K .......... .......... .......... .......... .......... 48% 4.79M 0s
+   100K .......... .......... .......... .......... .......... 72% 27.7M 0s
+   150K .......... .......... .......... .......... .......... 96% 6.01M 0s
+   200K ......                                                100% 90.3M=0.04s
+
+Last-modified header missing -- time-stamps turned off.
+2026-03-26 15:13:42 (4.91 MB/s) - ‘kb.opentechnology.ru/index.php?action=attachment&id=9600’ saved [211389/211389]
+
+--2026-03-26 15:13:42--  https://kb.opentechnology.ru/index.php?solution_id=1444
+Reusing existing connection to kb.opentechnology.ru:443.
+HTTP request sent, awaiting response... 302 Found
+Location: https://kb.opentechnology.ru/?action=login&auth_driver=rm3kl [following]
+--2026-03-26 15:13:46--  https://kb.opentechnology.ru/?action=login&auth_driver=rm3kl
+Reusing existing connection to kb.opentechnology.ru:443.
+HTTP request sent, awaiting response... 302 Found
+Location: https://moodle.opentechnology.ru/local/oauth/login.php?type=web_server&client_id=phpMyFAQ3KL&redirect_uri=https%3A%2F%2Fkb.opentechnology.ru%2F%3Fauth_driver%3Drm3kl&response_type=code&scope=user_info+user_courses [following]
+--2026-03-26 15:13:47--  https://moodle.opentechnology.ru/local/oauth/login.php?type=web_server&client_id=phpMyFAQ3KL&redirect_uri=https%3A%2F%2Fkb.opentechnology.ru%2F%3Fauth_driver%3Drm3kl&response_type=code&scope=user_info+user_courses
+Connecting to moodle.opentechnology.ru (moodle.opentechnology.ru)|185.178.208.138|:443... connected.
+HTTP request sent, awaiting response... 303 See Other
+Location: https://moodle.opentechnology.ru/login/index.php [following]
+--2026-03-26 15:13:47--  https://moodle.opentechnology.ru/login/index.php
+Reusing existing connection to moodle.opentechnology.ru:443.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [text/html]
+Saving to: ‘kb.opentechnology.ru/index.php?solution_id=1444.html’
+
+     0K .......... .......... .......... .......... .....      1.63M=0.03s
+
+2026-03-26 15:13:47 (1.63 MB/s) - ‘kb.opentechnology.ru/index.php?solution_id=1444.html’ saved [47005]
+
+--2026-03-26 15:13:47--  https://kb.opentechnology.ru/index.php?solution_id=1688
+Connecting to kb.opentechnology.ru (kb.opentechnology.ru)|186.2.171.14|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [text/html]
+Saving to: ‘kb.opentechnology.ru/index.php?solution_id=1688.html’
+
+     0K .......... .......... .......... .......... .......... 1.60M
+    50K .......... ....                                        9.16M=0.03s
+
+2026-03-26 15:13:50 (1.97 MB/s) - ‘kb.opentechnology.ru/index.php?solution_id=1688.html’ saved [66492]
+
+--2026-03-26 15:13:50--  https://kb.opentechnology.ru/index.php?solution_id=1317
+Reusing existing connection to kb.opentechnology.ru:443.
+HTTP request sent, awaiting response... 302 Found
+Location: https://kb.opentechnology.ru/?action=login&auth_driver=rm3kl [following]
+--2026-03-26 15:13:53--  https://kb.opentechnology.ru/?action=login&auth_driver=rm3kl
+Reusing existing connection to kb.opentechnology.ru:443.
+HTTP request sent, awaiting response... 302 Found
+Location: https://moodle.opentechnology.ru/local/oauth/login.php?type=web_server&client_id=phpMyFAQ3KL&redirect_uri=https%3A%2F%2Fkb.opentechnology.ru%2F%3Fauth_driver%3Drm3kl&response_type=code&scope=user_info+user_courses [following]
+--2026-03-26 15:13:54--  https://moodle.opentechnology.ru/local/oauth/login.php?type=web_server&client_id=phpMyFAQ3KL&redirect_uri=https%3A%2F%2Fkb.opentechnology.ru%2F%3Fauth_driver%3Drm3kl&response_type=code&scope=user_info+user_courses
+Connecting to moodle.opentechnology.ru (moodle.opentechnology.ru)|185.178.208.138|:443... connected.
+HTTP request sent, awaiting response... 303 See Other
+Location: https://moodle.opentechnology.ru/login/index.php [following]
+--2026-03-26 15:13:54--  https://moodle.opentechnology.ru/login/index.php
+Reusing existing connection to moodle.opentechnology.ru:443.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [text/html]
+Saving to: ‘kb.opentechnology.ru/index.php?solution_id=1317.html’
+
+     0K .......... .......... .......... .......... .....      3.03M=0.01s
+
+2026-03-26 15:13:55 (3.03 MB/s) - ‘kb.opentechnology.ru/index.php?solution_id=1317.html’ saved [47005]
+
+--2026-03-26 15:13:55--  https://kb.opentechnology.ru/index.php?action=attachment&id=9601
+Connecting to kb.opentechnology.ru (kb.opentechnology.ru)|186.2.171.14|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 53123 (52K) [image/png]
+Saving to: ‘kb.opentechnology.ru/index.php?action=attachment&id=9601’
+
+     0K .......... .......... .......... .......... .......... 96% 2.18M 0s
+    50K .                                                     100% 3.50T=0.02s
+
+Last-modified header missing -- time-stamps turned off.
+2026-03-26 15:13:56 (2.26 MB/s) - ‘kb.opentechnology.ru/index.php?action=attachment&id=9601’ saved [53123/53123]
+
+--2026-03-26 15:13:56--  https://kb.opentechnology.ru/index.php?action=attachment&id=9602
+Reusing existing connection to kb.opentechnology.ru:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 60935 (60K) [image/png]
+Saving to: ‘kb.opentechnology.ru/index.php?action=attachment&id=9602’
+
+     0K .......... .......... .......... .......... .......... 84% 2.41M 0s
+    50K .........                                             100%  101M=0.02s
+
+Last-modified header missing -- time-stamps turned off.
+2026-03-26 15:13:57 (2.86 MB/s) - ‘kb.opentechnology.ru/index.php?action=attachment&id=9602’ saved [60935/60935]
+
+--2026-03-26 15:13:57--  https://kb.opentechnology.ru/index.php?solution_id=1041
+Reusing existing connection to kb.opentechnology.ru:443.
+HTTP request sent, awaiting response... 302 Found
+Location: https://kb.opentechnology.ru/?action=login&auth_driver=rm3kl [following]
+--2026-03-26 15:14:00--  https://kb.opentechnology.ru/?action=login&auth_driver=rm3kl
+Reusing existing connection to kb.opentechnology.ru:443.
+HTTP request sent, awaiting response... 302 Found
+Location: https://moodle.opentechnology.ru/local/oauth/login.php?type=web_server&client_id=phpMyFAQ3KL&redirect_uri=https%3A%2F%2Fkb.opentechnology.ru%2F%3Fauth_driver%3Drm3kl&response_type=code&scope=user_info+user_courses [following]
+--2026-03-26 15:14:02--  https://moodle.opentechnology.ru/local/oauth/login.php?type=web_server&client_id=phpMyFAQ3KL&redirect_uri=https%3A%2F%2Fkb.opentechnology.ru%2F%3Fauth_driver%3Drm3kl&response_type=code&scope=user_info+user_courses
+Connecting to moodle.opentechnology.ru (moodle.opentechnology.ru)|185.178.208.138|:443... connected.
+HTTP request sent, awaiting response... 303 See Other
+Location: https://moodle.opentechnology.ru/login/index.php [following]
+--2026-03-26 15:14:02--  https://moodle.opentechnology.ru/login/index.php
+Reusing existing connection to moodle.opentechnology.ru:443.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [text/html]
+Saving to: ‘kb.opentechnology.ru/index.php?solution_id=1041.html’
+
+     0K .......... .......... .......... .......... .....      1.67M=0.03s
+
+2026-03-26 15:14:02 (1.67 MB/s) - ‘kb.opentechnology.ru/index.php?solution_id=1041.html’ saved [47005]
+
+--2026-03-26 15:14:02--  https://kb.opentechnology.ru/index.php?action=attachment&id=9828
+Connecting to kb.opentechnology.ru (kb.opentechnology.ru)|186.2.171.14|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 101712 (99K) [image/png]
+Saving to: ‘kb.opentechnology.ru/index.php?action=attachment&id=9828’
+
+     0K .......... .......... .......... .......... .......... 50% 2.37M 0s
+    50K .......... .......... .......... .......... ......... 100% 5.21M=0.03s
+
+Last-modified header missing -- time-stamps turned off.
+2026-03-26 15:14:03 (3.25 MB/s) - ‘kb.opentechnology.ru/index.php?action=attachment&id=9828’ saved [101712/101712]
+
+--2026-03-26 15:14:03--  https://kb.opentechnology.ru/index.php?action=attachment&id=9829
+Reusing existing connection to kb.opentechnology.ru:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 98858 (97K) [image/png]
+Saving to: ‘kb.opentechnology.ru/index.php?action=attachment&id=9829’
+
+     0K .......... .......... .......... .......... .......... 51% 2.24M 0s
+    50K .......... .......... .......... .......... ......    100% 4.65M=0.03s
+
+Last-modified header missing -- time-stamps turned off.
+2026-03-26 15:14:04 (2.98 MB/s) - ‘kb.opentechnology.ru/index.php?action=attachment&id=9829’ saved [98858/98858]
+
+--2026-03-26 15:14:04--  https://kb.opentechnology.ru/index.php?action=attachment&id=9808
+Reusing existing connection to kb.opentechnology.ru:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 131936 (129K) [image/png]
+Saving to: ‘kb.opentechnology.ru/index.php?action=attachment&id=9808’
+
+     0K .......... .......... .......... .......... .......... 38% 2.17M 0s
+    50K .......... .......... .......... .......... .......... 77% 3.67M 0s
+   100K .......... .......... ........                        100%  170M=0.04s
+
+Last-modified header missing -- time-stamps turned off.
+2026-03-26 15:14:06 (3.49 MB/s) - ‘kb.opentechnology.ru/index.php?action=attachment&id=9808’ saved [131936/131936]
+
+--2026-03-26 15:14:06--  https://kb.opentechnology.ru/index.php?action=attachment&id=9809
+Reusing existing connection to kb.opentechnology.ru:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 154222 (151K) [image/png]
+Saving to: ‘kb.opentechnology.ru/index.php?action=attachment&id=9809’
+
+     0K .......... .......... .......... .......... .......... 33% 2.20M 0s
+    50K .......... .......... .......... .......... .......... 66% 4.59M 0s
+   100K .......... .......... .......... .......... .......... 99% 82.7M 0s
+   150K                                                       100% 1.13T=0.03s
+
+Last-modified header missing -- time-stamps turned off.
+2026-03-26 15:14:07 (4.41 MB/s) - ‘kb.opentechnology.ru/index.php?action=attachment&id=9809’ saved [154222/154222]
+
+--2026-03-26 15:14:07--  https://kb.opentechnology.ru/index.php?solution_id=1165
+Reusing existing connection to kb.opentechnology.ru:443.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [text/html]
+Saving to: ‘kb.opentechnology.ru/index.php?solution_id=1165.html’
+
+     0K .......... .......... .......... .......... .......... 1.56M
+    50K .......... .......... ......                           4.67M=0.04s
+
+2026-03-26 15:14:09 (2.03 MB/s) - ‘kb.opentechnology.ru/index.php?solution_id=1165.html’ saved [78176]
+
+--2026-03-26 15:14:09--  https://kb.opentechnology.ru/index.php?action=attachment&id=9810
+Reusing existing connection to kb.opentechnology.ru:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 102962 (101K) [image/png]
+Saving to: ‘kb.opentechnology.ru/index.php?action=attachment&id=9810’
+
+     0K .......... .......... .......... .......... .......... 49% 2.20M 0s
+    50K .......... .......... .......... .......... .......... 99% 4.79M 0s
+   100K                                                       100% 1.02T=0.03s
+
+Last-modified header missing -- time-stamps turned off.
+2026-03-26 15:14:10 (3.03 MB/s) - ‘kb.opentechnology.ru/index.php?action=attachment&id=9810’ saved [102962/102962]
+
+--2026-03-26 15:14:10--  https://kb.opentechnology.ru/index.php?action=attachment&id=9811
+Reusing existing connection to kb.opentechnology.ru:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 98335 (96K) [image/png]
+Saving to: ‘kb.opentechnology.ru/index.php?action=attachment&id=9811’
+
+     0K .......... .......... .......... .......... .......... 52% 2.31M 0s
+    50K .......... .......... .......... .......... ......    100% 3.85M=0.03s
+
+Last-modified header missing -- time-stamps turned off.
+2026-03-26 15:14:11 (2.86 MB/s) - ‘kb.opentechnology.ru/index.php?action=attachment&id=9811’ saved [98335/98335]
+
+--2026-03-26 15:14:11--  https://kb.opentechnology.ru/index.php?action=attachment&id=9882
+Reusing existing connection to kb.opentechnology.ru:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 154714 (151K) [image/png]
+Saving to: ‘kb.opentechnology.ru/index.php?action=attachment&id=9882’
+
+     0K .......... .......... .......... .......... .......... 33% 2.19M 0s
+    50K .......... .......... .......... .......... .......... 66% 4.77M 0s
+   100K .......... .......... .......... .......... .......... 99% 93.9M 0s
+   150K .                                                     100% 2.03T=0.03s
+
+Last-modified header missing -- time-stamps turned off.
+2026-03-26 15:14:12 (4.46 MB/s) - ‘kb.opentechnology.ru/index.php?action=attachment&id=9882’ saved [154714/154714]
+
+--2026-03-26 15:14:12--  https://kb.opentechnology.ru/index.php?action=attachment&id=9880
+Reusing existing connection to kb.opentechnology.ru:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 56661 (55K) [image/png]
+Saving to: ‘kb.opentechnology.ru/index.php?action=attachment&id=9880’
+
+     0K .......... .......... .......... .......... .......... 90% 2.13M 0s
+    50K .....                                                 100% 9.93T=0.02s
+
+Last-modified header missing -- time-stamps turned off.
+2026-03-26 15:14:13 (2.36 MB/s) - ‘kb.opentechnology.ru/index.php?action=attachment&id=9880’ saved [56661/56661]
+
+--2026-03-26 15:14:13--  https://kb.opentechnology.ru/index.php?action=attachment&id=9881
+Reusing existing connection to kb.opentechnology.ru:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 67906 (66K) [image/png]
+Saving to: ‘kb.opentechnology.ru/index.php?action=attachment&id=9881’
+
+     0K .......... .......... .......... .......... .......... 75% 2.34M 0s
+    50K .......... ......                                     100%  272M=0.02s
+
+Last-modified header missing -- time-stamps turned off.
+2026-03-26 15:14:14 (3.10 MB/s) - ‘kb.opentechnology.ru/index.php?action=attachment&id=9881’ saved [67906/67906]
+
+--2026-03-26 15:14:14--  https://kb.opentechnology.ru/index.php?action=attachment&id=9812
+Reusing existing connection to kb.opentechnology.ru:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 113483 (111K) [image/png]
+Saving to: ‘kb.opentechnology.ru/index.php?action=attachment&id=9812’
+
+     0K .......... .......... .......... .......... .......... 45% 2.31M 0s
+    50K .......... .......... .......... .......... .......... 90% 4.63M 0s
+   100K ..........                                            100% 14.4M=0.03s
+
+Last-modified header missing -- time-stamps turned off.
+2026-03-26 15:14:15 (3.33 MB/s) - ‘kb.opentechnology.ru/index.php?action=attachment&id=9812’ saved [113483/113483]
+
+--2026-03-26 15:14:15--  https://kb.opentechnology.ru/index.php?action=attachment&id=9833
+Reusing existing connection to kb.opentechnology.ru:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 132797 (130K) [image/png]
+Saving to: ‘kb.opentechnology.ru/index.php?action=attachment&id=9833’
+
+     0K .......... .......... .......... .......... .......... 38% 2.25M 0s
+    50K .......... .......... .......... .......... .......... 77% 4.01M 0s
+   100K .......... .......... .........                       100%  232M=0.03s
+
+Last-modified header missing -- time-stamps turned off.
+2026-03-26 15:14:16 (3.73 MB/s) - ‘kb.opentechnology.ru/index.php?action=attachment&id=9833’ saved [132797/132797]
+
+--2026-03-26 15:14:16--  https://kb.opentechnology.ru/index.php?action=attachment&id=9832
+Reusing existing connection to kb.opentechnology.ru:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 97372 (95K) [image/png]
+Saving to: ‘kb.opentechnology.ru/index.php?action=attachment&id=9832’
+
+     0K .......... .......... .......... .......... .......... 52% 2.18M 0s
+    50K .......... .......... .......... .......... .....     100% 6.20M=0.03s
+
+Last-modified header missing -- time-stamps turned off.
+2026-03-26 15:14:18 (3.15 MB/s) - ‘kb.opentechnology.ru/index.php?action=attachment&id=9832’ saved [97372/97372]
+
+--2026-03-26 15:14:18--  https://kb.opentechnology.ru/index.php?action=attachment&id=9853
+Reusing existing connection to kb.opentechnology.ru:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 131524 (128K) [image/png]
+Saving to: ‘kb.opentechnology.ru/index.php?action=attachment&id=9853’
+
+     0K .......... .......... .......... .......... .......... 38% 2.25M 0s
+    50K .......... .......... .......... .......... .......... 77% 4.85M 0s
+   100K .......... .......... ........                        100% 22.7M=0.03s
+
+Last-modified header missing -- time-stamps turned off.
+2026-03-26 15:14:19 (3.81 MB/s) - ‘kb.opentechnology.ru/index.php?action=attachment&id=9853’ saved [131524/131524]
+
+--2026-03-26 15:14:19--  https://kb.opentechnology.ru/index.php?solution_id=1451
+Reusing existing connection to kb.opentechnology.ru:443.
+HTTP request sent, awaiting response... 302 Found
+Location: https://kb.opentechnology.ru/?action=login&auth_driver=rm3kl [following]
+--2026-03-26 15:14:22--  https://kb.opentechnology.ru/?action=login&auth_driver=rm3kl
+Reusing existing connection to kb.opentechnology.ru:443.
+HTTP request sent, awaiting response... 302 Found
+Location: https://moodle.opentechnology.ru/local/oauth/login.php?type=web_server&client_id=phpMyFAQ3KL&redirect_uri=https%3A%2F%2Fkb.opentechnology.ru%2F%3Fauth_driver%3Drm3kl&response_type=code&scope=user_info+user_courses [following]
+--2026-03-26 15:14:23--  https://moodle.opentechnology.ru/local/oauth/login.php?type=web_server&client_id=phpMyFAQ3KL&redirect_uri=https%3A%2F%2Fkb.opentechnology.ru%2F%3Fauth_driver%3Drm3kl&response_type=code&scope=user_info+user_courses
+Connecting to moodle.opentechnology.ru (moodle.opentechnology.ru)|185.178.208.138|:443... connected.
+HTTP request sent, awaiting response... 303 See Other
+Location: https://moodle.opentechnology.ru/login/index.php [following]
+--2026-03-26 15:14:24--  https://moodle.opentechnology.ru/login/index.php
+Reusing existing connection to moodle.opentechnology.ru:443.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [text/html]
+Saving to: ‘kb.opentechnology.ru/index.php?solution_id=1451.html’
+
+     0K .......... .......... .......... .......... .....      2.70M=0.02s
+
+2026-03-26 15:14:24 (2.70 MB/s) - ‘kb.opentechnology.ru/index.php?solution_id=1451.html’ saved [47005]
+
+--2026-03-26 15:14:24--  https://kb.opentechnology.ru/index.php?action=attachment&id=9854
+Connecting to kb.opentechnology.ru (kb.opentechnology.ru)|186.2.171.14|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 115004 (112K) [image/png]
+Saving to: ‘kb.opentechnology.ru/index.php?action=attachment&id=9854’
+
+     0K .......... .......... .......... .......... .......... 44% 1.61M 0s
+    50K .......... .......... .......... .......... .......... 89% 2.38M 0s
+   100K .......... ..                                         100% 1.37M=0.06s
+
+Last-modified header missing -- time-stamps turned off.
+2026-03-26 15:14:25 (1.84 MB/s) - ‘kb.opentechnology.ru/index.php?action=attachment&id=9854’ saved [115004/115004]
+
+--2026-03-26 15:14:25--  https://kb.opentechnology.ru/index.php?action=attachment&id=9855
+Reusing existing connection to kb.opentechnology.ru:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 324502 (317K) [image/png]
+Saving to: ‘kb.opentechnology.ru/index.php?action=attachment&id=9855’
+
+     0K .......... .......... .......... .......... .......... 15% 2.39M 0s
+    50K .......... .......... .......... .......... .......... 31% 4.98M 0s
+   100K .......... .......... .......... .......... .......... 47%  246M 0s
+   150K .......... .......... .......... .......... .......... 63% 3.95M 0s
+   200K .......... .......... .......... .......... .......... 78%  208M 0s
+   250K .......... .......... .......... .......... .......... 94%  390M 0s
+   300K .......... ......                                     100%  440M=0.04s
+
+Last-modified header missing -- time-stamps turned off.
+2026-03-26 15:14:26 (7.17 MB/s) - ‘kb.opentechnology.ru/index.php?action=attachment&id=9855’ saved [324502/324502]
+
+--2026-03-26 15:14:26--  https://kb.opentechnology.ru/index.php?action=attachment&id=9892
+Reusing existing connection to kb.opentechnology.ru:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 119716 (117K) [image/png]
+Saving to: ‘kb.opentechnology.ru/index.php?action=attachment&id=9892’
+
+     0K .......... .......... .......... .......... .......... 42% 2.33M 0s
+    50K .......... .......... .......... .......... .......... 85% 1.84M 0s
+   100K .......... ......                                     100% 1.95M=0.06s
+
+Last-modified header missing -- time-stamps turned off.
+2026-03-26 15:14:27 (2.04 MB/s) - ‘kb.opentechnology.ru/index.php?action=attachment&id=9892’ saved [119716/119716]
+
+--2026-03-26 15:14:27--  https://kb.opentechnology.ru/index.php?solution_id=1642
+Reusing existing connection to kb.opentechnology.ru:443.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [text/html]
+Saving to: ‘kb.opentechnology.ru/index.php?solution_id=1642.html’
+
+     0K .......... .......... .......... .......... .......... 1.57M
+    50K .......... .......... .......... .......... .......... 4.63M
+   100K ........                                               16.6T=0.04s
+
+2026-03-26 15:14:30 (2.56 MB/s) - ‘kb.opentechnology.ru/index.php?solution_id=1642.html’ saved [111524]
+
+--2026-03-26 15:14:30--  https://kb.opentechnology.ru/index.php?action=attachment&id=9858
+Reusing existing connection to kb.opentechnology.ru:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 132978 (130K) [image/png]
+Saving to: ‘kb.opentechnology.ru/index.php?action=attachment&id=9858’
+
+     0K .......... .......... .......... .......... .......... 38%  173M 0s
+    50K .......... .......... .......... .......... .......... 77%  224M 0s
+   100K .......... .......... .........                       100%  308M=0.001s
+
+Last-modified header missing -- time-stamps turned off.
+2026-03-26 15:14:31 (213 MB/s) - ‘kb.opentechnology.ru/index.php?action=attachment&id=9858’ saved [132978/132978]
+
+--2026-03-26 15:14:31--  https://kb.opentechnology.ru/index.php?action=attachment&id=9859
+Reusing existing connection to kb.opentechnology.ru:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 3354 (3.3K) [image/png]
+Saving to: ‘kb.opentechnology.ru/index.php?action=attachment&id=9859’
+
+     0K ...                                                   100% 3.76G=0s
+
+Last-modified header missing -- time-stamps turned off.
+2026-03-26 15:14:33 (3.76 GB/s) - ‘kb.opentechnology.ru/index.php?action=attachment&id=9859’ saved [3354/3354]
+
+--2026-03-26 15:14:33--  https://kb.opentechnology.ru/index.php?action=attachment&id=9861
+Reusing existing connection to kb.opentechnology.ru:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 251624 (246K) [image/png]
+Saving to: ‘kb.opentechnology.ru/index.php?action=attachment&id=9861’
+
+     0K .......... .......... .......... .......... .......... 20% 2.24M 0s
+    50K .......... .......... .......... .......... .......... 40% 4.66M 0s
+   100K .......... .......... .......... .......... .......... 61% 35.7M 0s
+   150K .......... .......... .......... .......... .......... 81% 5.39M 0s
+   200K .......... .......... .......... .......... .....     100% 50.4M=0.04s
+
+Last-modified header missing -- time-stamps turned off.
+2026-03-26 15:14:34 (5.51 MB/s) - ‘kb.opentechnology.ru/index.php?action=attachment&id=9861’ saved [251624/251624]
+
+--2026-03-26 15:14:34--  https://kb.opentechnology.ru/index.php?action=attachment&id=9862
+Reusing existing connection to kb.opentechnology.ru:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 114469 (112K) [image/png]
+Saving to: ‘kb.opentechnology.ru/index.php?action=attachment&id=9862’
+
+     0K .......... .......... .......... .......... .......... 44% 2.37M 0s
+    50K .......... .......... .......... .......... .......... 89% 4.47M 0s
+   100K .......... .                                          100%  108M=0.03s
+
+Last-modified header missing -- time-stamps turned off.
+2026-03-26 15:14:36 (3.45 MB/s) - ‘kb.opentechnology.ru/index.php?action=attachment&id=9862’ saved [114469/114469]
+
+--2026-03-26 15:14:36--  https://kb.opentechnology.ru/index.php?action=attachment&id=9877
+Reusing existing connection to kb.opentechnology.ru:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 115032 (112K) [image/png]
+Saving to: ‘kb.opentechnology.ru/index.php?action=attachment&id=9877’
+
+     0K .......... .......... .......... .......... .......... 44% 1.85M 0s
+    50K .......... .......... .......... .......... .......... 89% 8.96M 0s
+   100K .......... ..                                         100% 2.28M=0.04s
+
+Last-modified header missing -- time-stamps turned off.
+2026-03-26 15:14:37 (2.96 MB/s) - ‘kb.opentechnology.ru/index.php?action=attachment&id=9877’ saved [115032/115032]
+
+--2026-03-26 15:14:37--  https://kb.opentechnology.ru/index.php?action=attachment&id=9878
+Reusing existing connection to kb.opentechnology.ru:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 110387 (108K) [image/png]
+Saving to: ‘kb.opentechnology.ru/index.php?action=attachment&id=9878’
+
+     0K .......... .......... .......... .......... .......... 46% 2.26M 0s
+    50K .......... .......... .......... .......... .......... 92% 2.81M 0s
+   100K .......                                               100% 14.5T=0.04s
+
+Last-modified header missing -- time-stamps turned off.
+2026-03-26 15:14:38 (2.70 MB/s) - ‘kb.opentechnology.ru/index.php?action=attachment&id=9878’ saved [110387/110387]
+
+--2026-03-26 15:14:38--  https://kb.opentechnology.ru/index.php?action=attachment&id=9879
+Reusing existing connection to kb.opentechnology.ru:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 133603 (130K) [image/png]
+Saving to: ‘kb.opentechnology.ru/index.php?action=attachment&id=9879’
+
+     0K .......... .......... .......... .......... .......... 38% 2.25M 0s
+    50K .......... .......... .......... .......... .......... 76% 3.80M 0s
+   100K .......... .......... ..........                      100%  187M=0.03s
+
+Last-modified header missing -- time-stamps turned off.
+2026-03-26 15:14:39 (3.67 MB/s) - ‘kb.opentechnology.ru/index.php?action=attachment&id=9879’ saved [133603/133603]
+
+--2026-03-26 15:14:39--  https://kb.opentechnology.ru/index.php?action=attachment&id=9872
+Reusing existing connection to kb.opentechnology.ru:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 247387 (242K) [image/png]
+Saving to: ‘kb.opentechnology.ru/index.php?action=attachment&id=9872’
+
+     0K .......... .......... .......... .......... .......... 20% 2.05M 0s
+    50K .......... .......... .......... .......... .......... 41% 4.51M 0s
+   100K .......... .......... .......... .......... .......... 62%  269M 0s
+   150K .......... .......... .......... .......... .......... 82% 4.82M 0s
+   200K .......... .......... .......... .......... .         100% 5.02M=0.05s
+
+Last-modified header missing -- time-stamps turned off.
+2026-03-26 15:14:40 (4.45 MB/s) - ‘kb.opentechnology.ru/index.php?action=attachment&id=9872’ saved [247387/247387]
+
+--2026-03-26 15:14:40--  https://kb.opentechnology.ru/index.php?action=attachment&id=12205
+Reusing existing connection to kb.opentechnology.ru:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 375968 (367K) [image/png]
+Saving to: ‘kb.opentechnology.ru/index.php?action=attachment&id=12205’
+
+     0K .......... .......... .......... .......... .......... 13% 2.13M 0s
+    50K .......... .......... .......... .......... .......... 27% 4.86M 0s
+   100K .......... .......... .......... .......... .......... 40% 35.5M 0s
+   150K .......... .......... .......... .......... .......... 54% 5.46M 0s
+   200K .......... .......... .......... .......... .......... 68% 7.80M 0s
+   250K .......... .......... .......... .......... .......... 81% 40.4M 0s
+   300K .......... .......... .......... .......... .......... 95% 5.55M 0s
+   350K .......... .......                                    100% 6.99M=0.06s
+
+Last-modified header missing -- time-stamps turned off.
+2026-03-26 15:14:41 (5.79 MB/s) - ‘kb.opentechnology.ru/index.php?action=attachment&id=12205’ saved [375968/375968]
+
+--2026-03-26 15:14:41--  https://kb.opentechnology.ru/index.php?action=attachment&id=9874
+Reusing existing connection to kb.opentechnology.ru:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 115519 (113K) [image/png]
+Saving to: ‘kb.opentechnology.ru/index.php?action=attachment&id=9874’
+
+     0K .......... .......... .......... .......... .......... 44% 2.29M 0s
+    50K .......... .......... .......... .......... .......... 88% 3.19M 0s
+   100K .......... ..                                         100%  112M=0.04s
+
+Last-modified header missing -- time-stamps turned off.
+2026-03-26 15:14:42 (2.99 MB/s) - ‘kb.opentechnology.ru/index.php?action=attachment&id=9874’ saved [115519/115519]
+
+--2026-03-26 15:14:42--  https://kb.opentechnology.ru/index.php?action=attachment&id=9875
+Reusing existing connection to kb.opentechnology.ru:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 125579 (123K) [image/png]
+Saving to: ‘kb.opentechnology.ru/index.php?action=attachment&id=9875’
+
+     0K .......... .......... .......... .......... .......... 40% 2.03M 0s
+    50K .......... .......... .......... .......... .......... 81% 4.55M 0s
+   100K .......... .......... ..                              100%  152M=0.03s
+
+Last-modified header missing -- time-stamps turned off.
+2026-03-26 15:14:44 (3.43 MB/s) - ‘kb.opentechnology.ru/index.php?action=attachment&id=9875’ saved [125579/125579]
+
+--2026-03-26 15:14:44--  https://kb.opentechnology.ru/index.php?action=attachment&id=9876
+Reusing existing connection to kb.opentechnology.ru:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 56800 (55K) [image/png]
+Saving to: ‘kb.opentechnology.ru/index.php?action=attachment&id=9876’
+
+     0K .......... .......... .......... .......... .......... 90% 2.04M 0s
+    50K .....                                                 100% 50.9M=0.02s
+
+Last-modified header missing -- time-stamps turned off.
+2026-03-26 15:14:45 (2.26 MB/s) - ‘kb.opentechnology.ru/index.php?action=attachment&id=9876’ saved [56800/56800]
+
+--2026-03-26 15:14:45--  https://kb.opentechnology.ru/index.php?solution_id=1084
+Reusing existing connection to kb.opentechnology.ru:443.
+HTTP request sent, awaiting response... 302 Found
+Location: https://kb.opentechnology.ru/?action=login&auth_driver=rm3kl [following]
+--2026-03-26 15:14:48--  https://kb.opentechnology.ru/?action=login&auth_driver=rm3kl
+Reusing existing connection to kb.opentechnology.ru:443.
+HTTP request sent, awaiting response... 302 Found
+Location: https://moodle.opentechnology.ru/local/oauth/login.php?type=web_server&client_id=phpMyFAQ3KL&redirect_uri=https%3A%2F%2Fkb.opentechnology.ru%2F%3Fauth_driver%3Drm3kl&response_type=code&scope=user_info+user_courses [following]
+--2026-03-26 15:14:49--  https://moodle.opentechnology.ru/local/oauth/login.php?type=web_server&client_id=phpMyFAQ3KL&redirect_uri=https%3A%2F%2Fkb.opentechnology.ru%2F%3Fauth_driver%3Drm3kl&response_type=code&scope=user_info+user_courses
+Connecting to moodle.opentechnology.ru (moodle.opentechnology.ru)|185.178.208.138|:443... connected.
+HTTP request sent, awaiting response... 303 See Other
+Location: https://moodle.opentechnology.ru/login/index.php [following]
+--2026-03-26 15:14:49--  https://moodle.opentechnology.ru/login/index.php
+Reusing existing connection to moodle.opentechnology.ru:443.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [text/html]
+Saving to: ‘kb.opentechnology.ru/index.php?solution_id=1084.html’
+
+     0K .......... .......... .......... .......... .....      2.51M=0.02s
+
+2026-03-26 15:14:50 (2.51 MB/s) - ‘kb.opentechnology.ru/index.php?solution_id=1084.html’ saved [47005]
+
+--2026-03-26 15:14:50--  https://kb.opentechnology.ru/index.php?action=attachment&id=9863
+Connecting to kb.opentechnology.ru (kb.opentechnology.ru)|186.2.171.14|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 117134 (114K) [image/png]
+Saving to: ‘kb.opentechnology.ru/index.php?action=attachment&id=9863’
+
+     0K .......... .......... .......... .......... .......... 43% 2.32M 0s
+    50K .......... .......... .......... .......... .......... 87% 4.27M 0s
+   100K .......... ....                                       100% 16.8M=0.03s
+
+Last-modified header missing -- time-stamps turned off.
+2026-03-26 15:14:51 (3.35 MB/s) - ‘kb.opentechnology.ru/index.php?action=attachment&id=9863’ saved [117134/117134]
+
+--2026-03-26 15:14:51--  https://kb.opentechnology.ru/index.php?solution_id=1151
+Reusing existing connection to kb.opentechnology.ru:443.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [text/html]
+Saving to: ‘kb.opentechnology.ru/index.php?solution_id=1151.html’
+
+     0K .......... .......... .......... .......... .......... 1.49M
+    50K .......... .......... .......... ...                    108M=0.03s
+
+2026-03-26 15:14:53 (2.44 MB/s) - ‘kb.opentechnology.ru/index.php?solution_id=1151.html’ saved [84999]
+
+--2026-03-26 15:14:53--  https://kb.opentechnology.ru/index.php?solution_id=1164
+Reusing existing connection to kb.opentechnology.ru:443.
+HTTP request sent, awaiting response... 302 Found
+Location: https://kb.opentechnology.ru/?action=login&auth_driver=rm3kl [following]
+--2026-03-26 15:14:57--  https://kb.opentechnology.ru/?action=login&auth_driver=rm3kl
+Reusing existing connection to kb.opentechnology.ru:443.
+HTTP request sent, awaiting response... 302 Found
+Location: https://moodle.opentechnology.ru/local/oauth/login.php?type=web_server&client_id=phpMyFAQ3KL&redirect_uri=https%3A%2F%2Fkb.opentechnology.ru%2F%3Fauth_driver%3Drm3kl&response_type=code&scope=user_info+user_courses [following]
+--2026-03-26 15:14:58--  https://moodle.opentechnology.ru/local/oauth/login.php?type=web_server&client_id=phpMyFAQ3KL&redirect_uri=https%3A%2F%2Fkb.opentechnology.ru%2F%3Fauth_driver%3Drm3kl&response_type=code&scope=user_info+user_courses
+Connecting to moodle.opentechnology.ru (moodle.opentechnology.ru)|185.178.208.138|:443... connected.
+HTTP request sent, awaiting response... 303 See Other
+Location: https://moodle.opentechnology.ru/login/index.php [following]
+--2026-03-26 15:14:58--  https://moodle.opentechnology.ru/login/index.php
+Reusing existing connection to moodle.opentechnology.ru:443.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [text/html]
+Saving to: ‘kb.opentechnology.ru/index.php?solution_id=1164.html’
+
+     0K .......... .......... .......... .......... .....      2.12M=0.02s
+
+2026-03-26 15:14:58 (2.12 MB/s) - ‘kb.opentechnology.ru/index.php?solution_id=1164.html’ saved [47005]
+
+--2026-03-26 15:14:58--  https://kb.opentechnology.ru/index.php?solution_id=1605
+Connecting to kb.opentechnology.ru (kb.opentechnology.ru)|186.2.171.14|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: https://kb.opentechnology.ru/?action=login&auth_driver=rm3kl [following]
+--2026-03-26 15:15:02--  https://kb.opentechnology.ru/?action=login&auth_driver=rm3kl
+Reusing existing connection to kb.opentechnology.ru:443.
+HTTP request sent, awaiting response... 302 Found
+Location: https://moodle.opentechnology.ru/local/oauth/login.php?type=web_server&client_id=phpMyFAQ3KL&redirect_uri=https%3A%2F%2Fkb.opentechnology.ru%2F%3Fauth_driver%3Drm3kl&response_type=code&scope=user_info+user_courses [following]
+--2026-03-26 15:15:03--  https://moodle.opentechnology.ru/local/oauth/login.php?type=web_server&client_id=phpMyFAQ3KL&redirect_uri=https%3A%2F%2Fkb.opentechnology.ru%2F%3Fauth_driver%3Drm3kl&response_type=code&scope=user_info+user_courses
+Connecting to moodle.opentechnology.ru (moodle.opentechnology.ru)|185.178.208.138|:443... connected.
+HTTP request sent, awaiting response... 303 See Other
+Location: https://moodle.opentechnology.ru/login/index.php [following]
+--2026-03-26 15:15:03--  https://moodle.opentechnology.ru/login/index.php
+Reusing existing connection to moodle.opentechnology.ru:443.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [text/html]
+Saving to: ‘kb.opentechnology.ru/index.php?solution_id=1605.html’
+
+     0K .......... .......... .......... .......... .....      3.54M=0.01s
+
+2026-03-26 15:15:03 (3.54 MB/s) - ‘kb.opentechnology.ru/index.php?solution_id=1605.html’ saved [47005]
+
+--2026-03-26 15:15:03--  https://kb.opentechnology.ru/index.php?action=attachment&id=9673
+Connecting to kb.opentechnology.ru (kb.opentechnology.ru)|186.2.171.14|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 26328 (26K) [image/png]
+Saving to: ‘kb.opentechnology.ru/index.php?action=attachment&id=9673’
+
+     0K .......... .......... .....                           100% 2.42M=0.01s
+
+Last-modified header missing -- time-stamps turned off.
+2026-03-26 15:15:05 (2.42 MB/s) - ‘kb.opentechnology.ru/index.php?action=attachment&id=9673’ saved [26328/26328]
+
+--2026-03-26 15:15:05--  https://kb.opentechnology.ru/index.php?action=attachment&id=9675
+Reusing existing connection to kb.opentechnology.ru:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 121495 (119K) [image/png]
+Saving to: ‘kb.opentechnology.ru/index.php?action=attachment&id=9675’
+
+     0K .......... .......... .......... .......... .......... 42% 2.60M 0s
+    50K .......... .......... .......... .......... .......... 84% 4.44M 0s
+   100K .......... ........                                   100% 72.4M=0.03s
+
+Last-modified header missing -- time-stamps turned off.
+2026-03-26 15:15:06 (3.85 MB/s) - ‘kb.opentechnology.ru/index.php?action=attachment&id=9675’ saved [121495/121495]
+
+--2026-03-26 15:15:06--  https://kb.opentechnology.ru/index.php?action=attachment&id=9676
+Reusing existing connection to kb.opentechnology.ru:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 65820 (64K) [image/png]
+Saving to: ‘kb.opentechnology.ru/index.php?action=attachment&id=9676’
+
+     0K .......... .......... .......... .......... .......... 77% 2.54M 0s
+    50K .......... ....                                       100%  256M=0.02s
+
+Last-modified header missing -- time-stamps turned off.
+2026-03-26 15:15:07 (3.25 MB/s) - ‘kb.opentechnology.ru/index.php?action=attachment&id=9676’ saved [65820/65820]
+
+--2026-03-26 15:15:07--  https://kb.opentechnology.ru/index.php?action=attachment&id=12561
+Reusing existing connection to kb.opentechnology.ru:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 337070 (329K) [image/png]
+Saving to: ‘kb.opentechnology.ru/index.php?action=attachment&id=12561’
+
+     0K .......... .......... .......... .......... .......... 15% 2.45M 0s
+    50K .......... .......... .......... .......... .......... 30% 5.22M 0s
+   100K .......... .......... .......... .......... .......... 45% 31.0M 0s
+   150K .......... .......... .......... .......... .......... 60% 5.69M 0s
+   200K .......... .......... .......... .......... .......... 75% 83.4M 0s
+   250K .......... .......... .......... .......... .......... 91% 45.4M 0s
+   300K .......... .......... .........                       100% 34.2M=0.04s
+
+Last-modified header missing -- time-stamps turned off.
+2026-03-26 15:15:09 (7.66 MB/s) - ‘kb.opentechnology.ru/index.php?action=attachment&id=12561’ saved [337070/337070]
+
+--2026-03-26 15:15:09--  https://kb.opentechnology.ru/index.php?action=attachment&id=12207
+Reusing existing connection to kb.opentechnology.ru:443.
+HTTP request sent, awaiting response... 200 OK
+Length: 256894 (251K) [image/png]
+Saving to: ‘kb.opentechnology.ru/index.php?action=attachment&id=12207’
+
+     0K .......... .......... .......... .......... .......... 19% 2.52M 0s
+    50K .......... .......... .......... .......... .......... 39% 4.67M 0s
+   100K .......... .......... .......... .......... .......... 59% 68.0M 0s
+   150K .......... .......... .......... .......... .......... 79% 5.25M 0s
+   200K .......... .......... .......... .......... .......... 99% 71.3M 0s
+   250K                                                       100% 1.63T=0.04s
+
+Last-modified header missing -- time-stamps turned off.
+2026-03-26 15:15:10 (6.04 MB/s) - ‘kb.opentechnology.ru/index.php?action=attachment&id=12207’ saved [256894/256894]
+
+--2026-03-26 15:15:10--  https://kb.opentechnology.ru/index.php?solution_id=1781
+Reusing existing connection to kb.opentechnology.ru:443.
+HTTP request sent, awaiting response... 302 Found
+Location: https://kb.opentechnology.ru/?action=login&auth_driver=rm3kl [following]
+--2026-03-26 15:15:14--  https://kb.opentechnology.ru/?action=login&auth_driver=rm3kl
+Reusing existing connection to kb.opentechnology.ru:443.
+HTTP request sent, awaiting response... 302 Found
+Location: https://moodle.opentechnology.ru/local/oauth/login.php?type=web_server&client_id=phpMyFAQ3KL&redirect_uri=https%3A%2F%2Fkb.opentechnology.ru%2F%3Fauth_driver%3Drm3kl&response_type=code&scope=user_info+user_courses [following]
+--2026-03-26 15:15:15--  https://moodle.opentechnology.ru/local/oauth/login.php?type=web_server&client_id=phpMyFAQ3KL&redirect_uri=https%3A%2F%2Fkb.opentechnology.ru%2F%3Fauth_driver%3Drm3kl&response_type=code&scope=user_info+user_courses
+Connecting to moodle.opentechnology.ru (moodle.opentechnology.ru)|185.178.208.138|:443... connected.
+HTTP request sent, awaiting response... 303 See Other
+Location: https://moodle.opentechnology.ru/login/index.php [following]
+--2026-03-26 15:15:15--  https://moodle.opentechnology.ru/login/index.php
+Reusing existing connection to moodle.opentechnology.ru:443.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [text/html]
+Saving to: ‘kb.opentechnology.ru/index.php?solution_id=1781.html’
+
+     0K .......... .......... .......... .......... .....      2.88M=0.02s
+
+2026-03-26 15:15:15 (2.88 MB/s) - ‘kb.opentechnology.ru/index.php?solution_id=1781.html’ saved [47005]
+
+--2026-03-26 15:15:15--  https://kb.opentechnology.ru/index.php?solution_id=1086
+Connecting to kb.opentechnology.ru (kb.opentechnology.ru)|186.2.171.14|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: https://kb.opentechnology.ru/?action=login&auth_driver=rm3kl [following]
+--2026-03-26 15:15:19--  https://kb.opentechnology.ru/?action=login&auth_driver=rm3kl
+Reusing existing connection to kb.opentechnology.ru:443.
+HTTP request sent, awaiting response... 302 Found
+Location: https://moodle.opentechnology.ru/local/oauth/login.php?type=web_server&client_id=phpMyFAQ3KL&redirect_uri=https%3A%2F%2Fkb.opentechnology.ru%2F%3Fauth_driver%3Drm3kl&response_type=code&scope=user_info+user_courses [following]
+--2026-03-26 15:15:21--  https://moodle.opentechnology.ru/local/oauth/login.php?type=web_server&client_id=phpMyFAQ3KL&redirect_uri=https%3A%2F%2Fkb.opentechnology.ru%2F%3Fauth_driver%3Drm3kl&response_type=code&scope=user_info+user_courses
+Connecting to moodle.opentechnology.ru (moodle.opentechnology.ru)|185.178.208.138|:443... connected.
+HTTP request sent, awaiting response... 303 See Other
+Location: https://moodle.opentechnology.ru/login/index.php [following]
+--2026-03-26 15:15:21--  https://moodle.opentechnology.ru/login/index.php
+Reusing existing connection to moodle.opentechnology.ru:443.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [text/html]
+Saving to: ‘kb.opentechnology.ru/index.php?solution_id=1086.html’
+
+     0K .......... .......... .......... .......... .....      2.65M=0.02s
+
+2026-03-26 15:15:21 (2.65 MB/s) - ‘kb.opentechnology.ru/index.php?solution_id=1086.html’ saved [47005]
+
+--2026-03-26 15:15:21--  https://kb.opentechnology.ru/index.php?solution_id=1308
+Connecting to kb.opentechnology.ru (kb.opentechnology.ru)|186.2.171.14|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [text/html]
+Saving to: ‘kb.opentechnology.ru/index.php?solution_id=1308.html’
+
+     0K .......... .......... .......... .......... .......... 1.48M
+    50K .......... .......... .......... .......... ........   26.6M=0.03s
+
+2026-03-26 15:15:23 (2.77 MB/s) - ‘kb.opentechnology.ru/index.php?solution_id=1308.html’ saved [101101]
+
+--2026-03-26 15:15:23--  https://kb.opentechnology.ru/index.php?solution_id=1329
+Reusing existing connection to kb.opentechnology.ru:443.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [text/html]
+Saving to: ‘kb.opentechnology.ru/index.php?solution_id=1329.html’
+
+     0K .......... .......... .......... .......... .......... 1.51M
+    50K .......... .......... .......... .......... .......... 4.72M
+   100K ......                                                 11.4T=0.04s
+
+2026-03-26 15:15:26 (2.42 MB/s) - ‘kb.opentechnology.ru/index.php?solution_id=1329.html’ saved [108671]
+
+--2026-03-26 15:15:26--  https://kb.opentechnology.ru/index.php?solution_id=1441
+Reusing existing connection to kb.opentechnology.ru:443.
+HTTP request sent, awaiting response... 302 Found
+Location: https://kb.opentechnology.ru/?action=login&auth_driver=rm3kl [following]
+--2026-03-26 15:15:30--  https://kb.opentechnology.ru/?action=login&auth_driver=rm3kl
+Reusing existing connection to kb.opentechnology.ru:443.
+HTTP request sent, awaiting response... 302 Found
+Location: https://moodle.opentechnology.ru/local/oauth/login.php?type=web_server&client_id=phpMyFAQ3KL&redirect_uri=https%3A%2F%2Fkb.opentechnology.ru%2F%3Fauth_driver%3Drm3kl&response_type=code&scope=user_info+user_courses [following]
+--2026-03-26 15:15:31--  https://moodle.opentechnology.ru/local/oauth/login.php?type=web_server&client_id=phpMyFAQ3KL&redirect_uri=https%3A%2F%2Fkb.opentechnology.ru%2F%3Fauth_driver%3Drm3kl&response_type=code&scope=user_info+user_courses
+Connecting to moodle.opentechnology.ru (moodle.opentechnology.ru)|185.178.208.138|:443... connected.
+HTTP request sent, awaiting response... 303 See Other
+Location: https://moodle.opentechnology.ru/login/index.php [following]
+--2026-03-26 15:15:31--  https://moodle.opentechnology.ru/login/index.php
+Reusing existing connection to moodle.opentechnology.ru:443.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [text/html]
+Saving to: ‘kb.opentechnology.ru/index.php?solution_id=1441.html’
+
+     0K .......... .......... .......... .......... .....      3.81M=0.01s
+
+2026-03-26 15:15:31 (3.81 MB/s) - ‘kb.opentechnology.ru/index.php?solution_id=1441.html’ saved [47005]
+
+--2026-03-26 15:15:31--  https://kb.opentechnology.ru/index.php?solution_id=1750
+Connecting to kb.opentechnology.ru (kb.opentechnology.ru)|186.2.171.14|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: https://kb.opentechnology.ru/?action=login&auth_driver=rm3kl [following]
+--2026-03-26 15:15:35--  https://kb.opentechnology.ru/?action=login&auth_driver=rm3kl
+Reusing existing connection to kb.opentechnology.ru:443.
+HTTP request sent, awaiting response... 302 Found
+Location: https://moodle.opentechnology.ru/local/oauth/login.php?type=web_server&client_id=phpMyFAQ3KL&redirect_uri=https%3A%2F%2Fkb.opentechnology.ru%2F%3Fauth_driver%3Drm3kl&response_type=code&scope=user_info+user_courses [following]
+--2026-03-26 15:15:37--  https://moodle.opentechnology.ru/local/oauth/login.php?type=web_server&client_id=phpMyFAQ3KL&redirect_uri=https%3A%2F%2Fkb.opentechnology.ru%2F%3Fauth_driver%3Drm3kl&response_type=code&scope=user_info+user_courses
+Connecting to moodle.opentechnology.ru (moodle.opentechnology.ru)|185.178.208.138|:443... connected.
+HTTP request sent, awaiting response... 303 See Other
+Location: https://moodle.opentechnology.ru/login/index.php [following]
+--2026-03-26 15:15:37--  https://moodle.opentechnology.ru/login/index.php
+Reusing existing connection to moodle.opentechnology.ru:443.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [text/html]
+Saving to: ‘kb.opentechnology.ru/index.php?solution_id=1750.html’
+
+     0K .......... .......... .......... .......... .....      2.59M=0.02s
+
+2026-03-26 15:15:37 (2.59 MB/s) - ‘kb.opentechnology.ru/index.php?solution_id=1750.html’ saved [47005]
+
+--2026-03-26 15:15:37--  https://kb.opentechnology.ru/index.php?solution_id=1746
+Connecting to kb.opentechnology.ru (kb.opentechnology.ru)|186.2.171.14|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: https://kb.opentechnology.ru/?action=login&auth_driver=rm3kl [following]
+--2026-03-26 15:15:41--  https://kb.opentechnology.ru/?action=login&auth_driver=rm3kl
+Reusing existing connection to kb.opentechnology.ru:443.
+HTTP request sent, awaiting response... 302 Found
+Location: https://moodle.opentechnology.ru/local/oauth/login.php?type=web_server&client_id=phpMyFAQ3KL&redirect_uri=https%3A%2F%2Fkb.opentechnology.ru%2F%3Fauth_driver%3Drm3kl&response_type=code&scope=user_info+user_courses [following]
+--2026-03-26 15:15:42--  https://moodle.opentechnology.ru/local/oauth/login.php?type=web_server&client_id=phpMyFAQ3KL&redirect_uri=https%3A%2F%2Fkb.opentechnology.ru%2F%3Fauth_driver%3Drm3kl&response_type=code&scope=user_info+user_courses
+Connecting to moodle.opentechnology.ru (moodle.opentechnology.ru)|185.178.208.138|:443... connected.
+HTTP request sent, awaiting response... 303 See Other
+Location: https://moodle.opentechnology.ru/login/index.php [following]
+--2026-03-26 15:15:42--  https://moodle.opentechnology.ru/login/index.php
+Reusing existing connection to moodle.opentechnology.ru:443.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [text/html]
+Saving to: ‘kb.opentechnology.ru/index.php?solution_id=1746.html’
+
+     0K .......... .......... .......... .......... .....      3.20M=0.01s
+
+2026-03-26 15:15:42 (3.20 MB/s) - ‘kb.opentechnology.ru/index.php?solution_id=1746.html’ saved [47005]
+
+--2026-03-26 15:15:42--  https://kb.opentechnology.ru/index.php?action=attachment&id=12573
+Connecting to kb.opentechnology.ru (kb.opentechnology.ru)|186.2.171.14|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 517468 (505K) [image/png]
+Saving to: ‘kb.opentechnology.ru/index.php?action=attachment&id=12573’
+
+     0K .......... .......... .......... .......... ..........  9% 2.24M 0s
+    50K .......... .......... .......... .......... .......... 19% 4.80M 0s
+   100K .......... .......... .......... .......... .......... 29% 25.0M 0s
+   150K .......... .......... .......... .......... .......... 39% 5.66M 0s
+   200K .......... .......... .......... .......... .......... 49% 97.3M 0s
+   250K .......... .......... .......... .......... .......... 59% 82.5M 0s
+   300K .......... .......... .......... .......... .......... 69% 22.5M 0s
+   350K .......... .......... .......... .......... .......... 79% 2.98M 0s
+   400K .......... .......... .......... .......... .......... 89% 5.28M 0s
+   450K .......... .......... .......... .......... .......... 98% 4.35M 0s
+   500K .....                                                 100% 9.95T=0.08s
+
+Last-modified header missing -- time-stamps turned off.
+2026-03-26 15:15:43 (5.97 MB/s) - ‘kb.opentechnology.ru/index.php?action=attachment&id=12573’ saved [517468/517468]
+
+--2026-03-26 15:15:43--  https://kb.opentechnology.ru/index.php?solution_id=1766
+Reusing existing connection to kb.opentechnology.ru:443.
+HTTP request sent, awaiting response... 302 Found
+Location: https://kb.opentechnology.ru/?action=login&auth_driver=rm3kl [following]
+--2026-03-26 15:15:47--  https://kb.opentechnology.ru/?action=login&auth_driver=rm3kl
+Reusing existing connection to kb.opentechnology.ru:443.
+HTTP request sent, awaiting response... 302 Found
+Location: https://moodle.opentechnology.ru/local/oauth/login.php?type=web_server&client_id=phpMyFAQ3KL&redirect_uri=https%3A%2F%2Fkb.opentechnology.ru%2F%3Fauth_driver%3Drm3kl&response_type=code&scope=user_info+user_courses [following]
+--2026-03-26 15:15:48--  https://moodle.opentechnology.ru/local/oauth/login.php?type=web_server&client_id=phpMyFAQ3KL&redirect_uri=https%3A%2F%2Fkb.opentechnology.ru%2F%3Fauth_driver%3Drm3kl&response_type=code&scope=user_info+user_courses
+Connecting to moodle.opentechnology.ru (moodle.opentechnology.ru)|185.178.208.138|:443... connected.
+HTTP request sent, awaiting response... 303 See Other
+Location: https://moodle.opentechnology.ru/login/index.php [following]
+--2026-03-26 15:15:48--  https://moodle.opentechnology.ru/login/index.php
+Reusing existing connection to moodle.opentechnology.ru:443.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [text/html]
+Saving to: ‘kb.opentechnology.ru/index.php?solution_id=1766.html’
+
+     0K .......... .......... .......... .......... .....      3.85M=0.01s
+
+2026-03-26 15:15:48 (3.85 MB/s) - ‘kb.opentechnology.ru/index.php?solution_id=1766.html’ saved [47005]
+
+--2026-03-26 15:15:48--  https://kb.opentechnology.ru/index.php?solution_id=1350
+Connecting to kb.opentechnology.ru (kb.opentechnology.ru)|186.2.171.14|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [text/html]
+Saving to: ‘kb.opentechnology.ru/index.php?solution_id=1350.html’
+
+     0K .......... .......... .......... .......... ..........  194K
+    50K .........                                              18.4T=0.3s
+
+2026-03-26 15:15:51 (233 KB/s) - ‘kb.opentechnology.ru/index.php?solution_id=1350.html’ saved [61329]
+
+--2026-03-26 15:15:51--  https://kb.opentechnology.ru/index.php?solution_id=1630
+Reusing existing connection to kb.opentechnology.ru:443.
+HTTP request sent, awaiting response... 302 Found
+Location: https://kb.opentechnology.ru/?action=login&auth_driver=rm3kl [following]
+--2026-03-26 15:15:55--  https://kb.opentechnology.ru/?action=login&auth_driver=rm3kl
+Reusing existing connection to kb.opentechnology.ru:443.
+HTTP request sent, awaiting response... 302 Found
+Location: https://moodle.opentechnology.ru/local/oauth/login.php?type=web_server&client_id=phpMyFAQ3KL&redirect_uri=https%3A%2F%2Fkb.opentechnology.ru%2F%3Fauth_driver%3Drm3kl&response_type=code&scope=user_info+user_courses [following]
+--2026-03-26 15:15:56--  https://moodle.opentechnology.ru/local/oauth/login.php?type=web_server&client_id=phpMyFAQ3KL&redirect_uri=https%3A%2F%2Fkb.opentechnology.ru%2F%3Fauth_driver%3Drm3kl&response_type=code&scope=user_info+user_courses
+Connecting to moodle.opentechnology.ru (moodle.opentechnology.ru)|185.178.208.138|:443... connected.
+HTTP request sent, awaiting response... 303 See Other
+Location: https://moodle.opentechnology.ru/login/index.php [following]
+--2026-03-26 15:15:56--  https://moodle.opentechnology.ru/login/index.php
+Reusing existing connection to moodle.opentechnology.ru:443.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [text/html]
+Saving to: ‘kb.opentechnology.ru/index.php?solution_id=1630.html’
+
+     0K .......... .......... .......... .......... .....      1.66M=0.03s
+
+2026-03-26 15:15:57 (1.66 MB/s) - ‘kb.opentechnology.ru/index.php?solution_id=1630.html’ saved [47005]
+
+--2026-03-26 15:15:57--  https://kb.opentechnology.ru/index.php?solution_id=1765
+Connecting to kb.opentechnology.ru (kb.opentechnology.ru)|186.2.171.14|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: https://kb.opentechnology.ru/?action=login&auth_driver=rm3kl [following]
+--2026-03-26 15:16:01--  https://kb.opentechnology.ru/?action=login&auth_driver=rm3kl
+Reusing existing connection to kb.opentechnology.ru:443.
+HTTP request sent, awaiting response... 302 Found
+Location: https://moodle.opentechnology.ru/local/oauth/login.php?type=web_server&client_id=phpMyFAQ3KL&redirect_uri=https%3A%2F%2Fkb.opentechnology.ru%2F%3Fauth_driver%3Drm3kl&response_type=code&scope=user_info+user_courses [following]
+--2026-03-26 15:16:02--  https://moodle.opentechnology.ru/local/oauth/login.php?type=web_server&client_id=phpMyFAQ3KL&redirect_uri=https%3A%2F%2Fkb.opentechnology.ru%2F%3Fauth_driver%3Drm3kl&response_type=code&scope=user_info+user_courses
+Connecting to moodle.opentechnology.ru (moodle.opentechnology.ru)|185.178.208.138|:443... connected.
+HTTP request sent, awaiting response... 303 See Other
+Location: https://moodle.opentechnology.ru/login/index.php [following]
+--2026-03-26 15:16:02--  https://moodle.opentechnology.ru/login/index.php
+Reusing existing connection to moodle.opentechnology.ru:443.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [text/html]
+Saving to: ‘kb.opentechnology.ru/index.php?solution_id=1765.html’
+
+     0K .......... .......... .......... .......... .....      1.73M=0.03s
+
+2026-03-26 15:16:02 (1.73 MB/s) - ‘kb.opentechnology.ru/index.php?solution_id=1765.html’ saved [47005]
+
+--2026-03-26 15:16:02--  https://kb.opentechnology.ru/index.php?solution_id=1762
+Connecting to kb.opentechnology.ru (kb.opentechnology.ru)|186.2.171.14|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: https://kb.opentechnology.ru/?action=login&auth_driver=rm3kl [following]
+--2026-03-26 15:16:06--  https://kb.opentechnology.ru/?action=login&auth_driver=rm3kl
+Reusing existing connection to kb.opentechnology.ru:443.
+HTTP request sent, awaiting response... 302 Found
+Location: https://moodle.opentechnology.ru/local/oauth/login.php?type=web_server&client_id=phpMyFAQ3KL&redirect_uri=https%3A%2F%2Fkb.opentechnology.ru%2F%3Fauth_driver%3Drm3kl&response_type=code&scope=user_info+user_courses [following]
+--2026-03-26 15:16:07--  https://moodle.opentechnology.ru/local/oauth/login.php?type=web_server&client_id=phpMyFAQ3KL&redirect_uri=https%3A%2F%2Fkb.opentechnology.ru%2F%3Fauth_driver%3Drm3kl&response_type=code&scope=user_info+user_courses
+Connecting to moodle.opentechnology.ru (moodle.opentechnology.ru)|185.178.208.138|:443... connected.
+HTTP request sent, awaiting response... 303 See Other
+Location: https://moodle.opentechnology.ru/login/index.php [following]
+--2026-03-26 15:16:07--  https://moodle.opentechnology.ru/login/index.php
+Reusing existing connection to moodle.opentechnology.ru:443.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [text/html]
+Saving to: ‘kb.opentechnology.ru/index.php?solution_id=1762.html’
+
+     0K .......... .......... .......... .......... .....      2.12M=0.02s
+
+2026-03-26 15:16:07 (2.12 MB/s) - ‘kb.opentechnology.ru/index.php?solution_id=1762.html’ saved [47005]
+
+--2026-03-26 15:16:07--  https://kb.opentechnology.ru/index.php?action=attachment&id=12563
+Connecting to kb.opentechnology.ru (kb.opentechnology.ru)|186.2.171.14|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 729096 (712K) [image/png]
+Saving to: ‘kb.opentechnology.ru/index.php?action=attachment&id=12563’
+
+     0K .......... .......... .......... .......... ..........  7% 2.59M 0s
+    50K .......... .......... .......... .......... .......... 14% 5.52M 0s
+   100K .......... .......... .......... .......... .......... 21% 32.6M 0s
+   150K .......... .......... .......... .......... .......... 28% 6.02M 0s
+   200K .......... .......... .......... .......... .......... 35%  393M 0s
+   250K .......... .......... .......... .......... .......... 42% 78.3M 0s
+   300K .......... .......... .......... .......... .......... 49% 61.0M 0s
+   350K .......... .......... .......... .......... .......... 56% 6.35M 0s
+   400K .......... .......... .......... .......... .......... 63% 71.1M 0s
+   450K .......... .......... .......... .......... .......... 70%  177M 0s
+   500K .......... .......... .......... .......... .......... 77% 15.0M 0s
+   550K .......... .......... .......... .......... .......... 84% 9.66M 0s
+   600K .......... .......... .......... .......... .......... 91% 41.2M 0s
+   650K .......... .......... .......... .......... .......... 98% 24.8M 0s
+   700K .......... ..                                         100% 13.4M=0.06s
+
+Last-modified header missing -- time-stamps turned off.
+2026-03-26 15:16:09 (11.6 MB/s) - ‘kb.opentechnology.ru/index.php?action=attachment&id=12563’ saved [729096/729096]
+
+--2026-03-26 15:16:09--  https://kb.opentechnology.ru/index.php?solution_id=1448
+Reusing existing connection to kb.opentechnology.ru:443.
+HTTP request sent, awaiting response... 302 Found
+Location: https://kb.opentechnology.ru/?action=login&auth_driver=rm3kl [following]
+--2026-03-26 15:16:12--  https://kb.opentechnology.ru/?action=login&auth_driver=rm3kl
+Reusing existing connection to kb.opentechnology.ru:443.
+HTTP request sent, awaiting response... 302 Found
+Location: https://moodle.opentechnology.ru/local/oauth/login.php?type=web_server&client_id=phpMyFAQ3KL&redirect_uri=https%3A%2F%2Fkb.opentechnology.ru%2F%3Fauth_driver%3Drm3kl&response_type=code&scope=user_info+user_courses [following]
+--2026-03-26 15:16:14--  https://moodle.opentechnology.ru/local/oauth/login.php?type=web_server&client_id=phpMyFAQ3KL&redirect_uri=https%3A%2F%2Fkb.opentechnology.ru%2F%3Fauth_driver%3Drm3kl&response_type=code&scope=user_info+user_courses
+Connecting to moodle.opentechnology.ru (moodle.opentechnology.ru)|185.178.208.138|:443... connected.
+HTTP request sent, awaiting response... 303 See Other
+Location: https://moodle.opentechnology.ru/login/index.php [following]
+--2026-03-26 15:16:14--  https://moodle.opentechnology.ru/login/index.php
+Reusing existing connection to moodle.opentechnology.ru:443.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [text/html]
+Saving to: ‘kb.opentechnology.ru/index.php?solution_id=1448.html’
+
+     0K .......... .......... .......... .......... .....      2.99M=0.02s
+
+2026-03-26 15:16:14 (2.99 MB/s) - ‘kb.opentechnology.ru/index.php?solution_id=1448.html’ saved [47005]
+
+--2026-03-26 15:16:14--  https://kb.opentechnology.ru/index.php?solution_id=1440
+Connecting to kb.opentechnology.ru (kb.opentechnology.ru)|186.2.171.14|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: https://kb.opentechnology.ru/?action=login&auth_driver=rm3kl [following]
+--2026-03-26 15:16:18--  https://kb.opentechnology.ru/?action=login&auth_driver=rm3kl
+Reusing existing connection to kb.opentechnology.ru:443.
 HTTP request sent, awaiting response... 
