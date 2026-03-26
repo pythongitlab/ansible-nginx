@@ -1,0 +1,885 @@
+<!doctype html>
+<!--[if IE 9 ]> <html lang="ru" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="ru" class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <title>База знаний ООО &quot;Открытые технологии&quot; - Логика курса 3KL, часть 3. Примеры использования</title>
+    <meta name="description" content="В статье описаны примеры использования Логики курса 3KL: отправка сообщений, настройка ...">
+    <meta name="keywords" content="использование логики курса,ежегодная,использование цифровой образовательной среды,Логика курса, аттестация">
+    <meta name="author" content="ООО "Открытые технологии"">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="application-name" content="phpMyFAQ 2.9.13">
+    <meta name="robots" content="index, follow">
+    <meta name="revisit-after" content="7 days">
+    <meta name="apple-itunes-app" content="app-id=977896957">
+    <!-- Share on Facebook -->
+    <meta property="og:title" content="База знаний ООО &quot;Открытые технологии&quot; - Логика курса 3KL, часть 3. Примеры использования">
+    <meta property="og:description" content="В статье описаны примеры использования Логики курса 3KL: отправка сообщений, настройка ...">
+    <meta property="og:image" content="">
+    <link rel="stylesheet" href="https://kb.opentechnology.ru/assets/template/ot/css/style.min.css?v=1">
+    <link rel="shortcut icon" href="https://kb.opentechnology.ru/assets/template/ot/favicon.ico">
+    <link rel="apple-touch-icon" href="https://kb.opentechnology.ru/assets/template/ot/apple-touch-icon.png">
+    <link rel="canonical" href="https://kb.opentechnology.ru/content/27/173/ru/logika-kursa-3kl-castʹ-3-primery-ispolʹzovania.html">
+    <script src="https://kb.opentechnology.ru/assets/js/modernizr.min.js"></script>
+    <script src="https://kb.opentechnology.ru/assets/js/phpmyfaq.min.js"></script>
+    <script src="https://kb.opentechnology.ru/assets/js/libs/bootstrap-table/bootstrap-table.min.js"></script>
+    <link rel="alternate" title="News RSS Feed" type="application/rss+xml" href="https://kb.opentechnology.ru/feed/news/rss.php">
+    <link rel="alternate" title="TopTen RSS Feed" type="application/rss+xml" href="https://kb.opentechnology.ru/feed/topten/rss.php">
+    <link rel="alternate" title="Latest FAQ Records RSS Feed" type="application/rss+xml" href="https://kb.opentechnology.ru/feed/latest/rss.php">
+    <link rel="alternate" title="Open Questions RSS Feed" type="application/rss+xml" href="https://kb.opentechnology.ru/feed/openquestions/rss.php">
+    <link rel="search" type="application/opensearchdescription+xml" title="База знаний ООО Открытые технологии - Логика курса 3KL, часть 3. Примеры использования" href="https://kb.opentechnology.ru/opensearch.html">
+    <script>
+        if (self === top) {
+            document.documentElement.style.display = 'block';
+        } else {
+            top.location = self.location;
+        }
+    </script>
+    <style> html{display:none;} </style>
+</head>
+<body dir="ltr">
+<header>
+    <div class="pmf-wrapper pmf-masthead">
+        <div class="container-fluid">
+            <a id="logo" title="База знаний ООО Открытые технологии" href="https://kb.opentechnology.ru/">
+                <img src="https://kb.opentechnology.ru/assets/template/ot/img/logo.png" alt="phpMyFAQ">
+            </a>
+            <div id="mobile-nav-toggle" class="pull-right">
+                <a href="#" data-toggle="collapse" data-target=".pmf-nav .navbar-collapse">
+                    <i aria-hidden="true" class="fa fa-bars"></i>
+                </a>
+            </div>
+            <nav class="pull-right pmf-nav">
+                <div class="collapse navbar-collapse">
+                    <ul class="nav nav-pills navbar-nav">
+                        <li class=""><a href="https://kb.opentechnology.ru/search.html">Расширенный поиск</a></li>
+                        <li class=""><a href="https://kb.opentechnology.ru/showcat.html">Разделы</a></li>
+                        <li class=""><a href="https://kb.opentechnology.ru/addcontent.html">ответ</a></li>
+                        <li class=""><a href="https://kb.opentechnology.ru/ask.html">вопрос</a></li>
+                        <li class=""><a href="https://kb.opentechnology.ru/open.html">Открытые вопросы</a></li>
+                        <li class="dropdown ">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                Вход
+                                <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-right">
+                                
+                                <li></li>
+                                <li><a href="?action=login&auth_driver=rm3kl">Войти через Moodle</a></li>
+                                
+                                
+                                
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <div class="pmf-wrapper pmf-subheader">
+        <div class="container-fluid">
+            <div class="pmf-breadcrumb">
+                
+                <ul class="breadcrumb"></ul>
+                
+            </div>
+            <div class="pmf-searchbox">
+                <form role="search" id="search" action="?action=search" method="get">
+                    <input type="hidden" name="action" value="search">
+                    <button class="searchbutton" type="submit" aria-label="Поиск">
+                        <i aria-hidden="true" class="fa fa-search"></i>
+                    </button>
+                    <input type="text" class="searchfield typeahead" name="search" id="searchbox"
+                           autocomplete="off" placeholder="Поиск ...">
+                </form>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="pmf-wrapper pmf-main">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-9 pmf-maincontent">
+                <section>
+            <article class="pmf-faq">
+                <header>
+                    <div class="pull-right hidden-print" id="solution_id">
+                        <a class="label label-info" href="/index.php?solution_id=1173">
+                            ID #1173
+                        </a>
+                    </div>
+                    <h1>Логика курса 3KL, часть 3. Примеры использования</h1>
+                    <div class="pmf-faq-meta clearfix">
+                        <div class="pmf-faq-author">
+                            <i aria-hidden="true" class="fa fa-user"></i>
+                            <span class="data">Сергей Гусев</span>
+                        </div>
+                        <div class="pmf-faq-date">
+                            <i aria-hidden="true" class="fa fa-calendar"></i>
+                            <span class="data">18.09.2025</span>
+                        </div>
+                        <div class="pmf-faq-comments">
+                            <i aria-hidden="true" class="fa fa-comments"></i>
+                            <span class="data"><a class="show-comment-form" href="#">0 Комментариев</a></span>
+                        </div>
+                        <div class="pmf-faq-edit">
+                            
+                        </div>
+                    </div>
+                </header>
+                <div class="pmf-faq-body">
+                    <div class="otsf-incut advice">В статье описаны примеры использования Логики курса 3KL: отправка сообщений, настройка различных уведомлений, настройки подписок на <abbr data-toggle="tooltip" data-placement="bottom" title="Структурная единица (раздел сайта) в СЭО 3KL, объединяющий учебные материалы, преподавателей и изучающих материалы пользователей. Курс может включать в себя как набор учебных материалов, так и один единственный учебный материал, отображаемый сразу после входа в курс, также курс может не содержать учебных материалов и выполнять техническую функцию, например, реализовывать сообщество пользователей или элемент для организации учебных траекторий. Курс является минимальной единицей, на которую можно подписывать пользователей. При подписке на курс предполагается, что пользователь освоит его целиком. Статья «Форматы курсов».">курс</abbr>, отписка пользователя от курса, выдача значка, настройка ограничений доступа на элемент курса, организация регулярной переаттестации сотрудников. <span style="color: transparent;">. . </span></div>
+<h2>Инструкция по разделу «Логика курса 3KL». Часть 3</h2>
+<p><strong>Элемент курса «Логика курса 3KL» (далее - Логика курса 3KL, ЛК)</strong> — инструмент, позволяющий автоматизировать процессы отправки уведомлений, записи на курс, отписки от курса и внесения изменений в профиль подписчиков в зависимости от широкого ряда условий и настроек.</p>
+<p>Данная инструкция описывает примеры использования Логики курса 3KL для автоматизации процессов управления курсом и подписчиками. Используя эти материалы, вы сможете настроить свою систему подобным образом или на их основе разработать свои приемы применения элемента ЛК.</p>
+<h3>Содержание:</h3>
+<div class="otsf-incut example"><strong><a href="https://kb.opentechnology.ru/index.php?solution_id=1168#q1">Часть 1. Принцип работы, добавление и настройка элемента</a></strong><br />1. <a href="https://kb.opentechnology.ru/index.php?solution_id=1168#q1"><strong>Принцип работы «Логики курса 3KL» (ЛК)</strong></a><br />2. <a href="https://kb.opentechnology.ru/index.php?solution_id=1168#q2"><strong>Добавление элемента ЛК в курс</strong></a><br />3. <a href="https://kb.opentechnology.ru/index.php?solution_id=1168#q3"><strong>Страница «Добавление: Логика курса 3KL»</strong></a><br />3.1. <a href="https://kb.opentechnology.ru/index.php?solution_id=1168#q31"><abbr data-toggle="tooltip" data-placement="bottom" title="Фрагмент учебного курса, она имеет название и содержит обучающий контент по одной теме или модулю. Секция представляет собой законченную методическую единицу. Статья «Тематические секции курса».">Секция</abbr> «Отображение модуля»</a><br />3.2. <a href="https://kb.opentechnology.ru/index.php?solution_id=1168#q32">Секция «Ограничение доступа»</a><br />         <a href="https://kb.opentechnology.ru/index.php?solution_id=1168#q1111">Пример <abbr data-toggle="tooltip" data-placement="bottom" title="Позволяют задавать правила и критерии доступности элементов курса и секций курса в зависимости от условий. Каждый плагин ограничения доступа позволяет задавать свой тип условий. Статья «Ограничения доступности, управление ограничениями».">ограничения доступа</abbr></a><br />3.3. <a href="https://kb.opentechnology.ru/index.php?solution_id=1168#q33">Секция «Оценивание»</a><br />3.4. <a href="https://kb.opentechnology.ru/index.php?solution_id=1168#q34">Секция «Общие настройки модуля»</a><br />3.5. <a href="https://kb.opentechnology.ru/index.php?solution_id=1168#q35">Секция «Выполнение элемента курса»</a><br />3.6. <a href="https://kb.opentechnology.ru/index.php?solution_id=1168#q36">Секция «Теги»</a><br />3.7. <a href="https://kb.opentechnology.ru/index.php?solution_id=1168#q37">Секция «Компетенции»</a><br />3.8. <a href="https://kb.opentechnology.ru/index.php?solution_id=1168#q38">Секция «Оперативность проверки»</a><br />3.9. <a href="https://kb.opentechnology.ru/index.php?solution_id=1168#q39">Секция «Дополнительные настройки»</a><br />3.10. <a href="https://kb.opentechnology.ru/index.php?solution_id=1168#q310">«Сохранение настроек»</a></div>
+<div class="otsf-incut example"><strong><a href="https://kb.opentechnology.ru/index.php?solution_id=1172">Часть 2. Управление действиями и обработчики</a></strong> <br />4. <a href="https://kb.opentechnology.ru/index.php?solution_id=1172#q4">Страница Логики курса</a><br />   4.1. <a href="https://kb.opentechnology.ru/index.php?solution_id=1172#q41">Обработчики Логики курса</a><br />     4.1.1. <a href="https://kb.opentechnology.ru/index.php?solution_id=1172#q411">Виды обработчиков</a><br />     4.1.2. <a href="https://kb.opentechnology.ru/index.php?solution_id=1172#q412">Настройки обработчиков</a><br />5. <a href="https://kb.opentechnology.ru/index.php?solution_id=1172#q5">Управление действиями. Добавление действий</a><br />   5.1. <a href="https://kb.opentechnology.ru/index.php?solution_id=1172#q51">Действие «Отправить сообщение»</a><br />   5.2. <a href="https://kb.opentechnology.ru/index.php?solution_id=1172#q52">Действие «Записать в поле профиля»</a><br />   5.3. <a href="https://kb.opentechnology.ru/index.php?solution_id=1172#q53">Действие «Добавить в группу»</a> <br />   5.4. <a href="https://kb.opentechnology.ru/index.php?solution_id=1172#q54">Действие «Записать на курс»</a><br />   5.5. <a href="https://kb.opentechnology.ru/index.php?solution_id=1172#q55">Действие «Отписать от текущего курса»</a><br />   5.6. <a href="https://kb.opentechnology.ru/index.php?solution_id=1172#q56">Действие «Удалить пользовательские данные в курсе»</a><br />6. <a href="https://kb.opentechnology.ru/index.php?solution_id=1172#q6">Обработчики и действия</a><br />7. <a href="https://kb.opentechnology.ru/index.php?solution_id=1172#q7">Дополнительная информация</a><br />   7.1. <a href="https://kb.opentechnology.ru/index.php?solution_id=1172#q71">Макроподстановки</a><br />   7.2. <a href="https://kb.opentechnology.ru/index.php?solution_id=1172#q72">Права на получение уведомлений</a><br />8. <a href="https://kb.opentechnology.ru/index.php?solution_id=1172#q8">Возможные сценарии</a><br />   8.1. <a href="https://kb.opentechnology.ru/index.php?solution_id=1172#q81">Перезапись пользователя на курс без сохранения оценок</a><br />   8.2. <a href="https://kb.opentechnology.ru/index.php?solution_id=1172#q82">Запись в <abbr data-toggle="tooltip" data-placement="bottom" title="Группы пользователей, создаваемые преподавателем на уровне курса. Статья «Локальные группы и групповой режим».">локальные группы</abbr></a></div>
+<div class="otsf-incut example"><strong>Часть 3. Примеры использования</strong><br /><span style="color: #333333;"><a style="color: #333333;" href="#lk8">8. </a></span><strong><a href="#lk8">Примеры использования Логики курса 3KL </a></strong><br /><a href="#lk81"><span style="color: #333333;">8.1.</span> Отправка приветственных сообщений подписанным на курс пользователям</a><br /><a href="#lk82"><span style="color: #333333;">8.2.</span> Автоматическая запись на курс с использованием плагина «Otautoenrol» и Логики курса 3KL </a><br /><a href="#lk83"><span style="color: #333333;">8.3.</span> Отписка пользователя от курса по истечении времени на изучение курса</a><br /><a href="#lk84"><span style="color: #333333;">8.4.</span> Выдать студенту значок, если курс пройден более чем на 80% за три дня от подписки на курс</a><br /><a href="#lk85"><span style="color: #333333;">8.5.</span> Разослать <abbr data-toggle="tooltip" data-placement="bottom" title="Оповещение пользователя заранее определенным способом информирования (электронным письмом, всплывающим сообщением, смс, через мессенджер и т. п.) о наступлении отслеживаемого в системе события. Статья «Уведомления в СЭО 3КL».">уведомление</abbr> о приближающемся окончании подписки</a><br /><a href="#lk86"><span style="color: #333333;">8.6.</span> Периодическое напоминание о чем-либо</a><br /><a href="#lk87"><span style="color: #333333;">8.7. </span>Напоминание об учебе</a><br /><a href="#lk88"><span style="color: #333333;">8.8.</span> Уведомление о завершении обучения</a><br /><a href="#lk89"><span style="color: #333333;">8.9.</span> Как настроить ограничение доступа на элемент в зависимости от Логики курса</a><br /><a href="#lk810"><span style="color: #333333;">8.10.</span> Примеры настройки отправки уведомлений кураторам с помощью Логики курса 3KL <br /></a>8.11. <a href="#lk811">Организация регулярной переаттестации сотрудников</a><br />8.12. <a href="#q812">Как с помощью Логики курса 3KL настроить подписку и задать период записи на курс</a><br />8.13. <a href="#q813">Как с помощью Логики курса 3KL подписать слушателей в курс и распределить в локальные группы</a></div>
+<div class="otsf-incut example note">Подробнее об элементе курса «Логика курса 3KL» в статье <a href="https://kb.opentechnology.ru/index.php?solution_id=1674">«Вебинар от 26.10.2023г. Организация переаттестации с помощью элемента «Логика курса». Решение для СЭО 3KL v.4.1 (СЭО 3КL версии 4.1.6а)»</a>.</div>
+<h2><a id="lk8"></a>8. Примеры использования Логики курса 3KL</h2>
+<h3><a id="lk81"></a>8.1. Отправка приветственных сообщений подписанным на курс пользователям</h3>
+<p><strong>Задача:</strong></p>
+<p>Организовать автоматическую отправку приветственных сообщений слушателям, которые подписались на курс.</p>
+<p><strong>Предусловия:</strong></p>
+<p>Подразумевается, что:</p>
+<p>1) Курс уже создан и наполнен материалами.<br />2) Способы записи пользователей на курс настроены.<br />3) В СЭО 3КL корректно настроены и включены все необходимые каналы уведомлений (в первую очередь, по электронной почте).<br />4) У роли, под которой пользователи зачисляются в курс, есть право mod/otcourselogic:is_student (по умолчанию данное право есть у роли «<abbr data-toggle="tooltip" data-placement="bottom" title="Роль предоставляет доступ к просмотру материалов и выполнению элементов курса, просмотру своих оценок и отзывов преподавателей. Без возможности изменять содержание курса. Статья «Роли, контекст, ролевая модель».">Слушатель</abbr>»).</p>
+<div class="note otsf-incut">Подробная информация о способах записи на курс в статье <a href="https://kb.opentechnology.ru/index.php?solution_id=1020">«Способы записи пользователей на курс»</a>.</div>
+<div class="otsf-incut note">О других вариантах уведомлений пользователей о записи на курс в статьях<br /> <a href="https://kb.opentechnology.ru/index.php?solution_id=1108#qq3">«Примеры настройки отправки уведомлений кураторам с помощью Логики курса 3KL»</a>,<br /><a href="https://kb.opentechnology.ru/index.php?solution_id=1026#qq3">«Уведомления для преподавателя о поданном запросе на зачисление на курс»</a>,<br /><a href="https://kb.opentechnology.ru/index.php?solution_id=1026#qq32">«Уведомления для студента о поданном запросе на зачисление на курс»</a>.</div>
+<p><strong>Решение:</strong></p>
+<p>1) Добавить в курс элемент «Логика курса 3KL» (Рис. 8.1.1):</p>
+<p>Название = <em>Сообщения о записи на курс<br /></em>Доступность (поз. 1 Рис. 8.1.1) = Сделать доступным, но не отображать на странице курса<br />Периодическая проверка состояния (поз. 2 Рис. 8.1.1) = При каждой возможности<br />Проверка состояния при входе пользователя в курс (поз. 3 Рис. 8.1.1) = Да</p>
+<p><em><img class="otsf-screenshot" src="https://kb.opentechnology.ru/index.php?action=attachment&amp;id=8982" width="1844" height="2227" /></em></p>
+<div class="otsf-screenshot-description">Рис. 8.1.1. Страница настроек элемента курса «Логика курса 3KL».</div>
+<div class="otsf-incut note">Подробная информация о добавлении элементов курса в статье <a href="https://kb.opentechnology.ru/index.php?solution_id=1230#q11">«<abbr data-toggle="tooltip" data-placement="bottom" title="Динамические учебные материалы (форумы, тесты, задания и т. п.). Статья «Элементы курса и Ресурсы».">Элементы курса</abbr> и ресурсы»</a>,</div>
+<p>2) Последовательно добавить и настроить ограничения в разделе «Ограничения доступа» (см. рис. 8.1.1):</p>
+<ul>
+<li>Промежуток времени = указанный интервал времени прошел с даты начала подписки = 5 минут</li>
+</ul>
+<div class="otsf-incut note">Этот интервал нужен, чтобы пользователю успели отправиться предыдущие уведомления (если они есть) и в качестве запасного времени для внесения каких-либо срочных правок в отправляемое сообщение для пользователя.</div>
+<ul>
+<li>Набор ограничений -&gt; Промежуток времени = указанный интервал времени прошел с даты начала подписки = 1 дней<br />Условия ограничения для «Набор ограничений» — Студент <strong>не должен</strong> нижестоящему условию.</li>
+</ul>
+<div class="otsf-incut note">Это условие нужно, чтобы уведомления не отправлялись пользователям, которые были записаны на курс ранее.</div>
+<p>Нажать на кнопку «Сохранить и показать» (поз. 4 Рис. 8.1.1).</p>
+<p>3) В интерфейсе страницы Логики курса 3KL «Сообщения о записи на курс» нажать кнопку «Управление действиями», на вновь открывшейся странице добавить действие: в первой секции действия из выпадающего списка выбрать «Отправить сообщение» и нажать на кнопку «+» (Рис. 8.1.2).</p>
+<p><img class="otsf-screenshot" src="https://kb.opentechnology.ru/index.php?action=attachment&amp;id=8983" width="990" height="631" /></p>
+<div class="otsf-screenshot-description">Рис. 8.1.2. Настройка «Управление действиями». Отправить сообщение.</div>
+<p>4) В настройках созданного действия указать (Рис. 8.1.2):</p>
+<p>Включить = Да<br />Получатель = Студент<br />Текст уведомления =</p>
+<div class="otsf-incut example">Уважаемый (ая) {STUDENTFULLNAME} ! Вы зачислены на курс {COURSEFULLNAME}. Для начала обучения пройдите по ссылке: {COURSELINK}</div>
+<p>Отправлять от имени = <abbr data-toggle="tooltip" data-placement="bottom" title="Роль позволяет выполнять в рамках курса любые действия, связанные с изменением содержания курса и оцениванием слушателей. У роли нет права назначать других преподавателей. Из-за того, что преподаватель будет получать максимальное количество уведомлений о событиях, происходящих в курсе, не рекомендуется назначать эту роль глобально или на большие категории курсов. Статья «Роли, контекст, ролевая модель».">Преподаватель</abbr><br />Выберите отправителя = <em>Преподаватель курса</em></p>
+<p><img class="otsf-screenshot" src="https://kb.opentechnology.ru/index.php?action=attachment&amp;id=8984" width="990" height="618" /></p>
+<div class="otsf-screenshot-description">Рис. 8.1.3. Настройка действия «Отправить сообщение».</div>
+<div class="otsf-incut note">Если вы включили рассылку, но не указали текст уведомления для студента/учителя/куратора, то уведомления отправляться не будут.</div>
+<div class="otsf-incut note">В тексте сообщения можно использовать <a href="https://kb.opentechnology.ru/index.php?solution_id=1172#q71">макроподстановки</a>.</div>
+<div class="otsf-incut note">Поле «Краткое уведомление» может быть использовано для сообщения, отправляемого через СМС. Здесь также поддерживается применение макроподстановок.</div>
+<p>Сохранить настройки.</p>
+<p>5) Убедиться в корректности настроек: логика курса активна и срабатывает 1 раз, глазик не перечеркнут (Рис. 8.1.4).</p>
+<p><img class="otsf-screenshot" src="https://kb.opentechnology.ru/index.php?action=attachment&amp;id=8671" width="357" height="176" /></p>
+<div class="otsf-screenshot-description">Рис. 8.1.4. Проверяем активность «Логики курса 3KL».</div>
+<p><strong>Результат</strong></p>
+<p>Пользователь подписывается слушателем на курс и через 5 минут после этого получает на электронную почту, указанную в настройках его профиля, приветственное письмо. Вместо автоподстановок в письме будут стоять его ФИО, название курса и прямая ссылка на курс.</p>
+<p><a href="#q0">-Вернуться к содержанию-</a></p>
+<h3><a id="lk82"></a>8.2. Автоматическая запись на курс с использованием плагина «Otautoenrol» и Логики курса 3KL</h3>
+<p>Можно использовать ЛК совместно с плагином «<span class="SpellingError SCXW153417393 BCX0">Автозачисление</span><span class="NormalTextRun SCXW153417393 BCX0"> 3KL</span>» «Otautoenrol». Логика курса 3KL при выполнении тех или иных действий пользователя в курсе записывает в некоторые поля профиля определенные значения, плагин «Otautoenrol» отслеживает пользователей с такими данными в полях профиля и записывает их автоматически на другие курсы.</p>
+<div class="otsf-incut note">Информация о плагине «Otautoenrol»:  «<a href="https://kb.opentechnology.ru/index.php?solution_id=1009">Плагин «<span class="SpellingError SCXW153417393 BCX0">Автозачисление</span><span class="NormalTextRun SCXW153417393 BCX0"> 3KL</span></a>»<strong>. </strong>Ранее это решение было реализовано на базе устаревшего плагина «Autoenrol».<strong><br /></strong></div>
+<p><a href="https://kb.opentechnology.ru/index.php?solution_id=1173#q0">-Вернуться к содержанию-</a></p>
+<h3><a id="lk83"></a>8.3. Отписка пользователя от курса по истечении времени на изучение курса</h3>
+<p><strong>Задача:</strong></p>
+<p>На платном курсе «Устройство мотоцикла. Для демонстрации» необходимо настроить ограничение времени изучения курса таким образом, чтобы слушатели, оплатившие курс, имели доступ к материалам курса в течение двух часов. При этом должно учитываться только время, затраченное непосредственно на изучение материалов курса. По истечении оплаченного времени пользователь должен быть автоматически отписан от курса. При повторной оплате должен действовать тот же сценарий обучения.</p>
+<p><strong>Предусловия:</strong></p>
+<p>Подразумевается, что:</p>
+<p>1) В СЭО 3КL курс уже создан и наполнен материалами.<br />2) Запись слушателей в курс организована с помощью плагина «Подписка 3КL».</p>
+<div class="otsf-incut note">С вариантами настройки способов платной подписки на курс можно ознакомиться здесь: <a href="https://kb.opentechnology.ru/index.php?solution_id=1215">Плагин «Подписка 3KL» часть 3. Настройка платной подписки на курс</a></div>
+<p><strong>Общий алгоритм решения</strong>:</p>
+<p>1) Настройка плагина «Отслеживание времени непрерывного обучения».<br />2) Создание и настройка элемента «Логика курса 3KL».</p>
+<div class="otsf-incut note">Логика курса 3KL в этом решении настраивается для реализации следующего сценария:<br />Изначально, используемый элемент курса «Логика курса 3KL» недоступен пользователю и неактивен. Как только достигается условие доступа (определенное на изучение материалов курса время), Логика курса 3KL становится активной, отрабатывает настроенное действие «Отписать от текущего курса» и пользователь отписывается из курса.</div>
+<p><strong>Решение:</strong></p>
+<p>1) В курсе «Устройство мотоцикла. Для демонстрации» перейти на страницу «Отслеживание времени непрерывного обучения» (<em>курс</em> -&gt; Меню вторичной навигации -&gt; Дополнительно -&gt; Отслеживание времени непрерывного обучения) и выполнить следующие настройки (Рис. 8.3.1):</p>
+<p>Включить отслеживание = Да<br />Режим работы = <em>По действиям<br /></em>Максимальный засчитываемый период (пауза) между действиями пользователя = 10 мин<br />Время на изучение курса = 2 час<br />Включить отображение таймера в курсе<br />Зона для отображения таймера = Левая колонка</p>
+<p><img class="otsf-screenshot" src="https://kb.opentechnology.ru/index.php?action=attachment&amp;id=8664" width="1407" height="751" /></p>
+<div class="otsf-screenshot-description">Рис. 8.3.1. Включение «Отслеживание времени непрерывного обучения».</div>
+<p>Сохранить настройки.</p>
+<div class="otsf-incut note">Рекомендованный в решении режим работы «По действиям» не оказывает дополнительной нагрузки на систему и обеспечивает приблизительный подсчет времени непрерывного обучения. Для повышения точности учета времени вы можете выбрать режима «<abbr data-toggle="tooltip" data-placement="bottom" title="Совокупность технологий и подходов к написанию веб-приложений, позволяющих организовать интерактивное обновление данных без полной перезагрузки веб-страницы. Ajax позволяет делать более отзывчивые, удобные и современные интерфейсы. Примером технологии Ajax является перетаскивание элементов курса мышкой для определения их положения в оглавлении курса.">Ajax</abbr>-мониторинг» но, при этом, нагрузка на систему возрастет.<br />Дополнительная информация о возможностях и настройке инструмента в статье <a href="https://kb.opentechnology.ru/index.php?solution_id=1153">«Отслеживание времени непрерывного обучения в курсе»</a>.</div>
+<p>2) Добавить в курс элемент «Логика курса 3KL» и выполнить его предварительную настройку (Рис. 8.3.2):</p>
+<p><img class="otsf-screenshot" src="https://kb.opentechnology.ru/index.php?action=attachment&amp;id=8985" width="1079" height="700" /></p>
+<div class="otsf-screenshot-description">Рис. 8.3.2. Настройка «Логики курса 3KL» - отписка пользователей.</div>
+<p>Название = <em>Отписка пользователей<br /></em>Ограничение доступа = Время изучения курса = должно быть ≥ 2 час. (Рис. 8.3.3)<br />Доступность = Сделать доступным, но не отображать на странице курса (поз. 1. Рис. 8.3.4)<br />Периодическая проверка состояния = При каждой возможности (поз. 2. Рис. 8.3.4)<br />Проверка состояния при входе пользователя в курс = Да (поз. 3. Рис. 8.3.4)</p>
+<p><img class="otsf-screenshot" src="https://kb.opentechnology.ru/index.php?action=attachment&amp;id=8986" width="1069" height="753" /></p>
+<div class="otsf-screenshot-description">Рис. 8.3.3. Настройка ограничения доступа «Время изучения курса» .</div>
+<p><img class="otsf-screenshot" src="https://kb.opentechnology.ru/index.php?action=attachment&amp;id=8649" width="1074" height="750" /></p>
+<div class="otsf-screenshot-description">Рис. 8.3.4. Настройки доступности, оперативности проверки состояния.</div>
+<p>Сохранить настройки, нажав кнопку «Сохранить и показать» (см. поз. 4. Рис. 8.3.4).</p>
+<div class="otsf-incut note">Дополнительная информация в статьях:<br /><a href="https://kb.opentechnology.ru/index.php?solution_id=1230#q11">«Элементы курса и ресурсы»</a>,<br /><a href="https://kb.opentechnology.ru/index.php?solution_id=1169">«Ограничения доступности, управление ограничениями»</a>,<br /><a href="https://kb.opentechnology.ru/index.php?solution_id=1168">«Логика курса 3KL, часть 1. Принцип работы, добавление и настройка элемента»</a>.</div>
+<p>3) В интерфейсе страницы логики курса «Отписка пользователей» нажать кнопку «Управление действиями» (Рис. 8.3.5), на вновь открывшейся странице добавить действие: в первой секции действия из выпадающего списка выбрать «Отписать от текущего курса» и нажать на кнопку «+» (Рис. 8.3.6).</p>
+<p><img class="otsf-screenshot" src="https://kb.opentechnology.ru/index.php?action=attachment&amp;id=8987" width="1403" height="643" /></p>
+<div class="otsf-screenshot-description">Рис. 8.3.5. Переход на настройку «Управление действиями».</div>
+<p><img class="otsf-screenshot" src="https://kb.opentechnology.ru/index.php?action=attachment&amp;id=8988" width="1410" height="672" /></p>
+<div class="otsf-screenshot-description">Рис. 8.3.6. Настройка «Управление действиями». Выбрать действие.</div>
+<p>4) В настройках созданного действия указать:</p>
+<p>Включить = Да (Рис. 8.3.7)</p>
+<p><img class="otsf-screenshot" src="https://kb.opentechnology.ru/index.php?action=attachment&amp;id=8989" width="1423" height="414" /></p>
+<div class="otsf-screenshot-description">Рис. 8.3.7. Включение «Логики курса».</div>
+<p>Сохранить настройки.</p>
+<p>5) Убедиться, что «глазики» рядом с условиями и действиями не перечеркнуты (Рис. 8.3.8).</p>
+<p><img class="otsf-screenshot" src="https://kb.opentechnology.ru/index.php?action=attachment&amp;id=8652" width="346" height="224" /></p>
+<div class="otsf-screenshot-description">Рис. 8.3.8. Проверяем активность "Логики курса».</div>
+<div class="otsf-incut note">Подробная информация об управлении действиями в статье <a href="https://kb.opentechnology.ru/index.php?solution_id=1172">«Логика курса 3KL, часть 2. Управление действиями и обработчики»</a>.</div>
+<p><strong>Результат</strong></p>
+<p>После оплаты курса «Устройство мотоцикла. Для демонстрации» пользователь оказывается подписан на курс и получает доступ к материалам курса.</p>
+<p>На странице курса пользователю доступен таймер, который показывает, какое количество времени подписки еще осталось (Рис. 8.3.9).</p>
+<p><img class="otsf-screenshot" src="https://kb.opentechnology.ru/index.php?action=attachment&amp;id=8710" alt="" width="1766" height="973" /></p>
+<div class="otsf-screenshot-description">Рис. 8.3.9. Страница курса «Устройство мотоцикла. Для демонстрации» с включенным таймером.</div>
+<p>По окончании оплаченного времени доступа пользователь будет автоматически отписан от курса и может оплатить подписку повторно.</p>
+<p><a href="#q0">-Вернуться к содержанию-</a></p>
+<h3><a id="lk84"></a>8.4. Выдать студенту значок, если курс пройден более чем на 80% за три дня от подписки на курс</h3>
+<div class="otsf-incut comment"><strong>Задача:</strong> Выдать значок студенту в случае, если курс пройден более чем на 80%, и студент уложился в 3 дня от даты подписки на курс.</div>
+<div class="otsf-incut advice"><strong>Решение:</strong> Для решения этой задачи необходимо добавить в курс и настроить Логику курса 3KL (п.3.), создать значок (п. 1.) и настроить критерием выполнения значка условие выполнения элемента Логика курса(п. 2.).</div>
+<p>1) Создаем значок. Для создания значка можно воспользоваться инструкцией в базе знаний: «<a href="https://kb.opentechnology.ru/index.php?solution_id=1084"><abbr data-toggle="tooltip" data-placement="bottom" title="Элемент игрофикации, позволяющий отмечать заслуги студентов. Они свидетельствуют о прогрессе в обучении. Выдаются пользователю после выполнения определенных условий и отображаются в личном кабинете пользователя. Не следует путать с блоком «Последние значки». Статья «Значки».">Значки</abbr></a>»<strong>.</strong></p>
+<p>2) В качестве критерия получения значка выбираем «выполнение элемента Логика курса» (сам элемент ЛК необходимо заранее добавить в курс).</p>
+<p>3) Настраиваем Логику курса 3KL:</p>
+<p>3.1) В качестве выполнения Логики курса 3KL ставим смену состояния на активное.</p>
+<p>3.2) Добавим ограничение доступа «Набор ограничений».</p>
+<p>3.3) Внутрь Набора ограничений добавим ограничение «Промежуток времени»:</p>
+<p><img class="otsf-screenshot" src="https://kb.opentechnology.ru/index.php?action=attachment&amp;id=8612" width="990" height="520" /></p>
+<div class="otsf-screenshot-description">Рис. 8.4.1. Настройки ограничения доступа.</div>
+<p>Промежуток времени настроим так: «Студент НЕ ДОЛЖЕН соответствовать нижеследующему условию» — указанный интервал времени прошел с даты начала подписки, выберем «Логика курса» и укажем интервал времени — 3 дня. Простым языком эта установка означает следующее: «Студент не должен превысить интервал в 3 дня с начала подписки». После этого добавим еще одно ограничение доступа — «Оценка»:</p>
+<p><img class="otsf-screenshot" src="https://kb.opentechnology.ru/index.php?action=attachment&amp;id=8613" width="990" height="525" /></p>
+<div class="otsf-screenshot-description">Рис. 8.4.2. Настроенное ограничение доступа. </div>
+<p>3.4) Выберем «Итоговая оценка за курс», выставим «Должна быть ≥ 80%». Проверяем все наши настройки:</p>
+<p><img class="otsf-screenshot" src="https://kb.opentechnology.ru/index.php?action=attachment&amp;id=8614" width="990" height="615" /></p>
+<div class="otsf-screenshot-description">Рис. 8.4.3. Проверка настроек. </div>
+<p>4) Таким образом значок будет присуждён студенту, выполнившему данный учебный курс не менее, чем на 80% в срок до трех дней.</p>
+<p><a href="https://kb.opentechnology.ru/index.php?solution_id=1173#q0">-Вернуться к содержанию-</a></p>
+<h3><a id="lk85"></a>8.5. Разослать уведомление о приближающемся окончании подписки</h3>
+<div class="otsf-incut comment"><strong>Задача:</strong> Настроить рассылку уведомлений студентам о приближающемся завершении подписки. За указанный период до окончания подписки отправлять уведомления о том, что вскоре подписка закончится.</div>
+<p>В модуле «Логика курса» в секции «Ограничение доступа» нажимаем на кнопку «Добавить ограничение» и из списка ограничений выбираем «Промежуток времени».</p>
+<p>В появившемся меню ограничения доступа сначала укажем, что студент «<strong>Должен</strong> соответствовать нижеследующему условию», затем выберем пункт «До даты окончания подписки осталось менее указанного временного интервала». Далее выставим требуемый временной интервал, в нашем случае — 10 дней:</p>
+<p><img class="otsf-screenshot" src="https://kb.opentechnology.ru/index.php?action=attachment&amp;id=8615" width="990" height="440" /></p>
+<div class="otsf-screenshot-description">Рис. 8.5.1. Настройка ограничения доступа по временнному интервалу до даты окончания подписки.</div>
+<p>Тем самым, мы ограничиваем доступ к элементу «Логика курса 3KL» всем тем студентам, которые не соответствуют интересующим нас критериям.</p>
+<p>Переходим в настройки «Управление действиями» и настраиваем периодический обработчик:</p>
+<p><img class="otsf-screenshot" src="https://kb.opentechnology.ru/index.php?action=attachment&amp;id=8990" width="990" height="835" /></p>
+<div class="otsf-screenshot-description">Рис. 8.5.2. Управление действиями. </div>
+<p>Добавляем действие «Отправить сообщение»:</p>
+<p><img class="otsf-screenshot" src="https://kb.opentechnology.ru/index.php?action=attachment&amp;id=8617" width="348" height="425" /> </p>
+<div class="otsf-screenshot-description">Рис. 8.5.3. Действие  «Отправить сообщение».</div>
+<p>Выбираем получателя - «Студент». В поле «Текст уведомления» вставляем текст нашего сообщения (можно использовать макроподстановки). Указываем от чьего имени (администратор, преподаватель, или студент) будет производиться рассылка и сохраняем настройки действия:</p>
+<p><img class="otsf-screenshot" src="https://kb.opentechnology.ru/index.php?action=attachment&amp;id=8991" width="990" height="1260" /></p>
+<div class="otsf-screenshot-description">Рис. 8.5.4. Сохранение настроек. </div>
+<p>В результате <abbr data-toggle="tooltip" data-placement="bottom" title="Программный Продукт, разработанный Исполнителем и предназначенный для электронного обучения. В настоящем Регламенте упоминается в связи с предоставлением Исполнителем технической поддержки, предоставлением консультаций или прочих Сервисов по данному Продукту. Статья «Что представляет собой среда электронного обучения 3KL?».">система</abbr> начнёт рассылать уведомления студентам с напоминанием о приближающемся завершении подписки на курс.</p>
+<p><a href="https://kb.opentechnology.ru/index.php?solution_id=1173#q0">-Вернуться к содержанию-</a></p>
+<h3><a id="lk86"></a>8.6. Периодическое напоминание о чем-либо</h3>
+<div class="otsf-incut comment"><strong>Задача:</strong> Настроить периодическое напоминание о периоде сдачи контрольной работы (теста, задания и т.д.) .</div>
+<p>1) За основу настройки ЛК возьмем добавление ограничения доступа «<strong>Завершение элемента»</strong>.</p>
+<p>Общий принцип решения задачи: если задание не выполнено, с какого-то времени от начала курса, например, с 7 дней, элемент ЛК становится доступным и активным. Далее ЛК выполняет действие по периодической рассылке сообщений-напоминаний пользователю. После выполнения задания пользователем, элемент ЛК становится недоступным, дезактивируется и отключает действия по рассылке.</p>
+<p>2) Выберем элемент курса, за выполнением которого будет следить ЛК. Например, Контрольное задание к Теме 1:</p>
+<p><img class="otsf-screenshot" src="https://kb.opentechnology.ru/index.php?action=attachment&amp;id=8620" width="990" height="670" /></p>
+<div class="otsf-screenshot-description">Рис. 8.6.1. Настройка напоминаний.</div>
+<p>3) Выставим условие: «Элемент НЕ ДОЛЖЕН быть отмечен, как выполненный».</p>
+<p>4) Добавим ограничение по «Промежутку времени", выберем «Указанный интервал времени прошел с даты начала подписки» и выставим наш интервал — 7 дней.</p>
+<p>Наши настройки выглядят так:</p>
+<p><img class="otsf-screenshot" src="https://kb.opentechnology.ru/index.php?action=attachment&amp;id=8992" width="990" height="1000" /></p>
+<div class="otsf-screenshot-description">Рис. 8.6.2. Настройки ЛК.</div>
+<p>Внешний вид элемента ЛК в курсе (перечислены условия):</p>
+<p><img class="otsf-screenshot" src="https://kb.opentechnology.ru/index.php?action=attachment&amp;id=8622" width="990" height="210" /></p>
+<div class="otsf-screenshot-description">Рис. 8.6.3. Внешний вид элемента ЛК в курсе.</div>
+<p>5) Настраиваем периодический обработчик для активной ЛК и действие по рассылке сообщений как в предыдущем примере. Частоту рассылки и текст сообщения указываем по своему усмотрению.</p>
+<p><img class="otsf-screenshot" src="https://kb.opentechnology.ru/index.php?action=attachment&amp;id=682" alt="" width="341" height="207" /></p>
+<div class="otsf-screenshot-description">Рис. 8.6.4. Периодический обработчик для активной ЛК.</div>
+<p>В результате Логика курса периодически начнет рассылать уведомления пользователю через неделю от его подписки на курс, пока он не выполнит задание.</p>
+<p><a href="https://kb.opentechnology.ru/index.php?solution_id=1173#q0">-Вернуться к содержанию-</a></p>
+<h3><a id="lk87"></a>8.7. Напоминание об учебе</h3>
+<p>Настраиваем плагин доступным после выполнения промежуточного задания 1, но недоступным после выполнения следующего промежуточного задания 2. Устанавливаем, чтобы он становился активен, когда доступен. Настраиваем периодические уведомления студенту — раз в две недели и пишем соответствующий текст. <br />В результате, Логика курса 3KL начнет рассылать уведомления пользователю раз в две недели, начиная с того момента, как он выполнит промежуточное задание 1, таким образом напоминая и стимулируя дальнейшее обучение и выполнение следующего промежуточного задания 2.</p>
+<p><a href="https://kb.opentechnology.ru/index.php?solution_id=1173#q0">-Вернуться к содержанию</a><strong><a href="https://kb.opentechnology.ru/index.php?solution_id=1173#q0">-</a></strong></p>
+<h3><a id="lk88"></a>8.8. Уведомление о завершении обучения</h3>
+<p>Для отправки такого уведомления, ЛК настраивается в зависимости от установки требуемых уловий завершения обучения.</p>
+<p><strong>1)</strong> Допустим, <strong>завершением обучения в курсе является сдача итогового тестирования. </strong></p>
+<p>Настраиваем ограничение доступа. Условие доступности: оценка за тест «Итоговое тестирование» должна быть больше или равна 70% :</p>
+<p><img class="otsf-screenshot" src="https://kb.opentechnology.ru/index.php?action=attachment&amp;id=8623" width="990" height="325" /></p>
+<div class="otsf-screenshot-description">Рис. 8.8.1. Настройка ограничения доступа.</div>
+<p>Устанавливаем, чтобы элемент ЛК становился активен, когда доступен. Настраиваем текст уведомления для учителя, отправляемый при активации ЛК.</p>
+<p>Пока студент не получил оценку за тест 70% и выше, элемент курса «Логика курса 3KL» имеет статус «Не активен».</p>
+<p>Как только студент получит оценку за тест 70% и выше, элемент курса «Логика курса 3KL» сменит свой статус на «Активен», произойдет отправка сообщений. «Логика курса» автоматически определит учителей данного студента и отправит им уведомления.</p>
+<p><strong>2)</strong> Рассмотрим вариант, когда <strong>завершением обучения является «Завершение курса»</strong>. Условия завершения курса настраиваются в <strong>Меню вторичной навигации —&gt; Дополнительно —&gt; Завершение курса (</strong>или <strong>Настройки—&gt;Управление курсом—&gt;Завершение курса):</strong></p>
+<p><img class="otsf-screenshot" src="https://kb.opentechnology.ru/index.php?action=attachment&amp;id=8625" width="990" height="430" /></p>
+<div class="otsf-screenshot-description">Рис. 8.8.2. Настройки отслеживания выполнения для курса. </div>
+<p>Настраиваем ограничение доступности элемента ЛК. Добавим ограничение «<strong>Завершение курса»</strong> и настроим его так:</p>
+<p><img class="otsf-screenshot" src="https://kb.opentechnology.ru/index.php?action=attachment&amp;id=8624" width="990" height="300" /></p>
+<div class="otsf-screenshot-description">Рис. 8.8.3. Настройки завершения курса.</div>
+<p>Устанавливаем, чтобы элемент ЛК становился активен, когда доступен. Настраиваем текст уведомления для учителя, отправляемый при активации ЛК.</p>
+<p>Пока студент не выполнит условия Завершения курса, элемент курса «Логика курса 3KL» имеет статус «Не активен».</p>
+<p>Как только студент выполнит условия Завершения курса, элемент курса «Логика курса 3KL» сменит свой статус на «Активен», произойдет отправка сообщений. «Логика курса» автоматически определит учителей данного студента и отправит им уведомления.</p>
+<p><a href="https://kb.opentechnology.ru/index.php?solution_id=1173#q0">-Вернуться к содержанию</a><a href="https://kb.opentechnology.ru/index.php?solution_id=1173#q0">-</a></p>
+<h3><a id="lk89"></a>8.9. Как настроить ограничение доступа на элемент в зависимости от Логики курса</h3>
+<p>Элемент курса может зависеть от Логики курса, например, его доступность может быть связана с завершением элемента Логики курса 3KL. Для того, чтобы настроить доступность элемента, нужно в настройках ЛК перейти в секцию «Ограничение доступа» и добавить ограничение «Завершение элемента». В настройках этого ограничения выбираем из списка нужный нам элемент.</p>
+<p>Пример. Ограничения доступа—&gt;Добавить ограничение—&gt;Завершение элемента.<br />Во вкладке «Завершение элемента» выбираем элемент, который по условию нужно завершить.<br />Далее выбираем дополнительные ограничения, которые необходимы.<br />Например по роли. Добавить ограничение—&gt;Набор ограничение—&gt;Role.<br />Теперь, при выполнении элемента Логики курса, данный элемент будет доступен пользователю.</p>
+<div class="otsf-incut note">Подробнее об граничении доступа можно посмотреть здесь: «<a href="https://kb.opentechnology.ru/index.php?solution_id=1169">Ограничения доступности, управление ограничениями</a>».</div>
+<p><a href="https://kb.opentechnology.ru/index.php?solution_id=1173#q0">-Вернуться к содержанию-</a></p>
+<h3><a id="lk810"></a>8.10. Примеры настройки отправки уведомлений кураторам с помощью Логики курса 3KL</h3>
+<div class="otsf-incut example"><strong>Задача</strong><br />В курсе есть Итоговый тест. При успешном прохождении теста слушателем (оценка не менее 70%), нужно отправить уведомление куратору.</div>
+<div class="otsf-incut example"><strong>Задача</strong><br />Подопечный записан на курс, но в течение недели с момента записи не работал с курсом. Нужно отправить куратору уведомление об этом.</div>
+<div class="otsf-incut example"><strong>Задача</strong><br />Подопечный записан на курс и начал работать с курсом. Нужно отправить куратору уведомление об этом.</div>
+<div class="otsf-incut example">Отправка уведомлений кураторам в момент рубежного контроля.<br />Обычно подобные задачи подразумевают определение прогресса слушателя в курсе в определенный момент времени от начала (или конца) обучения. Соответственно, определяется момент даты/времени от/до начала/окончания подписки и необходимые уровни набора выполненных элементов/полученных оценок/итоговой оценки. <br /><strong>Задача</strong><br />1) Через 4 недели от начала обучения слушатель должен выполнить 4 задания из 5 (получить по ним любые оценки). Если это так, отправить уведомление куратору. Если это не так, отправить уведомление куратору.<br />2) За неделю до окончания подписки слушатель должен иметь итоговую оценку за курс более 60%. Если это так, отправить уведомление куратору. Если это не так, отправить уведомление куратору.</div>
+<div class="otsf-incut example"><strong>Задача</strong><br />В курсе есть Итоговый тест. При неуспешном прохождении теста слушателем (оценка не менее 50%), кураторам нужно отправить уведомление.</div>
+<div class="otsf-incut note">Все примеры решений по указанным задачам приведены здесь: <a href="https://kb.opentechnology.ru/index.php?solution_id=1108#qq3">Примеры настройки отправки уведомлений кураторам с помощью Логики курса 3KL </a></div>
+<p><a href="https://kb.opentechnology.ru/index.php?solution_id=1173#q0">-Вернуться к содержанию-</a></p>
+<h3><a id="lk811"></a>8.11. Организация регулярной переаттестации сотрудников</h3>
+<div class="otsf-incut advice">Видеоверсия решения доступна в видеоанонсе <a href="https://www.youtube.com/watch?v=sIDCy6v8V3k&amp;t=875s">«Анонс СЭО 3KL 4.1.6a»</a>.</div>
+<p><strong>Задача:<br /></strong>Все официанты итальянского ресторана должны каждый год проходить аттестацию на знание меню. Необходимо организовать автоматическую ежегодную запись сотрудника на тестирование и рассылку соответствующих уведомлений:</p>
+<ul>
+<li>непосредственно сотруднику:
+<ul>
+<li>о подошедшем сроке переаттестации (или первичной аттестации, если сотрудник работает меньше года);</li>
+<li>о прохождении аттестации (если аттестация пройдена успешно).</li>
+</ul>
+</li>
+<li>руководителю (если аттестация не пройдена).</li>
+</ul>
+<p><strong>Предусловия:<br /></strong>1) Подразумевается, что на учебном портале организации уже созданы, настроены и наполнены материалами курсы:</p>
+<ul>
+<li>«Официант» - общий курс для обучения официантов.</li>
+<li>«Тестирование на знание меню» - курс с ежегодным аттестационным тестом.</li>
+</ul>
+<div class="otsf-incut note">Дополнительная информация о создании курсов, тестов и организации подписки на курс в статьях<br /><a href="https://kb.opentechnology.ru/index.php?solution_id=1167">«Добавление нового курса»</a><br /><a href="https://kb.opentechnology.ru/index.php?solution_id=1225">«Создание курса. Введение»</a><br /><a href="https://kb.opentechnology.ru/index.php?solution_id=1020">«Способы записи пользователей на курс»</a>.</div>
+<p>2) При поступлении на работу все сотрудники-официанты сразу же подписываются на курс «Официант» и остаются подписанными на этот курс на протяжении всей своей трудовой деятельности в должности официанта.</p>
+<div class="otsf-incut note">Подписка выполняется любым удобным для вас способом. Рекомендуется использовать<a href="https://kb.opentechnology.ru/index.php?solution_id=1009"> способ зачисления «Автозачисление 3КL»</a> и <a href="https://kb.opentechnology.ru/index.php?solution_id=1009#q64">сценарий автоматической подписки по полю профиля</a>.</div>
+<p>3) В тесте «Ежегодное тестирование» в курсе «Тестирование на знание меню» должны быть заданы и настроены:</p>
+<ul>
+<li>проходной балл;</li>
+<li>однократное прохождение;</li>
+<li><span id="id_completionusegrade_description">условие выполнения элемента курса = Студент должен получить оценку для выполнения этого элемента.</span></li>
+</ul>
+<div class="otsf-incut note">Дополнительная информация в статьях<br /><a href="https://kb.opentechnology.ru/index.php?solution_id=1511">«Элемент курса «Тест». Путеводитель»</a><br /><a href="https://kb.opentechnology.ru/index.php?solution_id=1169">«Ограничения доступности, управление ограничениями»</a>.</div>
+<p>4) Руководитель сотрудников в должности официант назначен для них в системе как <abbr data-toggle="tooltip" data-placement="bottom" title="Роль назначается в контексте пользователя, дает возможность просматривать информацию о своих подопечных, а также получать уведомления от элемента курса «Логика курса». Статья «Роли, контекст, ролевая модель».">куратор</abbr>.</p>
+<div class="otsf-incut note">Дополнительная информация в статье <a href="https://kb.opentechnology.ru/index.php?solution_id=1108">«Кураторы и подопечные»</a>.</div>
+<p>5) В СЭО 3КL включен и корректно настроен на периодическое исполнение <a href="https://kb.opentechnology.ru/index.php?solution_id=1543#Planirovshchik_zadach_SEO_3KL">планировщик задач</a>.</p>
+<p><strong>Общий алгоритм решения:</strong></p>
+<p>1) Создание дополнительного поля профиля «Дата последней аттестации».</p>
+<p>2) Создание и настройка Логики курса 3KL для подписки пользователей на курс «Тестирование на знание меню» (в курсе «Официант»).</p>
+<p>3) Создание и настройка Логики курса 3KL для информирования пользователей о необходимости прохождения тестирования (в курсе «Тестирование на знание меню»).</p>
+<p>4) Создание и настройка Логики курса 3KL для финализации успешно пройденного итогового тестирования (сохранение даты тестирования, отписка от курса тестирования, сообщение слушателю) (в курсе «Тестирование на знание меню»).</p>
+<p>5) Создание и настройка Логики курса 3KL для информирования руководителя о неудовлетворительном результате тестирования (в курсе «Тестирование на знание меню»).</p>
+<p><strong>Решение:</strong></p>
+<p><strong>Создание дополнительного поля профиля «Дата последней аттестации»</strong></p>
+<p>1) На странице «Дополнительные поля профиля» (Администрирование-&gt;Пользователи-&gt;Учетные записи-&gt;Дополнительные поля профиля) кликом по ссылке «Создать новое поле профиля» раскрыть выпадающий список типов пролей и выбрать «Дата/время» (Рис. 8.11.1).</p>
+<p><img class="otsf-screenshot" src="https://kb.opentechnology.ru/index.php?action=attachment&amp;id=6996" alt="" width="1830" height="890" /></p>
+<div class="otsf-screenshot-description">Рис. 8.11.1. Страница «Дополнительные поля профиля». Выбор типа нового поля поля.</div>
+<p>2) В открывшемся модальном окне определить параметры дополнительного поля профиля (Рис. 8.11.2):</p>
+<p><img class="otsf-screenshot" src="https://kb.opentechnology.ru/index.php?action=attachment&amp;id=6997" alt="" width="798" height="1283" /></p>
+<div class="otsf-screenshot-description">Рис. 8.11.2. Окно создания поля профиля «Дата последней аттестации».</div>
+<p>Краткое название = <em>lastcristmas</em><br />Название = Дата последней аттестации<br />Это обязательное поле? = Нет<br />Это поле заблокировано = Да<br />Значения должны быть уникальными? = Нет<br />Показывать на странице регистрации? = Нет<br />Кому видно это поле? = Видно всем<br />Категория = <em>Другие поля</em><br />Наименьший год = <em>1917</em><br />Наибольший год = <em>2050</em></p>
+<div class="otsf-incut note">Обратите внимание: значение полей «Наименьший год и «Наибольший год» определяют временной диапазон, в котором могут быть заданы даты аттестации для слушателей. Устанавливайте их таким образом, чтобы учитывались все возможные будущие даты переаттестации.</div>
+<div class="otsf-incut note">Подробная информация о дополнительных полях профиля в статье <a href="https://kb.opentechnology.ru/index.php?solution_id=1165">«Добавление кастомных (настраиваемых) полей в профиль пользователя»</a>.</div>
+<p><strong>Создание и настройка Логики курса 3KL для подписки пользователей на курс «Тестирование на знание меню»</strong></p>
+<p>3) Перейти в курс «Официант», в нужную секцию курса добавить элемент курса «Логика курса 3KL» и выполнить его предварительную настройку (Рис. 8.11.3):</p>
+<p>Название = Автоматическая запись на аттестацию<br />Защита от случайных срабатываний = Да<br />Доступность = Сделать доступным, но не отображать на странице курса<br />Периодическая проверка состояния = Каждый день<br />Проверка состояния при входе пользователя в курс = Да</p>
+<div class="otsf-incut note">Выбор секции курса, в которой вы добавляете и настраиваете Логику курса 3KL, зависит от структуры вашего курса и принятых в вашей организации методов подачи учебного материала.<br />При создании инструментов автоматизации мы рекомендуем называть их таким образом, чтобы название максимально полно и подробно раскрывало смысл действия, выполняемого при срабатывании условий.</div>
+<p><img class="otsf-screenshot" src="https://kb.opentechnology.ru/index.php?action=attachment&amp;id=8993" width="1735" height="1432" /></p>
+<div class="otsf-screenshot-description">Рис. 8.11.3. Страница настроек элемента курса «Логика курса 3KL».</div>
+<p>4) Для создаваемой логики курса последовательно добавить и настроить два ограничения доступа, сохранить настройки созданного элемента курса.</p>
+<ul>
+<li> Ограничение доступа «<strong>Профиль пользователя</strong>» (поз. 1 Рис. 8.11.4):</li>
+</ul>
+<p>Поле профиля пользователя (Выберите...) = Дата последней аттестации<br />Метод сравнения (значение) = пустое</p>
+<ul>
+<li>Ограничение доступа «<strong>Сравнение дат и чисел в профиле пользователя</strong>» (поз. 2 Рис. 8.11.4):</li>
+</ul>
+<p>Выберите поле профиля... = Дата последней аттестации<br />Выберите вариант сравнения... = Полных дней с указанной до текущей даты<br />Выберите оператор сравнения... = &gt;(больше)<br />Значение = 365</p>
+<p>Условие доступа = Студент должен соответствовать любому из нижеследующих условий (поз. 3 Рис. 8.11.4).</p>
+<p><img class="otsf-screenshot" src="https://kb.opentechnology.ru/index.php?action=attachment&amp;id=7022" alt="" width="1685" height="514" /></p>
+<div class="otsf-screenshot-description">Рис. 8.11.4. Настроенные ограничения доступа логики курса «Автоматическая запись на аттестацию».</div>
+<div class="otsf-incut note">Подробная информация об ограничениях доступа и их настройке в статье <a href="https://kb.opentechnology.ru/index.php?solution_id=1169">«Ограничения доступности, управление ограничениями»</a>.</div>
+<p>5) На странице Логики курса 3KL «Автоматическая запись на аттестацию» нажать кнопку «Управление действиями» (Рис. 8.11.5).</p>
+<p><img class="otsf-screenshot" src="https://kb.opentechnology.ru/index.php?action=attachment&amp;id=8995" width="1721" height="716" /></p>
+<div class="otsf-screenshot-description">Рис. 8.11.5. Страница Логики курса 3KL «Автоматическая запись на аттестацию». Переход к созданию и настройке действия.</div>
+<p>6) На вновь открывшейся странице в первом блоке действия:</p>
+<ul>
+<li>открыть глазик в строке «Условие: логика курса активна» (включить действие);</li>
+<li>из выпадающего списка «Выберите действие...» выбрать «Записать на курс»;</li>
+<li>нажать на <img src="https://kb.opentechnology.ru/index.php?action=attachment&amp;id=7028" alt="" width="32" height="30" /> справа от списка (Рис. 8.11.6).</li>
+</ul>
+<p><img class="otsf-screenshot" src="https://kb.opentechnology.ru/index.php?action=attachment&amp;id=8998" width="1446" height="725" /></p>
+<div class="otsf-screenshot-description">Рис. 8.11.6. Страница «Управление действиями» Логики курса 3KL.</div>
+<p>7) Установить настройки для добавленного действия «Записать на курс» (Рис. 8.11.7):</p>
+<p>Включить = Да<br />Курс = Тестирование на знание меню<br />Роль = Слушатель<br />Перезапись на курс = Да<br />Восстановить оценки = Нет<br />Очистить модули курса = Да</p>
+<div class="otsf-incut note">Если в вашей СЭО 3КL курсы распределены по категориям, вместе с выбором курса необходимо указать категорию, в которой этот курс размещен. В нашем решении это категория «Разное».</div>
+<p><img class="otsf-screenshot" src="https://kb.opentechnology.ru/index.php?action=attachment&amp;id=8999" width="1442" height="731" /></p>
+<div class="otsf-screenshot-description">Рис. 8.11.7. Настройки действия «Записать на курс» Логики курса 3KL «Автоматическая запись на аттестацию».</div>
+<p><strong>Создание и настройка Логики курса 3KL для информирования пользователей о необходимости прохождения тестирования</strong></p>
+<p>8) Добавить в секцию курса «Тестирование на знание меню» элемент курса «Логика курса 3KL» и выполнить его предварительную настройку (Рис. 8.11.8):</p>
+<p>Название = Сообщение о необходимости пройти тестирование<br />Защита от случайных срабатываний = Да<br />Доступность = Сделать доступным, но не отображать на странице курса<br />Периодическая проверка состояния = Каждый день</p>
+<p><img class="otsf-screenshot" src="https://kb.opentechnology.ru/index.php?action=attachment&amp;id=9000" width="1716" height="1399" /></p>
+<div class="otsf-screenshot-description">Рис. 8.11.8. Страница настроек элемента курса «Логика курса 3KL».</div>
+<p>9) Для создаваемой логики курса добавить и настроить ограничение доступа «Промежуток времени», сохранить настройки созданного элемента курса (Рис. 8.11.9):</p>
+<p>Опция доступа = указанный интервал времени прошел с даты начала подписки<br />Укажите необходимый интервал времени = 1 мин.</p>
+<p>Условие доступа = Студент должен соответствовать нижеследующему условию.</p>
+<p><img class="otsf-screenshot" src="https://kb.opentechnology.ru/index.php?action=attachment&amp;id=7085" alt="" width="1247" height="417" /></p>
+<div class="otsf-screenshot-description">Рис. 8.11.9. Настроенные ограничения доступа логики курса «Сообщение о необходимости пройти тестирование».</div>
+<p>10) На странице Логики курса 3KL «Сообщение о необходимости пройти тестирование» нажать кнопку «Управление действиями» (Рис. 8.11.10).</p>
+<p><img class="otsf-screenshot" src="https://kb.opentechnology.ru/index.php?action=attachment&amp;id=9001" width="1733" height="474" /></p>
+<div class="otsf-screenshot-description">Рис. 8.11.10. Страница логики курса «Сообщение о необходимости пройти тестирование». Переход к созданию и настройке действия.</div>
+<p>11) На вновь открывшейся странице в первом блоке действия:</p>
+<ul>
+<li>открыть глазик в строке «Условие: логика курса активна» (включить действие);</li>
+<li>из выпадающего списка «Выберите действие...» выбрать «Отправить сообщение»;</li>
+<li>нажать на <img src="https://kb.opentechnology.ru/index.php?action=attachment&amp;id=7028" alt="" width="32" height="30" /> справа от списка (Рис. 8.11.11).</li>
+</ul>
+<p><img class="otsf-screenshot" src="https://kb.opentechnology.ru/index.php?action=attachment&amp;id=9002" width="1442" height="704" /></p>
+<div class="otsf-screenshot-description">Рис. 8.11.11. Страница «Управление действиями» логики курса «Сообщение о необходимости пройти тестирование».</div>
+<p>12) Установить настройки для добавленного действия «Отправить сообщение» (Рис. 8.11.12):</p>
+<p>Включить = Да<br />Получатель = Студент<br />Текст уведомления = Уважаемый(-ая), {STUDENTFULLNAME}! Вам необходимо пройти тестирование на курсе {COURSEFULLNAME}. Перейти к курсу можно по ссылке: {COURSELINK} или через свой личный кабинет. Перед тестированием рекомендуем освежить свои знания - доступна одна попытка прохождения теста!<br />Отправлять от имени = <em>Преподаватель</em><br /> Выберите отправителя = <em>Преподаватель курса «Тестирование на знание меню» </em></p>
+<p><img class="otsf-screenshot" src="https://kb.opentechnology.ru/index.php?action=attachment&amp;id=9003" width="1760" height="1016" /></p>
+<div class="otsf-screenshot-description">Рис. 8.11.12. Настройки действия «Отправить сообщение» логики курса 3KL «Сообщение о необходимости пройти тестирование».</div>
+<p><strong>Создание и настройка Логики курса 3KL для финализации успешно пройденного итогового тестирования</strong></p>
+<p>13) Добавить в секцию курса «Тестирование на знание меню» элемент курса «Логика курса 3KL» и выполнить его предварительную настройку (Рис. 8.11.13):</p>
+<p>Название = Успешное завершение аттестации<br />Защита от случайных срабатываний = Да<br />Доступность = Сделать доступным, но не отображать на странице курса<br />Периодическая проверка состояния = Каждый день</p>
+<p><img class="otsf-screenshot" src="https://kb.opentechnology.ru/index.php?action=attachment&amp;id=9004" width="1769" height="1240" /></p>
+<div class="otsf-screenshot-description">Рис. 8.11.13. Страница настроек элемента курса «Логика курса 3KL».</div>
+<p>14) Для создаваемой Логики курса 3KL добавить и настроить ограничение доступа «Выполнение элемента»:</p>
+<p>Выполнение элемента = Ежегодное тестирование (поз. 2 Рис. 8.11.14)<br />Условие выполнения элемента = элемент должен быть выполнен с оценкой выше проходного балла (поз. 3 Рис. 8.11.14)</p>
+<p>Условие доступа = Студент должен соответствовать нижеследующему условию (поз. 1 Рис. 8.11.14).</p>
+<p><img class="otsf-screenshot" src="https://kb.opentechnology.ru/index.php?action=attachment&amp;id=7094" alt="" width="1279" height="323" /></p>
+<div class="otsf-screenshot-description">Рис. 8.11.14. Настроенные ограничения доступа Логики курса 3KL «Успешное завершение аттестации».</div>
+<p>15) На странице Логики курса 3KL «Успешное завершение аттестации» нажать кнопку «Управление действиями» (Рис. 8.11.15).</p>
+<p><img class="otsf-screenshot" src="https://kb.opentechnology.ru/index.php?action=attachment&amp;id=9005" width="1716" height="482" /></p>
+<div class="otsf-screenshot-description">Рис. 8.11.15. Страница Логики курса 3KL «Успешное завершение аттестации». Переход к созданию и настройке действия.</div>
+<p>16) На вновь открывшейся странице в первом блоке действия:</p>
+<ul>
+<li>открыть глазик в строке «Условие: логика курса активна» (включить действие);</li>
+<li>из выпадающего списка «Выберите действие...» выбрать «Записать в поле профиля»;</li>
+<li>нажать на <img src="https://kb.opentechnology.ru/index.php?action=attachment&amp;id=7028" alt="" width="32" height="30" /> справа от поля (Рис. 8.11.16).</li>
+</ul>
+<p><img class="otsf-screenshot" src="https://kb.opentechnology.ru/index.php?action=attachment&amp;id=9006" width="1436" height="713" /></p>
+<div class="otsf-screenshot-description">Рис. 8.11.16. Страница «Управление действиями» Логики курса 3KL.</div>
+<p>17) Установить настройки для добавленного действия «Записать в поле профиля» (Рис. 8.11.17):</p>
+<p>Включить = Да<br />Запись в поле профиля = Дата последней аттестации<br />Шаблон для макроподстановки = {CURRENTTIMESTAMP}</p>
+<p><img class="otsf-screenshot" src="https://kb.opentechnology.ru/index.php?action=attachment&amp;id=9007" width="1180" height="607" /></p>
+<div class="otsf-screenshot-description">Рис. 8.11.17. Настройки действия «Записать в поле профиля» логики курса «Успешное завершение аттестации».</div>
+<p>18) На странице управления действиями Логики курса 3KL «Успешное завершение аттестации» (по аналогии с <strong>16)</strong>, в тот же <abbr data-toggle="tooltip" data-placement="bottom" title="1. Модуль. Модуль, обеспечивающий отображение вспомогательных виджетов на страницах курса и других страницах. Статья «Блоки в СЭО 3KL».&#13;&#10;2. Экземпляр модуля. Вспомогательный виджет, как правило в виде прямоугольной области, на странице системы, служащий для отображения вспомогательной информации и дополнительных действий при пользовании страницы. Например, Личный кабинет пользователя формируется из блоков. Чаще всего блоки размещаются во вспомогательных областях, например, в выдвижной панели блоков. Статья «Блоки в СЭО 3KL».">блок</abbr>) добавить действие «Отписать от текущего курса» (Рис. 8.11.18).</p>
+<p><img class="otsf-screenshot" src="https://kb.opentechnology.ru/index.php?action=attachment&amp;id=9008" width="1446" height="711" /></p>
+<div class="otsf-screenshot-description">Рис. 8.11.18. Добавление действия «Отписать от текущего курса».</div>
+<p>19) Убедиться, что параметр «Включить» = Да, сохранить настройки (Рис. 8.11.19).</p>
+<p><img class="otsf-screenshot" src="https://kb.opentechnology.ru/index.php?action=attachment&amp;id=9009" width="705" height="446" /></p>
+<div class="otsf-screenshot-description">Рис. 8.11.19. Настройки действия «Отписать от текущего курса».</div>
+<p>20) На странице управления действиями Логики курса 3KL «Успешное завершение аттестации» (по аналогии с <strong>16)</strong>, в тот же блок) добавить действие «Отправить сообщение» (Рис. 8.11.20).</p>
+<p><img class="otsf-screenshot" src="https://kb.opentechnology.ru/index.php?action=attachment&amp;id=9010" width="1442" height="721" /></p>
+<div class="otsf-screenshot-description">Рис. 8.11.20. Добавление действия «Отправить сообщение».</div>
+<p>21) Установить настройки для добавленного действия «Отправить сообщение» (Рис. 8.11.21):</p>
+<p>Включить = Да<br />Получатель = Студент<br />Текст уведомления = {STUDENTFULLNAME}, поздравляем! Вы успешно прошли аттестационное тестирование. До встречи в следующем году!<br />Отправлять от имени = <em>Преподаватель<br /></em>Выберите отправителя =<em> Преподаватель курса «Тестирование на знание меню»<br /></em></p>
+<p><img class="otsf-screenshot" src="https://kb.opentechnology.ru/index.php?action=attachment&amp;id=9011" width="1742" height="988" /></p>
+<div class="otsf-screenshot-description">Рис. 8.11.21. Настройки действия «Отправить сообщение».</div>
+<p><strong>Создание и настройка Логики курса 3KL для информирования руководителя о неудовлетворительном результате тестирования</strong></p>
+<p>22) Добавить в секцию курса «Тестирование на знание меню» элемент курса «Логика курса 3KL» и выполнить его предварительную настройку (Рис. 8.11.22):</p>
+<p>Название = Сообщение о неудовлетворительном результате тестирования<br />Защита от случайных срабатываний = Да<br />Доступность = Сделать доступным, но не отображать на странице курса<br />Периодическая проверка состояния = Каждый день</p>
+<p><img class="otsf-screenshot" src="https://kb.opentechnology.ru/index.php?action=attachment&amp;id=9012" width="1714" height="1238" /></p>
+<div class="otsf-screenshot-description">Рис. 8.11.22. Страница настроек элемента курса «Логика курса 3KL».</div>
+<p>23) Для создаваемой Логики курса 3KL добавить и настроить ограничение доступа «Выполнение элемента»:</p>
+<p>Выполнение элемента = Ежегодное тестирование (поз. 2 Рис. 8.11.23)<br />Условие выполнения элемента = элемент должен быть выполнен с оценкой ниже проходного балла (поз. 3 Рис. 8.11.23)</p>
+<p>Условие доступа = Студент должен соответствовать нижеследующему условию (поз. 1 Рис. 8.11.23).</p>
+<p><img class="otsf-screenshot" src="https://kb.opentechnology.ru/index.php?action=attachment&amp;id=7094" alt="" width="1279" height="323" /></p>
+<div class="otsf-screenshot-description">Рис. 8.11.23. Настроенные ограничения доступа Логики курса 3KL «Сообщение о неудовлетворительном результате тестирования».</div>
+<p>24) На странице Логики курса 3KL «Сообщение о неудовлетворительном результате тестирования» нажать кнопку «Управление действиями» (Рис. 8.11.24).</p>
+<p><img class="otsf-screenshot" src="https://kb.opentechnology.ru/index.php?action=attachment&amp;id=9013" width="1696" height="462" /></p>
+<div class="otsf-screenshot-description">Рис. 8.11.24. Страница Логики курса 3KL «Сообщение о необходимости пройти тестирование». Переход к созданию и настройке действия.</div>
+<p>25) На вновь открывшейся странице в первом блоке действия:</p>
+<ul>
+<li>открыть глазик в строке «Условие: логика курса активна» (включить действие);</li>
+<li>из выпадающего списка «Выберите действие...» выбрать «Отправить сообщение»;</li>
+<li>нажать на <img src="https://kb.opentechnology.ru/index.php?action=attachment&amp;id=7028" alt="" width="32" height="30" /> справа от списка (Рис. 8.11.25).</li>
+</ul>
+<p><img class="otsf-screenshot" src="https://kb.opentechnology.ru/index.php?action=attachment&amp;id=9014" width="1442" height="714" /></p>
+<div class="otsf-screenshot-description">Рис. 8.11.25. Страница «Управление действиями» Логики курса 3KL «Сообщение о неудовлетворительном результате тестирования».</div>
+<p>26) Установить настройки для добавленного действия «Отправить сообщение» (Рис. 8.11.26):</p>
+<p>Включить = Да<br />Получатель = Куратор<br />Текст уведомления = Информируем, что сотрудник {STUDENTFULLNAME} не прошел ежегодное тестирование в курсе {COURSEFULLNAME}.<br />Отправлять от имени = <em>Администратор</em></p>
+<p><img class="otsf-screenshot" src="https://kb.opentechnology.ru/index.php?action=attachment&amp;id=9015" width="1764" height="983" /></p>
+<div class="otsf-screenshot-description">Рис. 8.11.26. Настройки действия «Отправить сообщение» Логики курса 3KL «Сообщение о необходимости пройти тестирование».</div>
+<p><strong>Результат настройки:</strong></p>
+<p>В перечень дополнительных полей профиля пользователя добавлено поле «Дата последней аттестации»; в курсе «Официант» добавлена и настроена Логика курса 3KL «Автоматическая запись на аттестацию» (Рис. 8.11.27); в курсе «Тестирование на знание меню» добавлены и настроены Логики курса 3KL «Сообщение о необходимости пройти тестирование», «Успешное завершение аттестации», «Сообщение о неудовлетворительном результате тестирования» (Рис. 8.11.28).</p>
+<p><img class="otsf-screenshot" src="https://kb.opentechnology.ru/index.php?action=attachment&amp;id=7110" alt="" width="1793" height="716" /></p>
+<div class="otsf-screenshot-description">Рис. 8.11.27. Курс «Официант».</div>
+<p><img class="otsf-screenshot" src="https://kb.opentechnology.ru/index.php?action=attachment&amp;id=7111" alt="" width="1827" height="662" /></p>
+<div class="otsf-screenshot-description">Рис. 8.11.28. Курс «Тестирование на знание меню».</div>
+<p><strong>Результат:</strong></p>
+<p>1) На курс «Официант» подписывается новый сотрудник (у которого поле профиля «Дата последней аттестации» пустое) или у сотрудника, уже подписанного на курс, с даты прошлой аттестации прошло более года (значение поля «Дата последней аттестации» + 365 дней &gt; текущей даты) (Рис. 8.11.29).</p>
+<p><img class="otsf-screenshot" src="https://kb.opentechnology.ru/index.php?action=attachment&amp;id=7120" alt="" width="1710" height="712" /></p>
+<div class="otsf-screenshot-description">Рис.8.11.29. Страница «Зачисленные на курс пользователи» курса «Официант».</div>
+<p>2) Срабатывает Логика курса 3KL «Автоматическая запись на аттестацию» и подписывает этого сотрудника на курс «Тестирование на знание меню» (Рис. 8.11.30).</p>
+<p><img class="otsf-screenshot" src="https://kb.opentechnology.ru/index.php?action=attachment&amp;id=7121" alt="" width="1719" height="681" /></p>
+<div class="otsf-screenshot-description">Рис.8.11.30. Страница «Зачисленные на курс пользователи» курса «Тестирование на знание меню».</div>
+<p>3) Срабатывает Логика курса 3KL «Сообщение о необходимости пройти тестирование» и пользователь получает на электронную почту соответствующее информационное письмо (Рис. 8.11.31).</p>
+<p><img class="otsf-screenshot" src="https://kb.opentechnology.ru/index.php?action=attachment&amp;id=7129" alt="" width="884" height="258" /></p>
+<div class="otsf-screenshot-description">Рис. 8.11.31. Пример информационного письма о необходимости пройти тестирование.</div>
+<p>4) Пользователь выполняет аттестационное тестирование.</p>
+<p>5) Результат тестирования выше проходного балла. Срабатывает Логика курса 3KL «Успешное завершение аттестации» и:</p>
+<ul>
+<li>в поле профиля пользователя «Дата последней аттестации» записывается дата прохождения тестирования (Рис. 8.11.32);</li>
+</ul>
+<p><img class="otsf-screenshot" src="https://kb.opentechnology.ru/index.php?action=attachment&amp;id=7123" alt="" width="1746" height="685" /></p>
+<div class="otsf-screenshot-description">Рис. Рис. 8.11.32. Обновленная дата прохождения аттестации.</div>
+<ul>
+<li>пользователь отписывается от курса «Тестирование на знание меню;</li>
+</ul>
+<ul>
+<li>пользователь получает на электронную почту информационное сообщение об успешном прохождении аттестации (Рис. 8.11.33).</li>
+</ul>
+<p><img class="otsf-screenshot" src="https://kb.opentechnology.ru/index.php?action=attachment&amp;id=7124" alt="" width="877" height="257" /></p>
+<div class="otsf-screenshot-description">Рис. 8.11.33. Пример информационного письма о прохождении тестирования.</div>
+<p>6) Результат тестирования ниже проходного балла. Срабатывает Логика курса 3KL «Сообщение о неудовлетворительном результате тестирования» и руководитель сотрудника получает на электронную почту соответствующее информационное сообщение (Рис. 8.11.34).</p>
+<p><img class="otsf-screenshot" src="https://kb.opentechnology.ru/index.php?action=attachment&amp;id=7125" alt="" width="1087" height="181" /></p>
+<div class="otsf-screenshot-description">Рис. 8.11.34. Пример информационного письма руководителю.</div>
+<p><a href="https://kb.opentechnology.ru/index.php?solution_id=1173#q0">-Вернуться к содержанию-</a></p>
+<h3><a id="q812"></a>8.12. <a href="https://kb.opentechnology.ru/index.php?solution_id=1816">Как с помощью Логики курса 3KL настроить подписку и задать период записи на курс</a></h3>
+<h3><a id="q813"></a>8.13. <a href="https://kb.opentechnology.ru/index.php?solution_id=1818%20">Как с помощью Логики курса 3KL подписать слушателей в курс и распределить в локальные группы</a></h3>
+<p><a href="https://kb.opentechnology.ru/index.php?solution_id=1173#q0">-Вернуться к содержанию-</a></p>
+                    
+                    Теги: <a title="Логика курса" href="/tags/21624/logika-kursa.html">Логика курса</a>, <a title="элемент курса" href="/tags/21625/element-kursa.html">элемент курса</a>
+                    
+                    
+                    
+                    <aside id="faqAccordion" class="accordion related-faqs hidden-print">
+                        <div class="accordion-group">
+                            <div class="accordion-heading">
+                                <a class="accordion-toggle" href="#collapseRelatedFaqs" data-parent="#faqAccordion" data-toggle="collapse">
+                                    Связанные статьи
+                                </a>
+                            </div>
+                            <div id="collapseRelatedFaqs" class="accordion-body collapse">
+                                <div class="accordion-inner"><ul><li><a title="Метод записи на курс «Автозачисление 3KL» — otautoenrol" href="/content/27/9/ru/metod-zapisi-na-kurs-«avtozacislenie-3kl»-—-otautoenrol.html">Метод записи на курс «Автозачисление 3KL» — otautoenrol</a></li><li><a title="Настройка отображения элементов Витрины курсов 3KL через дополнительные поля курса" href="/content/27/14/ru/nastrojka-otobrazenia-elementov-vitriny-kursov-3kl-cerez-dopolnitelʹnye-pola-kursa.html">Настройка отображения элементов Витрины курсов 3KL через дополнительные поля курса</a></li><li><a title="Интеграция со сторонними сервисами" href="/content/27/33/ru/integracia-so-storonnimi-servisami.html">Интеграция со сторонними сервисами</a></li><li><a title="Интеграция с Webinar.ru. Элемент курса  «Webinar.ru»" href="/content/27/36/ru/integracia-s-webinarru-element-kursa-«webinarru».html">Интеграция с Webinar.ru. Элемент курса  «Webinar.ru»</a></li><li><a title="Настройка Витрины курсов 3KL" href="/content/27/58/ru/nastrojka-vitriny-kursov-3kl.html">Настройка Витрины курсов 3KL</a></li></ul></div>
+                            </div>
+                        </div>
+                    </aside>
+                    
+                    
+                    <aside id="faqAccordion" class="accordion related-categories hidden-print">
+                        <div class="accordion-group">
+                            <div class="accordion-heading">
+                                <a class="accordion-toggle" href="#collapseRelatedCategories" data-parent="#faqAccordion" data-toggle="collapse">
+                                    Категории для этой статьи
+                                </a>
+                            </div>
+                            <div id="collapseRelatedCategories" class="accordion-body collapse">
+                                <div class="accordion-inner"><ul class="breadcrumb-related-categories"></ul><ul class="breadcrumb-related-categories"></ul><ul class="breadcrumb-related-categories"></ul><ul class="breadcrumb-related-categories"></ul><ul class="breadcrumb-related-categories"></ul><ul class="breadcrumb-related-categories"></ul><ul class="breadcrumb-related-categories"></ul><ul class="breadcrumb-related-categories"></ul><ul class="breadcrumb-related-categories"><li itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a href="/category/1/publicnye-materialy.html" itemprop="url" rel="index"><span itemprop="title">Публичные материалы</span></a></li><li itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a href="/category/4/seo-3kl.html" itemprop="url"><span itemprop="title">СЭО 3KL</span></a></li><li itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a title="В этом разделе собраны инструкции по некоторым, наиболее крупным доработкам, которые отличают СЭО 3KL от community-версии Moodle" href="/category/265/instrukcii-po-nekotorym-modulam-razrabotannym-ooo-&N34otkrytye-tehnologii&N34.html" itemprop="url"><span itemprop="title">Инструкции по некоторым модулям, разработанным ООО &#34;Открытые технологии&#34;</span></a></li></ul><ul class="breadcrumb-related-categories"></ul><ul class="breadcrumb-related-categories"></ul><ul class="breadcrumb-related-categories"></ul></div>
+                            </div>
+                        </div>
+                    </aside>
+                    
+                </div>
+            </article>
+            <ul id="tab" class="nav nav-tabs hidden-print">
+                <li class="active"><a href="#votingForm" data-toggle="tab">Пожалуйста оцените этот ответ:</a></li>
+                
+                
+            </ul>
+            <div class="tab-content pmf-faq-info">
+                <div class="tab-pane active hidden-print" id="votingForm">
+                    <form action="#" method="post" class="form-inline">
+                        <input type="hidden" name="artikel" value="173">
+                        <div id="votings"></div>
+                        <div class="pmf-stars">
+                            <div class="pmf-star-rating" data-rating="Рейтинг ответа:">
+                                <span data-stars="5">☆</span>
+                                <span data-stars="4">☆</span>
+                                <span data-stars="3">☆</span>
+                                <span data-stars="2">☆</span>
+                                <span data-stars="1">☆</span>
+                            </div>
+                        </div>
+                        <div class="pull-right">
+                            <strong>Рейтинг ответа:</strong><span id="rating"> <span data-rating="5">5</span> (2 оценок)</span>
+                        </div>
+                    </form>
+                </div>
+                <div class="tab-pane hidden-print" id="switchAvailableLanguage">
+                    
+                </div>
+                <div class="tab-pane hidden-print" id="addTranslation">
+                    <form action="/index.php?action=translate&amp;cat=41&amp;id=173&amp;srclang=ru" method="post" class="form-inline" accept-charset="utf-8">
+                        <select class="form-control" name="translation" id="translation" size="1">
+	<option value="ar">Arabic</option>
+	<option value="eu">Basque</option>
+	<option value="bn">Bengali</option>
+	<option value="bs">Bosnian</option>
+	<option value="pt-br">Brazilian Portuguese</option>
+	<option value="zh">Chinese (Simplified)</option>
+	<option value="tw">Chinese (Traditional)</option>
+	<option value="cs">Czech</option>
+	<option value="da">Danish</option>
+	<option value="nl">Dutch</option>
+	<option value="en">English</option>
+	<option value="fi">Finnish</option>
+	<option value="fr">French</option>
+	<option value="fr-ca">French (Canada)</option>
+	<option value="de">German</option>
+	<option value="el">Greek</option>
+	<option value="he">Hebrew</option>
+	<option value="hi">Hindi</option>
+	<option value="hu">Hungarian</option>
+	<option value="id">Indonesian</option>
+	<option value="it">Italian</option>
+	<option value="ja">Japanese</option>
+	<option value="ko">Korean</option>
+	<option value="lv">Latvian</option>
+	<option value="lt">Lithuanian</option>
+	<option value="ms">Malay</option>
+	<option value="nb">Norwegian Bokm&aring;l</option>
+	<option value="fa">Persian</option>
+	<option value="pl">Polish</option>
+	<option value="pt">Portuguese</option>
+	<option value="ro">Romanian</option>
+	<option value="sr">Serbian</option>
+	<option value="sk">Slovak</option>
+	<option value="sl">Slovenian</option>
+	<option value="es">Spanish</option>
+	<option value="sv">Swedish</option>
+	<option value="th">Thai</option>
+	<option value="tr">Turkish</option>
+	<option value="uk">Ukrainian</option>
+	<option value="vi">Vietnamese</option>
+	<option value="cy">Welsh</option>
+</select>
+                        <button class="btn btn-primary" type="submit" name="submit">
+                            Старт перевода...
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <p class="hidden-print">Комментарии запрещены</p>
+            <aside class="pmf-create-comment hide" id="pmf-create-comment">
+                <hr>
+                <div id="loader"></div>
+                <h2><i aria-hidden="true" class="fa fa-heart"></i> Комментировать этот ответ</h2>
+                <form id="formValues" action="#" method="post" class="form-horizontal" accept-charset="utf-8">
+                    <input type="hidden" name="id" id="id" value="173">
+                    <input type="hidden" name="lang" id="lang" value="ru">
+                    <input type="hidden" name="type" id="type" value="faq">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <input type="text" name="user" id="user" class="form-control input-lg" required
+                                   placeholder="Ваше имя:" value="">
+                        </div>
+                        
+                        
+                        <div class="col-md-6">
+                            <input type="email" name="mail" id="mail" class="form-control input-lg" required
+                                   placeholder="Адрес Email"  value="">
+                        </div>
+	                    
+	                    
+                    </div>
+                    <textarea rows="10" name="comment_text" id="comment_text" class="form-control input-lg"
+                              placeholder="Ваши комментарии:"></textarea>
+                    <div class="form-group"><label class="col-sm-3 control-label">Пожалуйста введите символы изображённые но картинке</label>    <div class="col-sm-4">        <p class="form-control-static"><img id="captchaImage" src="/index.php?action=writecomment&amp;gen=img&amp;ck=1774514906" height="40" width="165" alt="Chuck Norris has counted to infinity. Twice." title="click to refresh">        </p>    </div>    <div class="col-sm-5">        <div class="input-group"><input type="text" class="form-control" name="captcha" id="captcha" size="6" autocomplete="off" required>            <span class="input-group-btn"><a class="btn btn-primary" id="captcha-button" data-action="writecomment"><i aria-hidden="true" class="fa fa-refresh"></i></a>            </span>        </div>    </div></div>
+                    
+                    <div class="pmf-buttons clearfix">
+                        <button class="btn btn-primary" id="submitcomment" type="submit">
+                            Отправить
+                        </button>
+                    </div>
+                </form>
+            </aside>
+            <aside class="pmf-comments" id="comments">
+                <hr>
+                
+            </aside>
+        </section>
+        <script src="assets/js/libs/highlight.pack.js"></script>
+        <style>
+        body {
+            position: relative;
+        }
+        </style>
+        <link rel="stylesheet" href="assets/js/libs/default.css">
+        <script>
+            $(document).ready(function() {
+                $(function() {
+                    $('div.pmf-stars > div.pmf-star-rating > span').on('click', function(e) {
+                        var numStars = $(e.target).data('stars');
+                        saveVoting('faq', 173, numStars, 'ru');
+                    });
+                });
+                $('pre code').each(function(i, block) {
+                    hljs.highlightBlock(block);
+                });
+                $('button.pmf-popover').popover();
+            });
+        </script>
+            </div>
+            <aside class="col-lg-3 pmf-aside">
+                        
+        <section class="pmf-aside-widget">
+            <div class="pmf-aside-widget-body pmf-social-links">
+                <a target="_blank" href="/pdf.php?cat=41&id=173&artlang=ru" rel="nofollow" title="Скомпилировать PDF файл">
+                    <span class="fa-stack fa-lg">
+                        <i aria-hidden="true" class="fa fa-square-o fa-stack-2x"></i>
+                        <i aria-hidden="true" class="fa fa-file-pdf-o fa-stack-1x"></i>
+                    </span>
+                </a>
+                <a href="javascript:window.print();" rel="nofollow" title="Отправить на печать">
+                    <span class="fa-stack fa-lg">
+                        <i aria-hidden="true" class="fa fa-square-o fa-stack-2x"></i>
+                        <i aria-hidden="true" class="fa fa-print fa-stack-1x"></i>
+                    </span>
+                </a>
+            </div>
+        </section>
+        
+        
+		
+            <div class="pmf-aside-widget">
+                <header>
+                    <h3>ВАЖНОЕ:</h3>
+                </header>
+                <div class="pmf-aside-widget-body">
+                    <ul class="pmf-list">
+                        <li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="Способы регистрации и аутентификации пользователей" href="/content/5/15/ru/sposoby-registracii-i-autentifikacii-polʹzovatelej.html">Способы регистрации и аутентификации пользователей</a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title=" Плагин  «Антиплагиат.ру». Проверка работ слушателей на заимствования с помощью сервиса «Антиплагиат»" href="/content/5/35/ru/plagin-«antiplagiatru»-proverka-rabot-slusatelej-na-zaimstvovania-s-pomosʹu-servisa-«antiplagiat».html"> Плагин «Антиплагиат.ру». Проверка работ слушателей на заимствования с ...</a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="Интеграция вебинаров в СЭО 3KL" href="/content/5/68/ru/integracia-vebinarov-v-seo-3kl.html">Интеграция вебинаров в СЭО 3KL</a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="Отчеты в СЭО 3KL " href="/content/41/100/ru/otcety-v-seo-3kl.html">Отчеты в СЭО 3KL </a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="Сертификат СЭО 3KL" href="/content/27/106/ru/sertifikat-seo-3kl.html">Сертификат СЭО 3KL</a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="Отслеживание времени непрерывного обучения в курсе" href="/content/24/153/ru/otslezivanie-vremeni-nepreryvnogo-obucenia-v-kurse.html">Отслеживание времени непрерывного обучения в курсе</a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="Как узнать о СЭО 3KL подробнее?" href="/content/1/157/ru/kak-uznatʹ-o-seo-3kl-podrobnee.html">Как узнать о СЭО 3KL подробнее?</a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="Логика курса 3KL, часть 1. Принцип работы, добавление и настройка элемента" href="/content/27/168/ru/logika-kursa-3kl-castʹ-1-princip-raboty-dobavlenie-i-nastrojka-elementa.html">Логика курса 3KL, часть 1. Принцип работы, добавление и ...</a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="Настройка внешнего вида СЭО 3КL" href="/content/27/183/ru/nastrojka-vnesnego-vida-seo-3kl.html">Настройка внешнего вида СЭО 3КL</a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="Плагин «Подписка 3KL» часть 2. Глобальные настройки" href="/content/27/216/ru/plagin-«podpiska-3kl»-castʹ-2-globalʹnye-nastrojki.html">Плагин «Подписка 3KL» часть 2. Глобальные настройки</a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="Портфолио ч. 1. Введение" href="/content/24/218/ru/portfolio-c-1-vvedenie.html">Портфолио ч. 1. Введение</a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="Глобальные сценарии 3KL. Локальный плагин" href="/content/27/271/ru/globalʹnye-scenarii-3kl-lokalʹnyj-plagin.html">Глобальные сценарии 3KL. Локальный плагин</a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="Панель управления СЭО 3KL. Локальный плагин" href="/content/41/375/ru/panelʹ-upravlenia-seo-3kl-lokalʹnyj-plagin.html">Панель управления СЭО 3KL. Локальный плагин</a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="Персональная информация пользователя. Страницы «О пользователе» и «Личный кабинет»" href="/content/27/480/ru/personalʹnaa-informacia-polʹzovatela-stranicy-«o-polʹzovatele»-i-«licnyj-kabinet».html">Персональная информация пользователя. Страницы «О пользователе» и «Личный кабинет» ...</a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="Элемент курса «Занятие 3КL»" href="/content/4/492/ru/element-kursa-«zanatie-3kl».html">Элемент курса «Занятие 3КL»</a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="Витрина курсов 3KL. Путеводитель" href="/content/27/536/ru/vitrina-kursov-3kl-putevoditelʹ.html">Витрина курсов 3KL. Путеводитель</a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="Справка СЭО 3КL" href="/content/27/542/ru/spravka-seo-3kl.html">Справка СЭО 3КL</a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="Термины и определения базы знаний" href="/content/2/543/ru/terminy-i-opredelenia-bazy-znanij.html">Термины и определения базы знаний</a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="Политики сайта и пользовательские соглашения" href="/content/1/593/ru/politiki-sajta-i-polʹzovatelʹskie-soglasenia.html">Политики сайта и пользовательские соглашения</a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="Расширенный анонс релиза 3.9.20a" href="/content/43/614/ru/rassirennyj-anons-reliza-3920a.html">Расширенный анонс релиза 3.9.20a</a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="Настройка внешнего вида СЭО 3КL версии 3.9" href="/content/27/633/ru/nastrojka-vnesnego-vida-seo-3kl-versii-39.html">Настройка внешнего вида СЭО 3КL версии 3.9</a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="Миграция СЭО 3КL с релиза 3.9 на 4.1. Вопросы и решения" href="/content/6/634/ru/migracia-seo-3kl-s-reliza-39-na-41-voprosy-i-resenia.html">Миграция СЭО 3КL с релиза 3.9 на 4.1. Вопросы ...</a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="Инструменты WEB API в СЭО 3КL. Возможности и примеры" href="/content/41/642/ru/instrumenty-web-api-v-seo-3kl-vozmoznosti-i-primery.html">Инструменты WEB API в СЭО 3КL. Возможности и примеры ...</a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="Расширенный анонс релиза 3.9.25a" href="/content/43/660/ru/rassirennyj-anons-reliza-3925a.html">Расширенный анонс релиза 3.9.25a</a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="21.05.2024 г., III конференция «СЭО Moodle для образования» и конкурс статей" href="/content/45/691/ru/21052024-g-iii-konferencia-«seo-moodle-dla-obrazovania»-i-konkurs-statej.html">21.05.2024 г., III конференция «СЭО Moodle для образования» и ...</a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="Организация открытого мероприятия (онлайн-конференции) на базе СЭО 3KL" href="/content/1/697/ru/organizacia-otkrytogo-meropriatia-onlajn_konferencii-na-baze-seo-3kl.html">Организация открытого мероприятия (онлайн-конференции) на базе СЭО 3KL</a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="Интеграция Cреды электронного обучения 3KL и Moodle  с ГИС СЦОС" href="/content/27/698/ru/integracia-credy-elektronnogo-obucenia-3kl-i-moodle-s-gis-scos.html">Интеграция Cреды электронного обучения 3KL и Moodle с ГИС ...</a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="Расширенный анонс релиза 4.5.4b-beta" href="/content/43/728/ru/rassirennyj-anons-reliza-454b_beta.html">Расширенный анонс релиза 4.5.4b-beta</a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="Расширенный анонс релиза 4.5.6b" href="/content/43/817/ru/rassirennyj-anons-reliza-456b.html">Расширенный анонс релиза 4.5.6b</a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="Расширенный анонс релиза 4.5.7a" href="/content/43/833/ru/rassirennyj-anons-reliza-457a.html">Расширенный анонс релиза 4.5.7a</a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="Главное и интересное. 3КL-осень 2025" href="/content/46/843/ru/glavnoe-i-interesnoe-3kl_osenʹ-2025.html">Главное и интересное. 3КL-осень 2025</a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="Расширенный анонс релиза 4.1.22a" href="/content/44/852/ru/rassirennyj-anons-reliza-4122a.html">Расширенный анонс релиза 4.1.22a</a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="Расширенный анонс релиза 4.5.10b" href="/content/43/879/ru/rassirennyj-anons-reliza-4510b.html">Расширенный анонс релиза 4.5.10b</a></li>
+                    </ul>
+                </div>
+            </div>
+        
+        <section class="pmf-aside-widget">
+            <header>
+                <h3>Записей в этой категории</h3>
+            </header>
+            <div class="pmf-aside-widget-body">
+                <ul class="phpmyfaq_ul"><li><a title="Выгрузка списка предварительно отобранных пользователей на странице «Действия над несколькими пользователями»" href="/content/41/884/ru/vygruzka-spiska-predvaritelʹno-otobrannyh-polʹzovatelej-na-stranice-«dejstvia-nad-neskolʹkimi-polʹzovatelami».html">Выгрузка списка предварительно отобранных пользователей на странице «Действия над несколькими пользователями»</a></li><li><a title="Формирование выборки пользователей на странице «Действия над несколькими пользователями»" href="/content/41/883/ru/formirovanie-vyborki-polʹzovatelej-na-stranice-«dejstvia-nad-neskolʹkimi-polʹzovatelami».html">Формирование выборки пользователей на странице «Действия над несколькими пользователями»</a></li><li><a title="Поиск пользователя СЭО 3KL по неполным данным с помощью страницы «Список пользователей»" href="/content/41/882/ru/poisk-polʹzovatela-seo-3kl-po-nepolnym-dannym-s-pomosʹu-stranicy-«spisok-polʹzovatelej».html">Поиск пользователя СЭО 3KL по неполным данным с помощью страницы «Список пользователей»</a></li><li><a title="Быстрый доступ к странице профиля пользователя с помощью страницы «Список пользователей»" href="/content/41/881/ru/bystryj-dostup-k-stranice-profila-polʹzovatela-s-pomosʹu-stranicy-«spisok-polʹzovatelej».html">Быстрый доступ к странице профиля пользователя с помощью страницы «Список пользователей»</a></li><li><a title="Вебинар от 30.10.2025г. Организация вебинара «Mirapolis Virtual Room» с оплатой через Robokassa. Инструкция по СЭО 3KL версии 4.5" href="/content/41/862/ru/vebinar-ot-30102025g-organizacia-vebinara-«mirapolis-virtual-room»-s-oplatoj-cerez-robokassa-instrukcia-po-seo-3kl-versii-45.html">Вебинар от 30.10.2025г. Организация вебинара «Mirapolis Virtual Room» с оплатой через Robokassa. Инструкция по СЭО 3KL версии 4.5</a></li><li><a title="Вебинар от 24.11.2025г. Слепое оценивание в СЭО Moodle и 3KL. Решение для СЭО 3KL v 4.5." href="/content/41/858/ru/vebinar-ot-24112025g-slepoe-ocenivanie-v-seo-moodle-i-3kl-resenie-dla-seo-3kl-v-45.html">Вебинар от 24.11.2025г. Слепое оценивание в СЭО Moodle и 3KL. Решение для СЭО 3KL v 4.5.</a></li><li><a title="Расширенный анонс релиза 4.5.8a" href="/content/41/851/ru/rassirennyj-anons-reliza-458a.html">Расширенный анонс релиза 4.5.8a</a></li><li><a title="Расширенный анонс релиза 4.5.7b" href="/content/41/841/ru/rassirennyj-anons-reliza-457b.html">Расширенный анонс релиза 4.5.7b</a></li><li><a title="Почему записанный на курс слушатель не видит роли некоторых пользователей, записанных на этот же курс?" href="/content/41/840/ru/pocemu-zapisannyj-na-kurs-slusatelʹ-ne-vidit-roli-nekotoryh-polʹzovatelej-zapisannyh-na-etot-ze-kurs.html">Почему записанный на курс слушатель не видит роли некоторых пользователей, записанных на этот же курс?</a></li><li><a title="Как массово сменить провайдер в уже настроенных элементах курса «‎Занятие 3KL»?" href="/content/41/837/ru/kak-massovo-smenitʹ-provajder-v-uze-nastroennyh-elementah-kursa-«‎zanatie-3kl».html">Как массово сменить провайдер в уже настроенных элементах курса «‎Занятие 3KL»?</a></li><li><a title="Вебинар от 25.07.2025г. Кураторство: реализация функций куратора образовательного процесса в СЭО 3KL" href="/content/41/832/ru/vebinar-ot-25072025g-kuratorstvo-realizacia-funkcij-kuratora-obrazovatelʹnogo-processa-v-seo-3kl.html">Вебинар от 25.07.2025г. Кураторство: реализация функций куратора образовательного процесса в СЭО 3KL</a></li><li><a title="Вебинар от 26.12.2024г. Личный кабинет слушателя ДО в СЭО 3KL. Решение по СЭО 3KL версии 4.1" href="/content/41/831/ru/vebinar-ot-26122024g-licnyj-kabinet-slusatela-do-v-seo-3kl-resenie-po-seo-3kl-versii-41.html">Вебинар от 26.12.2024г. Личный кабинет слушателя ДО в СЭО 3KL. Решение по СЭО 3KL версии 4.1</a></li><li><a title="Вебинар от 27.11.2024г. Личный кабинет слушателя ДПО в СЭО 3KL. Решение по СЭО 3KL версии 4.1" href="/content/41/830/ru/vebinar-ot-27112024g-licnyj-kabinet-slusatela-dpo-v-seo-3kl-resenie-po-seo-3kl-versii-41.html">Вебинар от 27.11.2024г. Личный кабинет слушателя ДПО в СЭО 3KL. Решение по СЭО 3KL версии 4.1</a></li><li><a title="Вебинар от 02.11.2024г. Личный кабинет сотрудника в СЭО 3KL. Решение по СЭО 3KL версии 4.1" href="/content/41/829/ru/vebinar-ot-02112024g-licnyj-kabinet-sotrudnika-v-seo-3kl-resenie-po-seo-3kl-versii-41.html">Вебинар от 02.11.2024г. Личный кабинет сотрудника в СЭО 3KL. Решение по СЭО 3KL версии 4.1</a></li><li><a title="Вебинар от 26.09.2024г. Личный кабинет студента в СЭО 3KL. Решение по СЭО 3KL версии 4.1" href="/content/41/828/ru/vebinar-ot-26092024g-licnyj-kabinet-studenta-v-seo-3kl-resenie-po-seo-3kl-versii-41.html">Вебинар от 26.09.2024г. Личный кабинет студента в СЭО 3KL. Решение по СЭО 3KL версии 4.1</a></li><li><a title="Вебинар от 29.08.2024г. Личный кабинет в СЭО 3KL. Основные настройки и блоки. Видеоинструкция по СЭО 3KL версии 4.1" href="/content/41/826/ru/vebinar-ot-29082024g-licnyj-kabinet-v-seo-3kl-osnovnye-nastrojki-i-bloki-videoinstrukcia-po-seo-3kl-versii-41.html">Вебинар от 29.08.2024г. Личный кабинет в СЭО 3KL. Основные настройки и блоки. Видеоинструкция по СЭО 3KL версии 4.1</a></li><li><a title="Вебинар от 24.07.2024г. Дополнительная кнопка доступа к курсу. Видеоинструкция по СЭО 3KL версии 4.1." href="/content/41/825/ru/vebinar-ot-24072024g-dopolnitelʹnaa-knopka-dostupa-k-kursu-videoinstrukcia-po-seo-3kl-versii-41.html">Вебинар от 24.07.2024г. Дополнительная кнопка доступа к курсу. Видеоинструкция по СЭО 3KL версии 4.1.</a></li><li><a title="Вебинар от 26.06.2024г. Плагин «Сертификат СЭО 3KL». Видеоинструкция по СЭО 3KL v 4.1." href="/content/41/824/ru/vebinar-ot-26062024g-plagin-«sertifikat-seo-3kl»-videoinstrukcia-po-seo-3kl-v-41.html">Вебинар от 26.06.2024г. Плагин «Сертификат СЭО 3KL». Видеоинструкция по СЭО 3KL v 4.1.</a></li><li><a title="Вебинар от 30.05.2024г. Взаимная оценка. Видеоинструкция по СЭО 3KL v 4.1" href="/content/41/819/ru/vebinar-ot-30052024g-vzaimnaa-ocenka-videoinstrukcia-po-seo-3kl-v-41.html">Вебинар от 30.05.2024г. Взаимная оценка. Видеоинструкция по СЭО 3KL v 4.1</a></li><li><a title="Вебинар от 03.05.2024г. Справка СЭО 3KL. Видеоинструкция по СЭО 3KL v 4.1" href="/content/41/818/ru/vebinar-ot-03052024g-spravka-seo-3kl-videoinstrukcia-po-seo-3kl-v-41.html">Вебинар от 03.05.2024г. Справка СЭО 3KL. Видеоинструкция по СЭО 3KL v 4.1</a></li><li><a title="Вебинар от 28.03.2024г. Блок «Спросить преподавателя». Видеоинструкция по СЭО 3KL v 4.1" href="/content/41/816/ru/vebinar-ot-28032024g-blok-«sprositʹ-prepodavatela»-videoinstrukcia-po-seo-3kl-v-41.html">Вебинар от 28.03.2024г. Блок «Спросить преподавателя». Видеоинструкция по СЭО 3KL v 4.1</a></li><li><a title="Инструмент «Целостность данных 3KL»" href="/content/41/798/ru/instrument-«celostnostʹ-dannyh-3kl».html">Инструмент «Целостность данных 3KL»</a></li><li><a title="Вебинар от 29.05.2025г. Витрина для организаций с большим количеством курсов. Инструкция по СЭО 3KL версии 4.1" href="/content/41/764/ru/vebinar-ot-29052025g-vitrina-dla-organizacij-s-bolʹsim-kolicestvom-kursov-instrukcia-po-seo-3kl-versii-41.html">Вебинар от 29.05.2025г. Витрина для организаций с большим количеством курсов. Инструкция по СЭО 3KL версии 4.1</a></li><li><a title="Вебинар от 20.06.2025г. Витрина курсов СЭО 3KL. Описательная страница курса / Лендинг курса" href="/content/41/763/ru/vebinar-ot-20062025g-vitrina-kursov-seo-3kl-opisatelʹnaa-stranica-kursa-_-lending-kursa.html">Вебинар от 20.06.2025г. Витрина курсов СЭО 3KL. Описательная страница курса / Лендинг курса</a></li><li><a title="Вебинар от 27.02.2025г. Витрина для организаций с небольшим количеством курсов. Инструкция по СЭО 3KL версии 4.1" href="/content/41/757/ru/vebinar-ot-27022025g-vitrina-dla-organizacij-s-nebolʹsim-kolicestvom-kursov-instrukcia-po-seo-3kl-versii-41.html">Вебинар от 27.02.2025г. Витрина для организаций с небольшим количеством курсов. Инструкция по СЭО 3KL версии 4.1</a></li><li><a title="Вебинар от 27.03.2025г. Витрина курсов для организаций со средним количеством курсов. Инструкция по СЭО 3KL версии 4.1" href="/content/41/756/ru/vebinar-ot-27032025g-vitrina-kursov-dla-organizacij-so-srednim-kolicestvom-kursov-instrukcia-po-seo-3kl-versii-41.html">Вебинар от 27.03.2025г. Витрина курсов для организаций со средним количеством курсов. Инструкция по СЭО 3KL версии 4.1</a></li><li><a title="Вебинар от 30.01.2025г. Витрина курсов. Введение. Назначение и возможности. Инструкция по СЭО 3KL версии 4.1" href="/content/41/755/ru/vebinar-ot-30012025g-vitrina-kursov-vvedenie-naznacenie-i-vozmoznosti-instrukcia-po-seo-3kl-versii-41.html">Вебинар от 30.01.2025г. Витрина курсов. Введение. Назначение и возможности. Инструкция по СЭО 3KL версии 4.1</a></li><li><a title="Страница «Среда (Версии ПО)»" href="/content/41/716/ru/stranica-«sreda-versii-po».html">Страница «Среда (Версии ПО)»</a></li><li><a title="Плагин «Подписка 3КL». Видео инструкция по СЭО 3KL 4.1" href="/content/41/694/ru/plagin-«podpiska-3kl»-video-instrukcia-po-seo-3kl-41.html">Плагин «Подписка 3КL». Видео инструкция по СЭО 3KL 4.1</a></li><li><a title="Вебинар от 07.09.2023г. Скрытие неучебных курсов и сведений о подписке в блоке «История обучения 3KL». Решение для СЭО 3KL v4.1 (СЭО 3КL версии 4.1.5с)" href="/content/41/673/ru/vebinar-ot-07092023g-skrytie-neucebnyh-kursov-i-svedenij-o-podpiske-v-bloke-«istoria-obucenia-3kl»-resenie-dla-seo-3kl-v41-seo-3kl-versii-415s.html">Вебинар от 07.09.2023г. Скрытие неучебных курсов и сведений о подписке в блоке «История обучения 3KL». Решение для СЭО 3KL v4.1 (СЭО 3КL версии 4.1.5с)</a></li><li><a title="Вебинар от 04.08.2023г. Блок «‎Самопроверка на заимствования 3KL»‎. Видеоинструкция по СЭО 3KL v 4.1 (СЭО 3КL версии 4.1.4b)" href="/content/41/672/ru/vebinar-ot-04082023g-blok-«‎samoproverka-na-zaimstvovania-3kl»‎-videoinstrukcia-po-seo-3kl-v-41-seo-3kl-versii-414b.html">Вебинар от 04.08.2023г. Блок «‎Самопроверка на заимствования 3KL»‎. Видеоинструкция по СЭО 3KL v 4.1 (СЭО 3КL версии 4.1.4b)</a></li><li><a title="Вебинар от 07.09.2023г. Элемент курса «‎Библиотека ресурсов»‎. Видеоинструкция по СЭО 3KL v 4.1 (СЭО 3КL версии 4.1.5а)" href="/content/41/671/ru/vebinar-ot-07092023g-element-kursa-«‎biblioteka-resursov»‎-videoinstrukcia-po-seo-3kl-v-41-seo-3kl-versii-415a.html">Вебинар от 07.09.2023г. Элемент курса «‎Библиотека ресурсов»‎. Видеоинструкция по СЭО 3KL v 4.1 (СЭО 3КL версии 4.1.5а)</a></li><li><a title="Капча (CAPTCHA) в СЭО 3KL" href="/content/41/654/ru/kapca-captcha-v-seo-3kl.html">Капча (CAPTCHA) в СЭО 3KL</a></li><li><a title="Инструменты WEB API в СЭО 3КL. Возможности и примеры" href="/content/41/642/ru/instrumenty-web-api-v-seo-3kl-vozmoznosti-i-primery.html">Инструменты WEB API в СЭО 3КL. Возможности и примеры</a></li><li><a title="Интеграция АСУ «Спрут» с СЭО 3KL (СДО Русский Moodle)" href="/content/41/638/ru/integracia-asu-«sprut»-s-seo-3kl-sdo-russkij-moodle.html">Интеграция АСУ «Спрут» с СЭО 3KL (СДО Русский Moodle)</a></li><li><a title="Отчет «Общая статистика»" href="/content/41/561/ru/otcet-«obsaa-statistika».html">Отчет «Общая статистика»</a></li><li><a title="Путеводитель по вебинарам" href="/content/41/556/ru/putevoditelʹ-po-vebinaram.html">Путеводитель по вебинарам</a></li><li><a title="Термины и определения базы знаний" href="/content/41/543/ru/terminy-i-opredelenia-bazy-znanij.html">Термины и определения базы знаний</a></li><li><a title="Витрина курсов 3KL. Путеводитель" href="/content/41/536/ru/vitrina-kursov-3kl-putevoditelʹ.html">Витрина курсов 3KL. Путеводитель</a></li><li><a title="Расширенный анонс релиза 3.9.11b" href="/content/41/528/ru/rassirennyj-anons-reliza-3911b.html">Расширенный анонс релиза 3.9.11b</a></li><li><a title="Глобальные настройки пользователей" href="/content/41/522/ru/globalʹnye-nastrojki-polʹzovatelej.html">Глобальные настройки пользователей</a></li><li><a title="Можно ли обновить СЭО 3KL до версии 3.9 и выше, если на сервере установлена Ubuntu 16.04?" href="/content/41/505/ru/mozno-li-obnovitʹ-seo-3kl-do-versii-39-i-vyse-esli-na-servere-ustanovlena-ubuntu-1604.html">Можно ли обновить СЭО 3KL до версии 3.9 и выше, если на сервере установлена Ubuntu 16.04?</a></li><li><a title="Требования к API внешней ЭБС, для интеграции с модулем &#34;Библиотека ресурсов 3КL&#34; (материал для разработчиков)" href="/content/41/483/ru/trebovania-k-api-vnesnej-ebs-dla-integracii-s-modulem-&N34biblioteka-resursov-3kl&N34-material-dla-razrabotcikov.html">Требования к API внешней ЭБС, для интеграции с модулем &#34;Библиотека ресурсов 3КL&#34; (материал для разработчиков)</a></li><li><a title="Панель управления СЭО 3KL. Локальный плагин" href="/content/41/375/ru/panelʹ-upravlenia-seo-3kl-lokalʹnyj-plagin.html">Панель управления СЭО 3KL. Локальный плагин</a></li><li><a title="Локальный плагин «Техническая поддержка СЭО 3KL». Страница информации о продукте" href="/content/41/351/ru/lokalʹnyj-plagin-«tehniceskaa-podderzka-seo-3kl»-stranica-informacii-o-produkte.html">Локальный плагин «Техническая поддержка СЭО 3KL». Страница информации о продукте</a></li><li><a title="Блок «Витрина курсов 3KL»" href="/content/41/350/ru/blok-«vitrina-kursov-3kl».html">Блок «Витрина курсов 3KL»</a></li><li><a title="Отображение слайдера на страницах «Портфолио» пользователя" href="/content/41/349/ru/otobrazenie-slajdera-na-stranicah-«portfolio»-polʹzovatela.html">Отображение слайдера на страницах «Портфолио» пользователя</a></li><li><a title="ЭД-018. Электронный деканат. Шаблоны расписания. Фактическое расписание" href="/content/41/329/ru/ed_018-elektronnyj-dekanat-sablony-raspisania-fakticeskoe-raspisanie.html">ЭД-018. Электронный деканат. Шаблоны расписания. Фактическое расписание</a></li><li><a title="Локальный плагин «Настраиваемые поля для объектов»" href="/content/41/314/ru/lokalʹnyj-plagin-«nastraivaemye-pola-dla-obʺektov».html">Локальный плагин «Настраиваемые поля для объектов»</a></li><li><a title="Блок «Внешние данные 3KL»" href="/content/41/308/ru/blok-«vnesnie-dannye-3kl».html">Блок «Внешние данные 3KL»</a></li><li><a title="Библиотека ресурсов 3KL: интеграция с  ЭБС, базами знаний и внешними источниками контента" href="/content/41/303/ru/biblioteka-resursov-3kl-integracia-s-ebs-bazami-znanij-i-vnesnimi-istocnikami-kontenta.html">Библиотека ресурсов 3KL: интеграция с  ЭБС, базами знаний и внешними источниками контента</a></li><li><a title="Элемент курса «Взаимная оценка 3KL»" href="/content/41/295/ru/element-kursa-«vzaimnaa-ocenka-3kl».html">Элемент курса «Взаимная оценка 3KL»</a></li><li><a title="Партнерская сеть. Электронный Деканат" href="/content/41/280/ru/partnerskaa-setʹ-elektronnyj-dekanat.html">Партнерская сеть. Электронный Деканат</a></li><li><a title="Самостоятельное системное администрирование сервера с СЭО 3KL, подготовленного специалистами компании «Открытые технологии»" href="/content/41/276/ru/samostoatelʹnoe-sistemnoe-administrirovanie-servera-s-seo-3kl-podgotovlennogo-specialistami-kompanii-«otkrytye-tehnologii».html">Самостоятельное системное администрирование сервера с СЭО 3KL, подготовленного специалистами компании «Открытые технологии»</a></li><li><a title="Настраиваемые поля курса. Применение в поиске курсов через Витрину курсов 3KL" href="/content/41/245/ru/nastraivaemye-pola-kursa-primenenie-v-poiske-kursov-cerez-vitrinu-kursov-3kl.html">Настраиваемые поля курса. Применение в поиске курсов через Витрину курсов 3KL</a></li><li><a title="Портфолио ч. 5. Права и решения" href="/content/41/222/ru/portfolio-c-5-prava-i-resenia.html">Портфолио ч. 5. Права и решения</a></li><li><a title="Плагин «Подписка 3KL» часть 3. Настройка подписки 3KL на курс" href="/content/41/215/ru/plagin-«podpiska-3kl»-castʹ-3-nastrojka-podpiski-3kl-na-kurs.html">Плагин «Подписка 3KL» часть 3. Настройка подписки 3KL на курс</a></li><li><a title="Уведомление об орфографической ошибке" href="/content/41/202/ru/uvedomlenie-ob-orfograficeskoj-osibke.html">Уведомление об орфографической ошибке</a></li><li><a title="Настройка внешнего вида СЭО 3КL" href="/content/41/183/ru/nastrojka-vnesnego-vida-seo-3kl.html">Настройка внешнего вида СЭО 3КL</a></li><li><a title="Настройка Витрины курсов 3KL. Бриф на Витрину курсов 3KL" href="/content/41/182/ru/nastrojka-vitriny-kursov-3kl-brif-na-vitrinu-kursov-3kl.html">Настройка Витрины курсов 3KL. Бриф на Витрину курсов 3KL</a></li><li><a title="Платные сервисы и расширенная техническая поддержка" href="/content/41/176/ru/platnye-servisy-i-rassirennaa-tehniceskaa-podderzka.html">Платные сервисы и расширенная техническая поддержка</a></li><li><a title="Логика курса 3KL, часть 3. Примеры использования" href="/content/41/173/ru/logika-kursa-3kl-castʹ-3-primery-ispolʹzovania.html">Логика курса 3KL, часть 3. Примеры использования</a></li><li><a title="Что будет, если не продлить лицензию или SaaS  СЭО  3KL?" href="/content/41/171/ru/cto-budet-esli-ne-prodlitʹ-licenziu-ili-saas-seo-3kl.html">Что будет, если не продлить лицензию или SaaS  СЭО  3KL?</a></li><li><a title="Ограничения доступности, управление ограничениями" href="/content/41/169/ru/ogranicenia-dostupnosti-upravlenie-ograniceniami.html">Ограничения доступности, управление ограничениями</a></li><li><a title="Добавление нового курса" href="/content/41/167/ru/dobavlenie-novogo-kursa.html">Добавление нового курса</a></li><li><a title="Добавление кастомных (настраиваемых) полей в профиль пользователя" href="/content/41/165/ru/dobavlenie-kastomnyh-nastraivaemyh-polej-v-profilʹ-polʹzovatela.html">Добавление кастомных (настраиваемых) полей в профиль пользователя</a></li><li><a title="Настройка упрощенной регистрации пользователей через email и СМС" href="/content/41/162/ru/nastrojka-uprosennoj-registracii-polʹzovatelej-cerez-email-i-sms.html">Настройка упрощенной регистрации пользователей через email и СМС</a></li><li><a title="Отслеживание времени непрерывного обучения в курсе" href="/content/41/153/ru/otslezivanie-vremeni-nepreryvnogo-obucenia-v-kurse.html">Отслеживание времени непрерывного обучения в курсе</a></li><li><a title="Тип вопроса «Объекты на изображении»" href="/content/41/144/ru/tip-voprosa-«obʺekty-na-izobrazenii».html">Тип вопроса «Объекты на изображении»</a></li><li><a title="Инструкция по работе с блоком «Слайдер 3KL»" href="/content/41/142/ru/instrukcia-po-rabote-s-blokom-«slajder-3kl».html">Инструкция по работе с блоком «Слайдер 3KL»</a></li><li><a title="Тип вопроса «Случайный вопрос с учетом правил выдачи»" href="/content/41/137/ru/tip-voprosa-«slucajnyj-vopros-s-ucetom-pravil-vydaci».html">Тип вопроса «Случайный вопрос с учетом правил выдачи»</a></li><li><a title="Как происходит резервное копирование данных в СЭО 3KL?" href="/content/41/130/ru/kak-proishodit-rezervnoe-kopirovanie-dannyh-v-seo-3kl.html">Как происходит резервное копирование данных в СЭО 3KL?</a></li><li><a title="Могу ли я использовать СЭО 3KL с операционной системой &#34;N&#34; (подставьте любое название)?" href="/content/41/129/ru/mogu-li-a-ispolʹzovatʹ-seo-3kl-s-operacionnoj-sistemoj-&N34n&N34-podstavʹte-luboe-nazvanie.html">Могу ли я использовать СЭО 3KL с операционной системой &#34;N&#34; (подставьте любое название)?</a></li><li><a title="Могу ли я установить СДО Русский Moodle 3KL самостоятельно?" href="/content/41/120/ru/mogu-li-a-ustanovitʹ-sdo-russkij-moodle-3kl-samostoatelʹno.html">Могу ли я установить СДО Русский Moodle 3KL самостоятельно?</a></li><li><a title="Какое сетевое имя (адрес, доменное имя, URL) будет у нашей СЭО?" href="/content/41/119/ru/kakoe-setevoe-ima-adres-domennoe-ima-url-budet-u-nasej-seo.html">Какое сетевое имя (адрес, доменное имя, URL) будет у нашей СЭО?</a></li><li><a title="Каков порядок установки и системные требования среды электронного обучения 3KL (Русский Moodle) на сервер клиента?" href="/content/41/117/ru/kakov-poradok-ustanovki-i-sistemnye-trebovania-sredy-elektronnogo-obucenia-3kl-russkij-moodle-na-server-klienta.html">Каков порядок установки и системные требования среды электронного обучения 3KL (Русский Moodle) на сервер клиента?</a></li><li><a title="Мы уже используем community-версию Moodle, можем ли мы перейти на профессиональную версию СЭО 3KL?" href="/content/41/116/ru/my-uze-ispolʹzuem-community_versiu-moodle-mozem-li-my-perejti-na-professionalʹnuu-versiu-seo-3kl.html">Мы уже используем community-версию Moodle, можем ли мы перейти на профессиональную версию СЭО 3KL?</a></li><li><a title="Что такое локальная и публичная (интернет) инсталляция СЭО 3KL?" href="/content/41/115/ru/cto-takoe-lokalʹnaa-i-publicnaa-internet-installacia-seo-3kl.html">Что такое локальная и публичная (интернет) инсталляция СЭО 3KL?</a></li><li><a title="Формат курса «3KL формат»" href="/content/41/114/ru/format-kursa-«3kl-format».html">Формат курса «3KL формат»</a></li><li><a title="Что выбрать: лицензию СЭО 3KL для установки на свой сервер или аренду СЭО в облаке?" href="/content/41/113/ru/cto-vybratʹ-licenziu-seo-3kl-dla-ustanovki-na-svoj-server-ili-arendu-seo-v-oblake.html">Что выбрать: лицензию СЭО 3KL для установки на свой сервер или аренду СЭО в облаке?</a></li><li><a title="Можно ли установить СЭО 3KL на свой сервер?" href="/content/41/111/ru/mozno-li-ustanovitʹ-seo-3kl-na-svoj-server.html">Можно ли установить СЭО 3KL на свой сервер?</a></li><li><a title="Отчеты в СЭО 3KL " href="/content/41/100/ru/otcety-v-seo-3kl.html">Отчеты в СЭО 3KL </a></li><li><a title="Массовая загрузка пользователей через файл csv" href="/content/41/79/ru/massovaa-zagruzka-polʹzovatelej-cerez-fajl-csv.html">Массовая загрузка пользователей через файл csv</a></li><li><a title="Настройка Витрины курсов 3KL" href="/content/41/58/ru/nastrojka-vitriny-kursov-3kl.html">Настройка Витрины курсов 3KL</a></li><li><a title="Интеграция с Webinar.ru. Элемент курса  «Webinar.ru»" href="/content/41/36/ru/integracia-s-webinarru-element-kursa-«webinarru».html">Интеграция с Webinar.ru. Элемент курса  «Webinar.ru»</a></li><li><a title="Интеграция со сторонними сервисами" href="/content/41/33/ru/integracia-so-storonnimi-servisami.html">Интеграция со сторонними сервисами</a></li><li><a title="Способы регистрации и аутентификации пользователей" href="/content/41/15/ru/sposoby-registracii-i-autentifikacii-polʹzovatelej.html">Способы регистрации и аутентификации пользователей</a></li><li><a title="Метод записи на курс «Автозачисление 3KL» — otautoenrol" href="/content/41/9/ru/metod-zapisi-na-kurs-«avtozacislenie-3kl»-—-otautoenrol.html">Метод записи на курс «Автозачисление 3KL» — otautoenrol</a></li></ul>
+            </div>
+        </section>
+        <section class="pmf-aside-widget">
+            <header>
+                <h3>Теги</h3>
+            </header>
+            <div class="pmf-aside-widget-body clearfix">
+                <ul class="pmf-tags">
+                    <li><a title="API (2)" href="/tags/21791/api.html">API</a> </li><li><a title="Crowdfunding (2)" href="/tags/11961/crowdfunding.html">Crowdfunding</a> </li><li><a title="e-learning (2)" href="/tags/15858/e_learning.html">e-learning</a> </li><li><a title="Moodle Mobile (2)" href="/tags/9006/moodle-mobile.html">Moodle Mobile</a> </li><li><a title="автоматизация (2)" href="/tags/22342/avtomatizacia.html">автоматизация</a> </li><li><a title="авторизация (2)" href="/tags/15/avtorizacia.html">авторизация</a> </li><li><a title="администрирование (2)" href="/tags/9/administrirovanie.html">администрирование</a> </li><li><a title="анонс (2)" href="/tags/11374/anons.html">анонс</a> </li><li><a title="Антиплагиат (2)" href="/tags/12474/antiplagiat.html">Антиплагиат</a> </li><li><a title="аутентификация (2)" href="/tags/2890/autentifikacia.html">аутентификация</a> </li><li><a title="база знаний (2)" href="/tags/9214/baza-znanij.html">база знаний</a> </li><li><a title="банк вопросов (2)" href="/tags/34/bank-voprosov.html">банк вопросов</a> </li><li><a title="безопасность (2)" href="/tags/10/bezopasnostʹ.html">безопасность</a> </li><li><a title="блок (2)" href="/tags/14/blok.html">блок</a> </li><li><a title="блоки (2)" href="/tags/12418/bloki.html">блоки</a> </li><li><a title="бэкап (2)" href="/tags/29/bekap.html">бэкап</a> </li><li><a title="вебинар (2)" href="/tags/21/vebinar.html">вебинар</a> </li><li><a title="видео (2)" href="/tags/35/video.html">видео</a> </li><li><a title="видеоинструкция (2)" href="/tags/12958/videoinstrukcia.html">видеоинструкция</a> </li><li><a title="витрина (2)" href="/tags/11740/vitrina.html">витрина</a> </li><li><a title="Витрина курсов (2)" href="/tags/9002/vitrina-kursov.html">Витрина курсов</a> </li><li><a title="внешние данные (2)" href="/tags/9901/vnesnie-dannye.html">внешние данные</a> </li><li><a title="внешний вид (2)" href="/tags/12/vnesnij-vid.html">внешний вид</a> </li><li><a title="время обучения (2)" href="/tags/25206/vrema-obucenia.html">время обучения</a> </li><li><a title="ГИС СЦОС (2)" href="/tags/18994/gis-scos.html">ГИС СЦОС</a> </li><li><a title="главная страница (2)" href="/tags/12979/glavnaa-stranica.html">главная страница</a> </li><li><a title="глобальные группы (2)" href="/tags/19272/globalʹnye-gruppy.html">глобальные группы</a> </li><li><a title="группы (2)" href="/tags/38/gruppy.html">группы</a> </li><li><a title="данные (2)" href="/tags/20654/dannye.html">данные</a> </li><li><a title="данные пользователя (2)" href="/tags/11813/dannye-polʹzovatela.html">данные пользователя</a> </li><li><a title="ДистантТВ (2)" href="/tags/12982/distanttv.html">ДистантТВ</a> </li><li><a title="Задание (2)" href="/tags/40/zadanie.html">Задание</a> </li><li><a title="занятие (2)" href="/tags/8996/zanatie.html">занятие</a> </li><li><a title="запись на курс (2)" href="/tags/21327/zapisʹ-na-kurs.html">запись на курс</a> </li><li><a title="зачисления на курсы (2)" href="/tags/2913/zacislenia-na-kursy.html">зачисления на курсы</a> </li><li><a title="значки (2)" href="/tags/45/znacki.html">значки</a> </li><li><a title="импорт (2)" href="/tags/5/import.html">импорт</a> </li><li><a title="инструктаж (2)" href="/tags/12968/instruktaz.html">инструктаж</a> </li><li><a title="инструменты (2)" href="/tags/12974/instrumenty.html">инструменты</a> </li><li><a title="интеграция (2)" href="/tags/2/integracia.html">интеграция</a> </li><li><a title="использование цифровой образовательной среды (2)" href="/tags/15569/ispolʹzovanie-cifrovoj-obrazovatelʹnoj-sredy.html">использование цифровой образовательной среды</a> </li><li><a title="кастомизация (2)" href="/tags/9562/kastomizacia.html">кастомизация</a> </li><li><a title="категория (2)" href="/tags/3149/kategoria.html">категория</a> </li><li><a title="КБЗ (2)" href="/tags/9213/kbz.html">КБЗ</a> </li><li><a title="коммуникации (2)" href="/tags/19/kommunikacii.html">коммуникации</a> </li><li><a title="компетенции (2)" href="/tags/11842/kompetencii.html">компетенции</a> </li><li><a title="конкурс (2)" href="/tags/14861/konkurs.html">конкурс</a> </li><li><a title="контент (2)" href="/tags/6/kontent.html">контент</a> </li><li><a title="конференция (2)" href="/tags/9228/konferencia.html">конференция</a> </li><li><a title="курс (2)" href="/tags/229/kurs.html">курс</a></li>
+                </ul>
+            </div>
+        </section>
+            </aside>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <div class="pmf-wrapper pmf-footer">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-9">
+                    <ul class="footer-menu">
+                        <li> | 526 гостей and 2 зарегистрированных</li>
+                        <li><a href="https://kb.opentechnology.ru/overview.html">FAQ Overview</a></li>
+                        <li><a href="https://kb.opentechnology.ru/sitemap/A/ru.html">Карта сайта</a></li>
+                        <li><a href="https://kb.opentechnology.ru/glossary.html">Глоссарий</a></li>
+                        <li><a href="https://kb.opentechnology.ru/contact.html">Адм</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <form action="?sid=18447237" method="post" class="pull-right" accept-charset="utf-8">
+                        <select class="form-control" name="language" id="language" size="1" onchange="this.form.submit();">
+	<option value="ar">Arabic</option>
+	<option value="eu">Basque</option>
+	<option value="bn">Bengali</option>
+	<option value="bs">Bosnian</option>
+	<option value="pt-br">Brazilian Portuguese</option>
+	<option value="zh">Chinese (Simplified)</option>
+	<option value="tw">Chinese (Traditional)</option>
+	<option value="cs">Czech</option>
+	<option value="da">Danish</option>
+	<option value="nl">Dutch</option>
+	<option value="en">English</option>
+	<option value="fi">Finnish</option>
+	<option value="fr">French</option>
+	<option value="fr-ca">French (Canada)</option>
+	<option value="de">German</option>
+	<option value="el">Greek</option>
+	<option value="he">Hebrew</option>
+	<option value="hi">Hindi</option>
+	<option value="hu">Hungarian</option>
+	<option value="id">Indonesian</option>
+	<option value="it">Italian</option>
+	<option value="ja">Japanese</option>
+	<option value="ko">Korean</option>
+	<option value="lv">Latvian</option>
+	<option value="lt">Lithuanian</option>
+	<option value="ms">Malay</option>
+	<option value="nb">Norwegian Bokm&aring;l</option>
+	<option value="fa">Persian</option>
+	<option value="pl">Polish</option>
+	<option value="pt">Portuguese</option>
+	<option value="ro">Romanian</option>
+	<option value="ru" selected="selected">Russian</option>
+	<option value="sr">Serbian</option>
+	<option value="sk">Slovak</option>
+	<option value="sl">Slovenian</option>
+	<option value="es">Spanish</option>
+	<option value="sv">Swedish</option>
+	<option value="th">Thai</option>
+	<option value="tr">Turkish</option>
+	<option value="uk">Ukrainian</option>
+	<option value="vi">Vietnamese</option>
+	<option value="cy">Welsh</option>
+</select>
+                        <input type="hidden" name="action" value="" />
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="pmf-wrapper copyright">
+        <div class="container-fluid">
+            <div class="pull-right">
+                powered by <a href="https://www.phpmyfaq.de" target="_blank">phpMyFAQ</a> 2.9.13
+            </div>
+        </div>
+    </div>
+    
+</footer>
+<script>
+    $('.topten').tooltip();
+    $('.latest-entries').tooltip();
+    $('.sticky-faqs').tooltip();
+    $('.table').each(function(){
+        var rows = $(this).children('thead').find('tr');
+        if (rows.length == 1)
+        {
+	    	var cells = rows.find('th,td');
+	    	var ths = cells.filter('th');
+	    	if (ths.length > 0 && ths.length == cells.length)
+	    	{
+	    	    ths.each(function(){
+	    	        $(this).data('sortable', true);
+	    	    });
+	    	    
+	    	    $(this).bootstrapTable();
+	    	}
+    	}
+    	
+    })
+</script>
+ 
+<script>
+        (function(w,d,u){
+                var s=d.createElement('script');s.async=true;s.src=u+'?'+(Date.now()/60000|0);
+                var h=d.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);
+        })(window,document,'https://crm.3072.ru/upload/crm/site_button/loader_4_g3w7tu.js');
+</script>
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+            
+   ym(23244946, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true,
+        webvisor:true
+   });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/23244946" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+</body>
+</html>

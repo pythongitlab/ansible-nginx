@@ -1,0 +1,848 @@
+<!doctype html>
+<!--[if IE 9 ]> <html lang="ru" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="ru" class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <title>База знаний ООО &quot;Открытые технологии&quot; - Инструменты WEB API в СЭО 3КL. Возможности и примеры</title>
+    <meta name="description" content="Статья посвящена общим вопросам включения, ...">
+    <meta name="keywords" content=" Python, веб-службы,внедрение цифровой образовательной среды,REST API,API, PHP, WEB API, интеграция, внешние системы">
+    <meta name="author" content="ООО "Открытые технологии"">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="application-name" content="phpMyFAQ 2.9.13">
+    <meta name="robots" content="index, follow">
+    <meta name="revisit-after" content="7 days">
+    <meta name="apple-itunes-app" content="app-id=977896957">
+    <!-- Share on Facebook -->
+    <meta property="og:title" content="База знаний ООО &quot;Открытые технологии&quot; - Инструменты WEB API в СЭО 3КL. Возможности и примеры">
+    <meta property="og:description" content="Статья посвящена общим вопросам включения, ...">
+    <meta property="og:image" content="">
+    <link rel="stylesheet" href="https://kb.opentechnology.ru/assets/template/ot/css/style.min.css?v=1">
+    <link rel="shortcut icon" href="https://kb.opentechnology.ru/assets/template/ot/favicon.ico">
+    <link rel="apple-touch-icon" href="https://kb.opentechnology.ru/assets/template/ot/apple-touch-icon.png">
+    <link rel="canonical" href="https://kb.opentechnology.ru/content/41/642/ru/instrumenty-web-api-v-seo-3kl-vozmoznosti-i-primery.html">
+    <script src="https://kb.opentechnology.ru/assets/js/modernizr.min.js"></script>
+    <script src="https://kb.opentechnology.ru/assets/js/phpmyfaq.min.js"></script>
+    <script src="https://kb.opentechnology.ru/assets/js/libs/bootstrap-table/bootstrap-table.min.js"></script>
+    <link rel="alternate" title="News RSS Feed" type="application/rss+xml" href="https://kb.opentechnology.ru/feed/news/rss.php">
+    <link rel="alternate" title="TopTen RSS Feed" type="application/rss+xml" href="https://kb.opentechnology.ru/feed/topten/rss.php">
+    <link rel="alternate" title="Latest FAQ Records RSS Feed" type="application/rss+xml" href="https://kb.opentechnology.ru/feed/latest/rss.php">
+    <link rel="alternate" title="Open Questions RSS Feed" type="application/rss+xml" href="https://kb.opentechnology.ru/feed/openquestions/rss.php">
+    <link rel="search" type="application/opensearchdescription+xml" title="База знаний ООО Открытые технологии - Инструменты WEB API в СЭО 3КL. Возможности и примеры" href="https://kb.opentechnology.ru/opensearch.html">
+    <script>
+        if (self === top) {
+            document.documentElement.style.display = 'block';
+        } else {
+            top.location = self.location;
+        }
+    </script>
+    <style> html{display:none;} </style>
+</head>
+<body dir="ltr">
+<header>
+    <div class="pmf-wrapper pmf-masthead">
+        <div class="container-fluid">
+            <a id="logo" title="База знаний ООО Открытые технологии" href="https://kb.opentechnology.ru/">
+                <img src="https://kb.opentechnology.ru/assets/template/ot/img/logo.png" alt="phpMyFAQ">
+            </a>
+            <div id="mobile-nav-toggle" class="pull-right">
+                <a href="#" data-toggle="collapse" data-target=".pmf-nav .navbar-collapse">
+                    <i aria-hidden="true" class="fa fa-bars"></i>
+                </a>
+            </div>
+            <nav class="pull-right pmf-nav">
+                <div class="collapse navbar-collapse">
+                    <ul class="nav nav-pills navbar-nav">
+                        <li class=""><a href="https://kb.opentechnology.ru/search.html">Расширенный поиск</a></li>
+                        <li class=""><a href="https://kb.opentechnology.ru/showcat.html">Разделы</a></li>
+                        <li class=""><a href="https://kb.opentechnology.ru/addcontent.html">ответ</a></li>
+                        <li class=""><a href="https://kb.opentechnology.ru/ask.html">вопрос</a></li>
+                        <li class=""><a href="https://kb.opentechnology.ru/open.html">Открытые вопросы</a></li>
+                        <li class="dropdown ">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                Вход
+                                <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-right">
+                                
+                                <li></li>
+                                <li><a href="?action=login&auth_driver=rm3kl">Войти через Moodle</a></li>
+                                
+                                
+                                
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <div class="pmf-wrapper pmf-subheader">
+        <div class="container-fluid">
+            <div class="pmf-breadcrumb">
+                
+                <ul class="breadcrumb"></ul>
+                
+            </div>
+            <div class="pmf-searchbox">
+                <form role="search" id="search" action="?action=search" method="get">
+                    <input type="hidden" name="action" value="search">
+                    <button class="searchbutton" type="submit" aria-label="Поиск">
+                        <i aria-hidden="true" class="fa fa-search"></i>
+                    </button>
+                    <input type="text" class="searchfield typeahead" name="search" id="searchbox"
+                           autocomplete="off" placeholder="Поиск ...">
+                </form>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="pmf-wrapper pmf-main">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-9 pmf-maincontent">
+                <section>
+            <article class="pmf-faq">
+                <header>
+                    <div class="pull-right hidden-print" id="solution_id">
+                        <a class="label label-info" href="/index.php?solution_id=1642">
+                            ID #1642
+                        </a>
+                    </div>
+                    <h1>Инструменты WEB API в СЭО 3КL. Возможности и примеры</h1>
+                    <div class="pmf-faq-meta clearfix">
+                        <div class="pmf-faq-author">
+                            <i aria-hidden="true" class="fa fa-user"></i>
+                            <span class="data">Сергей Гусев</span>
+                        </div>
+                        <div class="pmf-faq-date">
+                            <i aria-hidden="true" class="fa fa-calendar"></i>
+                            <span class="data">04.02.2026</span>
+                        </div>
+                        <div class="pmf-faq-comments">
+                            <i aria-hidden="true" class="fa fa-comments"></i>
+                            <span class="data"><a class="show-comment-form" href="#">0 Комментариев</a></span>
+                        </div>
+                        <div class="pmf-faq-edit">
+                            
+                        </div>
+                    </div>
+                </header>
+                <div class="pmf-faq-body">
+                    <div class="note advice otsf-incut"><span class="typesummary"><span class="EMoHub tL8wMe" style="text-align: left;">Статья посвящена общим вопросам включения, настройки и использованию <abbr data-toggle="tooltip" data-placement="bottom" title="Программный интерфейс приложений, набор определенных способов и правил, позволяющий различным программным продуктам обмениваться данными по стандартизированным протоколам. API СЭО 3КL поддерживает обмен данными по протоколам REST, SOAP и XML-RPC. Статья «Инструменты WEB API в СЭО 3КL. Возможности и примеры».">API</abbr> для интеграции СЭО 3КL с внешними системами.</span></span></div>
+<div class="note otsf-incut attention"><span class="typesummary"><span class="EMoHub tL8wMe" style="text-align: left;">Применение материалов, изложенных в статье, требует наличия специальных знаний. <span style="color: transparent;">. .</span></span></span><span id=":ua.co" class="EMoHub tL8wMe" style="text-align: left;"></span></div>
+<div class="otsf-incut example"><a id="q0"></a><strong>Содержание:</strong><br /> <a href="#q1"><strong><span style="color: #333333;">1.</span> Общая информация</strong></a><br /><a href="#q2"><strong><span style="color: #000000;">2.</span> Возможности</strong></a><br /><a href="#q21"><span style="color: #333333;">  2.1.</span> Документация API СЭО 3КL</a><br /><a href="#q22"><span style="color: #333333;">  2.2.</span> Использование API на примере создания нового пользователя (протокол REST)</a><br /><a href="#q3"><strong><span style="color: #000000;">3.</span> Предварительная настройка СЭО 3КL</strong></a><br /><a href="#q31"><span style="color: #333333;">  3.1.</span> Включение веб-служб и протоколов</a><br /><a href="#q32"><span style="color: #333333;">  3.2.</span> Создание пользователя для веб-службы</a><br /><a href="#q33"><span style="color: #333333;">  3.3.</span> Создание веб-службы</a><br /><a href="#q34"><span style="color: #333333;">  3.4.</span> Создание ключа безопасности (токена)</a><br /><a href="#q4"><strong><span style="color: #000000;">4.</span> Решения</strong></a><br /><a href="#q41"><span style="color: #333333;">  4.1.</span> Создание пользователей, соответствующих заданным параметрам</a><br /><a href="#q42"><span style="color: #333333;">  4.2.</span> Получение персоны деканата по идентификатору пользователя системы</a><br /><a href="#q43"><span style="color: #333333;">  4.3.</span> Создание в <abbr data-toggle="tooltip" data-placement="bottom" title="Система для учета достижений и целей пользователей. Модуль «Портфолио» позволяет организовать индивидуальный план развития персонала, формировать личные списки достижений пользователей, осуществлять целевое планирование в обучении. В том числе система дает самим пользователям возможность самостоятельно заполнять свою страницу Портфолио. Статья «Портфолио ч. 1. Введение».">портфолио</abbr> ЭД достижений по шаблону типа Настраиваемый</a><br /><a href="#q44"><span style="color: #333333;">  4.4.</span> Создание и редактирование настроек критериев завершения курса</a><br /><a href="#q45"><span style="color: #333333;">  4.5.</span> Управление зачислением на курсы через <abbr data-toggle="tooltip" data-placement="bottom" title="Группы пользователей, создаваемые администратором на уровне сайта или на уровне категорий курсов. Статья «Глобальные группы. Синхронизация с глобальной группой».">глобальные группы</abbr></a><br />  <a href="#q451"><span style="color: #333333;">  4.5.1.</span> Создание способа записи на курс через глобальную группу</a><br />  <a href="#q452"><span style="color: #333333;">  4.5.2.</span> Получение информации о способах записи на курс через глобальные группы</a><br />  <a href="#q453"><span style="color: #333333;">  4.5.3.</span> Редактирование способа записи на курс через глобальную группу</a><br />   <a href="#q454"><span style="color: #333333;">  4.5.4.</span> Удаление способа записи на курс по глобальную группу</a><br /><a href="#q46"><span style="color: #333333;">  4.6.</span> Пример внешней автоматизации массового создания курсов с преднастроенными способами зачисления через глобальные группы с использованием скрипта на Python</a></div>
+<h3><a id="q1"></a>1. Общая информация</h3>
+<p>Одним из вариантом взаимодействия внешних систем с СЭО 3КL является программный интерфейс приложений (API) - набор определенных способов и правил, позволяющий различным программным продуктам обмениваться данными по стандартизированным протоколам. API СЭО 3КL поддерживает обмен данными по протоколам REST, SOAP и XML-RPC.</p>
+<p>Клиент API (непосредственно внешняя система или пользователь API через <abbr data-toggle="tooltip" data-placement="bottom" title="Специальное программное обеспечение для просмотра страниц в интернете. Например, Firefox, Google Chrome.">веб-браузер</abbr>/консоль) обращается с запросом к серверу СЭО 3КL на выполнение функции (метода) API (Рис. 1.1). В зависимости от исполняемой функции, результатом запроса будет получение от сервера ответа с информацией из СЭО 3КL или какое-либо действие в системе.</p>
+<p><img class="otsf-screenshot" src="https://kb.opentechnology.ru/index.php?action=attachment&amp;id=7912" alt="" width="781" height="364" /></p>
+<div class="otsf-screenshot-description">Рис.1.1. Пример схемы работы WEB API.</div>
+<p>Перед обработкой запроса выполняется <abbr data-toggle="tooltip" data-placement="bottom" title="Процедура проверки аутентификационных данных (логин и пароль), введенных пользователем при входе в учетную запись, через проверку этих данных на соответствие логинам и паролям, сохраненным в пользовательской базе. Существуют также способы аутентификации без использования логина и пароля, например, OAuth 2.0. В общем случае аутентификация предшествует авторизации, но в СЭО 3KL оба термина считаются синонимами, так как авторизация происходит автоматически вместе с аутентификацией. Статья «Способы регистрации и аутентификации пользователей».">аутентификация</abbr> клиента API — <abbr data-toggle="tooltip" data-placement="bottom" title="Компьютерное устройство, специализированное для хранения данных и предоставления этих данных удаленным клиентским устройствам.">сервер</abbr> должен знать, кто делает запросы и имеет ли он на это право. Для этого запрос отправляется вместе с ключом безопасности (токеном), который сгенерирован с использованием информации учетной записи пользователя API. Если запрос содержит валидный ключ, то сервер выполнит его обработку.</p>
+<p>Инструкции о том, как правильно использовать API (формировать запрос), информация о классах и типах возвращаемых значений, примеры запроса и сообщения об ошибке, как правило, доступны в <a href="#q21" target="_blank" rel="noopener">документации API</a>.</p>
+<p>Общий алгоритм использования метода API может выглядеть следующим образом:</p>
+<ul>
+<li>подготовка к использованию API:
+<ul>
+<li>настройка веб-службы;</li>
+<li>подготовка пользователя для веб-службы и настройка его прав;</li>
+<li>генерация ключа безопасности (токена) веб-службы.</li>
+</ul>
+</li>
+<li>использование API:
+<ul>
+<li>создание запроса;</li>
+<li>отправка запроса;</li>
+<li>получение и обработка ответа.</li>
+</ul>
+</li>
+</ul>
+<p><a href="#q0">-Вернуться к содержанию-</a></p>
+<h3><a id="q2"></a>2. Возможности</h3>
+<h4><a id="q21"></a>2.1. Документация API СЭО 3КL</h4>
+<p>Полный перечень функций (методов), которые могут быть использованы при интеграции по API доступны в интерфейсе СЭО 3КL на странице «Документация API» (Администрирование-&gt;Сервер-&gt;Веб-службы-&gt;Документация API) (Рис. 2.2.1).</p>
+<p><img class="otsf-screenshot" src="https://kb.opentechnology.ru/index.php?action=attachment&amp;id=8543" alt="" width="1799" height="733" /></p>
+<div class="otsf-screenshot-description">Рис. 2.2.1. Внешний вид страницы «Документация API».</div>
+<p>Перечень методов выводится в алфавитном порядке. Название методов стандартизировано и формируется как<br /><strong>компонент_имя_метода</strong> (например, core_user_create_users), где</p>
+<p>компонент — область применения метода (core_user),<br />имя_метода — выполняемое действие (create_users).</p>
+<p>При клике на выбранном методе раскроется документация по нему, которая содержит (Рис. 2.2.2):</p>
+<p><img class="otsf-screenshot" src="https://kb.opentechnology.ru/index.php?action=attachment&amp;id=8565" alt="" width="1802" height="4104" /></p>
+<div class="otsf-screenshot-description">Рис. 2.2.2. Пример документации по методу «core_user_create_users».</div>
+<ul>
+<li>Краткое описание метода (см. поз. 1 Рис. 2.2.2).</li>
+<li>Требуемые для функции аргументы (см. поз. 2 Рис. 2.2.2).</li>
+<li>Описание структуры с указанием переменных, их типов и передаваемых данных (параметров) (см. поз. 3 Рис. 2.2.2).</li>
+<li>Вид ответа на запрос (см. поз. 4 Рис. 2.2.2).</li>
+<li>Вид сообщения об ошибке (см. поз. 5 Рис. 2.2.2).</li>
+<li>Дополнительная информация (см. поз. 6 Рис. 2.2.2).</li>
+</ul>
+<p><a href="#q0">-Вернуться к содержанию-</a></p>
+<h4><a id="q22"></a>2.2. Использование API на примере создания нового пользователя (протокол REST)</h4>
+<p>Администратор <a href="#q3">настраивает СЭО 3КL</a> для работы с веб-службами.</p>
+<p>Администратор использует метод API <strong>core_user_create_users</strong> и, следуя <a href="#q21">документации API</a>, формирует curl-запрос к серверу СЭО 3КL:</p>
+<pre class="otsf-incut pre">curl -k --location &#39;https://your_lms/webservice/rest/server.php&#39; \<br />--header &#39;Content-Type: application/x-www-form-urlencoded&#39; \<br />--data-urlencode &#39;moodlewsrestformat=json&#39; \<br />--data-urlencode &#39;wsfunction=core_user_create_users&#39; \<br />--data-urlencode &#39;wstoken=your_token&#39; \<br />--data-urlencode &#39;users[0][username]=testtestuser&#39; \<br />--data-urlencode &#39;users[0][createpassword]=1&#39; \<br />--data-urlencode &#39;users[0][firstname]=Иван&#39; \<br />--data-urlencode &#39;users[0][lastname]=Иванов&#39; \<br />--data-urlencode &#39;users[0][email]=testtestuser@test.dev&#39; \<br />--data-urlencode &#39;users[0][customfields][0][type]=mentor&#39; \<br />--data-urlencode &#39;users[0][customfields][0][value]=195&#39;</pre>
+<p>в котором:</p>
+<p>your_lms — название системы дистанционного обучения в которой работает администратор;<br />core_user_create_users — имя вызываемого метода API;<br />your_token — ключ безопасности настроенной веб-службы;<br />testtestuser — логин создаваемого пользователя;<br />[createpassword]=1 — указание на генерацию пароля системой;<br />Иван — имя создаваемого пользователя;<br />Иванов — фамилия создаваемого пользователя;<br />testtestuser@test.dev — электронная почта создаваемого пользователя;<br />[customfields][0][type]=mentor и [customfields][0][value]=195 — указание на создание дополнительного поля профиля типа mentor и присвоение ему значения 195.</p>
+<p>В результате в СЭО СЭО 3КL создается пользователь с указанным в запросе логином, именем и фамилией. При этом, в соответствии с параметрами запроса, пароль для входа был автоматически сгенерирован системой и отправлен ему на электронную почту.</p>
+<p><a href="#q0">-Вернуться к содержанию-</a></p>
+<h3><a id="q3"></a>3. Предварительная настройка СЭО 3КL<span class="otsf-admin-required">требуются права администратора</span></h3>
+<div class="otsf-incut attention">Действия в данной инструкции с пометкой <span class="otsf-admin-required">требуются права администратора</span> могут быть выполнены только при наличии доступа «Полный Администратор». Начиная с 2022 года для вновь заключаемых договоров такой набор прав предоставляется роли «<abbr data-toggle="tooltip" data-placement="bottom" title="Представитель Заказчика, взаимодействующий с технической поддержкой Исполнителя.">Диспетчер-администратор</abbr>» по умолчанию. Если ваш договор был заключен раньше, вы можете обратиться в техподдержку с соответствующей заявкой на расширение набора прав диспетчера-администратора.<br /> <strong>Важно!</strong> Неосторожные действия полного администратора могут повредить систему и <abbr data-toggle="tooltip" data-placement="bottom" title="Не следует путать с контекстом. Содержимое, которым наполнен сайт, это может быть информация любых видов – текст, мультимедиа и пр. Контент можно понимать в узком смысле (наполнение курса, учебные материалы) и в широком смысле (любая информация, загруженная в СЭО 3KL и не являющаяся программным кодом).">контент</abbr> таким образом, что исправление последствий вмешательства выйдет за рамки гарантийной технической поддержки. В случае внесения правок в глобальные настройки рекомендуем вам полностью убедиться в том, что вы понимаете, за что отвечают данные настройки. Если у вас возникают сомнения в назначении глобальных настроек, обратитесь за помощью в техническую поддержку.<br /> Подробная информация в статье <a href="https://kb.opentechnology.ru/index.php?solution_id=1010">«Полный административный доступ»</a>.</div>
+<p>Для использования методов API, необходимо создать и настроить в СЭО 3КL веб-службу. Общая последовательность действий и ссылки на соответствующие интерфейсы настроек доступны на странице «Обзор» (Администрирование-&gt;Сервер-&gt;Веб-службы-&gt;Обзор) (Рис. 3.1).</p>
+<p><img class="otsf-screenshot" src="https://kb.opentechnology.ru/index.php?action=attachment&amp;id=7684" alt="" width="1798" height="1812" /></p>
+<div class="otsf-screenshot-description">Рис. 3.1. Страница «Веб-службы».</div>
+<p><a href="#q0">-Вернуться к содержанию-</a></p>
+<h4><a id="q31"></a>3.1. Включение веб-служб и протоколов</h4>
+<p>Функционал веб-служб включается на странице администрирования «Расширенные возможности» (Рис. 3.1.1).</p>
+<p><img class="otsf-screenshot" src="https://kb.opentechnology.ru/index.php?action=attachment&amp;id=7833" alt="" width="1795" height="1094" /></p>
+<div class="otsf-screenshot-description">Рис. 3.1.1. Настройка «Включить веб-службы» на странице администрирования «Расширенные возможности».</div>
+<p>После того, как были включены веб-службы, необходимо убедиться, что на странице «Управление протоколами» (Администрирование-&gt;Сервер-&gt;Веб-службы-&gt;Управление протоколами) включены только те протоколы API, которые будут использоваться (Рис. 3.1.2). Те протоколы, которые <strong>не планируется использовать</strong>, рекомендуется отключить.</p>
+<p><img class="otsf-screenshot" src="https://kb.opentechnology.ru/index.php?action=attachment&amp;id=7834" alt="" width="1802" height="704" /></p>
+<div class="otsf-screenshot-description">Рис. 3.1.2. Включенный протокол REST на странице «Управление протоколами».</div>
+<div class="otsf-incut note">Может возникнуть ситуация, когда вам в СЭО 3KL понадобится <strong>отключить</strong> веб-службы. При этом следует помнить: если ранее была установлена опция «Включить веб-службы для мобильных устройств» — необходимо сначала снять ее и только после этого появится возможность снять опцию «Включить веб-службы».</div>
+<p><a href="#q0">-Вернуться к содержанию-</a></p>
+<h4><a id="q32"></a>3.2. Создание пользователя для веб-службы</h4>
+<p>В СЭО 3КL должен быть создан специальный пользователь (далее - пользователь интеграции), от имени которого будет происходить взаимодействие со внешней системой (Администрирование-&gt;Пользователи-&gt;Учетные записи-&gt;Добавить пользователя-&gt;). Затем пользователю выдаются необходимые права — шаги «3. Создать специального пользователя», «4. Проверить права пользователя» и «7. Выбрать определенного пользователя» процедуры настройки (см. Рис. 2.1).</p>
+<div class="otsf-incut note">В целях безопасности, настоятельно рекомендуем создать для такого пользователя в СЭО 3КL отдельную роль и определить в этой роли минимально необходимый для корректной работы интеграции набор прав: право на использование протокола + все те права, которые необходимы для каждой функции создаваемой веб-службы.</div>
+<div class="otsf-incut note">Дополнительная информация о создании и настройке ролей в статье <a href="https://kb.opentechnology.ru/index.php?solution_id=1185">«Определение ролей, настройка прав»</a>.</div>
+<p><a href="#q0">-Вернуться к содержанию-</a></p>
+<h4><a id="q33"></a>3.3. Создание веб-службы</h4>
+<p>В CЭО 3КL создается новая веб-служба (Администрирование-&gt;Сервер-&gt;Веб-службы-&gt;Внешние службы-&gt;кнопка «Добавить»), в которую включаются все необходимые для планируемой интеграции функции (Рис. 2.4) — шаги «5. Выбрать службу» и «6. Добавить функции» процедуры настройки (см. Рис. 2.1).</p>
+<p><img class="otsf-screenshot" src="https://kb.opentechnology.ru/index.php?action=attachment&amp;id=7836" alt="" width="1812" height="473" /></p>
+<div class="otsf-screenshot-description">Рис. 2.4. Добавление функций в ранее созданную веб-службу «Test_api_kbz».</div>
+<p><a href="#q0">-Вернуться к содержанию-</a></p>
+<h4><a id="q34"></a>3.4. Создание ключа безопасности (токена)</h4>
+<p>Для ранее созданного пользователя интеграции на странице «Создать ключ» (Администрирование-&gt;Сервер-&gt;Веб-службы-&gt;Управление ключами-&gt;кнопка «Создать ключ») генерируется ключ безопасности (токен), при помощи которого скрипт интеграции будет получать доступ к веб-службе (Рис. 2.5, Рис. 2.6).</p>
+<p><img class="otsf-screenshot" src="https://kb.opentechnology.ru/index.php?action=attachment&amp;id=7839" alt="" width="1811" height="723" /></p>
+<div class="otsf-screenshot-description">Рис. 2.5. Пример генерации токена пользователю интеграции Апиаев Прохор для веб-службы «Test_api_kbz».</div>
+<p><img class="otsf-screenshot" src="https://kb.opentechnology.ru/index.php?action=attachment&amp;id=7840" alt="" width="1800" height="696" /></p>
+<div class="otsf-screenshot-description">Рис. 2.6. Сгенерированный ключ безопасности на странице «Управление ключами».</div>
+<div class="otsf-incut note">Если пользователю интеграции может потребоваться доступ к документации используемых в веб-службе функций, необходимо дополнительно включить опцию «Документация веб-служб» (шаг «9. Включить информацию для разработчиков» процедуры настройки). Ссылки на документацию станут ему доступны на странице «Ключи безопасности».</div>
+<p><a href="#q0">-Вернуться к содержанию-</a><a id="z2" href="#q0"></a></p>
+<h3><a id="q4"></a>4. Решения</h3>
+<h4><a id="q41"></a>4.1. Создание пользователей, соответствующих заданным параметрам</h4>
+<p><strong>Протокол, название метода:</strong> REST, core_user_create_users<strong><br /></strong></p>
+<p><strong>Интерфейс СЭО 3КL, в котором доступен результат:</strong> https://<em>your_lms</em>/admin/user.php</p>
+<p><strong>Текст запроса:</strong></p>
+<pre class="otsf-incut pre"><!--?php &lt;br ?-->// Укажите свой домен вместо YOUR_DOMAIN<br />$wsurl = &#39;https://YOUR_DOMAIN/webservice/rest/server.php&#39;;<br />// Список аргументов, передаваемых в запросе по API<br />$arguments = [];<br />// Укажите свой токен<br />$arguments[&#39;wstoken&#39;] = &#39;YOUR_TOKEN&#39;;<br />// Формат - json<br />$arguments[&#39;moodlewsrestformat&#39;] = &#39;json&#39;;<br />// функция создания пользователей<br />$arguments[&#39;wsfunction&#39;] = &#39;core_user_create_users&#39;;<br />// список создаваемых пользователей<br />$arguments[&#39;users&#39;] = [<br /> // данные о первом и единственном в данном примере пользователе, который будет создан<br /> [<br /> // Логин<br /> &#39;username&#39; =&gt; &#39;apidemo&#39;,<br /> // Имя<br /> &#39;firstname&#39; =&gt; &#39;Api&#39;,<br /> // Фамилия<br /> &#39;lastname&#39; =&gt; &#39;Demo&#39;,<br /> // Адрес электронной почты<br /> &#39;email&#39; =&gt; &#39;api@demo.dev&#39;,<br /> // Флаг для автоматической генерации пароля<br /> &#39;createpassword&#39; =&gt; 1,<br /> // Подразделение<br /> &#39;department&#39; =&gt; &#39;DemoDep&#39;,<br /> ],<br />];<br />$ch = curl_init($wsurl);<br />curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);<br />curl_setopt($ch, CURLOPT_POST, true);<br />curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($arguments, &#39;&#39;, &#39;&amp;&#39;));<br />// При отладке на сервере с самоподписанным сертификатом используйте (раскомментируйте) следующие две опции<br />// curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);<br />// curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);<br />$response = curl_exec($ch);<br />$httpcode = curl_getinfo($ch, CURLINFO_HTTP_CODE);<br />curl_close($ch);<br />if ($response === false) {<br /> echo &#39;Curl error: &#39; . curl_error($ch) . PHP_EOL;<br />} else {<br /> echo &#39;Http code: &#39; . $httpcode . PHP_EOL;<br /> echo &#39;Response: &#39; . json_encode(json_decode($response, true), JSON_PRETTY_PRINT|JSON_UNESCAPED_UNICODE) . PHP_EOL;<br />}</pre>
+<p><a href="#q0">-Вернуться к содержанию-</a></p>
+<h4><a id="q42"></a>4.2. Получение персоны деканата по идентификатору пользователя системы</h4>
+<p><strong>Протокол, название метода:</strong> REST, block_dof_storage_persons_get_bu</p>
+<p><strong>Интерфейс СЭО 3КL, в котором доступен результат:</strong> https://<em>your_lms</em>/blocks/dof/im/persons/list.php</p>
+<p><strong>Текст запроса:</strong></p>
+<pre class="otsf-incut pre"><!--?php &lt;br ?-->// Укажите свой домен вместо YOUR_DOMAIN<br />$wsurl = &#39;https://YOUR_DOMAIN/webservice/rest/server.php&#39;;<br />// Список аргументов, передаваемых в запросе по API<br />$arguments = [];<br />// Укажите свой токен<br />$arguments[&#39;wstoken&#39;] = &#39;YOUR_TOKEN&#39;;<br />// Формат - json<br />$arguments[&#39;moodlewsrestformat&#39;] = &#39;json&#39;;<br />// функция получения персоны деканата по идентификатору пользователя системы<br />$arguments[&#39;wsfunction&#39;] = &#39;block_dof_storage_persons_get_bu&#39;;<br />// Идентификатор пользователя<br />$arguments[&#39;userid&#39;] = 190;<br />// Флаг, создавать ли персону в деканате, если для найденного пользователя системы персоны еще нет<br />$arguments[&#39;create&#39;] = true;<br />$ch = curl_init($wsurl);<br />curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);<br />curl_setopt($ch, CURLOPT_POST, true);<br />curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($arguments, &#39;&#39;, &#39;&amp;&#39;));<br />// При отладке на сервере с самоподписанным сертификатом используйте (раскомментируйте) следующие две опции<br />// curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);<br />// curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);<br />$response = curl_exec($ch);<br />$httpcode = curl_getinfo($ch, CURLINFO_HTTP_CODE);<br />curl_close($ch);<br />if ($response === false) {<br /> echo &#39;Curl error: &#39; . curl_error($ch) . PHP_EOL;<br />} else {<br /> echo &#39;Http code: &#39; . $httpcode . PHP_EOL;<br /> echo &#39;Response: &#39; . json_encode(json_decode($response, true), JSON_PRETTY_PRINT|JSON_UNESCAPED_UNICODE) . PHP_EOL;<br />}</pre>
+<p><a href="#q0">-Вернуться к содержанию-</a></p>
+<h4><a id="q43"></a>4.3. Создание в портфолио ЭД достижений по шаблону типа Настраиваемый</h4>
+<p><strong>Протокол, название метода:</strong> REST, block_dof_storage_achievementins_create</p>
+<p><strong>Интерфейс СЭО 3КL, в котором доступен результат:</strong> https://<em>your_lms</em>/blocks/dof/im/achievements/my.php?departmentid=<em>your_department_id</em>&amp;limitnum=30&amp;personid=<em>your_person_id</em></p>
+<p><strong>Текст запроса:</strong></p>
+<pre class="otsf-incut pre"><!--?php &lt;br ?-->// Укажите свой домен вместо YOUR_DOMAIN<br />$wsurl = &#39;https://YOUR_DOMAIN/webservice/rest/server.php&#39;;<br />// Список аргументов, передаваемых в запросе по API<br />$arguments = [];<br />// Укажите свой токен<br />$arguments[&#39;wstoken&#39;] = &#39;YOUR_TOKEN&#39;;<br />// Формат - json<br />$arguments[&#39;moodlewsrestformat&#39;] = &#39;json&#39;;<br />// функция создания в портфолио ЭД достижений по шаблону типа Настраиваемый<br />$arguments[&#39;wsfunction&#39;] = &#39;block_dof_storage_achievementins_create&#39;;<br />// Список достижений<br />$arguments[&#39;achievementins&#39;] = [<br /> // первое и единственное в данном примере добавляемое достижение<br /> [<br /> // идентификатор шаблона достижений<br /> &#39;achievementid&#39; =&gt; 15,<br /> // идентификатор персоны<br /> &#39;personid&#39; =&gt; 103,<br /> // данные достижения (список критериев и их значений)<br /> &#39;data&#39; =&gt; [<br /> (object)[<br /> // номер критерия<br /> &#39;criterianum&#39; =&gt; 0,<br /> // значение критерия<br /> &#39;criteriavalue&#39; =&gt; &#39;Достижение&#39;,<br /> ], <br /> (object)[<br /> // номер критерия<br /> &#39;criterianum&#39; =&gt; 1,<br /> // значение критерия<br /> &#39;criteriavalue&#39; =&gt; strtotime(&#39;+10 days&#39;),<br /> ], <br /> (object)[<br /> // номер критерия<br /> &#39;criterianum&#39; =&gt; 2,<br /> // значение критерия<br /> &#39;criteriavalue&#39; =&gt; 1,<br /> ], <br /> ],<br /> ]<br />];<br />$ch = curl_init($wsurl);<br />curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);<br />curl_setopt($ch, CURLOPT_POST, true);<br />curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($arguments, &#39;&#39;, &#39;&amp;&#39;));<br />// При отладке на сервере с самоподписанным сертификатом используйте (раскомментируйте) следующие две опции<br />// curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);<br />// curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);<br />$response = curl_exec($ch);<br />$httpcode = curl_getinfo($ch, CURLINFO_HTTP_CODE);<br />curl_close($ch);<br />if ($response === false) {<br /> echo &#39;Curl error: &#39; . curl_error($ch) . PHP_EOL;<br />} else {<br /> echo &#39;Http code: &#39; . $httpcode . PHP_EOL;<br /> echo &#39;Response: &#39; . json_encode(json_decode($response, true), JSON_PRETTY_PRINT|JSON_UNESCAPED_UNICODE) . PHP_EOL;<br />}</pre>
+<p><a href="#q0">-Вернуться к содержанию-</a></p>
+<h4><a id="q44"></a>4.4. Создание и редактирование настроек критериев завершения курса</h4>
+<p><strong>Протокол, название метода:</strong> REST, local_opentechnololgy_edit_completion_criteria</p>
+<p><strong>Интерфейс СЭО 3КL, в котором доступен результат:</strong> https://<em>your_lms</em>/course/completion.php?id=<em>your_course_id</em></p>
+<p><strong>Текст запроса:</strong></p>
+<pre class="otsf-incut pre"><!--?php &lt;br ?-->// Укажите свой домен вместо YOUR_DOMAIN<br />$wsurl = &#39;https://YOUR_DOMAIN/webservice/rest/server.php&#39;;<br />// Список аргументов, передаваемых в запросе по API<br />$arguments = [];<br />// Укажите свой токен<br />$arguments[&#39;wstoken&#39;] = &#39;YOUR_TOKEN&#39;;<br />// Формат - json<br />$arguments[&#39;moodlewsrestformat&#39;] = &#39;json&#39;;<br />// функция создания в портфолио ЭД достижений по шаблону типа Настраиваемый<br />$arguments[&#39;wsfunction&#39;] = &#39;local_opentechnololgy_edit_completion_criteria&#39;;<br />// Список курсов с критериями достижений<br />$arguments[&#39;courses&#39;] = [<br /> // первый и единственный в данном примере курс с критериями<br /> [<br /> // идентификатор курса<br /> &#39;id&#39; =&gt; 81,<br /> // разблокировать настройки (удалить данные о выполнении критериев выполнения курса)<br /> &#39;settingsunlock&#39; =&gt; 1,<br /> // общее - курс завершен, когда ЛЮБОЕ из условий будет выполнено<br /> &#39;overall_aggregation&#39; =&gt; 2,<br /> // выполнение элемента курса<br /> &#39;criteria_activity&#39; =&gt; [<br /> // объект со сведениями по элементу курса<br /> (object)[<br /> // идентификатор модуля курса<br /> &#39;cmid&#39; =&gt; 1761, <br /> // флаг - включен ли модуль курса в критерий выполнения<br /> &#39;value&#39; =&gt; 1<br /> ],<br /> ],<br /> // Требуемое условие - ЛЮБОЙ из выбранных элементов курса должен быть выполнен<br /> &#39;activity_aggregation&#39; =&gt; 2,<br /> // Завершение других курсов<br /> &#39;criteria_course&#39; =&gt; [<br /> // объект со сведениями о курсе<br /> (object)[<br /> // идентификатор курса<br /> &#39;courseid&#39; =&gt; 16<br /> ],<br /> ],<br /> // Требуемое условие - ЛЮБОЙ из выбранных курсов должен быть завершен<br /> &#39;course_aggregation&#39; =&gt; 2,<br /> // Дата - включить<br /> &#39;criteria_date&#39; =&gt; 1,<br /> // Дата, когда курс будет помечен как завершенный (в формате unix timestamp). В примере - через 10 дней от сегодняшнего дня.<br /> &#39;criteria_date_value&#39; =&gt; strtotime(&#39;+10 days&#39;),<br /> // Продолжительность зачисления - включить<br /> &#39;criteria_duration&#39; =&gt; 1,<br /> // Пользователь должен оставаться зачисленным на протяжении (в секундах). В примере - 10 дней.<br /> &#39;criteria_duration_days&#39; =&gt; 10 * 24 * 60 * 60,<br /> // Оценка за курс - включить<br /> &#39;criteria_grade&#39; =&gt; 1,<br /> // Необходимая оценка курса<br /> &#39;criteria_grade_value&#39; =&gt; floatval(50.00000),<br /> // завершение вручную за другого<br /> &#39;criteria_role&#39; =&gt; [<br /> // объект роли<br /> (object)[<br /> // идентификатор роли<br /> &#39;roleid&#39; =&gt; 3<br /> ],<br /> ],<br /> // Требуемое условие - ЛЮБАЯ из выбранных ролей может поставить отметку выполнения<br /> &#39;role_aggregation&#39; =&gt; 2,<br /> // Пользователь может сам поставить отметку о выполнении - включить<br /> &#39;criteria_self&#39; =&gt; 1,<br /> // исключение из курса - включить<br /> &#39;criteria_unenrol&#39; =&gt; 1,<br /> ]<br />];<br />$ch = curl_init($wsurl);<br />curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);<br />curl_setopt($ch, CURLOPT_POST, true);<br />curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($arguments, &#39;&#39;, &#39;&amp;&#39;));<br />// При отладке на сервере с самоподписанным сертификатом используйте (раскомментируйте) следующие две опции<br />// curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);<br />// curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);<br />$response = curl_exec($ch);<br />$httpcode = curl_getinfo($ch, CURLINFO_HTTP_CODE);<br />curl_close($ch);<br />if ($response === false) {<br /> echo &#39;Curl error: &#39; . curl_error($ch) . PHP_EOL;<br />} else {<br /> echo &#39;Http code: &#39; . $httpcode . PHP_EOL;<br /> echo &#39;Response: &#39; . json_encode(json_decode($response, true), JSON_PRETTY_PRINT|JSON_UNESCAPED_UNICODE) . PHP_EOL;<br />}</pre>
+<p><a href="#q0">-Вернуться к содержанию-</a></p>
+<h4><a id="q45"></a>4.5. Управление зачислением на курсы через глобальные группы</h4>
+<div class="otsf-incut note">Возможности, описанные в данном разделе, доступны в СЭО 3KL, начиная с версии 4.1.17a и реализуются при помощи плагина, local_ws_enrolcohort.</div>
+<p><a href="#q0">-Вернуться к содержанию-</a></p>
+<h5><a id="q451"></a>4.5.1. <strong>Создание способа записи на курс через глобальную группу</strong></h5>
+<p>Пример запроса curl:</p>
+<pre>curl -k --location &#39;https://your_lms/webservice/rest/server.php?wstoken=your_token&amp;wsfunction=local_ws_enrolcohort_add_instance&amp;moodlewsrestformat=json&#39; \
+ --header &#39;Content-Type: multipart/form-data&#39; \
+ --form &#39;instance[courseid]="81"&#39; \ 
+ --form &#39;instance[cohortid]="14"&#39; \ 
+ --form &#39;instance[roleid]="5"&#39; \  
+ --form &#39;instance[groupid]="77"&#39; \
+ --form &#39;instance[name]="Стажеры"&#39; \
+ --form &#39;instance[status]="0"&#39;</pre>
+<p>Пример запроса php:</p>
+<pre>$baseurl = &#39;https://YOUR_DOMAIN/webservice/rest/server.php&#39;;
+$params[&#39;wstoken&#39;] = &#39;YOUR_TOKEN&#39;;
+$params[&#39;moodlewsrestformat&#39;] = &#39;json&#39;;
+$params[&#39;wsfunction&#39;] = &#39;local_ws_enrolcohort_add_instance&#39;;
+
+$data[&#39;instance[courseid]&#39;] = 81;
+$data[&#39;instance[cohortid]&#39;] = 14;
+$data[&#39;instance[roleid]&#39;] = 5;
+$data[&#39;instance[groupid]&#39;] = 77; // необязательный параметр
+$data[&#39;instance[name]&#39;] = &#39;Стажеры&#39;; // необязательный параметр
+$data[&#39;instance[status]&#39;] = 0; // необязательный параметр
+
+$query = http_build_query($params, &#39;&#39;, &#39;&amp;&#39;);
+
+$ch = curl_init($baseurl . &#39;?&#39; . $query);
+curl_setopt($ch, CURLOPT_POST, 1);
+curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
+curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
+
+$response = curl_exec($ch);
+
+curl_close($ch);
+
+if ($response === false) {
+    echo &#39;Curl error: &#39; . curl_error($ch) . PHP_EOL;
+} else {
+    echo &#39;Response: &#39; . json_encode(json_decode($response, true), JSON_PRETTY_PRINT|JSON_UNESCAPED_UNICODE) . PHP_EOL;
+}</pre>
+<p><a href="#q0">-Вернуться к содержанию-</a></p>
+<h5><a id="q452"></a>4.5.2. <strong><span class="multiedit-on-h2"><span class="multieditable-parent"><span class="editable multieditable multieditable-initialized" data-name="issue[subject]" data-type="text" data-value="Веб - <abbr data-toggle="tooltip" data-placement="bottom" title="Комплекс мероприятий, проводимых Исполнителем с целью выполнения работ, оказания услуг или предоставления гарантийной поддержки товара или Продукта. Работа, услуга или гарантийная техническая поддержка включают закрытый перечень Сервисов, определяемый в Договоре. Настоящий Регламент описывает стандартные Сервисы Исполнителя, порядок их предоставления, регламенты взаимодействия Исполнителя и Заказчика при предоставлении Сервисов. Сервис является составной частью работы, услуги или гарантийного обслуживания товара или Продукта и может предоставляется только в их составе.">сервис</abbr> зачисления на курс по глобальной группе (local_ws_enrolcohort)">Получение информации о способах записи на курс через глобальные группы</span></span></span></strong></h5>
+<p>Пример запроса curl:</p>
+<pre>curl -k --location &#39;https://your_lms/webservice/rest/server.php?wstoken=your_token&amp;wsfunction=local_ws_enrolcohort_get_instances&amp;moodlewsrestformat=json&#39; \
+--header &#39;Content-Type: multipart/form-data&#39; \
+--form &#39;course[id]="81"&#39;</pre>
+<p>Пример запроса php:</p>
+<pre>&lt;?php
+
+$baseurl = &#39;https://YOUR_DOMAIN/webservice/rest/server.php&#39;;
+$params[&#39;wstoken&#39;] = &#39;YOUR_TOKEN&#39;;
+$params[&#39;moodlewsrestformat&#39;] = &#39;json&#39;;
+$params[&#39;wsfunction&#39;] = &#39;local_ws_enrolcohort_get_instances&#39;;
+
+$data[&#39;course[id]&#39;] = 81;
+
+$query = http_build_query($params, &#39;&#39;, &#39;&amp;&#39;);
+
+$ch = curl_init($baseurl . &#39;?&#39; . $query);
+curl_setopt($ch, CURLOPT_POST, 1);
+curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
+curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
+
+$response = curl_exec($ch);
+
+curl_close($ch);
+
+if ($response === false) {
+    echo &#39;Curl error: &#39; . curl_error($ch) . PHP_EOL;
+} else {
+    echo &#39;Response: &#39; . json_encode(json_decode($response, true), JSON_PRETTY_PRINT|JSON_UNESCAPED_UNICODE) . PHP_EOL;
+}</pre>
+<p><a href="#q0">-Вернуться к содержанию-</a></p>
+<h5><a id="q453"></a>4.5.3. <strong><span class="multiedit-on-h2"><span class="multieditable-parent"><span class="editable multieditable multieditable-initialized" data-name="issue[subject]" data-type="text" data-value="Веб - сервис зачисления на курс по глобальной группе (local_ws_enrolcohort)">Редактирование способа записи на курс через глобальную группу</span></span></span></strong></h5>
+<p>Пример запроса curl:</p>
+<pre>curl -k --location &#39;https://your_lms/webservice/rest/server.php?wstoken=your_token&amp;wsfunction=local_ws_enrolcohort_update_instance&amp;moodlewsrestformat=json&#39; \
+--header &#39;Content-Type: multipart/form-data&#39; \
+--form &#39;instance[id]="446"&#39; \
+--form &#39;instance[name]="Московский <abbr data-toggle="tooltip" data-placement="bottom" title="Область страницы, к которой администратор может применять различные настройки отображения блоков. К стандартным регионам Moodle относятся: правая колонка, левая колонка, верх страницы, низ страницы, центральная колонка - верх, центральная колонка - низ. К кастомным регионам, разработанным ОТ, относятся регионы: над шапкой, над контентом, в контенте (под заголовком), под контентом. Статья «Настройки темы оформления «СЭО 3КL».">регион</abbr>"&#39; \
+--form &#39;instance[roleid]="5"&#39; \
+--form &#39;instance[groupid]="77"&#39; \
+--form &#39;instance[status]="1"&#39;</pre>
+<p>Пример запроса php:</p>
+<pre>&lt;?php
+
+$baseurl = &#39;https://YOUR_DOMAIN/webservice/rest/server.php&#39;;
+$params[&#39;wstoken&#39;] = &#39;YOUR_TOKEN&#39;;
+$params[&#39;moodlewsrestformat&#39;] = &#39;json&#39;;
+$params[&#39;wsfunction&#39;] = &#39;local_ws_enrolcohort_update_instance&#39;;
+
+$data[&#39;instance[id]&#39;] = 446;
+$data[&#39;instance[name]&#39;] = &#39;Московский регион&#39;; // необязательный параметр
+$data[&#39;instance[status]&#39;] = 1; // необязательный параметр
+$data[&#39;instance[roleid]&#39;] = 5; // необязательный параметр
+$data[&#39;instance[groupid]&#39;] = 77; // необязательный параметр
+
+$query = http_build_query($params, &#39;&#39;, &#39;&amp;&#39;);
+
+$ch = curl_init($baseurl . &#39;?&#39; . $query);
+curl_setopt($ch, CURLOPT_POST, 1);
+curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
+curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
+
+$response = curl_exec($ch);
+
+curl_close($ch);
+
+if ($response === false) {
+    echo &#39;Curl error: &#39; . curl_error($ch) . PHP_EOL;
+} else {
+    echo &#39;Response: &#39; . json_encode(json_decode($response, true), JSON_PRETTY_PRINT|JSON_UNESCAPED_UNICODE) . PHP_EOL;
+}</pre>
+<p><a href="#q0">-Вернуться к содержанию-</a></p>
+<h5><a id="q454"></a>4.5.4. <strong><span class="multiedit-on-h2"><span class="multieditable-parent"><span class="editable multieditable multieditable-initialized" data-name="issue[subject]" data-type="text" data-value="Веб - сервис зачисления на курс по глобальной группе (local_ws_enrolcohort)">Удаление способа записи на курс через глобальную группу</span></span></span></strong></h5>
+<p>Пример запроса curl:</p>
+<pre>curl -k --location &#39;https://your_lms/webservice/rest/server.php?wstoken=your_token&amp;wsfunction=local_ws_enrolcohort_delete_instance&amp;moodlewsrestformat=json&#39; \
+--header &#39;Content-Type: multipart/form-data&#39; \
+--form &#39;instance[id]="444"&#39;</pre>
+<p>Пример запроса php:</p>
+<pre>&lt;?php
+
+$baseurl = &#39;https://YOUR_DOMAIN/webservice/rest/server.php&#39;;
+$params[&#39;wstoken&#39;] = &#39;YOUR_TOKEN&#39;;
+$params[&#39;moodlewsrestformat&#39;] = &#39;json&#39;;
+$params[&#39;wsfunction&#39;] = &#39;local_ws_enrolcohort_delete_instance&#39;;
+
+$data[&#39;instance[id]&#39;] = 444;
+
+$query = http_build_query($params, &#39;&#39;, &#39;&amp;&#39;);
+
+$ch = curl_init($baseurl . &#39;?&#39; . $query);
+curl_setopt($ch, CURLOPT_POST, 1);
+curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
+curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
+
+$response = curl_exec($ch);
+
+curl_close($ch);
+
+if ($response === false) {
+    echo &#39;Curl error: &#39; . curl_error($ch) . PHP_EOL;
+} else {
+    echo &#39;Response: &#39; . json_encode(json_decode($response, true), JSON_PRETTY_PRINT|JSON_UNESCAPED_UNICODE) . PHP_EOL;
+}</pre>
+<p><a href="#q0">-Вернуться к содержанию-</a><span id=":ua.co" class="EMoHub tL8wMe" style="text-align: left;"></span></p>
+<h4><a id="q46"></a>4.6. Пример внешней автоматизации массового создания курсов с преднастроенными способами зачисления через глобальные группы с использованием скрипта на <strong>Python</strong></h4>
+<div class="otsf-incut note">Основным преимуществом предложенного ниже решения является отсутствие необходимости выполнять какие-либо доработки на стороне СЭО 3KL. Данный алгоритм может быть рекомендован для реализации практически <strong>любой внешней автоматизации</strong>.</div>
+<p><strong>Задача:</strong><br />Используя web-сервисы, реализовать возможность массового создания в СЭО 3KL курсов на основании подготовленного <abbr data-toggle="tooltip" data-placement="bottom" title="Comma-Separated Values (значения, разделённые запятыми) — текстовый формат, предназначенный для представления табличных данных. Строка таблицы соответствует строке текста, которая содержит одно или несколько полей, разделенных запятыми. Статья «Массовая загрузка пользователей через файл csv».">csv</abbr>-файла. При этом, во вновь созданных курсах должно быть изначально преднастроено несколько способов зачисления <a href="https://kb.opentechnology.ru/index.php?solution_id=1065">«Синхронизация с глобальной группой»</a> для возможности автоматического зачисления участников существующих в системе глобальных групп. Роль (<abbr data-toggle="tooltip" data-placement="bottom" title="Роль предоставляет доступ к просмотру материалов и выполнению элементов курса, просмотру своих оценок и отзывов преподавателей. Без возможности изменять содержание курса. Статья «Роли, контекст, ролевая модель».">слушатель</abbr>, <abbr data-toggle="tooltip" data-placement="bottom" title="Роль позволяет выполнять в рамках курса любые действия, связанные с изменением содержания курса и оцениванием слушателей. У роли нет права назначать других преподавателей. Из-за того, что преподаватель будет получать максимальное количество уведомлений о событиях, происходящих в курсе, не рекомендуется назначать эту роль глобально или на большие категории курсов. Статья «Роли, контекст, ролевая модель».">преподаватель</abbr>, ассистент и т. п.), с которой пользователь зачисляется на курс, заранее известна и определяется принадлежностью к глобальной группе.</p>
+<p><strong>Предусловия:</strong><br />1) Предполагается, что csv-файл с параметрами создаваемых в СЭО 3KL курсов уже подготовлен и содержит в себе все необходимые для реализации решения данные.<br />2) Аккаунты сервиса Google (drive и collab) создан и активен, все необходимые параметры доступа и настройки выполнены на компьютере ответственного за создание курсов сотрудника организации (в нашем примере - диспетчера-администратора СЭО 3KL).</p>
+<div class="otsf-incut note">Применение сервисов Google не является обязательным условием решения. Вы можете использовать любые иные облачные хранилища и платформы для создания и выполнения кода на Python.</div>
+<p><strong>Общий алгоритм решения</strong> (Рис. 4.5.1):<br />1) Диспетчер администратор загружает csv-файл в облачное хранилище (или вносит необходимые правки в ранее выгруженный, непосредственно в таблице хранилища).<br />2) Загружает <a href="#p1">скрипт</a> в облачную среду разработки (Google Collab, в нашем примере), указывает путь до csv-файла.<br />3) Запускает скрипт.<br />4) Среда разработки выполняет скрипт: отправляет к API СЭО 3KL запросы, получает информацию по участвующим сущностям, передает информацию по создаваемым курсам, экземплярам способов записи на курсы и конкретным записям пользователей на курсы.<br />5) СЭО 3KL создает указанные в csv-файле курсы, способов записи на курсы.<br />6) СЭО 3KL зачисляет пользователей глобальных групп в созданные курсы согласно определенным в настройках способов подписки параметрам.</p>
+<p><img class="otsf-screenshot" src="https://kb.opentechnology.ru/index.php?action=attachment&amp;id=10857" alt="" /></p>
+<div class="otsf-screenshot-description">Рис. 4.5.1. Структурная схема решения.</div>
+<p><strong><a id="p1"></a>Пример скрипта на Python:</strong></p>
+<pre>import requests
+import pandas as pd
+from googleapiclient.discovery import build
+from google_auth_oauthlib.flow import InstalledAppFlow
+from google.auth.transport.requests import Request
+
+# Функция для аутентификации в Google Drive
+def authenticate_google_drive():
+    scopes = [&#39;https://www.googleapis.com/auth/drive.readonly&#39;]
+    
+    creds = None
+    if os.path.exists(&#39;token.json&#39;):
+        creds = Credentials.from_authorized_user_file(&#39;token.json&#39;, scopes)
+    # Если нет токена или он просрочен, создаем новый
+    if not creds or not creds.valid:
+        if creds and creds.expired and creds.refresh_token:
+            creds.refresh(Request())
+        else:
+            flow = InstalledAppFlow.from_client_secrets_file(
+                &#39;credentials.json&#39;, scopes)
+            creds = flow.run_local_server(port=0)
+        # Сохраняем токен для следующего запуска
+        with open(&#39;token.json&#39;, &#39;w&#39;) as token:
+            token.write(creds.to_json())
+            
+    return build(&#39;drive&#39;, &#39;v3&#39;, credentials=creds)
+
+# Функция для загрузки файла с Google Drive
+def download_csv_from_google_drive(drive_service, file_id):
+    request = drive_service.files().get_media(fileId=file_id)
+    fh = io.BytesIO()
+    downloader = MediaIoBaseDownload(fh, request)
+    done = False
+    while done is False:
+        status, done = downloader.next_chunk()
+        print("Download %d%%." % int(status.progress() * 100))
+    fh.seek(0)
+    df = pd.read_csv(fh)
+    return df
+
+# Настройки подключения к <abbr data-toggle="tooltip" data-placement="bottom" title="Modular Object-Oriented Dynamic Learning Environment (модульная объектно-ориентированная динамическая учебная среда), платформа обучения или система управления курсами (CMS) — свободно распространяемый по лицензии GNU GPL программный продукт, призванный помочь преподавателям создавать эффективные онлайн-курсы. СЭО 3KL базируется на ядре Moodle. Статья «Принципы работы Moodle».">Moodle</abbr> API
+MOODLE_URL = &#39;http://your-moodle-site/webservice/rest/server.php&#39;
+MOODLE_TOKEN = &#39;your_moodle_webservice_token&#39;
+
+# Загрузка CSV-файла с Google Drive
+drive_service = authenticate_google_drive()
+csv_data = download_csv_from_google_drive(drive_service, &#39;your_csv_file_id&#39;)
+
+min_i = 1  # Минимальное значение i (например, первая строка)
+max_i = 20 # Максимальное значение i
+
+# Проход по строкам CSV-файла
+for index, row in csv_data.iterrows():
+    shortname = row[&#39;shortname&#39;]
+    categoryid = row[&#39;categoryid&#39;]
+    fullname = row[&#39;fullname&#39;]
+    summary = row[&#39;summary&#39;]
+    cohorts = []
+    
+    for i in range(min_i, max_i):  # Цикл от min_i до max_i включительно
+        cohort_id = row[f&#39;cohort_{i}_id&#39;]  # Получаем значение cohort_N_id
+        roleid = row[f&#39;cohort_{i}_roleid&#39;]  # Получаем значение cohort_N_roleid
+        cohorts.append({
+            &#39;id&#39;: cohort_id,
+            &#39;roleid&#39;: roleid
+    })
+    
+    # Создание курса в Moodle
+    create_course_payload = {
+        &#39;courses[0][fullname]&#39;: fullname,
+        &#39;courses[0][shortname]&#39;: shortname,
+        &#39;courses[0][categoryid]&#39;: categoryid,
+        &#39;courses[0][summary]&#39;: summary,
+    }
+    create_course_response = requests.post(MOODLE_URL, params={&#39;wsfunction&#39;: &#39;core_course_create_courses&#39;, &#39;wstoken&#39;: MOODLE_TOKEN, &#39;moodlewsrestformat&#39;: &#39;json&#39;}, data=create_course_payload)
+    create_course_result = create_course_response.json()
+    course_id = create_course_result[&#39;courses&#39;][0][&#39;id&#39;]
+    
+    # Добавление групп в курс
+    for cohort in cohorts:
+        add_cohort_to_course_payload = {
+            &#39;instance[roleid]&#39;: cohort["roleid"],  # ID роли студента
+            &#39;instance[cohortid]&#39;: cohort["id"],  # ID глобальной группу
+            &#39;instance[courseid]&#39;: course_id # id курса
+        }
+        add_group_to_course_response = requests.post(MOODLE_URL, params={&#39;wsfunction&#39;: &#39;local_ws_enrolcohort_add_instance&#39;, &#39;wstoken&#39;: MOODLE_TOKEN, &#39;moodlewsrestformat&#39;: &#39;json&#39;}, data=add_group_to_course_payload)
+        add_group_to_course_result = add_group_to_course_response.json()
+        print(f&#39;Группа {group} успешно добавлена в курс {course_name}&#39;)</pre>
+<p><a href="#q0">-Вернуться к содержанию-</a></p>
+                    
+                    Теги: <a title="API" href="/tags/21791/api.html">API</a>, <a title="интеграция" href="/tags/2/integracia.html">интеграция</a>
+                    
+                    
+                    
+                    <aside id="faqAccordion" class="accordion related-faqs hidden-print">
+                        <div class="accordion-group">
+                            <div class="accordion-heading">
+                                <a class="accordion-toggle" href="#collapseRelatedFaqs" data-parent="#faqAccordion" data-toggle="collapse">
+                                    Связанные статьи
+                                </a>
+                            </div>
+                            <div id="collapseRelatedFaqs" class="accordion-body collapse">
+                                <div class="accordion-inner"><ul><li><a title="Что такое интеграция? Какие существуют интеграции и возможности обмена данными в СЭО 3KL? (заглавная статья)" href="/content/5/7/ru/cto-takoe-integracia-kakie-susestvuut-integracii-i-vozmoznosti-obmena-dannymi-v-seo-3kl-zaglavnaa-statʹa.html">Что такое интеграция? Какие существуют интеграции и возможности обмена данными в СЭО 3KL? (заглавная статья)</a></li><li><a title="Метод записи на курс «Автозачисление 3KL» — otautoenrol" href="/content/27/9/ru/metod-zapisi-na-kurs-«avtozacislenie-3kl»-—-otautoenrol.html">Метод записи на курс «Автозачисление 3KL» — otautoenrol</a></li><li><a title="Настройка отображения элементов Витрины курсов 3KL через дополнительные поля курса" href="/content/27/14/ru/nastrojka-otobrazenia-elementov-vitriny-kursov-3kl-cerez-dopolnitelʹnye-pola-kursa.html">Настройка отображения элементов Витрины курсов 3KL через дополнительные поля курса</a></li><li><a title="Интеграция со сторонними сервисами" href="/content/27/33/ru/integracia-so-storonnimi-servisami.html">Интеграция со сторонними сервисами</a></li><li><a title=" Плагин  «Антиплагиат.ру». Проверка работ слушателей на заимствования с помощью сервиса «Антиплагиат»" href="/content/5/35/ru/plagin-«antiplagiatru»-proverka-rabot-slusatelej-na-zaimstvovania-s-pomosʹu-servisa-«antiplagiat».html"> Плагин  «Антиплагиат.ру». Проверка работ слушателей на заимствования с помощью сервиса «Антиплагиат»</a></li></ul></div>
+                            </div>
+                        </div>
+                    </aside>
+                    
+                    
+                    <aside id="faqAccordion" class="accordion related-categories hidden-print">
+                        <div class="accordion-group">
+                            <div class="accordion-heading">
+                                <a class="accordion-toggle" href="#collapseRelatedCategories" data-parent="#faqAccordion" data-toggle="collapse">
+                                    Категории для этой статьи
+                                </a>
+                            </div>
+                            <div id="collapseRelatedCategories" class="accordion-body collapse">
+                                <div class="accordion-inner"><ul class="breadcrumb-related-categories"></ul><ul class="breadcrumb-related-categories"></ul><ul class="breadcrumb-related-categories"></ul><ul class="breadcrumb-related-categories"></ul></div>
+                            </div>
+                        </div>
+                    </aside>
+                    
+                </div>
+            </article>
+            <ul id="tab" class="nav nav-tabs hidden-print">
+                <li class="active"><a href="#votingForm" data-toggle="tab">Пожалуйста оцените этот ответ:</a></li>
+                
+                <li><a href="#switchAvailableLanguage" data-toggle="tab">изменить язык</a></li>
+                
+                
+            </ul>
+            <div class="tab-content pmf-faq-info">
+                <div class="tab-pane active hidden-print" id="votingForm">
+                    <form action="#" method="post" class="form-inline">
+                        <input type="hidden" name="artikel" value="642">
+                        <div id="votings"></div>
+                        <div class="pmf-stars">
+                            <div class="pmf-star-rating" data-rating="Рейтинг ответа:">
+                                <span data-stars="5">☆</span>
+                                <span data-stars="4">☆</span>
+                                <span data-stars="3">☆</span>
+                                <span data-stars="2">☆</span>
+                                <span data-stars="1">☆</span>
+                            </div>
+                        </div>
+                        <div class="pull-right">
+                            <strong>Рейтинг ответа:</strong><span id="rating"> <span data-rating="5">5</span> (1 оценка)</span>
+                        </div>
+                    </form>
+                </div>
+                <div class="tab-pane hidden-print" id="switchAvailableLanguage">
+                    <form method="post"><select name="language" onchange="top.location.href = this.options[this.selectedIndex].value;"><option value="/content/41/642//instrumenty-web-api-v-seo-3kl-vozmoznosti-i-primery.html"></option><option value="/content/41/642/ru/instrumenty-web-api-v-seo-3kl-vozmoznosti-i-primery.html" selected>Russian</option></select></form>
+                </div>
+                <div class="tab-pane hidden-print" id="addTranslation">
+                    <form action="/index.php?action=translate&amp;cat=41&amp;id=642&amp;srclang=ru" method="post" class="form-inline" accept-charset="utf-8">
+                        <select class="form-control" name="translation" id="translation" size="1">
+	<option value="ar">Arabic</option>
+	<option value="eu">Basque</option>
+	<option value="bn">Bengali</option>
+	<option value="bs">Bosnian</option>
+	<option value="pt-br">Brazilian Portuguese</option>
+	<option value="zh">Chinese (Simplified)</option>
+	<option value="tw">Chinese (Traditional)</option>
+	<option value="cs">Czech</option>
+	<option value="da">Danish</option>
+	<option value="nl">Dutch</option>
+	<option value="en">English</option>
+	<option value="fi">Finnish</option>
+	<option value="fr">French</option>
+	<option value="fr-ca">French (Canada)</option>
+	<option value="de">German</option>
+	<option value="el">Greek</option>
+	<option value="he">Hebrew</option>
+	<option value="hi">Hindi</option>
+	<option value="hu">Hungarian</option>
+	<option value="id">Indonesian</option>
+	<option value="it">Italian</option>
+	<option value="ja">Japanese</option>
+	<option value="ko">Korean</option>
+	<option value="lv">Latvian</option>
+	<option value="lt">Lithuanian</option>
+	<option value="ms">Malay</option>
+	<option value="nb">Norwegian Bokm&aring;l</option>
+	<option value="fa">Persian</option>
+	<option value="pl">Polish</option>
+	<option value="pt">Portuguese</option>
+	<option value="ro">Romanian</option>
+	<option value="sr">Serbian</option>
+	<option value="sk">Slovak</option>
+	<option value="sl">Slovenian</option>
+	<option value="es">Spanish</option>
+	<option value="sv">Swedish</option>
+	<option value="th">Thai</option>
+	<option value="tr">Turkish</option>
+	<option value="uk">Ukrainian</option>
+	<option value="vi">Vietnamese</option>
+	<option value="cy">Welsh</option>
+</select>
+                        <button class="btn btn-primary" type="submit" name="submit">
+                            Старт перевода...
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <p class="hidden-print">Комментарии запрещены</p>
+            <aside class="pmf-create-comment hide" id="pmf-create-comment">
+                <hr>
+                <div id="loader"></div>
+                <h2><i aria-hidden="true" class="fa fa-heart"></i> Комментировать этот ответ</h2>
+                <form id="formValues" action="#" method="post" class="form-horizontal" accept-charset="utf-8">
+                    <input type="hidden" name="id" id="id" value="642">
+                    <input type="hidden" name="lang" id="lang" value="ru">
+                    <input type="hidden" name="type" id="type" value="faq">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <input type="text" name="user" id="user" class="form-control input-lg" required
+                                   placeholder="Ваше имя:" value="">
+                        </div>
+                        
+                        
+                        <div class="col-md-6">
+                            <input type="email" name="mail" id="mail" class="form-control input-lg" required
+                                   placeholder="Адрес Email"  value="">
+                        </div>
+	                    
+	                    
+                    </div>
+                    <textarea rows="10" name="comment_text" id="comment_text" class="form-control input-lg"
+                              placeholder="Ваши комментарии:"></textarea>
+                    <div class="form-group"><label class="col-sm-3 control-label">Пожалуйста введите символы изображённые но картинке</label>    <div class="col-sm-4">        <p class="form-control-static"><img id="captchaImage" src="/index.php?action=writecomment&amp;gen=img&amp;ck=1774513036" height="40" width="165" alt="Chuck Norris has counted to infinity. Twice." title="click to refresh">        </p>    </div>    <div class="col-sm-5">        <div class="input-group"><input type="text" class="form-control" name="captcha" id="captcha" size="6" autocomplete="off" required>            <span class="input-group-btn"><a class="btn btn-primary" id="captcha-button" data-action="writecomment"><i aria-hidden="true" class="fa fa-refresh"></i></a>            </span>        </div>    </div></div>
+                    
+                    <div class="pmf-buttons clearfix">
+                        <button class="btn btn-primary" id="submitcomment" type="submit">
+                            Отправить
+                        </button>
+                    </div>
+                </form>
+            </aside>
+            <aside class="pmf-comments" id="comments">
+                <hr>
+                
+            </aside>
+        </section>
+        <script src="assets/js/libs/highlight.pack.js"></script>
+        <style>
+        body {
+            position: relative;
+        }
+        </style>
+        <link rel="stylesheet" href="assets/js/libs/default.css">
+        <script>
+            $(document).ready(function() {
+                $(function() {
+                    $('div.pmf-stars > div.pmf-star-rating > span').on('click', function(e) {
+                        var numStars = $(e.target).data('stars');
+                        saveVoting('faq', 642, numStars, 'ru');
+                    });
+                });
+                $('pre code').each(function(i, block) {
+                    hljs.highlightBlock(block);
+                });
+                $('button.pmf-popover').popover();
+            });
+        </script>
+            </div>
+            <aside class="col-lg-3 pmf-aside">
+                        
+        <section class="pmf-aside-widget">
+            <div class="pmf-aside-widget-body pmf-social-links">
+                <a target="_blank" href="/pdf.php?cat=41&id=642&artlang=ru" rel="nofollow" title="Скомпилировать PDF файл">
+                    <span class="fa-stack fa-lg">
+                        <i aria-hidden="true" class="fa fa-square-o fa-stack-2x"></i>
+                        <i aria-hidden="true" class="fa fa-file-pdf-o fa-stack-1x"></i>
+                    </span>
+                </a>
+                <a href="javascript:window.print();" rel="nofollow" title="Отправить на печать">
+                    <span class="fa-stack fa-lg">
+                        <i aria-hidden="true" class="fa fa-square-o fa-stack-2x"></i>
+                        <i aria-hidden="true" class="fa fa-print fa-stack-1x"></i>
+                    </span>
+                </a>
+            </div>
+        </section>
+        
+        
+		
+            <div class="pmf-aside-widget">
+                <header>
+                    <h3>ВАЖНОЕ:</h3>
+                </header>
+                <div class="pmf-aside-widget-body">
+                    <ul class="pmf-list">
+                        <li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="Способы регистрации и аутентификации пользователей" href="/content/5/15/ru/sposoby-registracii-i-autentifikacii-polʹzovatelej.html">Способы регистрации и аутентификации пользователей</a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title=" Плагин  «Антиплагиат.ру». Проверка работ слушателей на заимствования с помощью сервиса «Антиплагиат»" href="/content/5/35/ru/plagin-«antiplagiatru»-proverka-rabot-slusatelej-na-zaimstvovania-s-pomosʹu-servisa-«antiplagiat».html"> Плагин «Антиплагиат.ру». Проверка работ слушателей на заимствования с ...</a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="Интеграция вебинаров в СЭО 3KL" href="/content/5/68/ru/integracia-vebinarov-v-seo-3kl.html">Интеграция вебинаров в СЭО 3KL</a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="Отчеты в СЭО 3KL " href="/content/41/100/ru/otcety-v-seo-3kl.html">Отчеты в СЭО 3KL </a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="Сертификат СЭО 3KL" href="/content/27/106/ru/sertifikat-seo-3kl.html">Сертификат СЭО 3KL</a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="Отслеживание времени непрерывного обучения в курсе" href="/content/24/153/ru/otslezivanie-vremeni-nepreryvnogo-obucenia-v-kurse.html">Отслеживание времени непрерывного обучения в курсе</a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="Как узнать о СЭО 3KL подробнее?" href="/content/1/157/ru/kak-uznatʹ-o-seo-3kl-podrobnee.html">Как узнать о СЭО 3KL подробнее?</a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="Логика курса 3KL, часть 1. Принцип работы, добавление и настройка элемента" href="/content/27/168/ru/logika-kursa-3kl-castʹ-1-princip-raboty-dobavlenie-i-nastrojka-elementa.html">Логика курса 3KL, часть 1. Принцип работы, добавление и ...</a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="Настройка внешнего вида СЭО 3КL" href="/content/27/183/ru/nastrojka-vnesnego-vida-seo-3kl.html">Настройка внешнего вида СЭО 3КL</a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="Плагин «Подписка 3KL» часть 2. Глобальные настройки" href="/content/27/216/ru/plagin-«podpiska-3kl»-castʹ-2-globalʹnye-nastrojki.html">Плагин «Подписка 3KL» часть 2. Глобальные настройки</a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="Портфолио ч. 1. Введение" href="/content/24/218/ru/portfolio-c-1-vvedenie.html">Портфолио ч. 1. Введение</a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="Глобальные сценарии 3KL. Локальный плагин" href="/content/27/271/ru/globalʹnye-scenarii-3kl-lokalʹnyj-plagin.html">Глобальные сценарии 3KL. Локальный плагин</a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="Панель управления СЭО 3KL. Локальный плагин" href="/content/41/375/ru/panelʹ-upravlenia-seo-3kl-lokalʹnyj-plagin.html">Панель управления СЭО 3KL. Локальный плагин</a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="Персональная информация пользователя. Страницы «О пользователе» и «Личный кабинет»" href="/content/27/480/ru/personalʹnaa-informacia-polʹzovatela-stranicy-«o-polʹzovatele»-i-«licnyj-kabinet».html">Персональная информация пользователя. Страницы «О пользователе» и «Личный кабинет» ...</a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="Элемент курса «Занятие 3КL»" href="/content/4/492/ru/element-kursa-«zanatie-3kl».html">Элемент курса «Занятие 3КL»</a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="Витрина курсов 3KL. Путеводитель" href="/content/27/536/ru/vitrina-kursov-3kl-putevoditelʹ.html">Витрина курсов 3KL. Путеводитель</a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="Справка СЭО 3КL" href="/content/27/542/ru/spravka-seo-3kl.html">Справка СЭО 3КL</a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="Термины и определения базы знаний" href="/content/2/543/ru/terminy-i-opredelenia-bazy-znanij.html">Термины и определения базы знаний</a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="Политики сайта и пользовательские соглашения" href="/content/1/593/ru/politiki-sajta-i-polʹzovatelʹskie-soglasenia.html">Политики сайта и пользовательские соглашения</a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="Расширенный анонс релиза 3.9.20a" href="/content/43/614/ru/rassirennyj-anons-reliza-3920a.html">Расширенный анонс релиза 3.9.20a</a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="Настройка внешнего вида СЭО 3КL версии 3.9" href="/content/27/633/ru/nastrojka-vnesnego-vida-seo-3kl-versii-39.html">Настройка внешнего вида СЭО 3КL версии 3.9</a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="Миграция СЭО 3КL с релиза 3.9 на 4.1. Вопросы и решения" href="/content/6/634/ru/migracia-seo-3kl-s-reliza-39-na-41-voprosy-i-resenia.html">Миграция СЭО 3КL с релиза 3.9 на 4.1. Вопросы ...</a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="Инструменты WEB API в СЭО 3КL. Возможности и примеры" href="/content/41/642/ru/instrumenty-web-api-v-seo-3kl-vozmoznosti-i-primery.html">Инструменты WEB API в СЭО 3КL. Возможности и примеры ...</a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="Расширенный анонс релиза 3.9.25a" href="/content/43/660/ru/rassirennyj-anons-reliza-3925a.html">Расширенный анонс релиза 3.9.25a</a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="21.05.2024 г., III конференция «СЭО Moodle для образования» и конкурс статей" href="/content/45/691/ru/21052024-g-iii-konferencia-«seo-moodle-dla-obrazovania»-i-konkurs-statej.html">21.05.2024 г., III конференция «СЭО Moodle для образования» и ...</a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="Организация открытого мероприятия (онлайн-конференции) на базе СЭО 3KL" href="/content/1/697/ru/organizacia-otkrytogo-meropriatia-onlajn_konferencii-na-baze-seo-3kl.html">Организация открытого мероприятия (онлайн-конференции) на базе СЭО 3KL</a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="Интеграция Cреды электронного обучения 3KL и Moodle  с ГИС СЦОС" href="/content/27/698/ru/integracia-credy-elektronnogo-obucenia-3kl-i-moodle-s-gis-scos.html">Интеграция Cреды электронного обучения 3KL и Moodle с ГИС ...</a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="Расширенный анонс релиза 4.5.4b-beta" href="/content/43/728/ru/rassirennyj-anons-reliza-454b_beta.html">Расширенный анонс релиза 4.5.4b-beta</a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="Расширенный анонс релиза 4.5.6b" href="/content/43/817/ru/rassirennyj-anons-reliza-456b.html">Расширенный анонс релиза 4.5.6b</a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="Расширенный анонс релиза 4.5.7a" href="/content/43/833/ru/rassirennyj-anons-reliza-457a.html">Расширенный анонс релиза 4.5.7a</a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="Главное и интересное. 3КL-осень 2025" href="/content/46/843/ru/glavnoe-i-interesnoe-3kl_osenʹ-2025.html">Главное и интересное. 3КL-осень 2025</a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="Расширенный анонс релиза 4.1.22a" href="/content/44/852/ru/rassirennyj-anons-reliza-4122a.html">Расширенный анонс релиза 4.1.22a</a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="Расширенный анонс релиза 4.5.10b" href="/content/43/879/ru/rassirennyj-anons-reliza-4510b.html">Расширенный анонс релиза 4.5.10b</a></li>
+                    </ul>
+                </div>
+            </div>
+        
+        <section class="pmf-aside-widget">
+            <header>
+                <h3>Записей в этой категории</h3>
+            </header>
+            <div class="pmf-aside-widget-body">
+                <ul class="phpmyfaq_ul"><li><a title="Выгрузка списка предварительно отобранных пользователей на странице «Действия над несколькими пользователями»" href="/content/41/884/ru/vygruzka-spiska-predvaritelʹno-otobrannyh-polʹzovatelej-na-stranice-«dejstvia-nad-neskolʹkimi-polʹzovatelami».html">Выгрузка списка предварительно отобранных пользователей на странице «Действия над несколькими пользователями»</a></li><li><a title="Формирование выборки пользователей на странице «Действия над несколькими пользователями»" href="/content/41/883/ru/formirovanie-vyborki-polʹzovatelej-na-stranice-«dejstvia-nad-neskolʹkimi-polʹzovatelami».html">Формирование выборки пользователей на странице «Действия над несколькими пользователями»</a></li><li><a title="Поиск пользователя СЭО 3KL по неполным данным с помощью страницы «Список пользователей»" href="/content/41/882/ru/poisk-polʹzovatela-seo-3kl-po-nepolnym-dannym-s-pomosʹu-stranicy-«spisok-polʹzovatelej».html">Поиск пользователя СЭО 3KL по неполным данным с помощью страницы «Список пользователей»</a></li><li><a title="Быстрый доступ к странице профиля пользователя с помощью страницы «Список пользователей»" href="/content/41/881/ru/bystryj-dostup-k-stranice-profila-polʹzovatela-s-pomosʹu-stranicy-«spisok-polʹzovatelej».html">Быстрый доступ к странице профиля пользователя с помощью страницы «Список пользователей»</a></li><li><a title="Вебинар от 30.10.2025г. Организация вебинара «Mirapolis Virtual Room» с оплатой через Robokassa. Инструкция по СЭО 3KL версии 4.5" href="/content/41/862/ru/vebinar-ot-30102025g-organizacia-vebinara-«mirapolis-virtual-room»-s-oplatoj-cerez-robokassa-instrukcia-po-seo-3kl-versii-45.html">Вебинар от 30.10.2025г. Организация вебинара «Mirapolis Virtual Room» с оплатой через Robokassa. Инструкция по СЭО 3KL версии 4.5</a></li><li><a title="Вебинар от 24.11.2025г. Слепое оценивание в СЭО Moodle и 3KL. Решение для СЭО 3KL v 4.5." href="/content/41/858/ru/vebinar-ot-24112025g-slepoe-ocenivanie-v-seo-moodle-i-3kl-resenie-dla-seo-3kl-v-45.html">Вебинар от 24.11.2025г. Слепое оценивание в СЭО Moodle и 3KL. Решение для СЭО 3KL v 4.5.</a></li><li><a title="Расширенный анонс релиза 4.5.8a" href="/content/41/851/ru/rassirennyj-anons-reliza-458a.html">Расширенный анонс релиза 4.5.8a</a></li><li><a title="Расширенный анонс релиза 4.5.7b" href="/content/41/841/ru/rassirennyj-anons-reliza-457b.html">Расширенный анонс релиза 4.5.7b</a></li><li><a title="Почему записанный на курс слушатель не видит роли некоторых пользователей, записанных на этот же курс?" href="/content/41/840/ru/pocemu-zapisannyj-na-kurs-slusatelʹ-ne-vidit-roli-nekotoryh-polʹzovatelej-zapisannyh-na-etot-ze-kurs.html">Почему записанный на курс слушатель не видит роли некоторых пользователей, записанных на этот же курс?</a></li><li><a title="Как массово сменить провайдер в уже настроенных элементах курса «‎Занятие 3KL»?" href="/content/41/837/ru/kak-massovo-smenitʹ-provajder-v-uze-nastroennyh-elementah-kursa-«‎zanatie-3kl».html">Как массово сменить провайдер в уже настроенных элементах курса «‎Занятие 3KL»?</a></li><li><a title="Вебинар от 25.07.2025г. Кураторство: реализация функций куратора образовательного процесса в СЭО 3KL" href="/content/41/832/ru/vebinar-ot-25072025g-kuratorstvo-realizacia-funkcij-kuratora-obrazovatelʹnogo-processa-v-seo-3kl.html">Вебинар от 25.07.2025г. Кураторство: реализация функций куратора образовательного процесса в СЭО 3KL</a></li><li><a title="Вебинар от 26.12.2024г. Личный кабинет слушателя ДО в СЭО 3KL. Решение по СЭО 3KL версии 4.1" href="/content/41/831/ru/vebinar-ot-26122024g-licnyj-kabinet-slusatela-do-v-seo-3kl-resenie-po-seo-3kl-versii-41.html">Вебинар от 26.12.2024г. Личный кабинет слушателя ДО в СЭО 3KL. Решение по СЭО 3KL версии 4.1</a></li><li><a title="Вебинар от 27.11.2024г. Личный кабинет слушателя ДПО в СЭО 3KL. Решение по СЭО 3KL версии 4.1" href="/content/41/830/ru/vebinar-ot-27112024g-licnyj-kabinet-slusatela-dpo-v-seo-3kl-resenie-po-seo-3kl-versii-41.html">Вебинар от 27.11.2024г. Личный кабинет слушателя ДПО в СЭО 3KL. Решение по СЭО 3KL версии 4.1</a></li><li><a title="Вебинар от 02.11.2024г. Личный кабинет сотрудника в СЭО 3KL. Решение по СЭО 3KL версии 4.1" href="/content/41/829/ru/vebinar-ot-02112024g-licnyj-kabinet-sotrudnika-v-seo-3kl-resenie-po-seo-3kl-versii-41.html">Вебинар от 02.11.2024г. Личный кабинет сотрудника в СЭО 3KL. Решение по СЭО 3KL версии 4.1</a></li><li><a title="Вебинар от 26.09.2024г. Личный кабинет студента в СЭО 3KL. Решение по СЭО 3KL версии 4.1" href="/content/41/828/ru/vebinar-ot-26092024g-licnyj-kabinet-studenta-v-seo-3kl-resenie-po-seo-3kl-versii-41.html">Вебинар от 26.09.2024г. Личный кабинет студента в СЭО 3KL. Решение по СЭО 3KL версии 4.1</a></li><li><a title="Вебинар от 29.08.2024г. Личный кабинет в СЭО 3KL. Основные настройки и блоки. Видеоинструкция по СЭО 3KL версии 4.1" href="/content/41/826/ru/vebinar-ot-29082024g-licnyj-kabinet-v-seo-3kl-osnovnye-nastrojki-i-bloki-videoinstrukcia-po-seo-3kl-versii-41.html">Вебинар от 29.08.2024г. Личный кабинет в СЭО 3KL. Основные настройки и блоки. Видеоинструкция по СЭО 3KL версии 4.1</a></li><li><a title="Вебинар от 24.07.2024г. Дополнительная кнопка доступа к курсу. Видеоинструкция по СЭО 3KL версии 4.1." href="/content/41/825/ru/vebinar-ot-24072024g-dopolnitelʹnaa-knopka-dostupa-k-kursu-videoinstrukcia-po-seo-3kl-versii-41.html">Вебинар от 24.07.2024г. Дополнительная кнопка доступа к курсу. Видеоинструкция по СЭО 3KL версии 4.1.</a></li><li><a title="Вебинар от 26.06.2024г. Плагин «Сертификат СЭО 3KL». Видеоинструкция по СЭО 3KL v 4.1." href="/content/41/824/ru/vebinar-ot-26062024g-plagin-«sertifikat-seo-3kl»-videoinstrukcia-po-seo-3kl-v-41.html">Вебинар от 26.06.2024г. Плагин «Сертификат СЭО 3KL». Видеоинструкция по СЭО 3KL v 4.1.</a></li><li><a title="Вебинар от 30.05.2024г. Взаимная оценка. Видеоинструкция по СЭО 3KL v 4.1" href="/content/41/819/ru/vebinar-ot-30052024g-vzaimnaa-ocenka-videoinstrukcia-po-seo-3kl-v-41.html">Вебинар от 30.05.2024г. Взаимная оценка. Видеоинструкция по СЭО 3KL v 4.1</a></li><li><a title="Вебинар от 03.05.2024г. Справка СЭО 3KL. Видеоинструкция по СЭО 3KL v 4.1" href="/content/41/818/ru/vebinar-ot-03052024g-spravka-seo-3kl-videoinstrukcia-po-seo-3kl-v-41.html">Вебинар от 03.05.2024г. Справка СЭО 3KL. Видеоинструкция по СЭО 3KL v 4.1</a></li><li><a title="Вебинар от 28.03.2024г. Блок «Спросить преподавателя». Видеоинструкция по СЭО 3KL v 4.1" href="/content/41/816/ru/vebinar-ot-28032024g-blok-«sprositʹ-prepodavatela»-videoinstrukcia-po-seo-3kl-v-41.html">Вебинар от 28.03.2024г. Блок «Спросить преподавателя». Видеоинструкция по СЭО 3KL v 4.1</a></li><li><a title="Инструмент «Целостность данных 3KL»" href="/content/41/798/ru/instrument-«celostnostʹ-dannyh-3kl».html">Инструмент «Целостность данных 3KL»</a></li><li><a title="Вебинар от 29.05.2025г. Витрина для организаций с большим количеством курсов. Инструкция по СЭО 3KL версии 4.1" href="/content/41/764/ru/vebinar-ot-29052025g-vitrina-dla-organizacij-s-bolʹsim-kolicestvom-kursov-instrukcia-po-seo-3kl-versii-41.html">Вебинар от 29.05.2025г. Витрина для организаций с большим количеством курсов. Инструкция по СЭО 3KL версии 4.1</a></li><li><a title="Вебинар от 20.06.2025г. Витрина курсов СЭО 3KL. Описательная страница курса / Лендинг курса" href="/content/41/763/ru/vebinar-ot-20062025g-vitrina-kursov-seo-3kl-opisatelʹnaa-stranica-kursa-_-lending-kursa.html">Вебинар от 20.06.2025г. Витрина курсов СЭО 3KL. Описательная страница курса / Лендинг курса</a></li><li><a title="Вебинар от 27.02.2025г. Витрина для организаций с небольшим количеством курсов. Инструкция по СЭО 3KL версии 4.1" href="/content/41/757/ru/vebinar-ot-27022025g-vitrina-dla-organizacij-s-nebolʹsim-kolicestvom-kursov-instrukcia-po-seo-3kl-versii-41.html">Вебинар от 27.02.2025г. Витрина для организаций с небольшим количеством курсов. Инструкция по СЭО 3KL версии 4.1</a></li><li><a title="Вебинар от 27.03.2025г. Витрина курсов для организаций со средним количеством курсов. Инструкция по СЭО 3KL версии 4.1" href="/content/41/756/ru/vebinar-ot-27032025g-vitrina-kursov-dla-organizacij-so-srednim-kolicestvom-kursov-instrukcia-po-seo-3kl-versii-41.html">Вебинар от 27.03.2025г. Витрина курсов для организаций со средним количеством курсов. Инструкция по СЭО 3KL версии 4.1</a></li><li><a title="Вебинар от 30.01.2025г. Витрина курсов. Введение. Назначение и возможности. Инструкция по СЭО 3KL версии 4.1" href="/content/41/755/ru/vebinar-ot-30012025g-vitrina-kursov-vvedenie-naznacenie-i-vozmoznosti-instrukcia-po-seo-3kl-versii-41.html">Вебинар от 30.01.2025г. Витрина курсов. Введение. Назначение и возможности. Инструкция по СЭО 3KL версии 4.1</a></li><li><a title="Страница «Среда (Версии ПО)»" href="/content/41/716/ru/stranica-«sreda-versii-po».html">Страница «Среда (Версии ПО)»</a></li><li><a title="Плагин «Подписка 3КL». Видео инструкция по СЭО 3KL 4.1" href="/content/41/694/ru/plagin-«podpiska-3kl»-video-instrukcia-po-seo-3kl-41.html">Плагин «Подписка 3КL». Видео инструкция по СЭО 3KL 4.1</a></li><li><a title="Вебинар от 07.09.2023г. Скрытие неучебных курсов и сведений о подписке в блоке «История обучения 3KL». Решение для СЭО 3KL v4.1 (СЭО 3КL версии 4.1.5с)" href="/content/41/673/ru/vebinar-ot-07092023g-skrytie-neucebnyh-kursov-i-svedenij-o-podpiske-v-bloke-«istoria-obucenia-3kl»-resenie-dla-seo-3kl-v41-seo-3kl-versii-415s.html">Вебинар от 07.09.2023г. Скрытие неучебных курсов и сведений о подписке в блоке «История обучения 3KL». Решение для СЭО 3KL v4.1 (СЭО 3КL версии 4.1.5с)</a></li><li><a title="Вебинар от 04.08.2023г. Блок «‎Самопроверка на заимствования 3KL»‎. Видеоинструкция по СЭО 3KL v 4.1 (СЭО 3КL версии 4.1.4b)" href="/content/41/672/ru/vebinar-ot-04082023g-blok-«‎samoproverka-na-zaimstvovania-3kl»‎-videoinstrukcia-po-seo-3kl-v-41-seo-3kl-versii-414b.html">Вебинар от 04.08.2023г. Блок «‎Самопроверка на заимствования 3KL»‎. Видеоинструкция по СЭО 3KL v 4.1 (СЭО 3КL версии 4.1.4b)</a></li><li><a title="Вебинар от 07.09.2023г. Элемент курса «‎Библиотека ресурсов»‎. Видеоинструкция по СЭО 3KL v 4.1 (СЭО 3КL версии 4.1.5а)" href="/content/41/671/ru/vebinar-ot-07092023g-element-kursa-«‎biblioteka-resursov»‎-videoinstrukcia-po-seo-3kl-v-41-seo-3kl-versii-415a.html">Вебинар от 07.09.2023г. Элемент курса «‎Библиотека ресурсов»‎. Видеоинструкция по СЭО 3KL v 4.1 (СЭО 3КL версии 4.1.5а)</a></li><li><a title="Капча (CAPTCHA) в СЭО 3KL" href="/content/41/654/ru/kapca-captcha-v-seo-3kl.html">Капча (CAPTCHA) в СЭО 3KL</a></li><li><a title="Инструменты WEB API в СЭО 3КL. Возможности и примеры" href="/content/41/642/ru/instrumenty-web-api-v-seo-3kl-vozmoznosti-i-primery.html">Инструменты WEB API в СЭО 3КL. Возможности и примеры</a></li><li><a title="Интеграция АСУ «Спрут» с СЭО 3KL (СДО Русский Moodle)" href="/content/41/638/ru/integracia-asu-«sprut»-s-seo-3kl-sdo-russkij-moodle.html">Интеграция АСУ «Спрут» с СЭО 3KL (СДО Русский Moodle)</a></li><li><a title="Отчет «Общая статистика»" href="/content/41/561/ru/otcet-«obsaa-statistika».html">Отчет «Общая статистика»</a></li><li><a title="Путеводитель по вебинарам" href="/content/41/556/ru/putevoditelʹ-po-vebinaram.html">Путеводитель по вебинарам</a></li><li><a title="Термины и определения базы знаний" href="/content/41/543/ru/terminy-i-opredelenia-bazy-znanij.html">Термины и определения базы знаний</a></li><li><a title="Витрина курсов 3KL. Путеводитель" href="/content/41/536/ru/vitrina-kursov-3kl-putevoditelʹ.html">Витрина курсов 3KL. Путеводитель</a></li><li><a title="Расширенный анонс релиза 3.9.11b" href="/content/41/528/ru/rassirennyj-anons-reliza-3911b.html">Расширенный анонс релиза 3.9.11b</a></li><li><a title="Глобальные настройки пользователей" href="/content/41/522/ru/globalʹnye-nastrojki-polʹzovatelej.html">Глобальные настройки пользователей</a></li><li><a title="Можно ли обновить СЭО 3KL до версии 3.9 и выше, если на сервере установлена Ubuntu 16.04?" href="/content/41/505/ru/mozno-li-obnovitʹ-seo-3kl-do-versii-39-i-vyse-esli-na-servere-ustanovlena-ubuntu-1604.html">Можно ли обновить СЭО 3KL до версии 3.9 и выше, если на сервере установлена Ubuntu 16.04?</a></li><li><a title="Требования к API внешней ЭБС, для интеграции с модулем &#34;Библиотека ресурсов 3КL&#34; (материал для разработчиков)" href="/content/41/483/ru/trebovania-k-api-vnesnej-ebs-dla-integracii-s-modulem-&N34biblioteka-resursov-3kl&N34-material-dla-razrabotcikov.html">Требования к API внешней ЭБС, для интеграции с модулем &#34;Библиотека ресурсов 3КL&#34; (материал для разработчиков)</a></li><li><a title="Панель управления СЭО 3KL. Локальный плагин" href="/content/41/375/ru/panelʹ-upravlenia-seo-3kl-lokalʹnyj-plagin.html">Панель управления СЭО 3KL. Локальный плагин</a></li><li><a title="Локальный плагин «Техническая поддержка СЭО 3KL». Страница информации о продукте" href="/content/41/351/ru/lokalʹnyj-plagin-«tehniceskaa-podderzka-seo-3kl»-stranica-informacii-o-produkte.html">Локальный плагин «Техническая поддержка СЭО 3KL». Страница информации о продукте</a></li><li><a title="Блок «Витрина курсов 3KL»" href="/content/41/350/ru/blok-«vitrina-kursov-3kl».html">Блок «Витрина курсов 3KL»</a></li><li><a title="Отображение слайдера на страницах «Портфолио» пользователя" href="/content/41/349/ru/otobrazenie-slajdera-na-stranicah-«portfolio»-polʹzovatela.html">Отображение слайдера на страницах «Портфолио» пользователя</a></li><li><a title="ЭД-018. Электронный деканат. Шаблоны расписания. Фактическое расписание" href="/content/41/329/ru/ed_018-elektronnyj-dekanat-sablony-raspisania-fakticeskoe-raspisanie.html">ЭД-018. Электронный деканат. Шаблоны расписания. Фактическое расписание</a></li><li><a title="Локальный плагин «Настраиваемые поля для объектов»" href="/content/41/314/ru/lokalʹnyj-plagin-«nastraivaemye-pola-dla-obʺektov».html">Локальный плагин «Настраиваемые поля для объектов»</a></li><li><a title="Блок «Внешние данные 3KL»" href="/content/41/308/ru/blok-«vnesnie-dannye-3kl».html">Блок «Внешние данные 3KL»</a></li><li><a title="Библиотека ресурсов 3KL: интеграция с  ЭБС, базами знаний и внешними источниками контента" href="/content/41/303/ru/biblioteka-resursov-3kl-integracia-s-ebs-bazami-znanij-i-vnesnimi-istocnikami-kontenta.html">Библиотека ресурсов 3KL: интеграция с  ЭБС, базами знаний и внешними источниками контента</a></li><li><a title="Элемент курса «Взаимная оценка 3KL»" href="/content/41/295/ru/element-kursa-«vzaimnaa-ocenka-3kl».html">Элемент курса «Взаимная оценка 3KL»</a></li><li><a title="Партнерская сеть. Электронный Деканат" href="/content/41/280/ru/partnerskaa-setʹ-elektronnyj-dekanat.html">Партнерская сеть. Электронный Деканат</a></li><li><a title="Самостоятельное системное администрирование сервера с СЭО 3KL, подготовленного специалистами компании «Открытые технологии»" href="/content/41/276/ru/samostoatelʹnoe-sistemnoe-administrirovanie-servera-s-seo-3kl-podgotovlennogo-specialistami-kompanii-«otkrytye-tehnologii».html">Самостоятельное системное администрирование сервера с СЭО 3KL, подготовленного специалистами компании «Открытые технологии»</a></li><li><a title="Настраиваемые поля курса. Применение в поиске курсов через Витрину курсов 3KL" href="/content/41/245/ru/nastraivaemye-pola-kursa-primenenie-v-poiske-kursov-cerez-vitrinu-kursov-3kl.html">Настраиваемые поля курса. Применение в поиске курсов через Витрину курсов 3KL</a></li><li><a title="Портфолио ч. 5. Права и решения" href="/content/41/222/ru/portfolio-c-5-prava-i-resenia.html">Портфолио ч. 5. Права и решения</a></li><li><a title="Плагин «Подписка 3KL» часть 3. Настройка подписки 3KL на курс" href="/content/41/215/ru/plagin-«podpiska-3kl»-castʹ-3-nastrojka-podpiski-3kl-na-kurs.html">Плагин «Подписка 3KL» часть 3. Настройка подписки 3KL на курс</a></li><li><a title="Уведомление об орфографической ошибке" href="/content/41/202/ru/uvedomlenie-ob-orfograficeskoj-osibke.html">Уведомление об орфографической ошибке</a></li><li><a title="Настройка внешнего вида СЭО 3КL" href="/content/41/183/ru/nastrojka-vnesnego-vida-seo-3kl.html">Настройка внешнего вида СЭО 3КL</a></li><li><a title="Настройка Витрины курсов 3KL. Бриф на Витрину курсов 3KL" href="/content/41/182/ru/nastrojka-vitriny-kursov-3kl-brif-na-vitrinu-kursov-3kl.html">Настройка Витрины курсов 3KL. Бриф на Витрину курсов 3KL</a></li><li><a title="Платные сервисы и расширенная техническая поддержка" href="/content/41/176/ru/platnye-servisy-i-rassirennaa-tehniceskaa-podderzka.html">Платные сервисы и расширенная техническая поддержка</a></li><li><a title="Логика курса 3KL, часть 3. Примеры использования" href="/content/41/173/ru/logika-kursa-3kl-castʹ-3-primery-ispolʹzovania.html">Логика курса 3KL, часть 3. Примеры использования</a></li><li><a title="Что будет, если не продлить лицензию или SaaS  СЭО  3KL?" href="/content/41/171/ru/cto-budet-esli-ne-prodlitʹ-licenziu-ili-saas-seo-3kl.html">Что будет, если не продлить лицензию или SaaS  СЭО  3KL?</a></li><li><a title="Ограничения доступности, управление ограничениями" href="/content/41/169/ru/ogranicenia-dostupnosti-upravlenie-ograniceniami.html">Ограничения доступности, управление ограничениями</a></li><li><a title="Добавление нового курса" href="/content/41/167/ru/dobavlenie-novogo-kursa.html">Добавление нового курса</a></li><li><a title="Добавление кастомных (настраиваемых) полей в профиль пользователя" href="/content/41/165/ru/dobavlenie-kastomnyh-nastraivaemyh-polej-v-profilʹ-polʹzovatela.html">Добавление кастомных (настраиваемых) полей в профиль пользователя</a></li><li><a title="Настройка упрощенной регистрации пользователей через email и СМС" href="/content/41/162/ru/nastrojka-uprosennoj-registracii-polʹzovatelej-cerez-email-i-sms.html">Настройка упрощенной регистрации пользователей через email и СМС</a></li><li><a title="Отслеживание времени непрерывного обучения в курсе" href="/content/41/153/ru/otslezivanie-vremeni-nepreryvnogo-obucenia-v-kurse.html">Отслеживание времени непрерывного обучения в курсе</a></li><li><a title="Тип вопроса «Объекты на изображении»" href="/content/41/144/ru/tip-voprosa-«obʺekty-na-izobrazenii».html">Тип вопроса «Объекты на изображении»</a></li><li><a title="Инструкция по работе с блоком «Слайдер 3KL»" href="/content/41/142/ru/instrukcia-po-rabote-s-blokom-«slajder-3kl».html">Инструкция по работе с блоком «Слайдер 3KL»</a></li><li><a title="Тип вопроса «Случайный вопрос с учетом правил выдачи»" href="/content/41/137/ru/tip-voprosa-«slucajnyj-vopros-s-ucetom-pravil-vydaci».html">Тип вопроса «Случайный вопрос с учетом правил выдачи»</a></li><li><a title="Как происходит резервное копирование данных в СЭО 3KL?" href="/content/41/130/ru/kak-proishodit-rezervnoe-kopirovanie-dannyh-v-seo-3kl.html">Как происходит резервное копирование данных в СЭО 3KL?</a></li><li><a title="Могу ли я использовать СЭО 3KL с операционной системой &#34;N&#34; (подставьте любое название)?" href="/content/41/129/ru/mogu-li-a-ispolʹzovatʹ-seo-3kl-s-operacionnoj-sistemoj-&N34n&N34-podstavʹte-luboe-nazvanie.html">Могу ли я использовать СЭО 3KL с операционной системой &#34;N&#34; (подставьте любое название)?</a></li><li><a title="Могу ли я установить СДО Русский Moodle 3KL самостоятельно?" href="/content/41/120/ru/mogu-li-a-ustanovitʹ-sdo-russkij-moodle-3kl-samostoatelʹno.html">Могу ли я установить СДО Русский Moodle 3KL самостоятельно?</a></li><li><a title="Какое сетевое имя (адрес, доменное имя, URL) будет у нашей СЭО?" href="/content/41/119/ru/kakoe-setevoe-ima-adres-domennoe-ima-url-budet-u-nasej-seo.html">Какое сетевое имя (адрес, доменное имя, URL) будет у нашей СЭО?</a></li><li><a title="Каков порядок установки и системные требования среды электронного обучения 3KL (Русский Moodle) на сервер клиента?" href="/content/41/117/ru/kakov-poradok-ustanovki-i-sistemnye-trebovania-sredy-elektronnogo-obucenia-3kl-russkij-moodle-na-server-klienta.html">Каков порядок установки и системные требования среды электронного обучения 3KL (Русский Moodle) на сервер клиента?</a></li><li><a title="Мы уже используем community-версию Moodle, можем ли мы перейти на профессиональную версию СЭО 3KL?" href="/content/41/116/ru/my-uze-ispolʹzuem-community_versiu-moodle-mozem-li-my-perejti-na-professionalʹnuu-versiu-seo-3kl.html">Мы уже используем community-версию Moodle, можем ли мы перейти на профессиональную версию СЭО 3KL?</a></li><li><a title="Что такое локальная и публичная (интернет) инсталляция СЭО 3KL?" href="/content/41/115/ru/cto-takoe-lokalʹnaa-i-publicnaa-internet-installacia-seo-3kl.html">Что такое локальная и публичная (интернет) инсталляция СЭО 3KL?</a></li><li><a title="Формат курса «3KL формат»" href="/content/41/114/ru/format-kursa-«3kl-format».html">Формат курса «3KL формат»</a></li><li><a title="Что выбрать: лицензию СЭО 3KL для установки на свой сервер или аренду СЭО в облаке?" href="/content/41/113/ru/cto-vybratʹ-licenziu-seo-3kl-dla-ustanovki-na-svoj-server-ili-arendu-seo-v-oblake.html">Что выбрать: лицензию СЭО 3KL для установки на свой сервер или аренду СЭО в облаке?</a></li><li><a title="Можно ли установить СЭО 3KL на свой сервер?" href="/content/41/111/ru/mozno-li-ustanovitʹ-seo-3kl-na-svoj-server.html">Можно ли установить СЭО 3KL на свой сервер?</a></li><li><a title="Отчеты в СЭО 3KL " href="/content/41/100/ru/otcety-v-seo-3kl.html">Отчеты в СЭО 3KL </a></li><li><a title="Массовая загрузка пользователей через файл csv" href="/content/41/79/ru/massovaa-zagruzka-polʹzovatelej-cerez-fajl-csv.html">Массовая загрузка пользователей через файл csv</a></li><li><a title="Настройка Витрины курсов 3KL" href="/content/41/58/ru/nastrojka-vitriny-kursov-3kl.html">Настройка Витрины курсов 3KL</a></li><li><a title="Интеграция с Webinar.ru. Элемент курса  «Webinar.ru»" href="/content/41/36/ru/integracia-s-webinarru-element-kursa-«webinarru».html">Интеграция с Webinar.ru. Элемент курса  «Webinar.ru»</a></li><li><a title="Интеграция со сторонними сервисами" href="/content/41/33/ru/integracia-so-storonnimi-servisami.html">Интеграция со сторонними сервисами</a></li><li><a title="Способы регистрации и аутентификации пользователей" href="/content/41/15/ru/sposoby-registracii-i-autentifikacii-polʹzovatelej.html">Способы регистрации и аутентификации пользователей</a></li><li><a title="Метод записи на курс «Автозачисление 3KL» — otautoenrol" href="/content/41/9/ru/metod-zapisi-na-kurs-«avtozacislenie-3kl»-—-otautoenrol.html">Метод записи на курс «Автозачисление 3KL» — otautoenrol</a></li></ul>
+            </div>
+        </section>
+        <section class="pmf-aside-widget">
+            <header>
+                <h3>Теги</h3>
+            </header>
+            <div class="pmf-aside-widget-body clearfix">
+                <ul class="pmf-tags">
+                    <li><a title="API (2)" href="/tags/21791/api.html">API</a> </li><li><a title="Crowdfunding (2)" href="/tags/11961/crowdfunding.html">Crowdfunding</a> </li><li><a title="e-learning (2)" href="/tags/15858/e_learning.html">e-learning</a> </li><li><a title="Moodle Mobile (2)" href="/tags/9006/moodle-mobile.html">Moodle Mobile</a> </li><li><a title="автоматизация (2)" href="/tags/22342/avtomatizacia.html">автоматизация</a> </li><li><a title="авторизация (2)" href="/tags/15/avtorizacia.html">авторизация</a> </li><li><a title="администрирование (2)" href="/tags/9/administrirovanie.html">администрирование</a> </li><li><a title="анонс (2)" href="/tags/11374/anons.html">анонс</a> </li><li><a title="Антиплагиат (2)" href="/tags/12474/antiplagiat.html">Антиплагиат</a> </li><li><a title="аутентификация (2)" href="/tags/2890/autentifikacia.html">аутентификация</a> </li><li><a title="база знаний (2)" href="/tags/9214/baza-znanij.html">база знаний</a> </li><li><a title="банк вопросов (2)" href="/tags/34/bank-voprosov.html">банк вопросов</a> </li><li><a title="безопасность (2)" href="/tags/10/bezopasnostʹ.html">безопасность</a> </li><li><a title="блок (2)" href="/tags/14/blok.html">блок</a> </li><li><a title="блоки (2)" href="/tags/12418/bloki.html">блоки</a> </li><li><a title="бэкап (2)" href="/tags/29/bekap.html">бэкап</a> </li><li><a title="вебинар (2)" href="/tags/21/vebinar.html">вебинар</a> </li><li><a title="видео (2)" href="/tags/35/video.html">видео</a> </li><li><a title="видеоинструкция (2)" href="/tags/12958/videoinstrukcia.html">видеоинструкция</a> </li><li><a title="витрина (2)" href="/tags/11740/vitrina.html">витрина</a> </li><li><a title="Витрина курсов (2)" href="/tags/9002/vitrina-kursov.html">Витрина курсов</a> </li><li><a title="внешние данные (2)" href="/tags/9901/vnesnie-dannye.html">внешние данные</a> </li><li><a title="внешний вид (2)" href="/tags/12/vnesnij-vid.html">внешний вид</a> </li><li><a title="время обучения (2)" href="/tags/25206/vrema-obucenia.html">время обучения</a> </li><li><a title="ГИС СЦОС (2)" href="/tags/18994/gis-scos.html">ГИС СЦОС</a> </li><li><a title="главная страница (2)" href="/tags/12979/glavnaa-stranica.html">главная страница</a> </li><li><a title="глобальные группы (2)" href="/tags/19272/globalʹnye-gruppy.html">глобальные группы</a> </li><li><a title="группы (2)" href="/tags/38/gruppy.html">группы</a> </li><li><a title="данные (2)" href="/tags/20654/dannye.html">данные</a> </li><li><a title="данные пользователя (2)" href="/tags/11813/dannye-polʹzovatela.html">данные пользователя</a> </li><li><a title="ДистантТВ (2)" href="/tags/12982/distanttv.html">ДистантТВ</a> </li><li><a title="Задание (2)" href="/tags/40/zadanie.html">Задание</a> </li><li><a title="занятие (2)" href="/tags/8996/zanatie.html">занятие</a> </li><li><a title="запись на курс (2)" href="/tags/21327/zapisʹ-na-kurs.html">запись на курс</a> </li><li><a title="зачисления на курсы (2)" href="/tags/2913/zacislenia-na-kursy.html">зачисления на курсы</a> </li><li><a title="значки (2)" href="/tags/45/znacki.html">значки</a> </li><li><a title="импорт (2)" href="/tags/5/import.html">импорт</a> </li><li><a title="инструктаж (2)" href="/tags/12968/instruktaz.html">инструктаж</a> </li><li><a title="инструменты (2)" href="/tags/12974/instrumenty.html">инструменты</a> </li><li><a title="интеграция (2)" href="/tags/2/integracia.html">интеграция</a> </li><li><a title="использование цифровой образовательной среды (2)" href="/tags/15569/ispolʹzovanie-cifrovoj-obrazovatelʹnoj-sredy.html">использование цифровой образовательной среды</a> </li><li><a title="кастомизация (2)" href="/tags/9562/kastomizacia.html">кастомизация</a> </li><li><a title="категория (2)" href="/tags/3149/kategoria.html">категория</a> </li><li><a title="КБЗ (2)" href="/tags/9213/kbz.html">КБЗ</a> </li><li><a title="коммуникации (2)" href="/tags/19/kommunikacii.html">коммуникации</a> </li><li><a title="компетенции (2)" href="/tags/11842/kompetencii.html">компетенции</a> </li><li><a title="конкурс (2)" href="/tags/14861/konkurs.html">конкурс</a> </li><li><a title="контент (2)" href="/tags/6/kontent.html">контент</a> </li><li><a title="конференция (2)" href="/tags/9228/konferencia.html">конференция</a> </li><li><a title="курс (2)" href="/tags/229/kurs.html">курс</a></li>
+                </ul>
+            </div>
+        </section>
+            </aside>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <div class="pmf-wrapper pmf-footer">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-9">
+                    <ul class="footer-menu">
+                        <li>351 пользователь онлайн | 347 гостей and 4 зарегистрированных</li>
+                        <li><a href="https://kb.opentechnology.ru/overview.html">FAQ Overview</a></li>
+                        <li><a href="https://kb.opentechnology.ru/sitemap/A/ru.html">Карта сайта</a></li>
+                        <li><a href="https://kb.opentechnology.ru/glossary.html">Глоссарий</a></li>
+                        <li><a href="https://kb.opentechnology.ru/contact.html">Адм</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <form action="?sid=18447237" method="post" class="pull-right" accept-charset="utf-8">
+                        <select class="form-control" name="language" id="language" size="1" onchange="this.form.submit();">
+	<option value="ar">Arabic</option>
+	<option value="eu">Basque</option>
+	<option value="bn">Bengali</option>
+	<option value="bs">Bosnian</option>
+	<option value="pt-br">Brazilian Portuguese</option>
+	<option value="zh">Chinese (Simplified)</option>
+	<option value="tw">Chinese (Traditional)</option>
+	<option value="cs">Czech</option>
+	<option value="da">Danish</option>
+	<option value="nl">Dutch</option>
+	<option value="en">English</option>
+	<option value="fi">Finnish</option>
+	<option value="fr">French</option>
+	<option value="fr-ca">French (Canada)</option>
+	<option value="de">German</option>
+	<option value="el">Greek</option>
+	<option value="he">Hebrew</option>
+	<option value="hi">Hindi</option>
+	<option value="hu">Hungarian</option>
+	<option value="id">Indonesian</option>
+	<option value="it">Italian</option>
+	<option value="ja">Japanese</option>
+	<option value="ko">Korean</option>
+	<option value="lv">Latvian</option>
+	<option value="lt">Lithuanian</option>
+	<option value="ms">Malay</option>
+	<option value="nb">Norwegian Bokm&aring;l</option>
+	<option value="fa">Persian</option>
+	<option value="pl">Polish</option>
+	<option value="pt">Portuguese</option>
+	<option value="ro">Romanian</option>
+	<option value="ru" selected="selected">Russian</option>
+	<option value="sr">Serbian</option>
+	<option value="sk">Slovak</option>
+	<option value="sl">Slovenian</option>
+	<option value="es">Spanish</option>
+	<option value="sv">Swedish</option>
+	<option value="th">Thai</option>
+	<option value="tr">Turkish</option>
+	<option value="uk">Ukrainian</option>
+	<option value="vi">Vietnamese</option>
+	<option value="cy">Welsh</option>
+</select>
+                        <input type="hidden" name="action" value="" />
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="pmf-wrapper copyright">
+        <div class="container-fluid">
+            <div class="pull-right">
+                powered by <a href="https://www.phpmyfaq.de" target="_blank">phpMyFAQ</a> 2.9.13
+            </div>
+        </div>
+    </div>
+    
+</footer>
+<script>
+    $('.topten').tooltip();
+    $('.latest-entries').tooltip();
+    $('.sticky-faqs').tooltip();
+    $('.table').each(function(){
+        var rows = $(this).children('thead').find('tr');
+        if (rows.length == 1)
+        {
+	    	var cells = rows.find('th,td');
+	    	var ths = cells.filter('th');
+	    	if (ths.length > 0 && ths.length == cells.length)
+	    	{
+	    	    ths.each(function(){
+	    	        $(this).data('sortable', true);
+	    	    });
+	    	    
+	    	    $(this).bootstrapTable();
+	    	}
+    	}
+    	
+    })
+</script>
+ 
+<script>
+        (function(w,d,u){
+                var s=d.createElement('script');s.async=true;s.src=u+'?'+(Date.now()/60000|0);
+                var h=d.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);
+        })(window,document,'https://crm.3072.ru/upload/crm/site_button/loader_4_g3w7tu.js');
+</script>
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+            
+   ym(23244946, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true,
+        webvisor:true
+   });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/23244946" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+</body>
+</html>

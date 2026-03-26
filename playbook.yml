@@ -1,0 +1,6 @@
+- name: Safe nginx deploy with php-fpm
+  hosts: webservers
+  become: yes
+
+  roles:
+    - nginx

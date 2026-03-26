@@ -1,0 +1,15 @@
+User-agent: Yandex
+User-agent: Googlebot
+Allow: /
+Disallow: /*action=search*
+Disallow: /search.html*
+
+User-agent: facebookexternalhit
+User-agent: Amazonbot
+User-agent: AhrefsBot
+Disallow: /
+
+
+User-agent: *
+Disallow: /*action=search*
+Disallow: /search.html*

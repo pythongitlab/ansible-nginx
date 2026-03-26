@@ -1,0 +1,596 @@
+<!doctype html>
+<!--[if IE 9 ]> <html lang="ru" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="ru" class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <title>База знаний ООО &quot;Открытые технологии&quot; - Добавление кастомных (настраиваемых) полей в профиль пользователя</title>
+    <meta name="description" content="Содержание:1. Настраиваемые поля профиля пользователя2. Добавление ...">
+    <meta name="keywords" content="Conditional field,профиля,настраиваемые поля, lms ,кастомные,поля профиля,добавление полей,дополнительные поля, настраиваемые,поля,кастомные поля">
+    <meta name="author" content="ООО "Открытые технологии"">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="application-name" content="phpMyFAQ 2.9.13">
+    <meta name="robots" content="index, follow">
+    <meta name="revisit-after" content="7 days">
+    <meta name="apple-itunes-app" content="app-id=977896957">
+    <!-- Share on Facebook -->
+    <meta property="og:title" content="База знаний ООО &quot;Открытые технологии&quot; - Добавление кастомных (настраиваемых) полей в профиль пользователя">
+    <meta property="og:description" content="Содержание:1. Настраиваемые поля профиля пользователя2. Добавление ...">
+    <meta property="og:image" content="">
+    <link rel="stylesheet" href="https://kb.opentechnology.ru/assets/template/ot/css/style.min.css?v=1">
+    <link rel="shortcut icon" href="https://kb.opentechnology.ru/assets/template/ot/favicon.ico">
+    <link rel="apple-touch-icon" href="https://kb.opentechnology.ru/assets/template/ot/apple-touch-icon.png">
+    <link rel="canonical" href="https://kb.opentechnology.ru/content/24/165/ru/dobavlenie-kastomnyh-nastraivaemyh-polej-v-profilʹ-polʹzovatela.html">
+    <script src="https://kb.opentechnology.ru/assets/js/modernizr.min.js"></script>
+    <script src="https://kb.opentechnology.ru/assets/js/phpmyfaq.min.js"></script>
+    <script src="https://kb.opentechnology.ru/assets/js/libs/bootstrap-table/bootstrap-table.min.js"></script>
+    <link rel="alternate" title="News RSS Feed" type="application/rss+xml" href="https://kb.opentechnology.ru/feed/news/rss.php">
+    <link rel="alternate" title="TopTen RSS Feed" type="application/rss+xml" href="https://kb.opentechnology.ru/feed/topten/rss.php">
+    <link rel="alternate" title="Latest FAQ Records RSS Feed" type="application/rss+xml" href="https://kb.opentechnology.ru/feed/latest/rss.php">
+    <link rel="alternate" title="Open Questions RSS Feed" type="application/rss+xml" href="https://kb.opentechnology.ru/feed/openquestions/rss.php">
+    <link rel="search" type="application/opensearchdescription+xml" title="База знаний ООО Открытые технологии - Добавление кастомных (настраиваемых) полей в профиль пользователя" href="https://kb.opentechnology.ru/opensearch.html">
+    <script>
+        if (self === top) {
+            document.documentElement.style.display = 'block';
+        } else {
+            top.location = self.location;
+        }
+    </script>
+    <style> html{display:none;} </style>
+</head>
+<body dir="ltr">
+<header>
+    <div class="pmf-wrapper pmf-masthead">
+        <div class="container-fluid">
+            <a id="logo" title="База знаний ООО Открытые технологии" href="https://kb.opentechnology.ru/">
+                <img src="https://kb.opentechnology.ru/assets/template/ot/img/logo.png" alt="phpMyFAQ">
+            </a>
+            <div id="mobile-nav-toggle" class="pull-right">
+                <a href="#" data-toggle="collapse" data-target=".pmf-nav .navbar-collapse">
+                    <i aria-hidden="true" class="fa fa-bars"></i>
+                </a>
+            </div>
+            <nav class="pull-right pmf-nav">
+                <div class="collapse navbar-collapse">
+                    <ul class="nav nav-pills navbar-nav">
+                        <li class=""><a href="https://kb.opentechnology.ru/search.html">Расширенный поиск</a></li>
+                        <li class=""><a href="https://kb.opentechnology.ru/showcat.html">Разделы</a></li>
+                        <li class=""><a href="https://kb.opentechnology.ru/addcontent.html">ответ</a></li>
+                        <li class=""><a href="https://kb.opentechnology.ru/ask.html">вопрос</a></li>
+                        <li class=""><a href="https://kb.opentechnology.ru/open.html">Открытые вопросы</a></li>
+                        <li class="dropdown ">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                Вход
+                                <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-right">
+                                
+                                <li></li>
+                                <li><a href="?action=login&auth_driver=rm3kl">Войти через Moodle</a></li>
+                                
+                                
+                                
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <div class="pmf-wrapper pmf-subheader">
+        <div class="container-fluid">
+            <div class="pmf-breadcrumb">
+                
+                <ul class="breadcrumb"></ul>
+                
+            </div>
+            <div class="pmf-searchbox">
+                <form role="search" id="search" action="?action=search" method="get">
+                    <input type="hidden" name="action" value="search">
+                    <button class="searchbutton" type="submit" aria-label="Поиск">
+                        <i aria-hidden="true" class="fa fa-search"></i>
+                    </button>
+                    <input type="text" class="searchfield typeahead" name="search" id="searchbox"
+                           autocomplete="off" placeholder="Поиск ...">
+                </form>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="pmf-wrapper pmf-main">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-9 pmf-maincontent">
+                <section>
+            <article class="pmf-faq">
+                <header>
+                    <div class="pull-right hidden-print" id="solution_id">
+                        <a class="label label-info" href="/index.php?solution_id=1165">
+                            ID #1165
+                        </a>
+                    </div>
+                    <h1>Добавление кастомных (настраиваемых) полей в профиль пользователя</h1>
+                    <div class="pmf-faq-meta clearfix">
+                        <div class="pmf-faq-author">
+                            <i aria-hidden="true" class="fa fa-user"></i>
+                            <span class="data">Алексей Городков</span>
+                        </div>
+                        <div class="pmf-faq-date">
+                            <i aria-hidden="true" class="fa fa-calendar"></i>
+                            <span class="data">19.05.2025</span>
+                        </div>
+                        <div class="pmf-faq-comments">
+                            <i aria-hidden="true" class="fa fa-comments"></i>
+                            <span class="data"><a class="show-comment-form" href="#">0 Комментариев</a></span>
+                        </div>
+                        <div class="pmf-faq-edit">
+                            
+                        </div>
+                    </div>
+                </header>
+                <div class="pmf-faq-body">
+                    <div class="otsf-incut example"><strong><a id="q0"></a>Содержание:</strong><br /><strong>1. <a href="#q1"><abbr data-toggle="tooltip" data-placement="bottom" title="Специальные поля, значения которых могут нести дополнительную информацию о курсе, о его классификации, специализации, характеристиках. С помощью таких полей можно задавать дополнительные признаки для курсов. Настраиваемые поля используются также для сообщении дополнительной информации о пользователях, о локальных и глобальных группах. Статья «Настраиваемые поля курса. Применение в поиске курсов через Витрину курсов 3KL».">Настраиваемые поля</abbr> профиля пользователя</a></strong><br /><strong>2. </strong><a href="#q2"><strong>Добавление настраиваемых полей профиля пользователя</strong></a> <br />     2.1. <a href="#q21">Создание категории профиля</a><br />     2.2. <a href="#q22">Создание поля профиля</a><br />         2.2.1. <a href="#q221">Тип поля</a><br />         2.2.2. <a href="#q222"><abbr data-toggle="tooltip" data-placement="bottom" title="Фрагмент учебного курса, она имеет название и содержит обучающий контент по одной теме или модулю. Секция представляет собой законченную методическую единицу. Статья «Тематические секции курса».">Секция</abbr> настроек «Общие настройки полей»</a><br />         2.2.3. <a href="#q223">Секция настроек «Особые параметры» (специфические настройки полей)</a><br /><strong>3. <a href="#q3">Примеры</a></strong><br /><strong>4. <a href="#q4">Дополнительные возможности</a></strong></div>
+<h2><a id="q1"></a>1. Настраиваемые поля профиля пользователя</h2>
+<p>Поле — это пространство для хранения определённой информации. <br />В профиле пользователя можно создать настраиваемые (кастомные) поля. Это могут быть уникальные поля для каждой отдельной системы. Пример: «Должность», «Кабинет», «Уровень мастерства» и любые другие.</p>
+<p>Созданные <abbr data-toggle="tooltip" data-placement="bottom" title="Специальные поля, значения которых могут нести дополнительную информацию о курсе, о его классификации, специализации, характеристиках. С помощью таких полей можно задавать дополнительные признаки для курсов. Настраиваемые поля используются также для сообщении дополнительной информации о пользователях, о локальных и глобальных группах. Статья «Настраиваемые поля курса. Применение в поиске курсов через Витрину курсов 3KL».">кастомные поля</abbr> будут добавлены в список полей профиля к уже имеющимся стандартным. Эти поля можно применить для внесения специальных данных о пользователе и последующего их использования как для дополнительной информации о пользователе, так и для автоматизации процессов управления пользователями и курсами в <abbr data-toggle="tooltip" data-placement="bottom" title="Программный Продукт, разработанный Исполнителем и предназначенный для электронного обучения. В настоящем Регламенте упоминается в связи с предоставлением Исполнителем технической поддержки, предоставлением консультаций или прочих Сервисов по данному Продукту. Статья «Что представляет собой среда электронного обучения 3KL?».">СЭО</abbr>.</p>
+<p>Настраиваемые поля могут быть показаны в публичном профиле пользователя или на странице регистрации, а могут быть скрыты и использоваться только в технических или методических целях.</p>
+<p>Например, можно фильтровать пользователей по значению определенного настраиваемого поля и проводить с этими пользователями дальнейшие действия (запись на курс, присоединение к группам, рассылка уведомлений и т.д.).</p>
+<p>Некоторые примеры применения настраиваемых полей профиля можно посмотреть в статьях:</p>
+<ul>
+<li><a href="https://kb.opentechnology.ru/index.php?solution_id=1272"><abbr data-toggle="tooltip" data-placement="bottom" title="1. Модуль. Модуль, обеспечивающий отображение вспомогательных виджетов на страницах курса и других страницах. Статья «Блоки в СЭО 3KL».&#13;&#10;2. Экземпляр модуля. Вспомогательный виджет, как правило в виде прямоугольной области, на странице системы, служащий для отображения вспомогательной информации и дополнительных действий при пользовании страницы. Например, Личный кабинет пользователя формируется из блоков. Чаще всего блоки размещаются во вспомогательных областях, например, в выдвижной панели блоков. Статья «Блоки в СЭО 3KL».">Блок</abbr> «ТОП-10 3KL»</a></li>
+<li><a href="https://kb.opentechnology.ru/index.php?solution_id=1095">Блок «Объединение отчетов»</a></li>
+<li><a href="https://kb.opentechnology.ru/index.php?solution_id=1377">Блок «Спросить преподавателя 3KL»</a></li>
+<li><a href="https://kb.opentechnology.ru/index.php?solution_id=1219#pp6">Резюме в <abbr data-toggle="tooltip" data-placement="bottom" title="Система для учета достижений и целей пользователей. Модуль «Портфолио» позволяет организовать индивидуальный план развития персонала, формировать личные списки достижений пользователей, осуществлять целевое планирование в обучении. В том числе система дает самим пользователям возможность самостоятельно заполнять свою страницу Портфолио. Статья «Портфолио ч. 1. Введение».">Портфолио</abbr></a></li>
+<li><a href="https://kb.opentechnology.ru/index.php?solution_id=1009">Метод записи на курс «<span class="SpellingError SCXW224150733 BCX0">Автозачисление</span><span class="NormalTextRun SCXW224150733 BCX0"> 3KL</span>» - otautoenrol</a></li>
+</ul>
+<p><strong>Пример отображения нескольких категорий настраиваемых полей в публичном профиле пользователя (настраиваемые поля выделены):</strong></p>
+<p><img class="otsf-screenshot" src="https://kb.opentechnology.ru/index.php?action=attachment&amp;id=10746" width="1250" height="1756" /></p>
+<div class="otsf-screenshot-description">Рис. 1.1. Пример отображения нескольких категорий настраиваемых полей в публичном профиле пользователя.</div>
+<p>Все кастомные поля профиля находятся в категориях профиля. Категориями можно управлять. Категория, устанавливаемая по умолчанию для кастомных полей - «Другие поля».</p>
+<p>Каждое поле содержит ряд параметров, основным из которых является тип поля (Текстовое поле, Выбор из списка, Дата/Время и др.). Тип задается при создании поля и в дальнейшем не может быть изменен.</p>
+<p><strong>Пример редактирования настраиваемых полей полей в профиле пользователя по категориям:</strong></p>
+<p><img class="otsf-screenshot" src="https://kb.opentechnology.ru/index.php?action=attachment&amp;id=10745" width="1250" height="1540" /></p>
+<div class="otsf-screenshot-description">Рис. 1.2. Пример заполнения (редактирования) настраиваемых полей полей в профиле пользователя.</div>
+<p><a href="#q0">-Вернуться к содержанию-</a></p>
+<h2><a id="q2"></a>2. Добавление настраиваемых полей профиля пользователя <span class="admneed otsf-admin-required">требуются права администратора</span></h2>
+<div class="otsf-incut attention"><strong>Важно!</strong> Действия в данной инструкции с меткой <span class="admneed otsf-admin-required">требуются права администратора</span> можно выполнить только при наличии доступа «Полный Администратор». По умолчанию мы предоставляем доступ «<abbr data-toggle="tooltip" data-placement="bottom" title="Представитель Заказчика, взаимодействующий с технической поддержкой Исполнителя.">Диспетчер-Администратор</abbr>». Для изменения глобальных конфигураций мы рекомендуем выбрать набор требуемых опций по данной инструкции и обратиться в техническую поддержку с заявкой на конфигурирование системы. Подробнее - в статье «<a href="https://kb.opentechnology.ru/index.php?solution_id=1010">Полный административный доступ</a>».</div>
+<p>«Настраиваемые поля» добавляются через интерфейс «Поля профиля пользователя». Для этого администратору нужно перейти: Администрирование -► Пользователи -► Учетные записи -► Дополнительные профиля пользователя.<br />/user/profile/index.php</p>
+<p><img class="otsf-screenshot" src="https://kb.opentechnology.ru/index.php?action=attachment&amp;id=10743" width="1250" height="648" /></p>
+<div class="otsf-screenshot-description">Рис. 2.   Администрирование -► Пользователи -► Учетные записи -► Дополнительные профиля пользователя.</div>
+<p>На этой странице можно создавать категории полей и поля профиля, редактировать их, перемещать и удалять.</p>
+<p><a href="#q0">-Вернуться к содержанию-</a></p>
+<h3><a id="q21"></a>2.1. Создание категории профиля</h3>
+<p>Категории профиля позволяют создать контейнеры для полей, которые будут иметь свои заголовки и смогут отображаться в профиле пользователя единым блоком. Удобны для группировки полей.</p>
+<p><img class="otsf-screenshot" src="https://kb.opentechnology.ru/index.php?action=attachment&amp;id=10744" width="1250" height="713" /></p>
+<div class="otsf-screenshot-description">Рис. 2.1.1. Заполнение настраиваемых полей профиля пользователя по категориям.</div>
+<p>Для создания новой категории профиля нужно нажать вверху страницы на соответствующую кнопку:</p>
+<p><img class="otsf-screenshot" src="https://kb.opentechnology.ru/index.php?action=attachment&amp;id=10738" width="1250" height="60" /></p>
+<div class="otsf-screenshot-description">Рис. 2.1.2. Переход к созданию категории профиля.</div>
+<p>Далее ввести ее название и сохранить результат:</p>
+<p><img class="otsf-screenshot" src="https://kb.opentechnology.ru/index.php?action=attachment&amp;id=10739" width="1250" height="267" /></p>
+<div class="otsf-screenshot-description">Рис. 2.1.3. Создание новой категории профиля.</div>
+<p>Интерфейс управления категориями прост и интуитивно понятен. Пока в категории нет полей, она будет отображаться в интерфейсе с предупреждением («Поля для аттестации»):</p>
+<p><img class="otsf-screenshot" src="https://kb.opentechnology.ru/index.php?action=attachment&amp;id=10740" width="1250" height="437" /></p>
+<div class="otsf-screenshot-description">Рис. 2.1.4. Интерфейс управления категориями профиля.</div>
+<p><a href="#q0">-Вернуться к содержанию-</a></p>
+<h3><a id="q22"></a>2.2. Создание поля профиля</h3>
+<p>При создании нового поля профиля первоначально нужно выбрать тип поля:</p>
+<p><img class="otsf-screenshot" src="https://kb.opentechnology.ru/index.php?action=attachment&amp;id=10741" width="825" height="290" /></p>
+<div class="otsf-screenshot-description">Рис. 2.2. Создание поля профиля. Выбор типа поля.</div>
+<p><a href="#q0">-Вернуться к содержанию-</a></p>
+<h4><a id="q221"></a>2.2.1. Тип поля</h4>
+<ul>
+<li><strong>Выпадающее меню.</strong> Варианты выбора будут представлены в виде раскрывающегося списка, из которого пользователь сможет выбрать только один ответ.<br /><br /></li>
+<li><strong>Дата/время.</strong> Позволяет пользователям вводить дату/время.<br /><br /></li>
+<li><strong>Зависимые поля.</strong> П<span style="vertical-align: inherit;">озволяет создавать более функциональный вариант поля</span><span style="vertical-align: inherit;"> «Выбор из списка» (см.ниже), в котором можно настроить скрытие или показ других кастомных полей профиля на основе значения, выбранного для этого поля. Например, э</span><span style="vertical-align: inherit;">то позволяет создавать динамические страницы регистрации / профиля. Также </span><span style="vertical-align: inherit;">можно настроить некоторые другие поля как обязательные в зависимости от выбранного значения для этого поля.</span><br />Как это работает: есть анкета или форма, которую должен заполнить пользователь. Поле позволяет создать условия для вызова и показа определенных полей. В зависимости от того, что выбирает пользователь ему будут показываться заранее подготовленные поля. Это может быть полезно, если форма получается большая или нужно спрятать «лишние» поля.<br />Это также можно использовать, когда для разных пользователей (например, из разных отделов) отображаются предварительно настроенные варианты формы с определенным (различающимся) набором полей профиля в зависимости от специализации пользователей (отдела).</li>
+<li><strong>Загрузка файла.</strong> Позволяет пользователям загружать файлы в поля профиля<strong>.<br /></strong></li>
+<li><strong>Область ввода текста.</strong> Позволяет пользователям вводить большой объем текста через встроенный редактор (Atto) с возможностью форматирования и добавлением изображений.<br /><br /></li>
+<li><strong>Переключатель</strong> (Radio buttons). Позволяет пользователю выбрать один вариант из двух с помощью выставления «галочки».<br /><br /></li>
+<li><strong>Социальная. </strong>Позволяет добавить поле профиля со ссылкой на социальную сеть.</li>
+<li><strong>Текстовое поле.</strong> Пользователи могут ввести текст. Для более пространного текста или текста с форматированием (например, с различными уровнями заголовков, маркированным списком и т.п.) следует использовать поле «Область ввода текста».</li>
+</ul>
+<p><a href="#q0">-Вернуться к содержанию-</a></p>
+<h4><a id="q222"></a>2.2.2. Секция настроек «Общие настройки полей»</h4>
+<p>После выбора типа поля открывается окно настроек поля, которое содержит секцию «Общие настройки» (эта секция настроек одинакова для всех типов поля) и секцию «Особые параметры» (эта секция настроек индивидуальна для каждого типа поля).</p>
+<ul>
+<li><strong>Краткое название (должно быть уникальным).</strong> Значение задается латинскими буквами в нижнем регистре, могут применяться цифры и символ «_». Краткое название используется в том числе другими плагинами для идентификации поля. Помимо уникальности рекомендуется делать название кратким и в то же время понятным.</li>
+<li><strong>Название.</strong> Название поля.</li>
+<li><strong>Описание поля.</strong> Здесь можно ввести описание поля.</li>
+<li><strong>Это обязательное поле?</strong> Если выбрать «Да», пользователь обязательно должен будет заполнить это поле.</li>
+<li><strong>Это поле заблокировано?</strong> Если выбрать «Да», пользователь не сможет изменить значение поля.</li>
+<li><strong>Значения должны быть уникальными?</strong> Если выбрать «Да», значение поля должно быть уникальным.</li>
+<li><strong>Показывать на странице регистрации?</strong> Если выбрать «Да», поле будет отображаться на странице регистрации.</li>
+<li><strong>Кому видно это поле?</strong> Значения: Не видно никому / Видно всем / Видно пользователю. Определяет тех, кто сможет видеть значение данного поля.</li>
+<li><strong>Категория.</strong> Категория полей, в которую будет помещено данное поле.</li>
+</ul>
+<p><a href="#q0">-Вернуться к содержанию-</a></p>
+<h4><a id="q223"></a>2.2.3. Секция настроек «Особые параметры» (специфические настройки полей)</h4>
+<h5><strong>Conditional field</strong></h5>
+<p><strong>Варианты выбора (каждый с новой строки)</strong> - Укажите параметры меню, по одному параметру в каждой строке. Далее можно будет указать, какие поля должны быть скрыты или обязательны при выборе каждого параметра. </p>
+<div class="otsf-incut attention">Предупреждение! Несколько условных полей могут вызвать конфликты. Скрытые обязательные поля могут помешать отправке формы. Чтобы предотвратить это, убедитесь, что пользователи не попадают в ситуацию, когда поле требуется одним условным полем и одновременно скрывается другим условным полем.</div>
+<h5><strong>Выбор из списка</strong></h5>
+<ul>
+<li><strong>Варианты выбора (каждый с новой строки).</strong> Значения поля для выбора.</li>
+<li><strong>Значение по умолчанию.</strong> Значение, которое будет выставлено по умолчанию. Должно совпадать с одним из вариантов выбора (!).</li>
+</ul>
+<h5><strong>Дата/время</strong></h5>
+<ul>
+<li><strong>Наименьший год.</strong> Год, который может быть указан как минимальное значение.</li>
+<li><strong>Наибольший год.</strong> Год, который может быть указан как максимальное значение.</li>
+<li><strong>Включать время?</strong> Пользователь в поле может установить не только дату, но и время.</li>
+</ul>
+<h5><strong>Область ввода текста</strong></h5>
+<ul>
+<li><strong>Значение по умолчанию.</strong> Здесь может быть введен форматированный тест (с помощью встроенного редактора), который может включать изображения и другие элементы.</li>
+</ul>
+<h5><strong>Переключатель</strong></h5>
+<ul>
+<li><strong>Отмечено по умолчанию.</strong> При установке опции в «Да», значение поля изначально будет установлено в 1.</li>
+</ul>
+<div class="otsf-incut note"><strong>Примечание.</strong><br />При использовании поля типа «Переключатель» для записи в него значений (например, с помощью элемента «Логика курса») нужно использовать значения 0 или 1.</div>
+<h5>Текстовое поле</h5>
+<ul>
+<li><strong>Значение по умолчанию</strong>. Значение, которое будет выставлено по умолчанию.</li>
+<li><strong>Отображаемый размер</strong>. Размер поля, который будет отображаться пользователям. Ширина текстового поля, которое определяется числом символов моноширинного шрифта.</li>
+<li><strong>Максимальная длина.</strong> Опция устанавливает максимальное число символов, которое может быть введено пользователем в текстовом поле.</li>
+<li><strong>Это поле пароля?</strong> Определяет, является ли значение поля паролем. При установке «Да» значения вводимых пользователем символов будут скрываться точками. Рекомендуется при использовании поля как пароля установить настройку «Кому видно это поле» в значение «Видно пользователю».</li>
+<li><strong>Ссылка.</strong> Для преобразования текста из поля в ссылку, в данное поле нужно ввести URL, содержащий $$, где $$ будут заменены на текст из поля. Например, для преобразования Twitter ID в ссылку, введите <a href="http://twitter.com/$$">http://twitter.com/$$</a>.</li>
+<li><strong>Открывать ссылку</strong>. В этом поле выбирается, каким способом будет открываться отображаемое значение поля с ссылкой при клике на нее.</li>
+</ul>
+<p><a href="#q0">-Вернуться к содержанию-</a></p>
+<h2><a id="q3"></a>3. Примеры</h2>
+<div class="otsf-incut comment"><strong>Задача</strong><br />Сделать так, чтобы при выборе определенного пункта в одной категории поля профиля пользователю открывался определенный набор других полей для заполнения, а если он выберет другое поле, то ему выпадет другой список полей для заполнения.</div>
+<div class="otsf-incut example"><strong>Решение<br /></strong> Отображать различные поля по выбору другого поля можно. Для этого нужно:<br />1. Добавить дополнительные поля профиля, набор которых будет отличаться для разных пользователей. Скрывать и показывать таким образом можно только созданные дополнительные поля профиля. Для удобства можно предварительно создать отдельную категорию для таких полей.<br />2. Добавить новое поле типа «conditional field», это и будет поле, по которому будет определяться набор следующих полей.<br /><strong>В настройках этого поля:</strong><br />- необходимо указать варианты выбора, каждый вариант с новой строки;<br />- далее нужно нажать на кнопку «Configure conditionals» и, в открывшемся окне, настроить отображение полей по условиям. Напротив каждого из вариантов выбора можно для каждого из дополнительных полей установить галочки «Required» (сделать поле обязательным к заполнению при выборе конкретного варианта) и «Hidden» (чтобы скрыть поле при выборе конкретного варианта). <br />Если для поля и варианта не установлены галочки, при выборе этого варианта, поле будет видно, но не будет обязательным.</div>
+<p><a href="#q0">-Вернуться к содержанию-</a></p>
+<h2><a id="q4"></a>4. Дополнительные возможности</h2>
+<p>Для <strong>добавления файлов в поля профиля пользователя</strong> есть <abbr data-toggle="tooltip" data-placement="bottom" title="Программный модуль, расширяющий возможности системы.">плагин</abbr> <strong><abbr data-toggle="tooltip" data-placement="bottom" title="Modular Object-Oriented Dynamic Learning Environment (модульная объектно-ориентированная динамическая учебная среда), платформа обучения или система управления курсами (CMS) — свободно распространяемый по лицензии GNU GPL программный продукт, призванный помочь преподавателям создавать эффективные онлайн-курсы. СЭО 3KL базируется на ядре Moodle. Статья «Принципы работы Moodle».">moodle</abbr> profilefield_file</strong>. в версии moodle 3.5 он официально не поддерживается. Для установки плагина с помощью технической поддержки нужно создать заявку в категории: «Гарантийная техподдержка/ Установка стороннего плагина».</p>
+<p><a href="#q0">-Вернуться к содержанию-</a></p>
+                    
+                    Теги: <a title="администрирование" href="/tags/9/administrirovanie.html">администрирование</a>, <a title="регистрация" href="/tags/18624/registracia.html">регистрация</a>
+                    
+                    
+                    
+                    <aside id="faqAccordion" class="accordion related-faqs hidden-print">
+                        <div class="accordion-group">
+                            <div class="accordion-heading">
+                                <a class="accordion-toggle" href="#collapseRelatedFaqs" data-parent="#faqAccordion" data-toggle="collapse">
+                                    Связанные статьи
+                                </a>
+                            </div>
+                            <div id="collapseRelatedFaqs" class="accordion-body collapse">
+                                <div class="accordion-inner"><ul><li><a title="Настройка отображения элементов Витрины курсов 3KL через дополнительные поля курса" href="/content/27/14/ru/nastrojka-otobrazenia-elementov-vitriny-kursov-3kl-cerez-dopolnitelʹnye-pola-kursa.html">Настройка отображения элементов Витрины курсов 3KL через дополнительные поля курса</a></li><li><a title="Массовая загрузка пользователей через файл csv" href="/content/5/79/ru/massovaa-zagruzka-polʹzovatelej-cerez-fajl-csv.html">Массовая загрузка пользователей через файл csv</a></li><li><a title="Получение данных портфолио через внешние службы" href="/content/97/653/ru/polucenie-dannyh-portfolio-cerez-vnesnie-sluzby.html">Получение данных портфолио через внешние службы</a></li><li><a title="Добавление нового курса" href="/content/27/167/ru/dobavlenie-novogo-kursa.html">Добавление нового курса</a></li><li><a title="Портфолио ч. 2. Руководство пользователя" href="/content/27/219/ru/portfolio-c-2-rukovodstvo-polʹzovatela.html">Портфолио ч. 2. Руководство пользователя</a></li></ul></div>
+                            </div>
+                        </div>
+                    </aside>
+                    
+                    
+                    <aside id="faqAccordion" class="accordion related-categories hidden-print">
+                        <div class="accordion-group">
+                            <div class="accordion-heading">
+                                <a class="accordion-toggle" href="#collapseRelatedCategories" data-parent="#faqAccordion" data-toggle="collapse">
+                                    Категории для этой статьи
+                                </a>
+                            </div>
+                            <div id="collapseRelatedCategories" class="accordion-body collapse">
+                                <div class="accordion-inner"><ul class="breadcrumb-related-categories"></ul><ul class="breadcrumb-related-categories"></ul><ul class="breadcrumb-related-categories"></ul><ul class="breadcrumb-related-categories"></ul><ul class="breadcrumb-related-categories"></ul><ul class="breadcrumb-related-categories"></ul><ul class="breadcrumb-related-categories"></ul><ul class="breadcrumb-related-categories"></ul><ul class="breadcrumb-related-categories"></ul><ul class="breadcrumb-related-categories"></ul><ul class="breadcrumb-related-categories"></ul><ul class="breadcrumb-related-categories"></ul></div>
+                            </div>
+                        </div>
+                    </aside>
+                    
+                </div>
+            </article>
+            <ul id="tab" class="nav nav-tabs hidden-print">
+                <li class="active"><a href="#votingForm" data-toggle="tab">Пожалуйста оцените этот ответ:</a></li>
+                
+                
+            </ul>
+            <div class="tab-content pmf-faq-info">
+                <div class="tab-pane active hidden-print" id="votingForm">
+                    <form action="#" method="post" class="form-inline">
+                        <input type="hidden" name="artikel" value="165">
+                        <div id="votings"></div>
+                        <div class="pmf-stars">
+                            <div class="pmf-star-rating" data-rating="Рейтинг ответа:">
+                                <span data-stars="5">☆</span>
+                                <span data-stars="4">☆</span>
+                                <span data-stars="3">☆</span>
+                                <span data-stars="2">☆</span>
+                                <span data-stars="1">☆</span>
+                            </div>
+                        </div>
+                        <div class="pull-right">
+                            <strong>Рейтинг ответа:</strong><span id="rating"> <span data-rating="4">4</span> (1 оценка)</span>
+                        </div>
+                    </form>
+                </div>
+                <div class="tab-pane hidden-print" id="switchAvailableLanguage">
+                    
+                </div>
+                <div class="tab-pane hidden-print" id="addTranslation">
+                    <form action="/index.php?action=translate&amp;cat=41&amp;id=165&amp;srclang=ru" method="post" class="form-inline" accept-charset="utf-8">
+                        <select class="form-control" name="translation" id="translation" size="1">
+	<option value="ar">Arabic</option>
+	<option value="eu">Basque</option>
+	<option value="bn">Bengali</option>
+	<option value="bs">Bosnian</option>
+	<option value="pt-br">Brazilian Portuguese</option>
+	<option value="zh">Chinese (Simplified)</option>
+	<option value="tw">Chinese (Traditional)</option>
+	<option value="cs">Czech</option>
+	<option value="da">Danish</option>
+	<option value="nl">Dutch</option>
+	<option value="en">English</option>
+	<option value="fi">Finnish</option>
+	<option value="fr">French</option>
+	<option value="fr-ca">French (Canada)</option>
+	<option value="de">German</option>
+	<option value="el">Greek</option>
+	<option value="he">Hebrew</option>
+	<option value="hi">Hindi</option>
+	<option value="hu">Hungarian</option>
+	<option value="id">Indonesian</option>
+	<option value="it">Italian</option>
+	<option value="ja">Japanese</option>
+	<option value="ko">Korean</option>
+	<option value="lv">Latvian</option>
+	<option value="lt">Lithuanian</option>
+	<option value="ms">Malay</option>
+	<option value="nb">Norwegian Bokm&aring;l</option>
+	<option value="fa">Persian</option>
+	<option value="pl">Polish</option>
+	<option value="pt">Portuguese</option>
+	<option value="ro">Romanian</option>
+	<option value="sr">Serbian</option>
+	<option value="sk">Slovak</option>
+	<option value="sl">Slovenian</option>
+	<option value="es">Spanish</option>
+	<option value="sv">Swedish</option>
+	<option value="th">Thai</option>
+	<option value="tr">Turkish</option>
+	<option value="uk">Ukrainian</option>
+	<option value="vi">Vietnamese</option>
+	<option value="cy">Welsh</option>
+</select>
+                        <button class="btn btn-primary" type="submit" name="submit">
+                            Старт перевода...
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <p class="hidden-print">Комментарии запрещены</p>
+            <aside class="pmf-create-comment hide" id="pmf-create-comment">
+                <hr>
+                <div id="loader"></div>
+                <h2><i aria-hidden="true" class="fa fa-heart"></i> Комментировать этот ответ</h2>
+                <form id="formValues" action="#" method="post" class="form-horizontal" accept-charset="utf-8">
+                    <input type="hidden" name="id" id="id" value="165">
+                    <input type="hidden" name="lang" id="lang" value="ru">
+                    <input type="hidden" name="type" id="type" value="faq">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <input type="text" name="user" id="user" class="form-control input-lg" required
+                                   placeholder="Ваше имя:" value="">
+                        </div>
+                        
+                        
+                        <div class="col-md-6">
+                            <input type="email" name="mail" id="mail" class="form-control input-lg" required
+                                   placeholder="Адрес Email"  value="">
+                        </div>
+	                    
+	                    
+                    </div>
+                    <textarea rows="10" name="comment_text" id="comment_text" class="form-control input-lg"
+                              placeholder="Ваши комментарии:"></textarea>
+                    <div class="form-group"><label class="col-sm-3 control-label">Пожалуйста введите символы изображённые но картинке</label>    <div class="col-sm-4">        <p class="form-control-static"><img id="captchaImage" src="/index.php?action=writecomment&amp;gen=img&amp;ck=1774514921" height="40" width="165" alt="Chuck Norris has counted to infinity. Twice." title="click to refresh">        </p>    </div>    <div class="col-sm-5">        <div class="input-group"><input type="text" class="form-control" name="captcha" id="captcha" size="6" autocomplete="off" required>            <span class="input-group-btn"><a class="btn btn-primary" id="captcha-button" data-action="writecomment"><i aria-hidden="true" class="fa fa-refresh"></i></a>            </span>        </div>    </div></div>
+                    
+                    <div class="pmf-buttons clearfix">
+                        <button class="btn btn-primary" id="submitcomment" type="submit">
+                            Отправить
+                        </button>
+                    </div>
+                </form>
+            </aside>
+            <aside class="pmf-comments" id="comments">
+                <hr>
+                
+            </aside>
+        </section>
+        <script src="assets/js/libs/highlight.pack.js"></script>
+        <style>
+        body {
+            position: relative;
+        }
+        </style>
+        <link rel="stylesheet" href="assets/js/libs/default.css">
+        <script>
+            $(document).ready(function() {
+                $(function() {
+                    $('div.pmf-stars > div.pmf-star-rating > span').on('click', function(e) {
+                        var numStars = $(e.target).data('stars');
+                        saveVoting('faq', 165, numStars, 'ru');
+                    });
+                });
+                $('pre code').each(function(i, block) {
+                    hljs.highlightBlock(block);
+                });
+                $('button.pmf-popover').popover();
+            });
+        </script>
+            </div>
+            <aside class="col-lg-3 pmf-aside">
+                        
+        <section class="pmf-aside-widget">
+            <div class="pmf-aside-widget-body pmf-social-links">
+                <a target="_blank" href="/pdf.php?cat=41&id=165&artlang=ru" rel="nofollow" title="Скомпилировать PDF файл">
+                    <span class="fa-stack fa-lg">
+                        <i aria-hidden="true" class="fa fa-square-o fa-stack-2x"></i>
+                        <i aria-hidden="true" class="fa fa-file-pdf-o fa-stack-1x"></i>
+                    </span>
+                </a>
+                <a href="javascript:window.print();" rel="nofollow" title="Отправить на печать">
+                    <span class="fa-stack fa-lg">
+                        <i aria-hidden="true" class="fa fa-square-o fa-stack-2x"></i>
+                        <i aria-hidden="true" class="fa fa-print fa-stack-1x"></i>
+                    </span>
+                </a>
+            </div>
+        </section>
+        
+        
+		
+            <div class="pmf-aside-widget">
+                <header>
+                    <h3>ВАЖНОЕ:</h3>
+                </header>
+                <div class="pmf-aside-widget-body">
+                    <ul class="pmf-list">
+                        <li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="Способы регистрации и аутентификации пользователей" href="/content/5/15/ru/sposoby-registracii-i-autentifikacii-polʹzovatelej.html">Способы регистрации и аутентификации пользователей</a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title=" Плагин  «Антиплагиат.ру». Проверка работ слушателей на заимствования с помощью сервиса «Антиплагиат»" href="/content/5/35/ru/plagin-«antiplagiatru»-proverka-rabot-slusatelej-na-zaimstvovania-s-pomosʹu-servisa-«antiplagiat».html"> Плагин «Антиплагиат.ру». Проверка работ слушателей на заимствования с ...</a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="Интеграция вебинаров в СЭО 3KL" href="/content/5/68/ru/integracia-vebinarov-v-seo-3kl.html">Интеграция вебинаров в СЭО 3KL</a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="Отчеты в СЭО 3KL " href="/content/41/100/ru/otcety-v-seo-3kl.html">Отчеты в СЭО 3KL </a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="Сертификат СЭО 3KL" href="/content/27/106/ru/sertifikat-seo-3kl.html">Сертификат СЭО 3KL</a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="Отслеживание времени непрерывного обучения в курсе" href="/content/24/153/ru/otslezivanie-vremeni-nepreryvnogo-obucenia-v-kurse.html">Отслеживание времени непрерывного обучения в курсе</a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="Как узнать о СЭО 3KL подробнее?" href="/content/1/157/ru/kak-uznatʹ-o-seo-3kl-podrobnee.html">Как узнать о СЭО 3KL подробнее?</a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="Логика курса 3KL, часть 1. Принцип работы, добавление и настройка элемента" href="/content/27/168/ru/logika-kursa-3kl-castʹ-1-princip-raboty-dobavlenie-i-nastrojka-elementa.html">Логика курса 3KL, часть 1. Принцип работы, добавление и ...</a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="Настройка внешнего вида СЭО 3КL" href="/content/27/183/ru/nastrojka-vnesnego-vida-seo-3kl.html">Настройка внешнего вида СЭО 3КL</a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="Плагин «Подписка 3KL» часть 2. Глобальные настройки" href="/content/27/216/ru/plagin-«podpiska-3kl»-castʹ-2-globalʹnye-nastrojki.html">Плагин «Подписка 3KL» часть 2. Глобальные настройки</a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="Портфолио ч. 1. Введение" href="/content/24/218/ru/portfolio-c-1-vvedenie.html">Портфолио ч. 1. Введение</a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="Глобальные сценарии 3KL. Локальный плагин" href="/content/27/271/ru/globalʹnye-scenarii-3kl-lokalʹnyj-plagin.html">Глобальные сценарии 3KL. Локальный плагин</a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="Панель управления СЭО 3KL. Локальный плагин" href="/content/41/375/ru/panelʹ-upravlenia-seo-3kl-lokalʹnyj-plagin.html">Панель управления СЭО 3KL. Локальный плагин</a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="Персональная информация пользователя. Страницы «О пользователе» и «Личный кабинет»" href="/content/27/480/ru/personalʹnaa-informacia-polʹzovatela-stranicy-«o-polʹzovatele»-i-«licnyj-kabinet».html">Персональная информация пользователя. Страницы «О пользователе» и «Личный кабинет» ...</a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="Элемент курса «Занятие 3КL»" href="/content/4/492/ru/element-kursa-«zanatie-3kl».html">Элемент курса «Занятие 3КL»</a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="Витрина курсов 3KL. Путеводитель" href="/content/27/536/ru/vitrina-kursov-3kl-putevoditelʹ.html">Витрина курсов 3KL. Путеводитель</a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="Справка СЭО 3КL" href="/content/27/542/ru/spravka-seo-3kl.html">Справка СЭО 3КL</a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="Термины и определения базы знаний" href="/content/2/543/ru/terminy-i-opredelenia-bazy-znanij.html">Термины и определения базы знаний</a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="Политики сайта и пользовательские соглашения" href="/content/1/593/ru/politiki-sajta-i-polʹzovatelʹskie-soglasenia.html">Политики сайта и пользовательские соглашения</a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="Расширенный анонс релиза 3.9.20a" href="/content/43/614/ru/rassirennyj-anons-reliza-3920a.html">Расширенный анонс релиза 3.9.20a</a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="Настройка внешнего вида СЭО 3КL версии 3.9" href="/content/27/633/ru/nastrojka-vnesnego-vida-seo-3kl-versii-39.html">Настройка внешнего вида СЭО 3КL версии 3.9</a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="Миграция СЭО 3КL с релиза 3.9 на 4.1. Вопросы и решения" href="/content/6/634/ru/migracia-seo-3kl-s-reliza-39-na-41-voprosy-i-resenia.html">Миграция СЭО 3КL с релиза 3.9 на 4.1. Вопросы ...</a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="Инструменты WEB API в СЭО 3КL. Возможности и примеры" href="/content/41/642/ru/instrumenty-web-api-v-seo-3kl-vozmoznosti-i-primery.html">Инструменты WEB API в СЭО 3КL. Возможности и примеры ...</a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="Расширенный анонс релиза 3.9.25a" href="/content/43/660/ru/rassirennyj-anons-reliza-3925a.html">Расширенный анонс релиза 3.9.25a</a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="21.05.2024 г., III конференция «СЭО Moodle для образования» и конкурс статей" href="/content/45/691/ru/21052024-g-iii-konferencia-«seo-moodle-dla-obrazovania»-i-konkurs-statej.html">21.05.2024 г., III конференция «СЭО Moodle для образования» и ...</a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="Организация открытого мероприятия (онлайн-конференции) на базе СЭО 3KL" href="/content/1/697/ru/organizacia-otkrytogo-meropriatia-onlajn_konferencii-na-baze-seo-3kl.html">Организация открытого мероприятия (онлайн-конференции) на базе СЭО 3KL</a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="Интеграция Cреды электронного обучения 3KL и Moodle  с ГИС СЦОС" href="/content/27/698/ru/integracia-credy-elektronnogo-obucenia-3kl-i-moodle-s-gis-scos.html">Интеграция Cреды электронного обучения 3KL и Moodle с ГИС ...</a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="Расширенный анонс релиза 4.5.4b-beta" href="/content/43/728/ru/rassirennyj-anons-reliza-454b_beta.html">Расширенный анонс релиза 4.5.4b-beta</a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="Расширенный анонс релиза 4.5.6b" href="/content/43/817/ru/rassirennyj-anons-reliza-456b.html">Расширенный анонс релиза 4.5.6b</a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="Расширенный анонс релиза 4.5.7a" href="/content/43/833/ru/rassirennyj-anons-reliza-457a.html">Расширенный анонс релиза 4.5.7a</a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="Главное и интересное. 3КL-осень 2025" href="/content/46/843/ru/glavnoe-i-interesnoe-3kl_osenʹ-2025.html">Главное и интересное. 3КL-осень 2025</a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="Расширенный анонс релиза 4.1.22a" href="/content/44/852/ru/rassirennyj-anons-reliza-4122a.html">Расширенный анонс релиза 4.1.22a</a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="Расширенный анонс релиза 4.5.10b" href="/content/43/879/ru/rassirennyj-anons-reliza-4510b.html">Расширенный анонс релиза 4.5.10b</a></li>
+                    </ul>
+                </div>
+            </div>
+        
+        <section class="pmf-aside-widget">
+            <header>
+                <h3>Записей в этой категории</h3>
+            </header>
+            <div class="pmf-aside-widget-body">
+                <ul class="phpmyfaq_ul"><li><a title="Выгрузка списка предварительно отобранных пользователей на странице «Действия над несколькими пользователями»" href="/content/41/884/ru/vygruzka-spiska-predvaritelʹno-otobrannyh-polʹzovatelej-na-stranice-«dejstvia-nad-neskolʹkimi-polʹzovatelami».html">Выгрузка списка предварительно отобранных пользователей на странице «Действия над несколькими пользователями»</a></li><li><a title="Формирование выборки пользователей на странице «Действия над несколькими пользователями»" href="/content/41/883/ru/formirovanie-vyborki-polʹzovatelej-na-stranice-«dejstvia-nad-neskolʹkimi-polʹzovatelami».html">Формирование выборки пользователей на странице «Действия над несколькими пользователями»</a></li><li><a title="Поиск пользователя СЭО 3KL по неполным данным с помощью страницы «Список пользователей»" href="/content/41/882/ru/poisk-polʹzovatela-seo-3kl-po-nepolnym-dannym-s-pomosʹu-stranicy-«spisok-polʹzovatelej».html">Поиск пользователя СЭО 3KL по неполным данным с помощью страницы «Список пользователей»</a></li><li><a title="Быстрый доступ к странице профиля пользователя с помощью страницы «Список пользователей»" href="/content/41/881/ru/bystryj-dostup-k-stranice-profila-polʹzovatela-s-pomosʹu-stranicy-«spisok-polʹzovatelej».html">Быстрый доступ к странице профиля пользователя с помощью страницы «Список пользователей»</a></li><li><a title="Вебинар от 30.10.2025г. Организация вебинара «Mirapolis Virtual Room» с оплатой через Robokassa. Инструкция по СЭО 3KL версии 4.5" href="/content/41/862/ru/vebinar-ot-30102025g-organizacia-vebinara-«mirapolis-virtual-room»-s-oplatoj-cerez-robokassa-instrukcia-po-seo-3kl-versii-45.html">Вебинар от 30.10.2025г. Организация вебинара «Mirapolis Virtual Room» с оплатой через Robokassa. Инструкция по СЭО 3KL версии 4.5</a></li><li><a title="Вебинар от 24.11.2025г. Слепое оценивание в СЭО Moodle и 3KL. Решение для СЭО 3KL v 4.5." href="/content/41/858/ru/vebinar-ot-24112025g-slepoe-ocenivanie-v-seo-moodle-i-3kl-resenie-dla-seo-3kl-v-45.html">Вебинар от 24.11.2025г. Слепое оценивание в СЭО Moodle и 3KL. Решение для СЭО 3KL v 4.5.</a></li><li><a title="Расширенный анонс релиза 4.5.8a" href="/content/41/851/ru/rassirennyj-anons-reliza-458a.html">Расширенный анонс релиза 4.5.8a</a></li><li><a title="Расширенный анонс релиза 4.5.7b" href="/content/41/841/ru/rassirennyj-anons-reliza-457b.html">Расширенный анонс релиза 4.5.7b</a></li><li><a title="Почему записанный на курс слушатель не видит роли некоторых пользователей, записанных на этот же курс?" href="/content/41/840/ru/pocemu-zapisannyj-na-kurs-slusatelʹ-ne-vidit-roli-nekotoryh-polʹzovatelej-zapisannyh-na-etot-ze-kurs.html">Почему записанный на курс слушатель не видит роли некоторых пользователей, записанных на этот же курс?</a></li><li><a title="Как массово сменить провайдер в уже настроенных элементах курса «‎Занятие 3KL»?" href="/content/41/837/ru/kak-massovo-smenitʹ-provajder-v-uze-nastroennyh-elementah-kursa-«‎zanatie-3kl».html">Как массово сменить провайдер в уже настроенных элементах курса «‎Занятие 3KL»?</a></li><li><a title="Вебинар от 25.07.2025г. Кураторство: реализация функций куратора образовательного процесса в СЭО 3KL" href="/content/41/832/ru/vebinar-ot-25072025g-kuratorstvo-realizacia-funkcij-kuratora-obrazovatelʹnogo-processa-v-seo-3kl.html">Вебинар от 25.07.2025г. Кураторство: реализация функций куратора образовательного процесса в СЭО 3KL</a></li><li><a title="Вебинар от 26.12.2024г. Личный кабинет слушателя ДО в СЭО 3KL. Решение по СЭО 3KL версии 4.1" href="/content/41/831/ru/vebinar-ot-26122024g-licnyj-kabinet-slusatela-do-v-seo-3kl-resenie-po-seo-3kl-versii-41.html">Вебинар от 26.12.2024г. Личный кабинет слушателя ДО в СЭО 3KL. Решение по СЭО 3KL версии 4.1</a></li><li><a title="Вебинар от 27.11.2024г. Личный кабинет слушателя ДПО в СЭО 3KL. Решение по СЭО 3KL версии 4.1" href="/content/41/830/ru/vebinar-ot-27112024g-licnyj-kabinet-slusatela-dpo-v-seo-3kl-resenie-po-seo-3kl-versii-41.html">Вебинар от 27.11.2024г. Личный кабинет слушателя ДПО в СЭО 3KL. Решение по СЭО 3KL версии 4.1</a></li><li><a title="Вебинар от 02.11.2024г. Личный кабинет сотрудника в СЭО 3KL. Решение по СЭО 3KL версии 4.1" href="/content/41/829/ru/vebinar-ot-02112024g-licnyj-kabinet-sotrudnika-v-seo-3kl-resenie-po-seo-3kl-versii-41.html">Вебинар от 02.11.2024г. Личный кабинет сотрудника в СЭО 3KL. Решение по СЭО 3KL версии 4.1</a></li><li><a title="Вебинар от 26.09.2024г. Личный кабинет студента в СЭО 3KL. Решение по СЭО 3KL версии 4.1" href="/content/41/828/ru/vebinar-ot-26092024g-licnyj-kabinet-studenta-v-seo-3kl-resenie-po-seo-3kl-versii-41.html">Вебинар от 26.09.2024г. Личный кабинет студента в СЭО 3KL. Решение по СЭО 3KL версии 4.1</a></li><li><a title="Вебинар от 29.08.2024г. Личный кабинет в СЭО 3KL. Основные настройки и блоки. Видеоинструкция по СЭО 3KL версии 4.1" href="/content/41/826/ru/vebinar-ot-29082024g-licnyj-kabinet-v-seo-3kl-osnovnye-nastrojki-i-bloki-videoinstrukcia-po-seo-3kl-versii-41.html">Вебинар от 29.08.2024г. Личный кабинет в СЭО 3KL. Основные настройки и блоки. Видеоинструкция по СЭО 3KL версии 4.1</a></li><li><a title="Вебинар от 24.07.2024г. Дополнительная кнопка доступа к курсу. Видеоинструкция по СЭО 3KL версии 4.1." href="/content/41/825/ru/vebinar-ot-24072024g-dopolnitelʹnaa-knopka-dostupa-k-kursu-videoinstrukcia-po-seo-3kl-versii-41.html">Вебинар от 24.07.2024г. Дополнительная кнопка доступа к курсу. Видеоинструкция по СЭО 3KL версии 4.1.</a></li><li><a title="Вебинар от 26.06.2024г. Плагин «Сертификат СЭО 3KL». Видеоинструкция по СЭО 3KL v 4.1." href="/content/41/824/ru/vebinar-ot-26062024g-plagin-«sertifikat-seo-3kl»-videoinstrukcia-po-seo-3kl-v-41.html">Вебинар от 26.06.2024г. Плагин «Сертификат СЭО 3KL». Видеоинструкция по СЭО 3KL v 4.1.</a></li><li><a title="Вебинар от 30.05.2024г. Взаимная оценка. Видеоинструкция по СЭО 3KL v 4.1" href="/content/41/819/ru/vebinar-ot-30052024g-vzaimnaa-ocenka-videoinstrukcia-po-seo-3kl-v-41.html">Вебинар от 30.05.2024г. Взаимная оценка. Видеоинструкция по СЭО 3KL v 4.1</a></li><li><a title="Вебинар от 03.05.2024г. Справка СЭО 3KL. Видеоинструкция по СЭО 3KL v 4.1" href="/content/41/818/ru/vebinar-ot-03052024g-spravka-seo-3kl-videoinstrukcia-po-seo-3kl-v-41.html">Вебинар от 03.05.2024г. Справка СЭО 3KL. Видеоинструкция по СЭО 3KL v 4.1</a></li><li><a title="Вебинар от 28.03.2024г. Блок «Спросить преподавателя». Видеоинструкция по СЭО 3KL v 4.1" href="/content/41/816/ru/vebinar-ot-28032024g-blok-«sprositʹ-prepodavatela»-videoinstrukcia-po-seo-3kl-v-41.html">Вебинар от 28.03.2024г. Блок «Спросить преподавателя». Видеоинструкция по СЭО 3KL v 4.1</a></li><li><a title="Инструмент «Целостность данных 3KL»" href="/content/41/798/ru/instrument-«celostnostʹ-dannyh-3kl».html">Инструмент «Целостность данных 3KL»</a></li><li><a title="Вебинар от 29.05.2025г. Витрина для организаций с большим количеством курсов. Инструкция по СЭО 3KL версии 4.1" href="/content/41/764/ru/vebinar-ot-29052025g-vitrina-dla-organizacij-s-bolʹsim-kolicestvom-kursov-instrukcia-po-seo-3kl-versii-41.html">Вебинар от 29.05.2025г. Витрина для организаций с большим количеством курсов. Инструкция по СЭО 3KL версии 4.1</a></li><li><a title="Вебинар от 20.06.2025г. Витрина курсов СЭО 3KL. Описательная страница курса / Лендинг курса" href="/content/41/763/ru/vebinar-ot-20062025g-vitrina-kursov-seo-3kl-opisatelʹnaa-stranica-kursa-_-lending-kursa.html">Вебинар от 20.06.2025г. Витрина курсов СЭО 3KL. Описательная страница курса / Лендинг курса</a></li><li><a title="Вебинар от 27.02.2025г. Витрина для организаций с небольшим количеством курсов. Инструкция по СЭО 3KL версии 4.1" href="/content/41/757/ru/vebinar-ot-27022025g-vitrina-dla-organizacij-s-nebolʹsim-kolicestvom-kursov-instrukcia-po-seo-3kl-versii-41.html">Вебинар от 27.02.2025г. Витрина для организаций с небольшим количеством курсов. Инструкция по СЭО 3KL версии 4.1</a></li><li><a title="Вебинар от 27.03.2025г. Витрина курсов для организаций со средним количеством курсов. Инструкция по СЭО 3KL версии 4.1" href="/content/41/756/ru/vebinar-ot-27032025g-vitrina-kursov-dla-organizacij-so-srednim-kolicestvom-kursov-instrukcia-po-seo-3kl-versii-41.html">Вебинар от 27.03.2025г. Витрина курсов для организаций со средним количеством курсов. Инструкция по СЭО 3KL версии 4.1</a></li><li><a title="Вебинар от 30.01.2025г. Витрина курсов. Введение. Назначение и возможности. Инструкция по СЭО 3KL версии 4.1" href="/content/41/755/ru/vebinar-ot-30012025g-vitrina-kursov-vvedenie-naznacenie-i-vozmoznosti-instrukcia-po-seo-3kl-versii-41.html">Вебинар от 30.01.2025г. Витрина курсов. Введение. Назначение и возможности. Инструкция по СЭО 3KL версии 4.1</a></li><li><a title="Страница «Среда (Версии ПО)»" href="/content/41/716/ru/stranica-«sreda-versii-po».html">Страница «Среда (Версии ПО)»</a></li><li><a title="Плагин «Подписка 3КL». Видео инструкция по СЭО 3KL 4.1" href="/content/41/694/ru/plagin-«podpiska-3kl»-video-instrukcia-po-seo-3kl-41.html">Плагин «Подписка 3КL». Видео инструкция по СЭО 3KL 4.1</a></li><li><a title="Вебинар от 07.09.2023г. Скрытие неучебных курсов и сведений о подписке в блоке «История обучения 3KL». Решение для СЭО 3KL v4.1 (СЭО 3КL версии 4.1.5с)" href="/content/41/673/ru/vebinar-ot-07092023g-skrytie-neucebnyh-kursov-i-svedenij-o-podpiske-v-bloke-«istoria-obucenia-3kl»-resenie-dla-seo-3kl-v41-seo-3kl-versii-415s.html">Вебинар от 07.09.2023г. Скрытие неучебных курсов и сведений о подписке в блоке «История обучения 3KL». Решение для СЭО 3KL v4.1 (СЭО 3КL версии 4.1.5с)</a></li><li><a title="Вебинар от 04.08.2023г. Блок «‎Самопроверка на заимствования 3KL»‎. Видеоинструкция по СЭО 3KL v 4.1 (СЭО 3КL версии 4.1.4b)" href="/content/41/672/ru/vebinar-ot-04082023g-blok-«‎samoproverka-na-zaimstvovania-3kl»‎-videoinstrukcia-po-seo-3kl-v-41-seo-3kl-versii-414b.html">Вебинар от 04.08.2023г. Блок «‎Самопроверка на заимствования 3KL»‎. Видеоинструкция по СЭО 3KL v 4.1 (СЭО 3КL версии 4.1.4b)</a></li><li><a title="Вебинар от 07.09.2023г. Элемент курса «‎Библиотека ресурсов»‎. Видеоинструкция по СЭО 3KL v 4.1 (СЭО 3КL версии 4.1.5а)" href="/content/41/671/ru/vebinar-ot-07092023g-element-kursa-«‎biblioteka-resursov»‎-videoinstrukcia-po-seo-3kl-v-41-seo-3kl-versii-415a.html">Вебинар от 07.09.2023г. Элемент курса «‎Библиотека ресурсов»‎. Видеоинструкция по СЭО 3KL v 4.1 (СЭО 3КL версии 4.1.5а)</a></li><li><a title="Капча (CAPTCHA) в СЭО 3KL" href="/content/41/654/ru/kapca-captcha-v-seo-3kl.html">Капча (CAPTCHA) в СЭО 3KL</a></li><li><a title="Инструменты WEB API в СЭО 3КL. Возможности и примеры" href="/content/41/642/ru/instrumenty-web-api-v-seo-3kl-vozmoznosti-i-primery.html">Инструменты WEB API в СЭО 3КL. Возможности и примеры</a></li><li><a title="Интеграция АСУ «Спрут» с СЭО 3KL (СДО Русский Moodle)" href="/content/41/638/ru/integracia-asu-«sprut»-s-seo-3kl-sdo-russkij-moodle.html">Интеграция АСУ «Спрут» с СЭО 3KL (СДО Русский Moodle)</a></li><li><a title="Отчет «Общая статистика»" href="/content/41/561/ru/otcet-«obsaa-statistika».html">Отчет «Общая статистика»</a></li><li><a title="Путеводитель по вебинарам" href="/content/41/556/ru/putevoditelʹ-po-vebinaram.html">Путеводитель по вебинарам</a></li><li><a title="Термины и определения базы знаний" href="/content/41/543/ru/terminy-i-opredelenia-bazy-znanij.html">Термины и определения базы знаний</a></li><li><a title="Витрина курсов 3KL. Путеводитель" href="/content/41/536/ru/vitrina-kursov-3kl-putevoditelʹ.html">Витрина курсов 3KL. Путеводитель</a></li><li><a title="Расширенный анонс релиза 3.9.11b" href="/content/41/528/ru/rassirennyj-anons-reliza-3911b.html">Расширенный анонс релиза 3.9.11b</a></li><li><a title="Глобальные настройки пользователей" href="/content/41/522/ru/globalʹnye-nastrojki-polʹzovatelej.html">Глобальные настройки пользователей</a></li><li><a title="Можно ли обновить СЭО 3KL до версии 3.9 и выше, если на сервере установлена Ubuntu 16.04?" href="/content/41/505/ru/mozno-li-obnovitʹ-seo-3kl-do-versii-39-i-vyse-esli-na-servere-ustanovlena-ubuntu-1604.html">Можно ли обновить СЭО 3KL до версии 3.9 и выше, если на сервере установлена Ubuntu 16.04?</a></li><li><a title="Требования к API внешней ЭБС, для интеграции с модулем &#34;Библиотека ресурсов 3КL&#34; (материал для разработчиков)" href="/content/41/483/ru/trebovania-k-api-vnesnej-ebs-dla-integracii-s-modulem-&N34biblioteka-resursov-3kl&N34-material-dla-razrabotcikov.html">Требования к API внешней ЭБС, для интеграции с модулем &#34;Библиотека ресурсов 3КL&#34; (материал для разработчиков)</a></li><li><a title="Панель управления СЭО 3KL. Локальный плагин" href="/content/41/375/ru/panelʹ-upravlenia-seo-3kl-lokalʹnyj-plagin.html">Панель управления СЭО 3KL. Локальный плагин</a></li><li><a title="Локальный плагин «Техническая поддержка СЭО 3KL». Страница информации о продукте" href="/content/41/351/ru/lokalʹnyj-plagin-«tehniceskaa-podderzka-seo-3kl»-stranica-informacii-o-produkte.html">Локальный плагин «Техническая поддержка СЭО 3KL». Страница информации о продукте</a></li><li><a title="Блок «Витрина курсов 3KL»" href="/content/41/350/ru/blok-«vitrina-kursov-3kl».html">Блок «Витрина курсов 3KL»</a></li><li><a title="Отображение слайдера на страницах «Портфолио» пользователя" href="/content/41/349/ru/otobrazenie-slajdera-na-stranicah-«portfolio»-polʹzovatela.html">Отображение слайдера на страницах «Портфолио» пользователя</a></li><li><a title="ЭД-018. Электронный деканат. Шаблоны расписания. Фактическое расписание" href="/content/41/329/ru/ed_018-elektronnyj-dekanat-sablony-raspisania-fakticeskoe-raspisanie.html">ЭД-018. Электронный деканат. Шаблоны расписания. Фактическое расписание</a></li><li><a title="Локальный плагин «Настраиваемые поля для объектов»" href="/content/41/314/ru/lokalʹnyj-plagin-«nastraivaemye-pola-dla-obʺektov».html">Локальный плагин «Настраиваемые поля для объектов»</a></li><li><a title="Блок «Внешние данные 3KL»" href="/content/41/308/ru/blok-«vnesnie-dannye-3kl».html">Блок «Внешние данные 3KL»</a></li><li><a title="Библиотека ресурсов 3KL: интеграция с  ЭБС, базами знаний и внешними источниками контента" href="/content/41/303/ru/biblioteka-resursov-3kl-integracia-s-ebs-bazami-znanij-i-vnesnimi-istocnikami-kontenta.html">Библиотека ресурсов 3KL: интеграция с  ЭБС, базами знаний и внешними источниками контента</a></li><li><a title="Элемент курса «Взаимная оценка 3KL»" href="/content/41/295/ru/element-kursa-«vzaimnaa-ocenka-3kl».html">Элемент курса «Взаимная оценка 3KL»</a></li><li><a title="Партнерская сеть. Электронный Деканат" href="/content/41/280/ru/partnerskaa-setʹ-elektronnyj-dekanat.html">Партнерская сеть. Электронный Деканат</a></li><li><a title="Самостоятельное системное администрирование сервера с СЭО 3KL, подготовленного специалистами компании «Открытые технологии»" href="/content/41/276/ru/samostoatelʹnoe-sistemnoe-administrirovanie-servera-s-seo-3kl-podgotovlennogo-specialistami-kompanii-«otkrytye-tehnologii».html">Самостоятельное системное администрирование сервера с СЭО 3KL, подготовленного специалистами компании «Открытые технологии»</a></li><li><a title="Настраиваемые поля курса. Применение в поиске курсов через Витрину курсов 3KL" href="/content/41/245/ru/nastraivaemye-pola-kursa-primenenie-v-poiske-kursov-cerez-vitrinu-kursov-3kl.html">Настраиваемые поля курса. Применение в поиске курсов через Витрину курсов 3KL</a></li><li><a title="Портфолио ч. 5. Права и решения" href="/content/41/222/ru/portfolio-c-5-prava-i-resenia.html">Портфолио ч. 5. Права и решения</a></li><li><a title="Плагин «Подписка 3KL» часть 3. Настройка подписки 3KL на курс" href="/content/41/215/ru/plagin-«podpiska-3kl»-castʹ-3-nastrojka-podpiski-3kl-na-kurs.html">Плагин «Подписка 3KL» часть 3. Настройка подписки 3KL на курс</a></li><li><a title="Уведомление об орфографической ошибке" href="/content/41/202/ru/uvedomlenie-ob-orfograficeskoj-osibke.html">Уведомление об орфографической ошибке</a></li><li><a title="Настройка внешнего вида СЭО 3КL" href="/content/41/183/ru/nastrojka-vnesnego-vida-seo-3kl.html">Настройка внешнего вида СЭО 3КL</a></li><li><a title="Настройка Витрины курсов 3KL. Бриф на Витрину курсов 3KL" href="/content/41/182/ru/nastrojka-vitriny-kursov-3kl-brif-na-vitrinu-kursov-3kl.html">Настройка Витрины курсов 3KL. Бриф на Витрину курсов 3KL</a></li><li><a title="Платные сервисы и расширенная техническая поддержка" href="/content/41/176/ru/platnye-servisy-i-rassirennaa-tehniceskaa-podderzka.html">Платные сервисы и расширенная техническая поддержка</a></li><li><a title="Логика курса 3KL, часть 3. Примеры использования" href="/content/41/173/ru/logika-kursa-3kl-castʹ-3-primery-ispolʹzovania.html">Логика курса 3KL, часть 3. Примеры использования</a></li><li><a title="Что будет, если не продлить лицензию или SaaS  СЭО  3KL?" href="/content/41/171/ru/cto-budet-esli-ne-prodlitʹ-licenziu-ili-saas-seo-3kl.html">Что будет, если не продлить лицензию или SaaS  СЭО  3KL?</a></li><li><a title="Ограничения доступности, управление ограничениями" href="/content/41/169/ru/ogranicenia-dostupnosti-upravlenie-ograniceniami.html">Ограничения доступности, управление ограничениями</a></li><li><a title="Добавление нового курса" href="/content/41/167/ru/dobavlenie-novogo-kursa.html">Добавление нового курса</a></li><li><a title="Добавление кастомных (настраиваемых) полей в профиль пользователя" href="/content/41/165/ru/dobavlenie-kastomnyh-nastraivaemyh-polej-v-profilʹ-polʹzovatela.html">Добавление кастомных (настраиваемых) полей в профиль пользователя</a></li><li><a title="Настройка упрощенной регистрации пользователей через email и СМС" href="/content/41/162/ru/nastrojka-uprosennoj-registracii-polʹzovatelej-cerez-email-i-sms.html">Настройка упрощенной регистрации пользователей через email и СМС</a></li><li><a title="Отслеживание времени непрерывного обучения в курсе" href="/content/41/153/ru/otslezivanie-vremeni-nepreryvnogo-obucenia-v-kurse.html">Отслеживание времени непрерывного обучения в курсе</a></li><li><a title="Тип вопроса «Объекты на изображении»" href="/content/41/144/ru/tip-voprosa-«obʺekty-na-izobrazenii».html">Тип вопроса «Объекты на изображении»</a></li><li><a title="Инструкция по работе с блоком «Слайдер 3KL»" href="/content/41/142/ru/instrukcia-po-rabote-s-blokom-«slajder-3kl».html">Инструкция по работе с блоком «Слайдер 3KL»</a></li><li><a title="Тип вопроса «Случайный вопрос с учетом правил выдачи»" href="/content/41/137/ru/tip-voprosa-«slucajnyj-vopros-s-ucetom-pravil-vydaci».html">Тип вопроса «Случайный вопрос с учетом правил выдачи»</a></li><li><a title="Как происходит резервное копирование данных в СЭО 3KL?" href="/content/41/130/ru/kak-proishodit-rezervnoe-kopirovanie-dannyh-v-seo-3kl.html">Как происходит резервное копирование данных в СЭО 3KL?</a></li><li><a title="Могу ли я использовать СЭО 3KL с операционной системой &#34;N&#34; (подставьте любое название)?" href="/content/41/129/ru/mogu-li-a-ispolʹzovatʹ-seo-3kl-s-operacionnoj-sistemoj-&N34n&N34-podstavʹte-luboe-nazvanie.html">Могу ли я использовать СЭО 3KL с операционной системой &#34;N&#34; (подставьте любое название)?</a></li><li><a title="Могу ли я установить СДО Русский Moodle 3KL самостоятельно?" href="/content/41/120/ru/mogu-li-a-ustanovitʹ-sdo-russkij-moodle-3kl-samostoatelʹno.html">Могу ли я установить СДО Русский Moodle 3KL самостоятельно?</a></li><li><a title="Какое сетевое имя (адрес, доменное имя, URL) будет у нашей СЭО?" href="/content/41/119/ru/kakoe-setevoe-ima-adres-domennoe-ima-url-budet-u-nasej-seo.html">Какое сетевое имя (адрес, доменное имя, URL) будет у нашей СЭО?</a></li><li><a title="Каков порядок установки и системные требования среды электронного обучения 3KL (Русский Moodle) на сервер клиента?" href="/content/41/117/ru/kakov-poradok-ustanovki-i-sistemnye-trebovania-sredy-elektronnogo-obucenia-3kl-russkij-moodle-na-server-klienta.html">Каков порядок установки и системные требования среды электронного обучения 3KL (Русский Moodle) на сервер клиента?</a></li><li><a title="Мы уже используем community-версию Moodle, можем ли мы перейти на профессиональную версию СЭО 3KL?" href="/content/41/116/ru/my-uze-ispolʹzuem-community_versiu-moodle-mozem-li-my-perejti-na-professionalʹnuu-versiu-seo-3kl.html">Мы уже используем community-версию Moodle, можем ли мы перейти на профессиональную версию СЭО 3KL?</a></li><li><a title="Что такое локальная и публичная (интернет) инсталляция СЭО 3KL?" href="/content/41/115/ru/cto-takoe-lokalʹnaa-i-publicnaa-internet-installacia-seo-3kl.html">Что такое локальная и публичная (интернет) инсталляция СЭО 3KL?</a></li><li><a title="Формат курса «3KL формат»" href="/content/41/114/ru/format-kursa-«3kl-format».html">Формат курса «3KL формат»</a></li><li><a title="Что выбрать: лицензию СЭО 3KL для установки на свой сервер или аренду СЭО в облаке?" href="/content/41/113/ru/cto-vybratʹ-licenziu-seo-3kl-dla-ustanovki-na-svoj-server-ili-arendu-seo-v-oblake.html">Что выбрать: лицензию СЭО 3KL для установки на свой сервер или аренду СЭО в облаке?</a></li><li><a title="Можно ли установить СЭО 3KL на свой сервер?" href="/content/41/111/ru/mozno-li-ustanovitʹ-seo-3kl-na-svoj-server.html">Можно ли установить СЭО 3KL на свой сервер?</a></li><li><a title="Отчеты в СЭО 3KL " href="/content/41/100/ru/otcety-v-seo-3kl.html">Отчеты в СЭО 3KL </a></li><li><a title="Массовая загрузка пользователей через файл csv" href="/content/41/79/ru/massovaa-zagruzka-polʹzovatelej-cerez-fajl-csv.html">Массовая загрузка пользователей через файл csv</a></li><li><a title="Настройка Витрины курсов 3KL" href="/content/41/58/ru/nastrojka-vitriny-kursov-3kl.html">Настройка Витрины курсов 3KL</a></li><li><a title="Интеграция с Webinar.ru. Элемент курса  «Webinar.ru»" href="/content/41/36/ru/integracia-s-webinarru-element-kursa-«webinarru».html">Интеграция с Webinar.ru. Элемент курса  «Webinar.ru»</a></li><li><a title="Интеграция со сторонними сервисами" href="/content/41/33/ru/integracia-so-storonnimi-servisami.html">Интеграция со сторонними сервисами</a></li><li><a title="Способы регистрации и аутентификации пользователей" href="/content/41/15/ru/sposoby-registracii-i-autentifikacii-polʹzovatelej.html">Способы регистрации и аутентификации пользователей</a></li><li><a title="Метод записи на курс «Автозачисление 3KL» — otautoenrol" href="/content/41/9/ru/metod-zapisi-na-kurs-«avtozacislenie-3kl»-—-otautoenrol.html">Метод записи на курс «Автозачисление 3KL» — otautoenrol</a></li></ul>
+            </div>
+        </section>
+        <section class="pmf-aside-widget">
+            <header>
+                <h3>Теги</h3>
+            </header>
+            <div class="pmf-aside-widget-body clearfix">
+                <ul class="pmf-tags">
+                    <li><a title="API (2)" href="/tags/21791/api.html">API</a> </li><li><a title="Crowdfunding (2)" href="/tags/11961/crowdfunding.html">Crowdfunding</a> </li><li><a title="e-learning (2)" href="/tags/15858/e_learning.html">e-learning</a> </li><li><a title="Moodle Mobile (2)" href="/tags/9006/moodle-mobile.html">Moodle Mobile</a> </li><li><a title="автоматизация (2)" href="/tags/22342/avtomatizacia.html">автоматизация</a> </li><li><a title="авторизация (2)" href="/tags/15/avtorizacia.html">авторизация</a> </li><li><a title="администрирование (2)" href="/tags/9/administrirovanie.html">администрирование</a> </li><li><a title="анонс (2)" href="/tags/11374/anons.html">анонс</a> </li><li><a title="Антиплагиат (2)" href="/tags/12474/antiplagiat.html">Антиплагиат</a> </li><li><a title="аутентификация (2)" href="/tags/2890/autentifikacia.html">аутентификация</a> </li><li><a title="база знаний (2)" href="/tags/9214/baza-znanij.html">база знаний</a> </li><li><a title="банк вопросов (2)" href="/tags/34/bank-voprosov.html">банк вопросов</a> </li><li><a title="безопасность (2)" href="/tags/10/bezopasnostʹ.html">безопасность</a> </li><li><a title="блок (2)" href="/tags/14/blok.html">блок</a> </li><li><a title="блоки (2)" href="/tags/12418/bloki.html">блоки</a> </li><li><a title="бэкап (2)" href="/tags/29/bekap.html">бэкап</a> </li><li><a title="вебинар (2)" href="/tags/21/vebinar.html">вебинар</a> </li><li><a title="видео (2)" href="/tags/35/video.html">видео</a> </li><li><a title="видеоинструкция (2)" href="/tags/12958/videoinstrukcia.html">видеоинструкция</a> </li><li><a title="витрина (2)" href="/tags/11740/vitrina.html">витрина</a> </li><li><a title="Витрина курсов (2)" href="/tags/9002/vitrina-kursov.html">Витрина курсов</a> </li><li><a title="внешние данные (2)" href="/tags/9901/vnesnie-dannye.html">внешние данные</a> </li><li><a title="внешний вид (2)" href="/tags/12/vnesnij-vid.html">внешний вид</a> </li><li><a title="время обучения (2)" href="/tags/25206/vrema-obucenia.html">время обучения</a> </li><li><a title="ГИС СЦОС (2)" href="/tags/18994/gis-scos.html">ГИС СЦОС</a> </li><li><a title="главная страница (2)" href="/tags/12979/glavnaa-stranica.html">главная страница</a> </li><li><a title="глобальные группы (2)" href="/tags/19272/globalʹnye-gruppy.html">глобальные группы</a> </li><li><a title="группы (2)" href="/tags/38/gruppy.html">группы</a> </li><li><a title="данные (2)" href="/tags/20654/dannye.html">данные</a> </li><li><a title="данные пользователя (2)" href="/tags/11813/dannye-polʹzovatela.html">данные пользователя</a> </li><li><a title="ДистантТВ (2)" href="/tags/12982/distanttv.html">ДистантТВ</a> </li><li><a title="Задание (2)" href="/tags/40/zadanie.html">Задание</a> </li><li><a title="занятие (2)" href="/tags/8996/zanatie.html">занятие</a> </li><li><a title="запись на курс (2)" href="/tags/21327/zapisʹ-na-kurs.html">запись на курс</a> </li><li><a title="зачисления на курсы (2)" href="/tags/2913/zacislenia-na-kursy.html">зачисления на курсы</a> </li><li><a title="значки (2)" href="/tags/45/znacki.html">значки</a> </li><li><a title="импорт (2)" href="/tags/5/import.html">импорт</a> </li><li><a title="инструктаж (2)" href="/tags/12968/instruktaz.html">инструктаж</a> </li><li><a title="инструменты (2)" href="/tags/12974/instrumenty.html">инструменты</a> </li><li><a title="интеграция (2)" href="/tags/2/integracia.html">интеграция</a> </li><li><a title="использование цифровой образовательной среды (2)" href="/tags/15569/ispolʹzovanie-cifrovoj-obrazovatelʹnoj-sredy.html">использование цифровой образовательной среды</a> </li><li><a title="кастомизация (2)" href="/tags/9562/kastomizacia.html">кастомизация</a> </li><li><a title="категория (2)" href="/tags/3149/kategoria.html">категория</a> </li><li><a title="КБЗ (2)" href="/tags/9213/kbz.html">КБЗ</a> </li><li><a title="коммуникации (2)" href="/tags/19/kommunikacii.html">коммуникации</a> </li><li><a title="компетенции (2)" href="/tags/11842/kompetencii.html">компетенции</a> </li><li><a title="конкурс (2)" href="/tags/14861/konkurs.html">конкурс</a> </li><li><a title="контент (2)" href="/tags/6/kontent.html">контент</a> </li><li><a title="конференция (2)" href="/tags/9228/konferencia.html">конференция</a> </li><li><a title="курс (2)" href="/tags/229/kurs.html">курс</a></li>
+                </ul>
+            </div>
+        </section>
+            </aside>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <div class="pmf-wrapper pmf-footer">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-9">
+                    <ul class="footer-menu">
+                        <li> | 524 гостей and 2 зарегистрированных</li>
+                        <li><a href="https://kb.opentechnology.ru/overview.html">FAQ Overview</a></li>
+                        <li><a href="https://kb.opentechnology.ru/sitemap/A/ru.html">Карта сайта</a></li>
+                        <li><a href="https://kb.opentechnology.ru/glossary.html">Глоссарий</a></li>
+                        <li><a href="https://kb.opentechnology.ru/contact.html">Адм</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <form action="?sid=18447237" method="post" class="pull-right" accept-charset="utf-8">
+                        <select class="form-control" name="language" id="language" size="1" onchange="this.form.submit();">
+	<option value="ar">Arabic</option>
+	<option value="eu">Basque</option>
+	<option value="bn">Bengali</option>
+	<option value="bs">Bosnian</option>
+	<option value="pt-br">Brazilian Portuguese</option>
+	<option value="zh">Chinese (Simplified)</option>
+	<option value="tw">Chinese (Traditional)</option>
+	<option value="cs">Czech</option>
+	<option value="da">Danish</option>
+	<option value="nl">Dutch</option>
+	<option value="en">English</option>
+	<option value="fi">Finnish</option>
+	<option value="fr">French</option>
+	<option value="fr-ca">French (Canada)</option>
+	<option value="de">German</option>
+	<option value="el">Greek</option>
+	<option value="he">Hebrew</option>
+	<option value="hi">Hindi</option>
+	<option value="hu">Hungarian</option>
+	<option value="id">Indonesian</option>
+	<option value="it">Italian</option>
+	<option value="ja">Japanese</option>
+	<option value="ko">Korean</option>
+	<option value="lv">Latvian</option>
+	<option value="lt">Lithuanian</option>
+	<option value="ms">Malay</option>
+	<option value="nb">Norwegian Bokm&aring;l</option>
+	<option value="fa">Persian</option>
+	<option value="pl">Polish</option>
+	<option value="pt">Portuguese</option>
+	<option value="ro">Romanian</option>
+	<option value="ru" selected="selected">Russian</option>
+	<option value="sr">Serbian</option>
+	<option value="sk">Slovak</option>
+	<option value="sl">Slovenian</option>
+	<option value="es">Spanish</option>
+	<option value="sv">Swedish</option>
+	<option value="th">Thai</option>
+	<option value="tr">Turkish</option>
+	<option value="uk">Ukrainian</option>
+	<option value="vi">Vietnamese</option>
+	<option value="cy">Welsh</option>
+</select>
+                        <input type="hidden" name="action" value="" />
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="pmf-wrapper copyright">
+        <div class="container-fluid">
+            <div class="pull-right">
+                powered by <a href="https://www.phpmyfaq.de" target="_blank">phpMyFAQ</a> 2.9.13
+            </div>
+        </div>
+    </div>
+    
+</footer>
+<script>
+    $('.topten').tooltip();
+    $('.latest-entries').tooltip();
+    $('.sticky-faqs').tooltip();
+    $('.table').each(function(){
+        var rows = $(this).children('thead').find('tr');
+        if (rows.length == 1)
+        {
+	    	var cells = rows.find('th,td');
+	    	var ths = cells.filter('th');
+	    	if (ths.length > 0 && ths.length == cells.length)
+	    	{
+	    	    ths.each(function(){
+	    	        $(this).data('sortable', true);
+	    	    });
+	    	    
+	    	    $(this).bootstrapTable();
+	    	}
+    	}
+    	
+    })
+</script>
+ 
+<script>
+        (function(w,d,u){
+                var s=d.createElement('script');s.async=true;s.src=u+'?'+(Date.now()/60000|0);
+                var h=d.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);
+        })(window,document,'https://crm.3072.ru/upload/crm/site_button/loader_4_g3w7tu.js');
+</script>
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+            
+   ym(23244946, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true,
+        webvisor:true
+   });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/23244946" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+</body>
+</html>

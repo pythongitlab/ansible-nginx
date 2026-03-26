@@ -1,0 +1,2177 @@
+<!doctype html>
+<!--[if IE 9 ]> <html lang="ru" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="ru" class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <title>База знаний ООО &quot;Открытые технологии&quot; - Интеграция АСУ «Спрут» с СЭО 3KL (СДО Русский Moodle)</title>
+    <meta name="description" content="Содержание:1. Общие принципы интеграции2. Спецификации интеграции ...">
+    <meta name="keywords" content="выгрузка оценок,интеграция,СПРУТ,внедрение современных образовательных технологий">
+    <meta name="author" content="ООО "Открытые технологии"">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="application-name" content="phpMyFAQ 2.9.13">
+    <meta name="robots" content="index, follow">
+    <meta name="revisit-after" content="7 days">
+    <meta name="apple-itunes-app" content="app-id=977896957">
+    <!-- Share on Facebook -->
+    <meta property="og:title" content="База знаний ООО &quot;Открытые технологии&quot; - Интеграция АСУ «Спрут» с СЭО 3KL (СДО Русский Moodle)">
+    <meta property="og:description" content="Содержание:1. Общие принципы интеграции2. Спецификации интеграции ...">
+    <meta property="og:image" content="">
+    <link rel="stylesheet" href="https://kb.opentechnology.ru/assets/template/ot/css/style.min.css?v=1">
+    <link rel="shortcut icon" href="https://kb.opentechnology.ru/assets/template/ot/favicon.ico">
+    <link rel="apple-touch-icon" href="https://kb.opentechnology.ru/assets/template/ot/apple-touch-icon.png">
+    <link rel="canonical" href="https://kb.opentechnology.ru/content/41/638/ru/integracia-asu-«sprut»-s-seo-3kl-sdo-russkij-moodle.html">
+    <script src="https://kb.opentechnology.ru/assets/js/modernizr.min.js"></script>
+    <script src="https://kb.opentechnology.ru/assets/js/phpmyfaq.min.js"></script>
+    <script src="https://kb.opentechnology.ru/assets/js/libs/bootstrap-table/bootstrap-table.min.js"></script>
+    <link rel="alternate" title="News RSS Feed" type="application/rss+xml" href="https://kb.opentechnology.ru/feed/news/rss.php">
+    <link rel="alternate" title="TopTen RSS Feed" type="application/rss+xml" href="https://kb.opentechnology.ru/feed/topten/rss.php">
+    <link rel="alternate" title="Latest FAQ Records RSS Feed" type="application/rss+xml" href="https://kb.opentechnology.ru/feed/latest/rss.php">
+    <link rel="alternate" title="Open Questions RSS Feed" type="application/rss+xml" href="https://kb.opentechnology.ru/feed/openquestions/rss.php">
+    <link rel="search" type="application/opensearchdescription+xml" title="База знаний ООО Открытые технологии - Интеграция АСУ «Спрут» с СЭО 3KL (СДО Русский Moodle)" href="https://kb.opentechnology.ru/opensearch.html">
+    <script>
+        if (self === top) {
+            document.documentElement.style.display = 'block';
+        } else {
+            top.location = self.location;
+        }
+    </script>
+    <style> html{display:none;} </style>
+</head>
+<body dir="ltr">
+<header>
+    <div class="pmf-wrapper pmf-masthead">
+        <div class="container-fluid">
+            <a id="logo" title="База знаний ООО Открытые технологии" href="https://kb.opentechnology.ru/">
+                <img src="https://kb.opentechnology.ru/assets/template/ot/img/logo.png" alt="phpMyFAQ">
+            </a>
+            <div id="mobile-nav-toggle" class="pull-right">
+                <a href="#" data-toggle="collapse" data-target=".pmf-nav .navbar-collapse">
+                    <i aria-hidden="true" class="fa fa-bars"></i>
+                </a>
+            </div>
+            <nav class="pull-right pmf-nav">
+                <div class="collapse navbar-collapse">
+                    <ul class="nav nav-pills navbar-nav">
+                        <li class=""><a href="https://kb.opentechnology.ru/search.html">Расширенный поиск</a></li>
+                        <li class=""><a href="https://kb.opentechnology.ru/showcat.html">Разделы</a></li>
+                        <li class=""><a href="https://kb.opentechnology.ru/addcontent.html">ответ</a></li>
+                        <li class=""><a href="https://kb.opentechnology.ru/ask.html">вопрос</a></li>
+                        <li class=""><a href="https://kb.opentechnology.ru/open.html">Открытые вопросы</a></li>
+                        <li class="dropdown ">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                Вход
+                                <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-right">
+                                
+                                <li></li>
+                                <li><a href="?action=login&auth_driver=rm3kl">Войти через Moodle</a></li>
+                                
+                                
+                                
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <div class="pmf-wrapper pmf-subheader">
+        <div class="container-fluid">
+            <div class="pmf-breadcrumb">
+                
+                <ul class="breadcrumb"></ul>
+                
+            </div>
+            <div class="pmf-searchbox">
+                <form role="search" id="search" action="?action=search" method="get">
+                    <input type="hidden" name="action" value="search">
+                    <button class="searchbutton" type="submit" aria-label="Поиск">
+                        <i aria-hidden="true" class="fa fa-search"></i>
+                    </button>
+                    <input type="text" class="searchfield typeahead" name="search" id="searchbox"
+                           autocomplete="off" placeholder="Поиск ...">
+                </form>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="pmf-wrapper pmf-main">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-9 pmf-maincontent">
+                <section>
+            <article class="pmf-faq">
+                <header>
+                    <div class="pull-right hidden-print" id="solution_id">
+                        <a class="label label-info" href="/index.php?solution_id=1638">
+                            ID #1638
+                        </a>
+                    </div>
+                    <h1>Интеграция АСУ «Спрут» с СЭО 3KL (СДО Русский Moodle)</h1>
+                    <div class="pmf-faq-meta clearfix">
+                        <div class="pmf-faq-author">
+                            <i aria-hidden="true" class="fa fa-user"></i>
+                            <span class="data">Сергей Гусев</span>
+                        </div>
+                        <div class="pmf-faq-date">
+                            <i aria-hidden="true" class="fa fa-calendar"></i>
+                            <span class="data">28.05.2025</span>
+                        </div>
+                        <div class="pmf-faq-comments">
+                            <i aria-hidden="true" class="fa fa-comments"></i>
+                            <span class="data"><a class="show-comment-form" href="#">0 Комментариев</a></span>
+                        </div>
+                        <div class="pmf-faq-edit">
+                            
+                        </div>
+                    </div>
+                </header>
+                <div class="pmf-faq-body">
+                    <div class="otsf-incut example"><a id="q0"></a><strong>Содержание:<br />1. <a href="#q1">Общие принципы интеграции</a></strong><strong><br />2. <a href="#q2">Спецификации интеграции с АСУ «Спрут»</a><br /></strong>  2.1. <a href="#q21">Версия 1 спецификации интеграции с АСУ «Спрут» (текущая)</a><strong><br /></strong>    2.1.1. <a href="#q211">Сценарий «Передача пользовательских данных из АСУ «Спрут» в <abbr data-toggle="tooltip" data-placement="bottom" title="Программный Продукт, разработанный Исполнителем и предназначенный для электронного обучения. В настоящем Регламенте упоминается в связи с предоставлением Исполнителем технической поддержки, предоставлением консультаций или прочих Сервисов по данному Продукту. Статья «Что представляет собой среда электронного обучения 3KL?».">СЭО</abbr> 3КL»</a><br />    2.1.2. <a href="#q212">Сценарий «Передача pdf-документов из АСУ «Спрут» в СЭО 3КL»</a><br />    2.1.3. <a href="#q213">Сценарий «Передача оценок из СЭО 3КL в АСУ «Спрут»</a><br />  2.2. <a href="#q22">Версия 2 спецификации интеграции с АСУ «Спрут» (планируемая)</a><strong><br /></strong>    2.2.1. <a href="#q221">Сценарий «Передача пользовательских данных из АСУ «Спрут» в СЭО 3КL»</a><br />    2.2.2. <a href="#q222">Сценарий «Передача pdf-документов из АСУ «Спрут» в СЭО 3КL»</a><br />    2.2.3. <a href="#q223">Сценарий «Передача оценок из СЭО 3КL в АСУ «Спрут»</a><br />    2.2.4. <a href="#q224">Сценарий «Передача данных <abbr data-toggle="tooltip" data-placement="bottom" title="Программный Продукт, права на который переданы Заказчику по Договору, техническая поддержка которого осуществляется Исполнителем. Продукт является свободно распространяемым программным обеспечением. Исполнитель передает Заказчику права на Продукт или экземпляр Продукта (в зависимости от условий Договора) на основании международной лицензии GNU GPL v3. Условия лицензии GNU GPL v3 действуют расширенно по отношению к условиям Договора. Если условия Договора противоречат условиям лицензии GNU GPL v3, применяются условия лицензии GNU GPL v3.&#13;&#10;В соответствии с данной лицензией, Заказчик получает весь набор прав, предусмотренных лицензией GNU GPL v3, включая право (лицензию) свободно использовать (воспроизводить, исполнять), изучать, модифицировать Продукт в любых целях без ограничений. В случае распространения Продукта Заказчиком полностью, частично или в составе другого продукта, за плату или бесплатно, Заказчик выражает согласие с условиями лицензии GNU GPL v3 и обязуется их соблюдать, включая условие обязательного распространения действия лицензии GNU GPL v3 в отношении всех распространяемых экземпляров Продукта и распространения всех экземпляров Продукта вместе со всеми исходными кодами и передачи прав, полученных согласно лицензии GNU GPL v3, в полном объеме вместе со всеми экземплярами, содержащими Продукт полностью или частично. В соответствии с условиями лицензии GNU GPL v3, исключительные права на Продукт и его составляющие остаются за их текущими правообладателями, а правообладатели, в свою очередь, предоставляют всем обладателям экземпляра оговоренные выше права, предусмотренные лицензией GNU GPL v3.">по</abbr> курсам из СЭО 3КL в АСУ «Спрут»</a><br />    2.2.5. <a href="#q225">Сценарий «Передача данных по категориям курсов из СЭО 3КL в АСУ «Спрут»</a> <strong><br />3. <a href="#q3">Настройка интеграции СЭО 3КL с АСУ «Спрут» (версия 1)</a></strong><strong><br /></strong>  3.1. <a href="#q31">Настройка сценария «Передача пользовательских данных из АСУ «Спрут» в СЭО 3КL»</a> <br />  3.2. <a href="#q32">Настройка сценария «Передача pdf-документов из АСУ «Спрут» в СЭО 3КL»</a> <br />  3.3. <a href="#q33">Настройка сценария «Передача оценок из СЭО 3КL в АСУ «Спрут»</a><br />    3.3.1. <a href="#q331">Создание настраиваемых полей</a> <br />    3.3.2. <a href="#q332">Настройка подключения к буферной БД</a><br />     3.3.3. <a href="#q333">Настройка Панели обработки прецедентов для выгрузки оценок</a><br />    3.3.4. <a href="#q334">Включение выгрузки оценок по расписанию</a><strong><br />4. <a href="#q4">Настройка интеграции СЭО 3КL с АСУ «Спрут» (версия 2)</a></strong><strong><br /></strong>  4.1. <a href="#q41">Настройка сценария «Передача пользовательских данных из АСУ «Спрут» в СЭО 3КL»</a> <br />  4.2. <a href="#q42">Настройка сценария «Передача pdf-документов из АСУ «Спрут» в СЭО 3КL»</a> <br />  4.3. <a href="#q43">Настройка сценария «Передача оценок из СЭО 3КL в АСУ «Спрут»</a><br />    4.3.1. <a href="#q431">Создание настраиваемых полей</a> <br />    4.3.2. <a href="#q432">Настройка подключения к буферной БД</a><br />     4.3.3. <a href="#q433">Настройка Панели обработки прецедентов для выгрузки оценок</a><br />    4.3.4. <a href="#q434">Настройка Панели обработки прецедентов для выгрузки данных по курсам</a><br />    4.3.5. <a href="#q435">Настройка Панели обработки прецедентов для выгрузки данных по категориям курсов</a><br />    4.3.6. <a href="#q436">Включение выгрузки оценок по расписанию</a><br /><strong>5. <a href="#q5">Примеры и решения</a></strong></div>
+<h3><a id="q1"></a>1. Общие принципы интеграции</h3>
+<div class="otsf-incut note"><a href="http://int21vek.ru/page.2.html">Автоматизированная <abbr data-toggle="tooltip" data-placement="bottom" title="Программный Продукт, разработанный Исполнителем и предназначенный для электронного обучения. В настоящем Регламенте упоминается в связи с предоставлением Исполнителем технической поддержки, предоставлением консультаций или прочих Сервисов по данному Продукту. Статья «Что представляет собой среда электронного обучения 3KL?».">система</abbr> управления «Спрут»</a>, а именно подсистема «Студент» (далее АСУ «Спрут», СПРУТ), предназначена для ведения документооборота в высших и средних учебных заведениях РФ и автоматизации контроля над деятельностью студентов, начиная от поступления и заканчивая выдачей дипломов.</div>
+<p>Данная <abbr data-toggle="tooltip" data-placement="bottom" title="Процесс обмена данными между двумя программными продуктами. Интеграция снижает трудоемкость работы оператора и уменьшает количество ошибок ручного ввода. В СЭО 3KL могут быть такие типы интеграций, как Сквозной переход (при клике по ссылке в одной системе осуществляется переход в другую систему), Встраивание (предполагает встраивание в материал или страницу виджета с другого сайта или системы), Объединение процессов (в этом случае процесс, начатый в одной системе, продолжается в другой и завершается в исходной), Встраивание с объединением процессов (встроенный виджет получает от СЭО 3KL начальную информацию, а после завершения своей работы возвращает в СЭО 3KL результат), Отображение данных (внутри одной системы отображаются данные из другой системы), Импорт данных (данные из внешней системы попадают в СЭО 3KL и там ею обрабатываются), Экспорт данных (данные из СЭО 3KL выгружаются во внешнюю систему). Статья «Что такое интеграция? Какие существуют интеграции и возможности обмена данными в СЭО 3KL? (заглавная статья)».">интеграция</abbr> позволяет автоматизировать процедуру обмена данными между СЭО 3КL (оценки, курсы и т. п.) и АСУ «Спрут» (данные по студентам, зачетные книжки, ведомости и т. п.). Основной обмен данными происходит через буферную базу данных MS SQL (Рис. 1.1).</p>
+<p><img class="otsf-screenshot" src="https://kb.opentechnology.ru/index.php?action=attachment&amp;id=6301" alt="" width="854" height="586" /></p>
+<div class="otsf-screenshot-description">Рис. 1.1. Архитектура взаимодействия СЭО 3КL и АСУ «Спрут».</div>
+<p><strong>Общий алгоритм интеграции:</strong></p>
+<p>1) Из АСУ «Спрут» в буферную БД выгружаются данные по учащимся (определенный набор полей пользователей), зарегистрированным в системе (Рис. 1.2).</p>
+<p><img class="otsf-screenshot" src="https://kb.opentechnology.ru/index.php?action=attachment&amp;id=6330" alt="" width="3338" height="196" /></p>
+<div class="otsf-screenshot-description">Рис. 1.2. Пример таблицы внешней БД с данными пользователей.</div>
+<p>2) СЭО 3КL по расписанию синхронизируется с внешней БД, забирает из нее данные о новых пользователях и обновляет данные по ранее загруженным (если есть изменения).</p>
+<p>3) Учащиеся, по своему логину, зарегистрированному в АСУ «Спрут», входят в СЭО 3КL, в соответствии с учебным планом изучают курсы (=дисциплины), получают оценки за них.</p>
+<div class="otsf-incut note">Во внешней БД хранятся и передаются только логины и адреса электронной почты пользователей. Пароль формируется на стороне СЭО 3КL по стандартному сценарию восстановления пароля: на электронную почту пользователя приходит ссылка, перейдя по которой он самостоятельно создает пароль для входа в систему.</div>
+<p>4) Итоговые оценки за дисциплины выгружаются из СЭО 3КL в буферную БД (по расписанию и событию). Критерием выгрузки служит выставление оценки или изменение ранее выставленной.</p>
+<p>5) АСУ «Спрут» забирает оценки пользователей из буферной БД, использует их для контроля успеваемости, формирует на их основании соответствующие документы (ведомости, зачетные книжки и т. п.).</p>
+<p>6) АСУ «Спрут» по расписанию выгружает сформированные документы по учащимся в формате pdf во внешнее файловое хранилище (Рис. 1.4).</p>
+<p><img class="otsf-screenshot" src="https://kb.opentechnology.ru/index.php?action=attachment&amp;id=6321" alt="" width="1494" height="797" /></p>
+<div class="otsf-screenshot-description">Рис. 1.4. Настройка выгрузки из СПРУТ документов по учащимся.</div>
+<p>7) В СЭО 3КL, в личном кабинете пользователя, отображаются ссылки на документы пользователя в файловом хранилище (Рис. 1.5).</p>
+<p><img class="otsf-screenshot" src="https://kb.opentechnology.ru/index.php?action=attachment&amp;id=6319" alt="" width="1734" height="974" /></p>
+<div class="otsf-screenshot-description">Рис. 1.5. Пример страницы личного кабинета пользователя.</div>
+<p>Интеграция включает следующие независимые сценарии (Табл. 1):</p>
+<table class="table table-bordered" style="width: 954px;">
+<tbody>
+<tr>
+<td style="width: 427px; text-align: center;"><strong>Название сценария</strong></td>
+<td style="width: 377px; text-align: center;"><strong>Задействованные плагины (СЭО 3КL)</strong></td>
+</tr>
+<tr>
+<td style="width: 427px;">Передача пользовательских данных из АСУ «Спрут» в СЭО 3КL</td>
+<td style="width: 377px;"><a href="https://kb.opentechnology.ru/index.php?solution_id=1018">Внешняя база данных»</a> (auth_db)</td>
+</tr>
+<tr>
+<td style="width: 427px;">Передача pdf-документов из АСУ «Спрут» в СЭО 3КL</td>
+<td style="width: 377px;"><a href="https://kb.opentechnology.ru/index.php?solution_id=1308">Внешние данные</a> (otexternaldata)</td>
+</tr>
+<tr>
+<td style="width: 427px;">Передача оценок из СЭО 3КL в АСУ «Спрут»</td>
+<td style="width: 377px;">
+<p>История обучения (local_learninghistory) — для сбора оценок из курсов</p>
+<p><a href="https://kb.opentechnology.ru/index.php?solution_id=1314"><abbr data-toggle="tooltip" data-placement="bottom" title="Специальные поля, значения которых могут нести дополнительную информацию о курсе, о его классификации, специализации, характеристиках. С помощью таких полей можно задавать дополнительные признаки для курсов. Настраиваемые поля используются также для сообщении дополнительной информации о пользователях, о локальных и глобальных группах. Статья «Настраиваемые поля курса. Применение в поиске курсов через Витрину курсов 3KL».">Настраиваемые поля</abbr> для объектов</a> (local_mcov) — для хранения типа итогового контроля</p>
+<p><a href="https://kb.opentechnology.ru/index.php?solution_id=1271">Панель обработки прецедентов</a> (local_pprocessing) — для выгрузки данных в буферную базу данных (БД)</p>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="otsf-screenshot-description" style="margin-top: -20px;">Табл. 1. Сценарии интеграции.</div>
+<p><a href="#q0">-Вернуться к содержанию-</a></p>
+<h3><a id="q2"></a>2. Спецификации интеграции с АСУ «Спрут»</h3>
+<h4><a id="q21"></a>2.1. Версия 1 спецификации интеграции с АСУ «Спрут» (текущая)</h4>
+<div class="otsf-incut note">В данном разделе представлен текущий вариант интеграции между СЭО 3КL и АСУ «Спрут».<br />Данная версия интеграции уже реализована, для ее настройки все готово.<br />Основным недостатком версии 1 является то, что требуется настраивать и заполнять большое количество дополнительных полей в каждом курсе, по которым СПРУТ сопоставляет оценки из СЭО 3KL со своим учебным планом. Кроме того, требуется выполнять специальную настройку итоговой оценки в каждом курсе для приведения оценки к специальному техническому формату, применяемому в базе данных АСУ «Спрут» (1-5 для экзаменов с оценкой и 6-7 для зачетов). <br />Этот недостаток устранен в <a href="#q22">версии 2 спецификации интеграции</a>. В настоящая время продолжается совместная работа по переходу на версию 2.</div>
+<h5><a id="q211"></a>2.1.1. Сценарий «Передача пользовательских данных из АСУ «Спрут» в СЭО 3КL»</h5>
+<p><strong>Назначение сценария:</strong></p>
+<p>Выгрузка значений полей базы данных АСУ «Спрут» в базу данных СЭО 3КL с использованием буферной БД (<a href="#tb1">таблица данных пользователей</a>).</p>
+<p><strong>Требования к БД:</strong></p>
+<p>Тип внешней БД — MS SQL. Кодировка внешней базы данных Cyrillic_General_100 или Cyrillic_General.</p>
+<p><strong>Условия запуска:</strong></p>
+<p>Выгрузка данных из АСУ «Спрут» во внешнюю БД выполняется по расписанию.</p>
+<p>Выгрузка новых записей из внешней БД в СЭО 3КL выполняется по расписанию, раз в сутки.</p>
+<p>Обновление данных пользователя в СЭО 3КL из внешней БД выполняется по событию авторизации этого пользователя в СЭО 3КL.</p>
+<p><strong><a id="tb1"></a>Транслируемые поля:</strong></p>
+<table class="table table-bordered" style="width: 943px;">
+<tbody>
+<tr>
+<td style="width: 154px; text-align: center;"><strong>Название поля в таблице буферной БД<br /></strong></td>
+<td style="width: 190px; text-align: center;"><strong>Тип</strong></td>
+<td style="width: 304.033px; text-align: center;"><strong>Допустимое значение<br /></strong></td>
+<td style="width: 375.967px; text-align: center;"><strong>Примечание</strong></td>
+</tr>
+<tr>
+<td style="width: 154px;">student_login</td>
+<td style="width: 190px;">nvarchar(200)</td>
+<td style="width: 304.033px;">Валидная utf8 строка в нижнем регистре, соответствующая регулярному выражению [^-\.@_a-z0-9], максимальная длина 100 символов.</td>
+<td style="width: 375.967px;">
+<p>Ключ-идентификатор СЭО 3КL.</p>
+<p>Поле «Логин» (username) в СЭО 3КL.</p>
+<div class="otsf-incut note">Уникальное поле.</div>
+</td>
+</tr>
+<tr>
+<td style="width: 154px;">student_firstname</td>
+<td style="width: 190px;">nvarchar(200)</td>
+<td style="width: 304.033px;">Валидная utf8 строка, максимальная длина 100 символов.</td>
+<td style="width: 375.967px;">Поле «Имя» (firstname) в СЭО 3КL.</td>
+</tr>
+<tr>
+<td style="width: 154px;">student_lastname</td>
+<td style="width: 190px;">nvarchar(200)</td>
+<td style="width: 304.033px;">Валидная utf8 строка, максимальная длина 100 символов.</td>
+<td style="width: 375.967px;">Поле «Фамилия» (lastname) в СЭО 3КL.</td>
+</tr>
+<tr>
+<td style="width: 154px;">student_middlename</td>
+<td style="width: 190px;">nvarchar(200) NULL</td>
+<td style="width: 304.033px;">Валидная utf8 строка, максимальная длина 100 символов.<br /><br /></td>
+<td style="width: 375.967px;">Поле «Отчество или второе имя» (middlename) в СЭО 3КL.</td>
+</tr>
+<tr>
+<td style="width: 154px;">student_fullname</td>
+<td style="width: 190px;">ntext NULL</td>
+<td style="width: 304.033px;">Cтрока, размером не более 2^30 - 1 (1 073 741 823) байт.</td>
+<td style="width: 375.967px;">
+<p>Поле «ФИО» (profile_field_student_fullname) в СЭО 3КL (кастомное поле типа text).</p>
+<div class="otsf-incut note">Имя поля в СЭО 3КL может быть иным (задаётся настройками).</div>
+</td>
+</tr>
+<tr>
+<td style="width: 154px;">student_dateofbirth</td>
+<td style="width: 190px;">bigint NULL</td>
+<td style="width: 304.033px;">Метка времени в формате timestamp.</td>
+<td style="width: 375.967px;">
+<p>Поле «Дата рождения» (profile_field_student_dateofbirth) в СЭО 3КL (кастомное поле типа datetime).</p>
+<div class="otsf-incut note">Имя поля в СЭО 3КL может быть иным (задаётся настройками).</div>
+</td>
+</tr>
+<tr>
+<td style="width: 154px;">student_gender</td>
+<td style="width: 190px;">ntext NULL</td>
+<td style="width: 304.033px;">Строка, размером не более 2^30 - 1 (1 073 741 823) байт.</td>
+<td style="width: 375.967px;">
+<p>Поле «Пол» (profile_field_student_gender) в СЭО 3КL (кастомное поле типа text).</p>
+<div class="otsf-incut note">Имя поля в СЭО 3КL может быть иным (задаётся настройками).</div>
+</td>
+</tr>
+<tr>
+<td style="width: 154px;">student_email</td>
+<td style="width: 190px;">nvarchar(200)</td>
+<td style="width: 304.033px;">Валидный email (в соответствии с RFC#822 <a href="http://www.faqs.org/rfcs/rfc822.html" target="_blank" rel="noopener nofollow noreferrer">http://www.faqs.org/rfcs/rfc822.html</a>), максимальная длина 100 символов.</td>
+<td style="width: 375.967px;">Поле «Адрес электронной почты» (email) в СЭО 3КL.</td>
+</tr>
+<tr>
+<td style="width: 154px;">PIN</td>
+<td style="width: 190px;">nvarchar(510)</td>
+<td style="width: 304.033px;">Строка, максимальная длина 255 символов.</td>
+<td style="width: 375.967px;">
+<p>Ключ-идентификатор в СПРУТ.</p>
+<p>Поле «Индивидуальный номер» (idnumber) в СЭО 3КL.</p>
+<div class="otsf-incut note">Уникальное поле.</div>
+</td>
+</tr>
+<tr>
+<td style="width: 154px;">student_contract_num</td>
+<td style="width: 190px;">ntext NULL</td>
+<td style="width: 304.033px;">Строка, размером не более 2^30 - 1 (1 073 741 823) байт.</td>
+<td style="width: 375.967px;">
+<p>Поле «№ договора» (profile_field_student_contract_num) в СЭО 3КL (кастомное поле типа text).</p>
+<div class="otsf-incut note">Имя поля в СЭО 3КL может быть иным (задаётся настройками).</div>
+</td>
+</tr>
+<tr>
+<td style="width: 154px;">student_contract_date</td>
+<td style="width: 190px;">bigint NULL</td>
+<td style="width: 304.033px;">Метка времени в формате timestamp.</td>
+<td style="width: 375.967px;">
+<p>Поле «Дата заключения договора» (profile_field_student_contract_date) в СЭО 3КL (кастомное поле типа datetime).</p>
+<div class="otsf-incut note">Имя поля в СЭО 3КL может быть иным (задаётся настройками).</div>
+</td>
+</tr>
+<tr>
+<td style="width: 154px;">student_numbook</td>
+<td style="width: 190px;">ntext NULL</td>
+<td style="width: 304.033px;">Строка размером не более 2^30 - 1 (1 073 741 823) байт.</td>
+<td style="width: 375.967px;">
+<p>Поле «№ зачетной книжки» (profile_field_student_numbook) в СЭО 3КL (кастомное поле типа text).</p>
+<div class="otsf-incut note">Имя поля в СЭО 3КL может быть иным (задаётся настройками).</div>
+</td>
+</tr>
+<tr>
+<td style="width: 154px;">student_phonecell</td>
+<td style="width: 190px;">nvarchar(40) NULL</td>
+<td style="width: 304.033px;">Строка, максимальная длина 20 символов.</td>
+<td style="width: 375.967px;">Поле «Мобильный телефон» (phone2) в СЭО 3КL.</td>
+</tr>
+<tr>
+<td style="width: 154px;">student_numgroup</td>
+<td style="width: 190px;">ntext NULL</td>
+<td style="width: 304.033px;">Строка размером не более 2^30 - 1 (1 073 741 823) байт.</td>
+<td style="width: 375.967px;">
+<p>Поле «Группа» (profile_field_Group) в СЭО 3КL (кастомное поле типа text).</p>
+<div class="otsf-incut note">Имя поля в СЭО 3КL может быть иным (задаётся настройками).</div>
+</td>
+</tr>
+<tr>
+<td style="width: 154px;">student_formob</td>
+<td style="width: 190px;">ntext NULL</td>
+<td style="width: 304.033px;">Строка размером не более 2^30 - 1 (1 073 741 823) байт.</td>
+<td style="width: 375.967px;">
+<p>Поле «Форма обучения» (profile_field_edu) в СЭО 3КL (кастомное поле типа text).</p>
+<div class="otsf-incut note">Имя поля в СЭО 3КL может быть иным (задаётся настройками).</div>
+</td>
+</tr>
+<tr>
+<td style="width: 154px;">student_direc</td>
+<td style="width: 190px;">ntext NULL</td>
+<td style="width: 304.033px;">Строка размером не более 2^30 - 1 (1 073 741 823) байт.</td>
+<td style="width: 375.967px;">
+<p>Поле «Направление» (profile_field_student_direc) в СЭО 3КL (кастомное поле типа text).</p>
+<div class="otsf-incut note">Имя поля в СЭО 3КL может быть иным (задаётся настройками).</div>
+</td>
+</tr>
+<tr>
+<td style="width: 154px;">student_prof</td>
+<td style="width: 190px;">ntext NULL</td>
+<td style="width: 304.033px;">Строка размером не более 2^30 - 1 (1 073 741 823) байт.</td>
+<td style="width: 375.967px;">
+<p>Поле «Профиль» (profile_field_student_prof) в СЭО 3КL (кастомное поле типа text).</p>
+<div class="otsf-incut note">Имя поля в СЭО 3КL может быть иным (задаётся настройками).</div>
+</td>
+</tr>
+<tr>
+<td style="width: 154px;">semestr</td>
+<td style="width: 190px;">tinyint NULL</td>
+<td style="width: 304.033px;">Целое число от 0 до 255.</td>
+<td style="width: 375.967px;">Поле «Семестр» (profile_field_semestr) в СЭО 3КL.</td>
+</tr>
+<tr>
+<td style="width: 154px;">status</td>
+<td style="width: 190px;">ntext NULL</td>
+<td style="width: 304.033px;">Строка размером не более 2^30 - 1 (1 073 741 823) байт.</td>
+<td style="width: 375.967px;">
+<p>Поле «Статус» (profile_field_status) в СЭО 3КL (кастомное поле типа text).</p>
+<div class="otsf-incut note">Имя поля в СЭО 3КL может быть иным (задаётся настройками).</div>
+</td>
+</tr>
+<tr>
+<td style="width: 154px;">dolg</td>
+<td style="width: 190px;">float NULL</td>
+<td style="width: 304.033px;">Число с плавающей запятой (точность не более 15 знаков).</td>
+<td style="width: 375.967px;">
+<p>Поле «Финансовая задолженность (руб.)» (profile_field_dolg) в СЭО 3КL (кастомное поле типа text).</p>
+<div class="otsf-incut note">Имя поля в СЭО 3КL может быть иным (задаётся настройками).</div>
+</td>
+</tr>
+<tr>
+<td style="width: 154px;">ak_dolg</td>
+<td style="width: 190px;">smallint NULL</td>
+<td style="width: 304.033px;">Целое число в диапазоне от -32 768 до 32 767</td>
+<td style="width: 375.967px;">
+<p>Поле «Академическая задолженность (дисц.)» (profile_field_ak_dolg) в СЭО 3КL (кастомное поле типа text).</p>
+<div class="otsf-incut note">Имя поля в СЭО 3КL может быть иным (задаётся настройками).</div>
+</td>
+</tr>
+<tr>
+<td style="width: 154px;">student_sp</td>
+<td style="width: 190px;">ntext NULL</td>
+<td style="width: 304.033px;"> </td>
+<td style="width: 375.967px;">
+<p>Кастомное поле типа text.</p>
+<div class="otsf-incut note">Имя поля в СЭО 3КL может быть иным (задаётся настройками).</div>
+</td>
+</tr>
+<tr>
+<td style="width: 154px;">comment</td>
+<td style="width: 190px;">ntext NULL</td>
+<td style="width: 304.033px;"> </td>
+<td style="width: 375.967px;"> </td>
+</tr>
+<tr>
+<td style="width: 154px;">customfield</td>
+<td style="width: 190px;">ntext NULL</td>
+<td style="width: 304.033px;"> </td>
+<td style="width: 375.967px;"> </td>
+</tr>
+</tbody>
+</table>
+<div class="otsf-screenshot-description" style="margin-top: -20px;">Табл. 2. Описание полей таблицы данных пользователей «student».</div>
+<p><strong>Описание сценария:</strong></p>
+<p>1) Из АСУ «Спрут» во внешнюю БД выгружаются данные полей пользователей (Табл. 3): добавляются новые записи (если значение ключа-идентификатора в таблице не найдено) и обновляются записи, данные в которых изменились.</p>
+<table class="table table-bordered"><colgroup width="34"></colgroup> <colgroup width="144"></colgroup> <colgroup width="184"></colgroup> <colgroup width="224"></colgroup> <colgroup width="119"></colgroup> <colgroup width="118"></colgroup> <colgroup width="135"></colgroup> <colgroup width="126"></colgroup> <colgroup width="103"></colgroup> <colgroup width="120"></colgroup> <colgroup width="92"></colgroup> <colgroup width="67"></colgroup> <colgroup width="91"></colgroup> <colgroup width="118"></colgroup> <colgroup width="122"></colgroup> <colgroup width="217"></colgroup> <colgroup width="408"></colgroup> <colgroup width="104"></colgroup> <colgroup width="62"></colgroup> <colgroup width="48"></colgroup> <colgroup width="62"></colgroup> <colgroup width="58"></colgroup> <colgroup width="77"></colgroup>
+<tbody>
+<tr>
+<td height="17">PIN</td>
+<td>student_contract_num</td>
+<td>student_contract_date</td>
+<td>student_email</td>
+<td>student_fullname</td>
+<td>student_firstname</td>
+<td>student_lastname</td>
+<td>student_middlename</td>
+<td>student_dateofbirth</td>
+<td>student_gender</td>
+<td>student_phonecell</td>
+<td>customfield</td>
+<td>comment</td>
+<td>student_login</td>
+<td>student_numbook</td>
+<td>student_numgroup</td>
+<td>student_direc</td>
+<td>student_prof</td>
+<td>student_formob</td>
+<td>status</td>
+<td>dolg</td>
+<td>Semestr</td>
+<td>ak_dolg</td>
+<td>student_sp</td>
+</tr>
+<tr>
+<td height="17">3</td>
+<td>11-96</td>
+<td>1686787200</td>
+<td>test1@test.ru</td>
+<td>Кузнецова Наталия Юрьевна</td>
+<td>Наталия</td>
+<td>Кузнецова</td>
+<td>Юрьевна</td>
+<td>290131200</td>
+<td>жен.</td>
+<td>82221234560</td>
+<td>10500, 52500</td>
+<td> </td>
+<td>11-96</td>
+<td>11-96</td>
+<td>М-2</td>
+<td>0605 Бухгалтерский учёт и аудит</td>
+<td>Банковское дело</td>
+<td>Очно-заочная</td>
+<td>Студент</td>
+<td>52500</td>
+<td>6</td>
+<td>5</td>
+<td> </td>
+</tr>
+<tr>
+<td height="17">4</td>
+<td>22-96</td>
+<td>1686787200</td>
+<td>test2@test.ru</td>
+<td>Бакатина Татьяна Александровна</td>
+<td>Татьяна</td>
+<td>Бакатина</td>
+<td>Александровна</td>
+<td>277603200</td>
+<td>жен.</td>
+<td>82221234561</td>
+<td>10500, 62000</td>
+<td> </td>
+<td>22-96</td>
+<td>22-96</td>
+<td>Неизвестная</td>
+<td>0605 Бухгалтерский учёт и аудит</td>
+<td>Банковское дело</td>
+<td>Очно-заочная</td>
+<td>Студент</td>
+<td>62000</td>
+<td>6</td>
+<td>3</td>
+<td> </td>
+</tr>
+<tr>
+<td height="17">7</td>
+<td>15-96/1</td>
+<td>1686787200</td>
+<td>test3@test.ru</td>
+<td>Тодосиева Татьяна Андреевна</td>
+<td>Татьяна</td>
+<td>Тодосиева</td>
+<td>Андреевна</td>
+<td>303004800</td>
+<td>жен.</td>
+<td>82221234562</td>
+<td>10500, 62000</td>
+<td> </td>
+<td>15-96/1</td>
+<td>15-96/1</td>
+<td>М-2</td>
+<td>0605 Бухгалтерский учёт и аудит</td>
+<td>Банковское дело</td>
+<td>Очно-заочная</td>
+<td>Студент</td>
+<td>62000</td>
+<td>6</td>
+<td>4</td>
+<td> </td>
+</tr>
+<tr>
+<td height="17">9</td>
+<td>17-96</td>
+<td>1686787200</td>
+<td>test4@test.ru</td>
+<td>Тришкина Ольга Ивановна</td>
+<td>Ольга</td>
+<td>Тришкина</td>
+<td>Ивановна</td>
+<td>283996800</td>
+<td>жен.</td>
+<td>82221234563</td>
+<td>1400, 7900</td>
+<td> </td>
+<td>17-96</td>
+<td>17-96</td>
+<td>М-2</td>
+<td>0611 Менеджмент организации</td>
+<td>Банковское дело</td>
+<td>Очная</td>
+<td>Студент</td>
+<td>7900</td>
+<td>6</td>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td height="17">11</td>
+<td>19-96</td>
+<td>1686787200</td>
+<td>test5@test.ru</td>
+<td>Трунова Владислава Игоревна</td>
+<td>Владислава</td>
+<td>Трунова</td>
+<td>Игоревна</td>
+<td>232934400</td>
+<td>жен.</td>
+<td>82221234564</td>
+<td>10500, 62000</td>
+<td> </td>
+<td>19-96</td>
+<td>19-96</td>
+<td>М-2</td>
+<td>0605 Бухгалтерский учёт и аудит</td>
+<td>Банковское дело</td>
+<td>Очно-заочная</td>
+<td>Студент</td>
+<td>62000</td>
+<td>6</td>
+<td>3</td>
+<td> </td>
+</tr>
+<tr>
+<td height="17">12</td>
+<td>20-96</td>
+<td>1686787200</td>
+<td>test6@test.ru</td>
+<td>Тулупов Александр Сергеевич</td>
+<td>Александр</td>
+<td>Тулупов</td>
+<td>Сергеевич</td>
+<td>285465600</td>
+<td>муж.</td>
+<td>82221234565</td>
+<td>10500, 62000</td>
+<td> </td>
+<td>20-96</td>
+<td>20-96</td>
+<td>М-2</td>
+<td>0605 Бухгалтерский учёт и аудит</td>
+<td>Банковское дело</td>
+<td>Очно-заочная</td>
+<td>Студент</td>
+<td>62000</td>
+<td>6</td>
+<td>3</td>
+<td> </td>
+</tr>
+<tr>
+<td height="17">13</td>
+<td>21-96</td>
+<td>1686787200</td>
+<td>test7@test.ru</td>
+<td>Чекменева Елена Вениаминовна</td>
+<td>Елена</td>
+<td>Чекменева</td>
+<td>Вениаминовна</td>
+<td>1686787200</td>
+<td>жен.</td>
+<td>82221234566</td>
+<td>10500, 62000</td>
+<td> </td>
+<td>21-96</td>
+<td>21-96</td>
+<td>М-2</td>
+<td>0605 Бухгалтерский учёт и аудит</td>
+<td>Банковское дело</td>
+<td>Очно-заочная</td>
+<td>Студент</td>
+<td>62000</td>
+<td>6</td>
+<td>2</td>
+<td> </td>
+</tr>
+<tr>
+<td height="17">15</td>
+<td>23-96</td>
+<td>915148800</td>
+<td>test8@test.ru</td>
+<td>Ахмеджанова Нелли Шамильевна</td>
+<td>Нелли</td>
+<td>Ахмеджанова</td>
+<td>Шамильевна</td>
+<td>296092800</td>
+<td>жен.</td>
+<td> </td>
+<td>10500, 10500</td>
+<td> </td>
+<td>23-96</td>
+<td>23-96</td>
+<td>Неизвестная</td>
+<td>0605 Бухгалтерский учёт и аудит</td>
+<td>Банковское дело</td>
+<td>Очно-заочная</td>
+<td>Студент</td>
+<td>10500</td>
+<td>6</td>
+<td>7</td>
+<td> </td>
+</tr>
+</tbody>
+</table>
+<div class="otsf-screenshot-description" style="margin-top: -20px;">Табл. 3. Пример таблицы данных пользователей во внешней БД.</div>
+<p>2) СЭО 3КL с настроенной периодичностью синхронизируется с внешней БД и, в случае появления в там новых записей, информация по новым пользователям добавляется в базу данных среды электронного обучения. Поиск и проверка выполняются по значению ключа-идентификатора. Сопоставление полей внешней БД и БД СЭО 3КL происходит на основании настроек плагина «Внешняя база данных» (auth_db). Обновление данных по ранее добавленным в В СЭО 3КL пользователям на этом этапе не выполняется.</p>
+<p>3) В СЭО 3КL авторизуется пользователь, еще ни разу не заходивший в систему, но данные по которому синхронизированы. Пользователь применяет сценарий восстановления пароля в СЭО 3КL по логину (значение поля student_login таблицы данных пользователей во внешней БД), система генерирует временный пароль и высылает на электронную почту пользователя ссылку на страницу создания пароля.</p>
+<p>4) В СЭО 3КL входит пользователь, у которого уже есть пара логин/пароль. В момент авторизации происходит обновление полей пользователя в СЭО 3КL, если его данные во внешней БД изменились.</p>
+<p><strong>Запрос на создание таблицы:</strong></p>
+<pre class="otsf-incut pre">CREATE TABLE [dbo].[student] (<br />  [student_login] nvarchar(100) NOT NULL,<br />  [student_firstname] nvarchar(100) NOT NULL,<br />  [student_lastname] nvarchar(100) NOT NULL,<br />  [student_middlename] nvarchar(100) NULL,<br />  [student_fullname] ntext NULL,<br />  [student_dateofbirth] bigint NULL,<br />  [student_gender] ntext NULL,<br />  [student_email] nvarchar(100) NOT NULL,<br />  [PIN] nvarchar(255) NOT NULL,<br />  [student_contract_num] ntext NULL,<br />  [student_contract_date] bigint NULL,<br />  [student_numbook] ntext NULL,<br />  [student_phonecell] nvarchar(20) NULL,<br />  [student_numgroup] ntext NULL,<br />  [student_formob] ntext NULL,<br />  [student_direc] ntext NULL,<br />  [student_prof] ntext NULL,<br />  [semestr] tinyint NULL,<br />  [status] ntext NULL,<br />  [dolg] float NULL,<br />  [ak_dolg] smallint NULL,<br />  [student_sp] ntext NULL,<br />  [comment] ntext NULL,<br />  [customfield] ntext NULL<br />);<br />ALTER TABLE [dbo].[student] ADD PRIMARY KEY ([student_login]);<br />CREATE UNIQUE INDEX [student_PIN] ON [dbo].[student] ([PIN]);</pre>
+<p><a href="#q0">-Вернуться к содержанию-</a></p>
+<h5><a id="q212"></a>2.1.2. Сценарий «Передача pdf-документов из АСУ «Спрут» в СЭО 3КL»</h5>
+<p><strong>Назначение сценария:</strong></p>
+<p>Доступ учащихся из личного кабинета пользователя СЭО 3КL к <a href="#tb2">документам</a>, сформированным в АСУ «Спрут».</p>
+<p><strong>Тип контента и протокол передачи:</strong></p>
+<p>Файлы в формате pdf по протоколу WebDAV.</p>
+<p><strong>Условия запуска:</strong></p>
+<p>Выгрузка из АСУ «Спрут» во внешнее файловое хранилище документов по учащимся выполняется по расписанию, еженедельно.</p>
+<p><strong><a id="tb2"></a>Генерируемые документы:</strong></p>
+<table class="table table-bordered" style="width: 653px;">
+<tbody>
+<tr>
+<td style="width: 251px; text-align: center;"><strong>Название документа</strong></td>
+<td style="width: 401px; text-align: center;"><strong>Пример внешнего вида</strong></td>
+</tr>
+<tr>
+<td style="width: 251px;">Учебная карточка</td>
+<td style="width: 401px;"><img src="https://kb.opentechnology.ru/index.php?action=attachment&amp;id=6439" width="400" height="677" /></td>
+</tr>
+<tr>
+<td style="width: 251px;">Зачетная книжка</td>
+<td style="width: 401px;"><img src="https://kb.opentechnology.ru/index.php?action=attachment&amp;id=6441" width="400" height="270" /></td>
+</tr>
+<tr>
+<td style="width: 251px;">Академическая задолженность</td>
+<td style="width: 401px;"><img src="https://kb.opentechnology.ru/index.php?action=attachment&amp;id=6442" width="400" height="310" /></td>
+</tr>
+<tr>
+<td style="width: 251px;">Электронный журнал</td>
+<td style="width: 401px;"><img src="https://kb.opentechnology.ru/index.php?action=attachment&amp;id=6443" width="400" height="180" /></td>
+</tr>
+<tr>
+<td style="width: 251px;">Контроль оплаты</td>
+<td style="width: 401px;"><img src="https://kb.opentechnology.ru/index.php?action=attachment&amp;id=6444" width="400" height="210" /></td>
+</tr>
+<tr>
+<td style="width: 251px;">Квитанция на оплату</td>
+<td style="width: 401px;"><a href="https://www.consultant.ru/document/cons_doc_LAW_18623/a7b417ebdf07d15487b95b1b40dd6f2291c02523/">Форма ПД-4</a></td>
+</tr>
+</tbody>
+</table>
+<div class="otsf-screenshot-description" style="margin-top: -20px;">Табл. 4. Транслируемые из СПРУТ в СЭО 3КL документы.</div>
+<p><strong>Описание сценария:</strong></p>
+<p>1) На стороне СПРУТ происходит генерация необходимых документов, сгенерированные документы помещаются в папку внешнего хранилища (в тематические подпапки «Оплата обучения» и «Ход и результаты обучения»), где название папки = индивидуальному номеру пользователя (idnumber) в СЭО 3KL (Рис. 2.1.2.а).</p>
+<p><img class="otsf-screenshot" src="https://kb.opentechnology.ru/index.php?action=attachment&amp;id=6437" alt="" width="1278" height="597" /></p>
+<div class="otsf-screenshot-description">Рис. 2.1.2.а. Структура папок файлового хранилища. </div>
+<p>Если данные студента изменились, ранее сохраненные документы автоматически заменяются актуальными.</p>
+<p>2) В личном кабинете пользователя СЭО 3КL, в блоке «Внешние данные», доступны ссылки на документы, выгруженные АСУ «Спрут» в папку внешнего хранилища (Рис. 2.1.2.б) или соответствующее сообщение, если никаких файлов в папке нет.</p>
+<p><img class="otsf-screenshot" src="https://kb.opentechnology.ru/index.php?action=attachment&amp;id=6322" alt="" width="332" height="459" /></p>
+<div class="otsf-screenshot-description">Рис. 2.1.2.б. Пример настроенных блоков «Внешние данные».</div>
+<p><a href="#q0">-Вернуться к содержанию-</a></p>
+<h5><a id="q213"></a>2.1.3. Сценарий «Передача оценок из СЭО 3КL в АСУ «Спрут»</h5>
+<p><strong>Назначение сценария:</strong></p>
+<p>Выгрузка данных по оценкам (значения итоговых оценок за <abbr data-toggle="tooltip" data-placement="bottom" title="Структурная единица (раздел сайта) в СЭО 3KL, объединяющий учебные материалы, преподавателей и изучающих материалы пользователей. Курс может включать в себя как набор учебных материалов, так и один единственный учебный материал, отображаемый сразу после входа в курс, также курс может не содержать учебных материалов и выполнять техническую функцию, например, реализовывать сообщество пользователей или элемент для организации учебных траекторий. Курс является минимальной единицей, на которую можно подписывать пользователей. При подписке на курс предполагается, что пользователь освоит его целиком. Статья «Форматы курсов».">курс</abbr> и служебных полей) из СЭО 3КL в базу данных АСУ «Спрут» с использованием буферной БД (<a href="#tb6">таблица оценок</a>).</p>
+<p><strong>Требования к БД:</strong></p>
+<p>Тип внешней БД — MS SQL. Кодировка внешней базы данных Cyrillic_General_100 или Cyrillic_General.</p>
+<p><strong>Условия запуска:</strong></p>
+<p>Выгрузка данных по оценкам из СЭО 3КL во внешнюю БД выполняется:</p>
+<ul>
+<li>по расписанию, раз в сутки, в процессе отработки регулярной задачи «Ежедневная обработка прецедентов» (выгрузка всех данных);</li>
+<li>по событию «Изменена история оценки» (создание или обновление записи в таблице).</li>
+</ul>
+<p>Выгрузка данных из внешней БД в АСУ «Спрут» выполняется по расписанию.</p>
+<p><strong><a id="tb6"></a>Транслируемые поля:</strong></p>
+<table class="table table-bordered" style="width: 1129.3px;">
+<tbody>
+<tr style="height: 117px;">
+<td style="width: 140px; text-align: center; height: 117px;"><strong>Название поля в таблице буферной БД</strong></td>
+<td style="width: 211px; text-align: center; height: 117px;"><strong>Тип</strong></td>
+<td style="width: 450px; text-align: center; height: 117px;"><strong>Допустимое значение</strong></td>
+<td style="width: 414px; text-align: center; height: 117px;"><strong>Пример</strong></td>
+<td style="width: 618.3px; text-align: center; height: 117px;"><strong>Примечание</strong></td>
+</tr>
+<tr style="height: 77px;">
+<td style="width: 140px; height: 77px;">id</td>
+<td style="width: 211px; height: 77px;">int, автоинкрементное поле, primary key</td>
+<td style="width: 450px; height: 77px;"> </td>
+<td style="width: 414px; height: 77px;"> </td>
+<td style="width: 618.3px; height: 77px;"> </td>
+</tr>
+<tr style="height: 195.8px;">
+<td style="width: 140px; height: 195.8px;">markCode</td>
+<td style="width: 211px; height: 195.8px;">float</td>
+<td style="width: 450px; height: 195.8px;">Число с плавающей запятой в диапазоне от 0 до 100.</td>
+<td style="width: 414px; height: 195.8px;">75, 75.25, 75.00025</td>
+<td style="width: 618.3px; height: 195.8px;">
+<p>Выгружается оценка в процентах от 0 до 100, на стороне СПРУТ интерпретируется в соответствии со справочником СПРУТ.</p>
+<div class="otsf-incut attention">Выгружаемое значение оценки зависит от настроек, выполненных в СЭО 3KL!</div>
+</td>
+</tr>
+<tr style="height: 141px;">
+<td style="width: 140px; height: 141px;">MarkDate</td>
+<td style="width: 211px; height: 141px;">datetime2 NULL</td>
+<td style="width: 450px; height: 141px;">Дата в формате YYYY-mm-dd H:i:s.</td>
+<td style="width: 414px; height: 141px;">2022-03-05 00:00:00</td>
+<td style="width: 618.3px; height: 141px;">
+<p>Поле «Время получения оценки за курс» (finalgradetimestamp) в СЭО 3КL.</p>
+<p>Поле «Дата выставления оценки» в АСУ «Спрут».</p>
+</td>
+</tr>
+<tr style="height: 273px;">
+<td style="width: 140px; height: 273px;">PIN</td>
+<td style="width: 211px; height: 273px;">int</td>
+<td style="width: 450px; height: 273px;">Целое число, диапазон от -2 147 483 648 до 2 147 483 647.</td>
+<td style="width: 414px; height: 273px;">54784</td>
+<td style="width: 618.3px; height: 273px;">
+<p>Поле «Индивидуальный номер» (idnumber) в СЭО 3КL.</p>
+<p>Поле профиля пользователя СЭО 3КL, которое соответствует идентификатору пользователя в системе СПРУТ (какое поле профиля выгружается в СПРУТ в качестве идентификатора пользователя).</p>
+<div class="otsf-incut note">Уникальное поле.</div>
+</td>
+</tr>
+<tr style="height: 161px;">
+<td style="width: 140px; height: 161px;">idKurs</td>
+<td style="width: 211px; height: 161px;">int</td>
+<td style="width: 450px; height: 161px;">Целое число, диапазон от -2 147 483 648 до 2 147 483 647.</td>
+<td style="width: 414px; height: 161px;">10</td>
+<td style="width: 618.3px; height: 161px;"> 
+<p>Поле «Идентификатор курса» (courseid) в СЭО 3КL.</p>
+<p>В текущей версии  интеграции в СПРУТ не используется.</p>
+</td>
+</tr>
+<tr style="height: 201px;">
+<td style="width: 140px; height: 201px;">DateVig</td>
+<td style="width: 211px; height: 201px;">datetime2 NULL</td>
+<td style="width: 450px; height: 201px;">Дата в формате YYYY-mm-dd H:i:s.</td>
+<td style="width: 414px; height: 201px;">2022-03-05 00:00:00</td>
+<td style="width: 618.3px; height: 201px;">
+<p>Поле «Дата выгрузки из СЭО 3КL» в АСУ «Спрут».</p>
+<p>Метка времени, соответствующая моменту выгрузки данных. Генерируется на стороне СЭО 3КL непосредственно во время выгрузки оценки.</p>
+</td>
+</tr>
+<tr style="height: 233px;">
+<td style="width: 140px; height: 233px;">subjCode</td>
+<td style="width: 211px; height: 233px;">int</td>
+<td style="width: 450px; height: 233px;">Целое число больше нуля. Числовой идентификатор дисциплины согласно справочнику СПРУТа.</td>
+<td style="width: 414px; height: 233px;">77</td>
+<td style="width: 618.3px; height: 233px;">
+<p>Поле «Код дисциплины» (course_mcov_pub_listsubject) в СЭО 3КL (настраиваемое поле курса).</p>
+<p>Числовой идентификатор дисциплины согласно справочнику АСУ «Спрут».</p>
+<div class="otsf-incut note">Имя поля в СЭО 3КL может быть иным (задаётся настройками).</div>
+</td>
+</tr>
+<tr style="height: 273px;">
+<td style="width: 140px; height: 273px;">markTypeCode</td>
+<td style="width: 211px; height: 273px;">int</td>
+<td style="width: 450px; height: 273px;">Целое число больше нуля.</td>
+<td style="width: 414px; height: 273px;">4</td>
+<td style="width: 618.3px; height: 273px;">
+<p>Поле «Тип испытания» (course_mcov_pub_coursecontroltype) в СЭО 3КL (настраиваемое поле курса).</p>
+<p>Тип испытания (цифровое обозначение (код) испытания (экзамен, зачет и т. п.)) согласно справочнику АСУ «Спрут».</p>
+<div class="otsf-incut note">Имя поля в СЭО 3КL может быть иным (задаётся настройками).</div>
+</td>
+</tr>
+<tr style="height: 395px;">
+<td style="width: 140px; height: 395px;">Lesson</td>
+<td style="width: 211px; height: 395px;">int</td>
+<td style="width: 450px; height: 395px;">Целое число больше нуля.</td>
+<td style="width: 414px; height: 395px;">45</td>
+<td style="width: 618.3px; height: 395px;">
+<p>Поле «Номер (порядковый номер зачета)» (course_mcov_pub_lesson) в СЭО 3КL (настраиваемое поле курса).</p>
+<p>Поле «Порядковый номер испытания по дисциплине» в АСУ «Спрут».</p>
+<p>Например, если во втором семестре проводится первый зачет по иностранному языку, то номер = 1. Если в третьем семестре второй зачет по иностранному языку, то его номер = 2. Если в четвёртом семестре не зачет, а экзамен, то номер = 1.</p>
+<div class="otsf-incut note">Имя поля в СЭО 3КL может быть иным (задаётся настройками).</div>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="otsf-screenshot-description" style="margin-top: -20px;">Табл. 5. Описание полей для таблицы оценок «studentMark».</div>
+<p><strong>Описание сценария:</strong></p>
+<p>1) СЭО 3КL выгружает (по расписанию или по событию) во внешнюю БД значения оценок пользователей за курс и служебных полей, необходимых для корректной обработки на стороне СПРУТ этих оценок (Табл. 6). <abbr data-toggle="tooltip" data-placement="bottom" title="Процедура проверки существования идентификатора, однозначно определяющего субъект идентификации в информационной системе.">Идентификация</abbr> записей во внешней базе данных выполняется по составному ключу вида «Идентификатор пользователя (поле PIN) + Идентификатор курса» (idKurs):</p>
+<ul>
+<li>если составной ключ не найден - в базе данных создается новая запись;</li>
+<li>если запись уже есть в таблице - обновляются значения изменившихся полей.</li>
+</ul>
+<div class="otsf-incut note">СЭО 3KL выгружает в буферную базу данных данные по всем оценкам и курсам, которые есть в СЭО 3KL. АСУ «Спрут» отбирает из этого списка только те оценки, которые соответствуют внесенному в АСУ «Спрут» учебному плану.</div>
+<table class="table table-bordered"><colgroup width="40"></colgroup> <colgroup width="67"></colgroup> <colgroup width="101"></colgroup> <colgroup width="72"></colgroup> <colgroup width="133"></colgroup> <colgroup width="34"></colgroup> <colgroup width="50"></colgroup> <colgroup width="133"></colgroup> <colgroup width="55"></colgroup>
+<tbody>
+<tr>
+<td height="17">id</td>
+<td>subjCode</td>
+<td>markTypeCode</td>
+<td>markCode</td>
+<td>MarkDate</td>
+<td>PIN</td>
+<td>idKurs</td>
+<td>DateVig</td>
+<td>Lesson</td>
+</tr>
+<tr>
+<td height="17">4198</td>
+<td>8</td>
+<td>2</td>
+<td>6</td>
+<td>2023-07-05 00:00:00</td>
+<td>5</td>
+<td>81</td>
+<td>2023-07-05 00:00:00</td>
+<td>1</td>
+</tr>
+<tr>
+<td height="17">4313</td>
+<td>8</td>
+<td>2</td>
+<td>6</td>
+<td>2023-07-05 00:00:00</td>
+<td>123</td>
+<td>81</td>
+<td>2023-07-05 00:00:00</td>
+<td>1</td>
+</tr>
+<tr>
+<td height="17">4645</td>
+<td>8</td>
+<td>2</td>
+<td>6</td>
+<td>2023-07-05 00:00:00</td>
+<td>22</td>
+<td>81</td>
+<td>2023-07-05 00:00:00</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<div class="otsf-screenshot-description" style="margin-top: -20px;">Табл. 6. Пример таблицы оценок во внешней БД.</div>
+<p>2) АСУ «Спрут» с настроенной периодичностью загружает из буферной БД данные по оценкам.</p>
+<p>3) В случае, если оценка удаляется из СЭО 3КL, оценка удаляется и из буферной БД. Решение необходимости сохранения или удаления данной оценки из своей базы данных АСУ «Спрут» принимает самостоятельно.</p>
+<p><strong>Запрос на создание таблицы:</strong></p>
+<pre class="otsf-incut pre">CREATE TABLE [dbo].[studentMark] (<br />  [id] int NOT NULL IDENTITY PRIMARY KEY,<br />  [SubjCode] int NOT NULL,<br />  [MarkTypeCode] int NOT NULL,<br />  [MarkCode] nvarchar(100) NOT NULL,<br />  [MarkDate] datetime2 NULL,<br />  [PIN] int NOT NULL,<br />  [idKurs] int NOT NULL,<br />  [DateVig] datetime2 NULL,<br />  [Lesson] int NOT NULL<br />);<br />CREATE UNIQUE INDEX [studentMark_PIN_idKurs] ON [dbo].[studentMark] ([PIN], [idKurs]);</pre>
+<p><a href="#q0">-Вернуться к содержанию-</a></p>
+<h4><a id="q22"></a>2.2. Версия 2 спецификации интеграции с АСУ «Спрут» (планируемая)</h4>
+<div class="otsf-incut note">В данном разделе представлен проект планируемой доработки интеграции между СЭО 3КL и АСУ «Спрут».<br />Версия 2 исправляет основной недостаток версии 1 — необходимость заполнять дополнительные поля в каждом курсе. Для этого добавлены сценарии для передачи списка <a href="#q225">категорий курсов</a> и <a href="#q224">курсов</a> из СЭО 3KL в АСУ «Спрут». Благодаря этому появится возможность организовать выбор соответствия дисциплин и курсов прямо в пользовательском интерфейсе АСУ «Спрут». Когда в АСУ «Спрут» будет информация о соответствии курсов СЭО 3KL и дисциплин учебного плана, поля subjCodemark, TypeCode и Lesson в интеграционной таблице становятся избыточными и их не нужно будет вносить (и, впоследствии, заполнять) в дополнительные поля описания курса на стороне СЭО 3КL.<br />Помимо этого, версия 2 спецификации интеграции позволяет использовать функции «буквы» для более удобной и гибкой настройки приведения итоговых оценок за курс к шкалам «1-5» или «зачет/незачет»: предполагается автоматическая конвертация принятых обозначений «неуд/уд/хор/отл» или «зачет/незачет» на принятый в АСУ СПРУТ технический формат (числа от 1 до 7) с помощью функции автозамены*.<br />____________________________________<br />* — функция будет реализована в ближайших версиях СЭО 3KL.</div>
+<h5><a id="q221"></a>2.2.1. Сценарий «Передача пользовательских данных из АСУ «Спрут» в СЭО 3КL»</h5>
+<p>Соответствует аналогичному сценарию <a href="#q211">версии 1</a>.</p>
+<p><a href="#q0">-Вернуться к содержанию-</a></p>
+<h5><a id="q222"></a>2.2.2. Сценарий «Передача pdf-документов из АСУ «Спрут» в СЭО 3КL»</h5>
+<p>Соответствует аналогичному сценарию <a href="#q212">версии 1</a>.</p>
+<p><a href="#q0">-Вернуться к содержанию-</a></p>
+<h5><a id="q223"></a>2.2.3. Сценарий «Передача оценок из СЭО 3КL в АСУ «Спрут»</h5>
+<p><strong>Назначение сценария:</strong></p>
+<p>Выгрузка данных по оценкам (значения итоговых оценок за курс и служебных полей) из СЭО 3КL в базу данных АСУ «Спрут» с использованием буферной БД (<a href="#tb3">таблица оценок</a>).</p>
+<p><strong>Требования к БД:</strong></p>
+<p>Тип внешней БД — MS SQL. Кодировка внешней базы данных Cyrillic_General_100 или Cyrillic_General.</p>
+<p><strong>Условия запуска:</strong></p>
+<p>Выгрузка данных по оценкам из СЭО 3КL во внешнюю БД выполняется:</p>
+<ul>
+<li>по расписанию, раз в сутки, в процессе отработки регулярной задачи «Ежедневная обработка прецедентов» (выгрузка всех данных);</li>
+<li>по событию «Изменена история оценки» (создание или обновление записи в таблице).</li>
+</ul>
+<p>Выгрузка данных из внешней БД в АСУ СПРУТ выполняется по расписанию.</p>
+<p><strong><a id="tb3"></a>Транслируемые поля:</strong></p>
+<table class="table table-bordered" style="width: 1105.72px;">
+<tbody>
+<tr>
+<td style="width: 140px; text-align: center;"><strong>Название поля в таблице буферной БД</strong></td>
+<td style="width: 189px; text-align: center;"><strong>Тип</strong></td>
+<td style="width: 466px; text-align: center;"><strong>Допустимое значение</strong></td>
+<td style="width: 405px; text-align: center;"><strong>Пример</strong></td>
+<td style="width: 1639.72px; text-align: center;"><strong>Примечание</strong></td>
+</tr>
+<tr>
+<td style="width: 140px;">id</td>
+<td style="width: 189px;">int, автоинкрементное поле, primary key</td>
+<td style="width: 466px;"> </td>
+<td style="width: 405px;"> </td>
+<td style="width: 1639.72px;"> </td>
+</tr>
+<tr>
+<td style="width: 140px;">markCode</td>
+<td style="width: 189px;">float</td>
+<td style="width: 466px;">Число с плавающей запятой в диапазоне от 0 до 100.</td>
+<td style="width: 405px;">75, 75.25, 75.00025</td>
+<td style="width: 1639.72px;">Выгружается оценка в процентах от 0 до 100, на стороне СПРУТ интерпретируется в соответствии со справочником СПРУТ.<br />
+<div class="otsf-incut attention">Выгружаемое значение оценки зависит от настроек, выполненных в СЭО 3KL!</div>
+</td>
+</tr>
+<tr>
+<td style="width: 140px;">MarkDate</td>
+<td style="width: 189px;">datetime2 NULL</td>
+<td style="width: 466px;">Дата в формате YYYY-mm-dd H:i:s.</td>
+<td style="width: 405px;">2022-03-05 00:00:00</td>
+<td style="width: 1639.72px;">
+<p>Поле «Время получения оценки за курс» (finalgradetimestamp) в СЭО 3КL.</p>
+<p>Поле «Дата выставления оценки» в АСУ «Спрут».</p>
+</td>
+</tr>
+<tr>
+<td style="width: 140px;">PIN</td>
+<td style="width: 189px;">int</td>
+<td style="width: 466px;">Целое число, диапазон от -2 147 483 648 до 2 147 483 647</td>
+<td style="width: 405px;">54784</td>
+<td style="width: 1639.72px;">
+<p>Поле «Индивидуальный номер» (idnumber) в СЭО 3КL.</p>
+<p>Поле профиля пользователя СЭО 3КL, которое соответствует идентификатору пользователя в системе СПРУТ (какое поле профиля выгружается в СПРУТ в качестве идентификатора пользователя).</p>
+<div class="otsf-incut note">Уникальное поле.</div>
+</td>
+</tr>
+<tr>
+<td style="width: 140px;">idKurs</td>
+<td style="width: 189px;">int</td>
+<td style="width: 466px;">Целое число, диапазон от -2 147 483 648 до 2 147 483 647.</td>
+<td style="width: 405px;">10</td>
+<td style="width: 1639.72px;">Поле «Идентификатор курса» (courseid) в СЭО 3КL.</td>
+</tr>
+<tr>
+<td style="width: 140px;">DateVig</td>
+<td style="width: 189px;">datetime2 NULL</td>
+<td style="width: 466px;">Дата в формате YYYY-mm-dd H:i:s.</td>
+<td style="width: 405px;">2022-03-05 00:00:00</td>
+<td style="width: 1639.72px;">
+<p>Поле «Дата выгрузки из СЭО 3КL» в АСУ «Спрут».</p>
+<p>Метка времени, соответствующая моменту выгрузки данных. Генерируется на стороне СЭО 3КL непосредственно во время выгрузки оценки.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="otsf-screenshot-description" style="margin-top: -20px;">Табл. 7. Описание полей для таблицы оценок «studentMark».</div>
+<p><strong>Описание сценария:</strong></p>
+<p>1) СЭО 3КL выгружает (по расписанию или по событию) во внешнюю БД значения оценок пользователей за курс и служебных полей, необходимых для корректной обработки на стороне СПРУТ этих оценок (Табл. 6). Идентификация записей во внешней базе данных выполняется по составному ключу вида «Идентификатор пользователя (поле PIN) + Идентификатор курса» (idKurs):</p>
+<ul>
+<li>если составной ключ не найден - в базе данных создается новая запись;</li>
+<li>если запись уже есть в таблице - обновляются значения изменившихся полей.</li>
+</ul>
+<div class="otsf-incut note">СЭО 3KL выгружает в буферную базу данных данные по всем оценкам и курсам, которые есть в СЭО 3KL. АСУ «Спрут» отбирает из этого списка только те оценки, которые соответствуют внесеннуму в АСУ «Спрут» учебному плану.</div>
+<table class="table table-bordered" style="width: 779px;"><colgroup width="40"></colgroup> <colgroup width="67"></colgroup> <colgroup width="101"></colgroup> <colgroup width="72"></colgroup> <colgroup width="133"></colgroup>
+<tbody>
+<tr>
+<td style="width: 55px;" height="17">id</td>
+<td style="width: 74px;">markCode</td>
+<td style="width: 160px;">MarkDate</td>
+<td style="width: 110.1px;">PIN</td>
+<td style="width: 34.9px;">idKurs</td>
+<td style="width: 171px;">DateVig</td>
+</tr>
+<tr>
+<td style="width: 55px;" height="17">4198</td>
+<td style="width: 74px;">6</td>
+<td style="width: 160px;">2023-07-05 00:00:00</td>
+<td style="width: 110.1px;">5</td>
+<td style="width: 34.9px;">81</td>
+<td style="width: 171px;">2023-07-05 00:00:00</td>
+</tr>
+<tr>
+<td style="width: 55px;" height="17">4313</td>
+<td style="width: 74px;">6</td>
+<td style="width: 160px;">2023-07-05 00:00:00</td>
+<td style="width: 110.1px;">123</td>
+<td style="width: 34.9px;">81</td>
+<td style="width: 171px;">2023-07-05 00:00:00</td>
+</tr>
+<tr>
+<td style="width: 55px;" height="17">4645</td>
+<td style="width: 74px;">6</td>
+<td style="width: 160px;">2023-07-05 00:00:00</td>
+<td style="width: 110.1px;">22</td>
+<td style="width: 34.9px;">81</td>
+<td style="width: 171px;">2023-07-05 00:00:00</td>
+</tr>
+</tbody>
+</table>
+<div class="otsf-screenshot-description" style="margin-top: -20px;">Табл. 8. Пример таблицы оценок во внешней БД.</div>
+<p>2) АСУ «Спрут» с настроенной периодичностью загружает из буферной БД данные по оценкам.</p>
+<p>3) В случае, если оценка удаляется из СЭО 3КL, оценка удаляется и из буферной БД. Решение необходимости сохранения или удаления данной оценки из своей базы данных АСУ «Спрут» принимает самостоятельно.</p>
+<p><strong>Запрос на создание таблицы:</strong></p>
+<pre class="otsf-incut pre">CREATE TABLE [dbo].[studentMark] (<br />  [id] int NOT NULL IDENTITY PRIMARY KEY,<br />  [PIN] int NOT NULL,<br />  [idKurs] int NOT NULL,<br />  [MarkCode] nvarchar(100) NOT NULL,<br />  [MarkDate] datetime2 NULL,<br />  [DateVig] datetime2 NULL<br />);<br />CREATE UNIQUE INDEX [studentMark_PIN_idKurs] ON [dbo].[studentMark] ([PIN], [idKurs]);</pre>
+<p><a href="#q0">-Вернуться к содержанию-</a></p>
+<h5><a id="q224"></a>2.2.4. Сценарий «Передача данных по курсам из СЭО 3КL в АСУ «Спрут»</h5>
+<p><strong>Назначение сценария:</strong></p>
+<p>Выгрузка данных по курсам (идентификаторов курсов, названий и служебные полей) из СЭО 3КL в базу данных АСУ «Спрут» с использованием буферной БД (<a href="#tb4">таблица данных по курсам</a>).</p>
+<p><strong>Требования к БД:</strong></p>
+<p>Тип внешней БД — MS SQL. Кодировка внешней базы данных Cyrillic_General_100 или Cyrillic_General.</p>
+<p><strong>Условия запуска:</strong></p>
+<p>Выгрузка данных по курсам из СЭО 3КL во внешнюю БД выполняется по расписанию, раз в сутки, в процессе отработки регулярной задачи «Ежедневная обработка прецедентов» (выгрузка всех данных).</p>
+<p>Выгрузка данных из внешней БД в АСУ «Спрут» выполняется по расписанию.</p>
+<p><strong><a id="tb4"></a>Транслируемые поля:</strong></p>
+<table class="table table-bordered" style="width: 1064.73px;">
+<tbody>
+<tr>
+<td style="width: 140px; text-align: center;"><strong>Название поля в таблице буферной БД</strong></td>
+<td style="width: 246px; text-align: center;"><strong>Тип</strong></td>
+<td style="width: 413px; text-align: center;"><strong>Допустимое значение</strong></td>
+<td style="width: 414px; text-align: center;"><strong>Пример</strong></td>
+<td style="width: 749.733px; text-align: center;"><strong>Примечание</strong></td>
+</tr>
+<tr>
+<td style="width: 140px;">id</td>
+<td style="width: 246px;">int, PRIMARY KEY</td>
+<td style="width: 413px;"> </td>
+<td style="width: 414px;"> </td>
+<td style="width: 749.733px;">
+<p>Поле «Идентификатор курса СЭО 3KL» (id) в СЭО 3КL.</p>
+<div class="otsf-incut note">Ключ-идентификатор СЭО 3КL.</div>
+</td>
+</tr>
+<tr>
+<td style="width: 140px;">fullname</td>
+<td style="width: 246px;">nvarchar(508)</td>
+<td style="width: 413px;">Строка, максимальная длина 254 символа.</td>
+<td style="width: 414px;"> </td>
+<td style="width: 749.733px;">Поле «Полное название курса» (fullname) в СЭО 3КL.</td>
+</tr>
+<tr>
+<td style="width: 140px;">shortname</td>
+<td style="width: 246px;">nvarchar(510)</td>
+<td style="width: 413px;">Строка, максимальная длина 255 символов.</td>
+<td style="width: 414px;"> </td>
+<td style="width: 749.733px;">Поле «Краткое название курса» (shortname) в СЭО 3КL.</td>
+</tr>
+<tr>
+<td style="width: 140px;">idnumber</td>
+<td style="width: 246px;">nvarchar(200)</td>
+<td style="width: 413px;">Строка, максимальная длина 100 символов.</td>
+<td style="width: 414px;"> </td>
+<td style="width: 749.733px;">
+<p>Поле «Идентификационный номер курса» (idnumber) в СЭО 3КL.</p>
+<p>Используется для сопоставления курса СЭО 3KL с записями в системах, являющихся внешними для СЭО 3KL и предназначено для хранения уникального кода таких записей.</p>
+</td>
+</tr>
+<tr>
+<td style="width: 140px;">category</td>
+<td style="width: 246px;">int</td>
+<td style="width: 413px;"> </td>
+<td style="width: 414px;"> </td>
+<td style="width: 749.733px;">Поле «Идентификатор категории курса СЭО 3KL» (category) в СЭО 3КL.</td>
+</tr>
+<tr>
+<td style="width: 140px;">sync_session_status</td>
+<td style="width: 246px;">nvarchar(100)</td>
+<td style="width: 413px;">Строка, максимальная длина 50 символов.</td>
+<td style="width: 414px;">in_progress, completed</td>
+<td style="width: 749.733px;">Статус последней сессии синхронизации. Генерируется непосредственно во время выгрузки данных.</td>
+</tr>
+<tr>
+<td style="width: 140px;">sync_session_start_ts</td>
+<td style="width: 246px;">int</td>
+<td style="width: 413px;">Метка времени в формате timestamp.</td>
+<td style="width: 414px;"> </td>
+<td style="width: 749.733px;">Дата начала сессии последней синхронизации. Генерируется непосредственно во время выгрузки данных.</td>
+</tr>
+<tr>
+<td style="width: 140px;">sync_item_finish_ts</td>
+<td style="width: 246px;">int</td>
+<td style="width: 413px;">Метка времени в формате timestamp.</td>
+<td style="width: 414px;"> </td>
+<td style="width: 749.733px;">Дата завершения последней синхронизации объекта. Генерируется непосредственно во время выгрузки данных.</td>
+</tr>
+<tr>
+<td style="width: 140px;">sync_item_status</td>
+<td style="width: 246px;">nvarchar(100)</td>
+<td style="width: 413px;">Строка, максимальная длина 50 символов.</td>
+<td style="width: 414px;">actual, outdated</td>
+<td style="width: 749.733px;">Статус записи. Генерируется непосредственно во время выгрузки данных.</td>
+</tr>
+</tbody>
+</table>
+<div class="otsf-screenshot-description" style="margin-top: -20px;">Табл. 9. Описание полей для таблицы данных курсов «3kl_courses».</div>
+<p><strong>Описание сценария:</strong></p>
+<p>1) СЭО 3КL выгружает во внешнюю БД данные по курсам. Идентификация записей во внешней базе данных выполняется по ключу «Идентификатор курса СЭО 3KL» (id).</p>
+<ul>
+<li>если ключ не найден - в базе данных создается новая запись;</li>
+<li>если запись уже есть в таблице - обновляются значения изменившихся полей.</li>
+</ul>
+<p>2) АСУ «Спрут» с настроенной периодичностью загружает из буферной БД данные по курсам.</p>
+<p><strong>Запрос на создание таблицы:</strong></p>
+<pre class="otsf-incut pre">CREATE TABLE [dbo].[3kl_courses] (<br />  [id] int NOT NULL PRIMARY KEY,<br />  [fullname] nvarchar(254) NOT NULL,<br />  [shortname] nvarchar(255) NOT NULL,<br />  [idnumber] nvarchar(100) NOT NULL,<br />  [category] int NOT NULL,<br />  [sync_session_status] nvarchar(50) NOT NULL,<br />  [sync_session_start_ts] int NOT NULL,<br />  [sync_item_finish_ts] int NOT NULL,<br />  [sync_item_status] nvarchar(50) NOT NULL<br />);<br />CREATE UNIQUE INDEX [3kl_courses_shortname] ON [dbo].[3kl_courses] ([shortname]);</pre>
+<p><a href="#q0">-Вернуться к содержанию-</a></p>
+<h5><a id="q225"></a>2.2.5. Сценарий «Передача данных по категориям курсов из СЭО 3КL в АСУ «Спрут»</h5>
+<p><strong>Назначение сценария:</strong></p>
+<p>Выгрузка данных по категориям курсов (идентификаторов категорий курсов, их названий и служебные полей) из СЭО 3КL в базу данных АСУ СПРУТ с использованием буферной БД (<a href="#tb5">таблица данных по категориям курсов</a>).</p>
+<p><strong>Требования к БД:</strong></p>
+<p>Тип внешней БД — MS SQL. Кодировка внешней базы данных Cyrillic_General_100 или Cyrillic_General.</p>
+<p><strong>Условия запуска:</strong></p>
+<p>Выгрузка данных по категориям курсам из СЭО 3КL во внешнюю БД выполняется по расписанию, раз в сутки, в процессе отработки регулярной задачи «Ежедневная обработка прецедентов» (выгрузка всех данных).</p>
+<p>Выгрузка данных из внешней БД в АСУ СПРУТ выполняется по расписанию.</p>
+<p><strong><a id="tb5"></a>Транслируемые поля:</strong></p>
+<table class="table table-bordered" style="width: 981px;">
+<tbody>
+<tr>
+<td style="width: 140px; text-align: center;"><strong>Название поля в таблице буферной БД</strong></td>
+<td style="width: 268.117px; text-align: center;"><strong>Тип</strong></td>
+<td style="width: 392.883px; text-align: center;"><strong>Допустимое значение</strong></td>
+<td style="width: 414px; text-align: center;"><strong>Пример</strong></td>
+<td style="width: 691px; text-align: center;"><strong>Примечание</strong></td>
+</tr>
+<tr>
+<td style="width: 140px;">id</td>
+<td style="width: 268.117px;">int, PRIMARY KEY</td>
+<td style="width: 392.883px;">Целое число, диапазон от -2 147 483 648 до 2 147 483 647</td>
+<td style="width: 414px;">3</td>
+<td style="width: 691px;">
+<p>Поле «Идентификатор категории курсов СЭО 3KL» (id) в СЭО 3КL.</p>
+<div class="otsf-incut note">Ключ-идентификатор СЭО 3КL.</div>
+</td>
+</tr>
+<tr>
+<td style="width: 140px;">name</td>
+<td style="width: 268.117px;">nvarchar(510)</td>
+<td style="width: 392.883px;">Строка, максимальная длина 255 символа.</td>
+<td style="width: 414px;">Информационные системы и технологии</td>
+<td style="width: 691px;">Поле «Название категории» (name) в СЭО 3КL.</td>
+</tr>
+<tr>
+<td style="width: 140px;">idnumber</td>
+<td style="width: 268.117px;">nvarchar(200)</td>
+<td style="width: 392.883px;">Строка, максимальная длина 100 символов.</td>
+<td style="width: 414px;">34</td>
+<td style="width: 691px;">
+<p>Поле «Идентификационный номер категории» (idnumber) в СЭО 3КL.</p>
+<p>Используется для сопоставления категории курса СЭО 3KL с записями в системах, являющихся внешними для СЭО 3KL и предназначено для хранения уникального кода таких записей.</p>
+</td>
+</tr>
+<tr>
+<td style="width: 140px;">path</td>
+<td style="width: 268.117px;">nvarchar(510)</td>
+<td style="width: 392.883px;"> строка, максимальная длина 255 символов</td>
+<td style="width: 414px;">/5/6</td>
+<td style="width: 691px;">
+<p>Поле «Идентификатор категории курса СЭО 3KL» (path) в СЭО 3КL.</p>
+<p>путь до категории в дереве категорий вида /parentid/categoryid</p>
+</td>
+</tr>
+<tr>
+<td style="width: 140px;">sync_session_status</td>
+<td style="width: 268.117px;">nvarchar(100)</td>
+<td style="width: 392.883px;">Строка, максимальная длина 50 символов.</td>
+<td style="width: 414px;">in_progress, completed</td>
+<td style="width: 691px;">Статус последней сессии синхронизации. Генерируется непосредственно во время выгрузки данных.</td>
+</tr>
+<tr>
+<td style="width: 140px;">sync_session_start_ts</td>
+<td style="width: 268.117px;">int</td>
+<td style="width: 392.883px;">Метка времени в формате timestamp.</td>
+<td style="width: 414px;"> </td>
+<td style="width: 691px;">Дата начала сессии последней синхронизации. Генерируется непосредственно во время выгрузки данных.</td>
+</tr>
+<tr>
+<td style="width: 140px;">sync_item_finish_ts</td>
+<td style="width: 268.117px;">int</td>
+<td style="width: 392.883px;">Метка времени в формате timestamp.</td>
+<td style="width: 414px;"> </td>
+<td style="width: 691px;">Дата завершения последней синхронизации объекта. Генерируется непосредственно во время выгрузки данных.</td>
+</tr>
+<tr>
+<td style="width: 140px;">sync_item_status</td>
+<td style="width: 268.117px;">nvarchar(100)</td>
+<td style="width: 392.883px;">Строка, максимальная длина 50 символов.</td>
+<td style="width: 414px;">actual, outdated</td>
+<td style="width: 691px;">Статус записи. Генерируется непосредственно во время выгрузки данных.</td>
+</tr>
+</tbody>
+</table>
+<div class="otsf-screenshot-description" style="margin-top: -20px;">Табл. 10. Описание полей для таблицы данных по категориям курсов «3kl_course_categories».</div>
+<p><strong>Описание сценария:</strong></p>
+<p>1) СЭО 3КL выгружает во внешнюю БД данные по категориям курсов. Идентификация записей во внешней базе данных выполняется по ключу «Идентификатор категории курса СЭО 3KL» (id).</p>
+<ul>
+<li>если ключ не найден - в базе данных создается новая запись;</li>
+<li>если запись уже есть в таблице - обновляются значения изменившихся полей.</li>
+</ul>
+<p>2) АСУ «Спрут» с настроенной периодичностью загружает из буферной БД данные по категориям курсам.</p>
+<p><strong>Запрос на создание таблицы:</strong></p>
+<pre class="otsf-incut pre">CRE ATE TABLE [dbo].[3kl_course_categories] (<br /> [id] int NOT NULL,<br /> [name] nvarchar(255) NOT NULL,<br /> [idnumber] nvarchar(100) NULL,<br /> [path] nvarchar(255) NOT NULL,<br /> [sync_session_status] nvarchar(50) NOT NULL,<br /> [sync_session_start_ts] int NOT NULL,<br /> [sync_item_finish_ts] int NOT NULL,<br /> [sync_item_status] nvarchar(50) NOT NULL<br />);<br />ALT ER TABLE [dbo].[3kl_course_categories] ADD PRIMARY KEY ([id]);</pre>
+<p><a href="#q0">-Вернуться к содержанию-</a></p>
+<h3><a id="q3"></a>3. Настройка интеграции СЭО 3КL с АСУ «Спрут» (версия 1)<span class="otsf-admin-required">требуются права администратора</span></h3>
+<div class="otsf-incut attention">Действия в данной инструкции с пометкой <span class="otsf-admin-required">требуются права администратора</span> могут быть выполнены только при наличии доступа «Полный Администратор». Начиная с 2022 года для вновь заключаемых договоров такой набор прав предоставляется роли «<abbr data-toggle="tooltip" data-placement="bottom" title="Представитель Заказчика, взаимодействующий с технической поддержкой Исполнителя.">Диспетчер-администратор</abbr>» по умолчанию. Если ваш договор был заключен раньше, вы можете обратиться в техподдержку с соответствующей заявкой на расширение набора прав диспетчера-администратора.<br /><strong>Важно! </strong>Неосторожные действия полного администратора могут повредить систему и <abbr data-toggle="tooltip" data-placement="bottom" title="Не следует путать с контекстом. Содержимое, которым наполнен сайт, это может быть информация любых видов – текст, мультимедиа и пр. Контент можно понимать в узком смысле (наполнение курса, учебные материалы) и в широком смысле (любая информация, загруженная в СЭО 3KL и не являющаяся программным кодом).">контент</abbr> таким образом, что исправление последствий вмешательства выйдет за рамки гарантийной технической поддержки. Для безопасного изменения глобальных настроек мы рекомендуем выбрать набор требуемых опций по данной инструкции и обратиться в техническую поддержку с заявкой на конфигурирование системы.<br />Подробная информация в статье <a href="https://kb.opentechnology.ru/index.php?solution_id=1010">«Полный административный доступ»</a>.</div>
+<div class="otsf-incut note">Обратите внимание: из каждого курса может быть выгружена только <strong>одна оценка</strong>. Если итоговая оценка изменилась, то будет выгружена последняя оценка с последней датой простановки.</div>
+<div class="otsf-incut note">Подразумевается, что на момент настройки интеграции, буферная база данных и все необходимые таблицы уже созданы и соответствуют требованиям <a href="#q2">спецификации</a>.</div>
+<p>Реквизиты, необходимые для настройки интеграции (на стороне СЭО 3КL):</p>
+<p><em><strong>Подключение к внешней БД</strong></em></p>
+<ul>
+<li>Адрес сервера БД</li>
+<li>Название БД</li>
+<li>Имя пользователя БД</li>
+<li>Пароль к БД</li>
+<li>Название таблицы данных пользователей</li>
+<li>Название таблицы оценок</li>
+</ul>
+<div class="otsf-incut note">Таблицы данных пользователей и оценок могут быть расположены в разных базах данных. В этом случае, потребуются реквизиты обеих БД.</div>
+<p><em><strong>Подключение к файловому хранилищу</strong></em></p>
+<ul>
+<li>Адрес файлового хранилища СПРУТ</li>
+<li>Имя пользователя для подключения к файловому хранилищу СПРУТ</li>
+<li>Пароль к файловому хранилищу СПРУТ</li>
+</ul>
+<h4><a id="q31"></a>3.1. Настройка сценария «Передача пользовательских данных из АСУ «Спрут» в СЭО 3КL»</h4>
+<div class="otsf-incut note">Сценарий предусматривает хранение пароля пользователя на стороне СЭО 3КL. Для отработки сценария необходимо, чтобы в СЭО 3КL были включены и корректно настроены:<br />   • <abbr data-toggle="tooltip" data-placement="bottom" title="Программный модуль, расширяющий возможности системы.">плагин</abbr> аутентификации<a href="https://kb.opentechnology.ru/index.php?solution_id=1018"> «Внешняя база данных»</a> (auth_db);<br />   • <a href="https://kb.opentechnology.ru/index.php?solution_id=1543#Cron"><abbr data-toggle="tooltip" data-placement="bottom" title="Системная утилита в UNIX-подобных операционных системах, работающая в фоновом режиме и предназначенная для автоматического запуска программ и скриптов (заданий) на сервере с заданной периодичностью в определенное время. Последовательность заданий и расписание их запуска содержится в crontab-файлах, а редактирование осуществляется с помощью команды crontab, а также программ и элементов графического интерфейса управления.">планировщик cron</abbr></a>;<br />   • задача «Задача синхронизации пользователей» (\auth_db\task\sync_users) Планировщика задач включена и настроена на регулярное выполнение.</div>
+<p>1) На странице настроек плагина аутентификации «Внешняя база данных» (Администрирование-&gt;Плагины-&gt;<abbr data-toggle="tooltip" data-placement="bottom" title="Процедура проверки аутентификационных данных (логин и пароль), введенных пользователем при входе в учетную запись, через проверку этих данных на соответствие логинам и паролям, сохраненным в пользовательской базе. Существуют также способы аутентификации без использования логина и пароля, например, OAuth 2.0. В общем случае аутентификация предшествует авторизации, но в СЭО 3KL оба термина считаются синонимами, так как авторизация происходит автоматически вместе с аутентификацией. Статья «Способы регистрации и аутентификации пользователей».">Аутентификация</abbr>-&gt;Внешняя база данных) установить следующие параметры (Рис. 3.1.1.):</p>
+<p>Сервер баз данных = <em>Адрес сервера БД</em><br />База данных = mssqlnative<br />Кавычки как в Sybase = Нет<br />Название базы данных = <em>Название БД</em><br />Пользователь базы данных = <em>Имя пользователя БД</em><br />Пароль = <em>Пароль к БД</em><br />Таблица = <em>Название таблицы данных пользователей</em><br />Поле логина = student_login<br />Формат пароля = Внутренний<br />Кодировка внешней базы данных = utf-8<br />При удалении пользователя во внешнем источнике = Сохранить внутреннюю учетную запись<br />Обновить пользователей = Нет</p>
+<p><img class="otsf-screenshot" src="https://kb.opentechnology.ru/index.php?action=attachment&amp;id=6327" alt="" width="1721" height="2703" /></p>
+<div class="otsf-screenshot-description">Рис. 3.1.1. Страница настроек плагина аутентификации «Внешняя база данных».</div>
+<p>2) В разделе «Сопоставление данных» на странице настроек плагина аутентификации «Внешняя база данных» установить следующие соответствия полей (Табл. 11):</p>
+<table class="table table-bordered" style="width: 640px;">
+<tbody>
+<tr>
+<td style="width: 1132.18px; text-align: center;"><strong>Поле</strong></td>
+<td style="width: 326.817px; text-align: center;"><strong>Значение</strong></td>
+</tr>
+<tr>
+<td style="width: 1132.18px;">Сопоставление данных (Имя)</td>
+<td style="width: 326.817px;">student_firstname</td>
+</tr>
+<tr>
+<td style="width: 1132.18px;">Обновление локальной учетной записи (Имя)</td>
+<td style="width: 326.817px;">При каждом входе</td>
+</tr>
+<tr>
+<td style="width: 1132.18px;">Обновление внешней учетной записи (Имя)</td>
+<td style="width: 326.817px;">Никогда</td>
+</tr>
+<tr>
+<td style="width: 1132.18px;">Блокировка значения (Имя)</td>
+<td style="width: 326.817px;">Заблокировано</td>
+</tr>
+<tr>
+<td style="width: 1132.18px;">Сопоставление данных (Фамилия)</td>
+<td style="width: 326.817px;">student_lastname</td>
+</tr>
+<tr>
+<td style="width: 1132.18px;">Обновление локальной учетной записи (Фамилия)</td>
+<td style="width: 326.817px;">При каждом входе</td>
+</tr>
+<tr>
+<td style="width: 1132.18px;">Обновление внешней учетной записи (Фамилия)</td>
+<td style="width: 326.817px;">Никогда</td>
+</tr>
+<tr>
+<td style="width: 1132.18px;">Блокировка значения (Фамилия)</td>
+<td style="width: 326.817px;">Заблокировано</td>
+</tr>
+<tr>
+<td style="width: 1132.18px;">Сопоставление данных (Адрес электронной почты)</td>
+<td style="width: 326.817px;">student_email</td>
+</tr>
+<tr>
+<td style="width: 1132.18px;">Обновление локальной учетной записи (Адрес электронной почты)</td>
+<td style="width: 326.817px;">При каждом входе</td>
+</tr>
+<tr>
+<td style="width: 1132.18px;">Обновление внешней учетной записи (Адрес электронной почты)</td>
+<td style="width: 326.817px;">Никогда</td>
+</tr>
+<tr>
+<td style="width: 1132.18px;">Блокировка значения (Адрес электронной почты)</td>
+<td style="width: 326.817px;">Заблокировано</td>
+</tr>
+<tr>
+<td style="width: 1132.18px;">Сопоставление данных (Индивидуальный номер)</td>
+<td style="width: 326.817px;">pin</td>
+</tr>
+<tr>
+<td style="width: 1132.18px;">Обновление локальной учетной записи (Индивидуальный номер)</td>
+<td style="width: 326.817px;">При каждом входе</td>
+</tr>
+<tr>
+<td style="width: 1132.18px;">Обновление внешней учетной записи (Индивидуальный номер)</td>
+<td style="width: 326.817px;">Никогда</td>
+</tr>
+<tr>
+<td style="width: 1132.18px;">Блокировка значения (Индивидуальный номер)</td>
+<td style="width: 326.817px;">Заблокировано</td>
+</tr>
+<tr>
+<td style="width: 1132.18px;">Сопоставление данных (Мобильный телефон)</td>
+<td style="width: 326.817px;">student_phonecell</td>
+</tr>
+<tr>
+<td style="width: 1132.18px;">Обновление локальной учетной записи (Мобильный телефон)</td>
+<td style="width: 326.817px;">При каждом входе</td>
+</tr>
+<tr>
+<td style="width: 1132.18px;">Обновление внешней учетной записи (Мобильный телефон)</td>
+<td style="width: 326.817px;">Никогда</td>
+</tr>
+<tr>
+<td style="width: 1132.18px;">Блокировка значения (Мобильный телефон)</td>
+<td style="width: 326.817px;">Заблокировано</td>
+</tr>
+<tr>
+<td style="width: 1132.18px;">Сопоставление данных (Отчество или второе имя)</td>
+<td style="width: 326.817px;">student_middlename</td>
+</tr>
+<tr>
+<td style="width: 1132.18px;">Обновление локальной учетной записи (Отчество или второе имя)</td>
+<td style="width: 326.817px;">При каждом входе</td>
+</tr>
+<tr>
+<td style="width: 1132.18px;">Обновление внешней учетной записи (Отчество или второе имя)</td>
+<td style="width: 326.817px;">Никогда</td>
+</tr>
+<tr>
+<td style="width: 1132.18px;">Блокировка значения (Отчество или второе имя)</td>
+<td style="width: 326.817px;">Заблокировано</td>
+</tr>
+<tr>
+<td style="width: 1132.18px;">Сопоставление данных (Группа)</td>
+<td style="width: 326.817px;">student_numgroup</td>
+</tr>
+<tr>
+<td style="width: 1132.18px;">Обновление локальной учетной записи (Группа)</td>
+<td style="width: 326.817px;">При каждом входе</td>
+</tr>
+<tr>
+<td style="width: 1132.18px;">Обновление внешней учетной записи (Группа)</td>
+<td style="width: 326.817px;">Никогда</td>
+</tr>
+<tr>
+<td style="width: 1132.18px;">Блокировка значения (Группа)</td>
+<td style="width: 326.817px;">Заблокировано</td>
+</tr>
+<tr>
+<td style="width: 1132.18px;">Сопоставление данных (Форма обучения)</td>
+<td style="width: 326.817px;">student_formob</td>
+</tr>
+<tr>
+<td style="width: 1132.18px;">Обновление локальной учетной записи (Форма обучения)</td>
+<td style="width: 326.817px;">При каждом входе</td>
+</tr>
+<tr>
+<td style="width: 1132.18px;">Обновление внешней учетной записи (Форма обучения)</td>
+<td style="width: 326.817px;">Никогда</td>
+</tr>
+<tr>
+<td style="width: 1132.18px;">Блокировка значения (Форма обучения)</td>
+<td style="width: 326.817px;">Заблокировано</td>
+</tr>
+<tr>
+<td style="width: 1132.18px;">Сопоставление данных (Финансовая задолженность (руб.))</td>
+<td style="width: 326.817px;">dolg</td>
+</tr>
+<tr>
+<td style="width: 1132.18px;">Обновление локальной учетной записи (Финансовая задолженность (руб.))</td>
+<td style="width: 326.817px;">При каждом входе</td>
+</tr>
+<tr>
+<td style="width: 1132.18px;">Обновление внешней учетной записи (Финансовая задолженность (руб.))</td>
+<td style="width: 326.817px;">Никогда</td>
+</tr>
+<tr>
+<td style="width: 1132.18px;">Блокировка значения (Финансовая задолженность (руб.))</td>
+<td style="width: 326.817px;">Заблокировано</td>
+</tr>
+<tr>
+<td style="width: 1132.18px;">Сопоставление данных (Академическая задолженность (дисц.))</td>
+<td style="width: 326.817px;">ak_dolg</td>
+</tr>
+<tr>
+<td style="width: 1132.18px;">Обновление локальной учетной записи (Академическая задолженность (дисц.))</td>
+<td style="width: 326.817px;">При каждом входе</td>
+</tr>
+<tr>
+<td style="width: 1132.18px;">Обновление внешней учетной записи (Академическая задолженность (дисц.))</td>
+<td style="width: 326.817px;">Никогда</td>
+</tr>
+<tr>
+<td style="width: 1132.18px;">Блокировка значения (Академическая задолженность (дисц.))</td>
+<td style="width: 326.817px;">Заблокировано</td>
+</tr>
+<tr>
+<td style="width: 1132.18px;">Сопоставление данных (ФИО)</td>
+<td style="width: 326.817px;">student_fullname</td>
+</tr>
+<tr>
+<td style="width: 1132.18px;">Обновление локальной учетной записи (ФИО)</td>
+<td style="width: 326.817px;">При каждом входе</td>
+</tr>
+<tr>
+<td style="width: 1132.18px;">Обновление внешней учетной записи (ФИО)</td>
+<td style="width: 326.817px;">Никогда</td>
+</tr>
+<tr>
+<td style="width: 1132.18px;">Блокировка значения (ФИО)</td>
+<td style="width: 326.817px;">Заблокировано</td>
+</tr>
+<tr>
+<td style="width: 1132.18px;">Сопоставление данных (Дата рождения)</td>
+<td style="width: 326.817px;">student_dateofbirth</td>
+</tr>
+<tr>
+<td style="width: 1132.18px;">Обновление локальной учетной записи (Дата рождения)</td>
+<td style="width: 326.817px;">При каждом входе</td>
+</tr>
+<tr>
+<td style="width: 1132.18px;">Обновление внешней учетной записи (Дата рождения)</td>
+<td style="width: 326.817px;">Никогда</td>
+</tr>
+<tr>
+<td style="width: 1132.18px;">Блокировка значения (Дата рождения)</td>
+<td style="width: 326.817px;">Заблокировано</td>
+</tr>
+<tr>
+<td style="width: 1132.18px;">Сопоставление данных (Пол)</td>
+<td style="width: 326.817px;">student_gender</td>
+</tr>
+<tr>
+<td style="width: 1132.18px;">Обновление локальной учетной записи (Пол)</td>
+<td style="width: 326.817px;">При каждом входе</td>
+</tr>
+<tr>
+<td style="width: 1132.18px;">Обновление внешней учетной записи (Пол)</td>
+<td style="width: 326.817px;">Никогда</td>
+</tr>
+<tr>
+<td style="width: 1132.18px;">Блокировка значения (Пол)</td>
+<td style="width: 326.817px;">Заблокировано</td>
+</tr>
+<tr>
+<td style="width: 1132.18px;">Сопоставление данных (Направление)</td>
+<td style="width: 326.817px;">student_direc</td>
+</tr>
+<tr>
+<td style="width: 1132.18px;">Обновление локальной учетной записи (Направление)</td>
+<td style="width: 326.817px;">При каждом входе</td>
+</tr>
+<tr>
+<td style="width: 1132.18px;">Обновление внешней учетной записи (Направление)</td>
+<td style="width: 326.817px;">Никогда</td>
+</tr>
+<tr>
+<td style="width: 1132.18px;">Блокировка значения (Направление)</td>
+<td style="width: 326.817px;">Заблокировано</td>
+</tr>
+<tr>
+<td style="width: 1132.18px;">Сопоставление данных (Профиль)</td>
+<td style="width: 326.817px;">student_prof</td>
+</tr>
+<tr>
+<td style="width: 1132.18px;">Обновление локальной учетной записи (Профиль)</td>
+<td style="width: 326.817px;">При каждом входе</td>
+</tr>
+<tr>
+<td style="width: 1132.18px;">Обновление внешней учетной записи (Профиль)</td>
+<td style="width: 326.817px;">Никогда</td>
+</tr>
+<tr>
+<td style="width: 1132.18px;">Блокировка значения (Профиль)</td>
+<td style="width: 326.817px;">Заблокировано</td>
+</tr>
+<tr>
+<td style="width: 1132.18px;">Сопоставление данных (Семестр)</td>
+<td style="width: 326.817px;">semestr</td>
+</tr>
+<tr>
+<td style="width: 1132.18px;">Обновление локальной учетной записи (Семестр)</td>
+<td style="width: 326.817px;">При каждом входе</td>
+</tr>
+<tr>
+<td style="width: 1132.18px;">Обновление внешней учетной записи (Семестр)</td>
+<td style="width: 326.817px;">Никогда</td>
+</tr>
+<tr>
+<td style="width: 1132.18px;">Блокировка значения (Семестр)</td>
+<td style="width: 326.817px;">Заблокировано</td>
+</tr>
+<tr>
+<td style="width: 1132.18px;">Сопоставление данных (Статус)</td>
+<td style="width: 326.817px;">status</td>
+</tr>
+<tr>
+<td style="width: 1132.18px;">Обновление локальной учетной записи (Статус)</td>
+<td style="width: 326.817px;">При каждом входе</td>
+</tr>
+<tr>
+<td style="width: 1132.18px;">Обновление внешней учетной записи (Статус)</td>
+<td style="width: 326.817px;">Никогда</td>
+</tr>
+<tr>
+<td style="width: 1132.18px;">Блокировка значения (Статус)</td>
+<td style="width: 326.817px;">Заблокировано</td>
+</tr>
+<tr>
+<td style="width: 1132.18px;">Сопоставление данных (№ договора)</td>
+<td style="width: 326.817px;">student_contract_num</td>
+</tr>
+<tr>
+<td style="width: 1132.18px;">Обновление локальной учетной записи (№ договора)</td>
+<td style="width: 326.817px;">При каждом входе</td>
+</tr>
+<tr>
+<td style="width: 1132.18px;">Обновление внешней учетной записи (№ договора)</td>
+<td style="width: 326.817px;">Никогда</td>
+</tr>
+<tr>
+<td style="width: 1132.18px;">Блокировка значения (№ договора)</td>
+<td style="width: 326.817px;">Заблокировано</td>
+</tr>
+<tr>
+<td style="width: 1132.18px;">Сопоставление данных ( Дата заключения договора)</td>
+<td style="width: 326.817px;">student_contract_date</td>
+</tr>
+<tr>
+<td style="width: 1132.18px;">Обновление локальной учетной записи ( Дата заключения договора)</td>
+<td style="width: 326.817px;">При каждом входе</td>
+</tr>
+<tr>
+<td style="width: 1132.18px;">Обновление внешней учетной записи ( Дата заключения договора)</td>
+<td style="width: 326.817px;">Никогда</td>
+</tr>
+<tr>
+<td style="width: 1132.18px;">Блокировка значения ( Дата заключения договора)</td>
+<td style="width: 326.817px;">Заблокировано</td>
+</tr>
+<tr>
+<td style="width: 1132.18px;">Сопоставление данных (№ зачетной книжки)</td>
+<td style="width: 326.817px;">student_numbook</td>
+</tr>
+<tr>
+<td style="width: 1132.18px;">Обновление локальной учетной записи (№ зачетной книжки)</td>
+<td style="width: 326.817px;">При каждом входе</td>
+</tr>
+<tr>
+<td style="width: 1132.18px;">Обновление внешней учетной записи (№ зачетной книжки)</td>
+<td style="width: 326.817px;">Никогда</td>
+</tr>
+<tr>
+<td style="width: 1132.18px;">Блокировка значения (№ зачетной книжки)</td>
+<td style="width: 326.817px;">Заблокировано</td>
+</tr>
+</tbody>
+</table>
+<div class="otsf-screenshot-description" style="margin-top: -20px;">Табл. 11. Поля и значения для настройки выгрузки оценок в СПРУТ.</div>
+<p>Для остальных полей раздела оставить настройки по умолчанию.</p>
+<p>3) Убедиться, что в Планировщике задач (Администрирование-&gt;Сервер-&gt;Задачи-&gt;Планировщик задач) включено и настроено ежедневное выполнение задачи «Задача синхронизации пользователей» (\auth_db\task\sync_users) (Рис. 3.1.2, Рис. 3.1.3).</p>
+<p><img class="otsf-screenshot" src="https://kb.opentechnology.ru/index.php?action=attachment&amp;id=6328" alt="" width="1707" height="458" /></p>
+<div class="otsf-screenshot-description">Рис. 3.1.2. Задача синхронизации пользователей по внешней базе данных в Планировщике задач.</div>
+<p><img class="otsf-screenshot" src="https://kb.opentechnology.ru/index.php?action=attachment&amp;id=6329" alt="" width="1059" height="665" /></p>
+<div class="otsf-screenshot-description">Рис. 3.1.3. Пример настройки регулярной задачи «Задача синхронизации пользователей». Запуск задачи запланирован ежедневно, в 02:13.</div>
+<div class="otsf-incut note">Задача по выгрузке данных пользователей из внешней БД в СЭО 3КL будет выполняться, если в системе включен и корректно настроен <a href="https://kb.opentechnology.ru/index.php?solution_id=1543#Cron">планировщик cron</a>.</div>
+<div class="otsf-incut note">Дополнительная информация о плагине аутентификации «Внешняя база данных» в статье <a href="https://kb.opentechnology.ru/index.php?solution_id=1018">«Аутентификация «Внешняя база данных». Синхронизация пользователей с внешней БД»</a>.</div>
+<p><a href="#q0">-Вернуться к содержанию-</a></p>
+<h4><a id="q32"></a>3.2. Настройка сценария «Передача pdf-документов из «Спрут» в СЭО 3КL»</h4>
+<div class="otsf-incut note">Для отработки сценария необходимо, чтобы в СЭО 3КL был включен и корректно настроен плагин блока <a href="https://kb.opentechnology.ru/index.php?solution_id=1308">«Внешние данные»</a> (otexternaldata), а сам <abbr data-toggle="tooltip" data-placement="bottom" title="1. Модуль. Модуль, обеспечивающий отображение вспомогательных виджетов на страницах курса и других страницах. Статья «Блоки в СЭО 3KL».&#13;&#10;2. Экземпляр модуля. Вспомогательный виджет, как правило в виде прямоугольной области, на странице системы, служащий для отображения вспомогательной информации и дополнительных действий при пользовании страницы. Например, Личный кабинет пользователя формируется из блоков. Чаще всего блоки размещаются во вспомогательных областях, например, в выдвижной панели блоков. Статья «Блоки в СЭО 3KL».">блок</abbr> размещен в личном кабинете пользователя.</div>
+<p>1) На странице «Настройки по умолчанию для страницы «Личный кабинет» (Администрирование-&gt;Внешний вид-&gt;Настройки по умолчанию для страницы «Личный кабинет») добавить блок «Внешние данные» (Рис. 3.2.1).</p>
+<p><img class="otsf-screenshot" src="https://kb.opentechnology.ru/index.php?action=attachment&amp;id=6324" alt="" width="1229" height="884" /></p>
+<div class="otsf-screenshot-description">Рис. 3.2.1. Добавление блока «Внешние данные».</div>
+<p>2) На добавленном блоке нажать кнопку «Управление контентом». На открывшейся странице настроек в поле «Тип контента» выбрать «Файлы по протоколу WebDAV»и нажать «Применить».</p>
+<p>3) В открывшемся разделе «Конфигурация» заполнить поля настроек (Рис. 3.2.2):</p>
+<p>Базовый url сервера = <a href="https://webdav.yandex.ru">https://webdav.yandex.ru</a><br />Имя пользователя для подключения = <em>Имя пользователя для подключения к файловому хранилищу СПРУТ</em><br />Пароль для подключения = <em>Пароль к файловому хранилищу СПРУТ</em><br />Путь до директории, содержимое которой требуется отобразить = /sprut/{user.idnumber}/Ход и результаты обучения<br />Mustache-шаблон :</p>
+<div class="otsf-incut example">{{#has_items}}<br />{{#items}}<br /> <br />
+<div><br /> <a href="{{fileurl}}" target="_blank" rel="noopener">{{basename}}</a></div>
+<br /><br />{{/items}}<br />{{/has_items}}<br /><br />{{^has_items}}<br />
+<div>В вашей директории файлов не найдено</div>
+<br />{{/has_items}}</div>
+<p><img class="otsf-screenshot" src="https://kb.opentechnology.ru/index.php?action=attachment&amp;id=6325" alt="" width="1378" height="959" /></p>
+<div class="otsf-screenshot-description">Рис. 3.2.2. Страница настроек блока «Внешние данные» для типа контента «Файлы по протоколу WebDAV».</div>
+<p>4) Повторить действия 1)-2) и создать еще один блок «Внешние данные».</p>
+<p>5) В открывшемся разделе «Конфигурация» заполнить поля настроек:</p>
+<p>Базовый url сервера = <a href="https://webdav.yandex.ru">https://webdav.yandex.ru</a><br />Имя пользователя для подключения = <em>Имя пользователя для подключения к файловому хранилищу СПРУТ</em><br />Пароль для подключения = <em>Пароль к файловому хранилищу СПРУТ</em><br />Путь до директории, содержимое которой требуется отобразить = /sprut/{user.idnumber}/Оплата обучения/<br />Mustache-шаблон :</p>
+<div class="nolink">{{#has_items}}<br />{{#items}}<br />
+<div><a href="{{fileurl}}" target="_blank" rel="noopener">{{filename}}</a></div>
+<br />{{/items}}<br />{{/has_items}}<br />{{^has_items}}<br />
+<div>В вашей директории файлов не найдено</div>
+<br />{{/has_items}}</div>
+<p>6) После сохранения настроек, добавленные блоки будут доступны в личном кабинете для всех пользователей СЭО 3КL (Рис. 3.2.3).</p>
+<p><img class="otsf-screenshot" src="https://kb.opentechnology.ru/index.php?action=attachment&amp;id=6326" alt="" width="1693" height="633" /></p>
+<div class="otsf-screenshot-description">Рис. 3.2.3. Пример отображения настроенных для интеграции с АСУ СПРУТ блоков «Внешние данные» в выдвижной панели блоков личного кабинета пользователя.</div>
+<p><a href="#q0">-Вернуться к содержанию-</a></p>
+<h4><a id="q33"></a>3.3. Настройка сценария «Передача оценок из СЭО 3КL в АСУ «Спрут»</h4>
+<div class="otsf-incut note">Для отработки сценария необходимо, чтобы в СЭО 3КL были: :<br />   • включены и корректно настроены <a href="https://kb.opentechnology.ru/index.php?solution_id=1543#Cron">планировщик cron</a> и плагины «История обучения» (local_learninghistory), <a href="https://kb.opentechnology.ru/index.php?solution_id=1271">«Панель обработки прецедентов»</a> (local_pprocessing), <a href="https://kb.opentechnology.ru/index.php?solution_id=1314">«Настраиваемые поля для объектов»</a> (local_mcov);<br />   • созданы необходимые настраиваемые поля курсов и заполнены в соответствии со справочником СПРУТ;<br />   • задача «Ежедневная обработка прецедентов» (\local_pprocessing\task\daily) включена в Планировщике задач и настроена на регулярное исполнение.</div>
+<p>Настройка сценария состоит из следующих этапов:</p>
+<ul>
+<li>создание настраиваемых полей;</li>
+<li>настройка подключения к буферной БД;</li>
+<li>настройка Панели обработки прецедентов для выгрузки оценок;</li>
+<li>включение выгрузки оценок по расписанию.</li>
+</ul>
+<p><a href="#q0">-Вернуться к содержанию-</a></p>
+<h5><a id="q331"></a>3.3.1. Создание настраиваемых полей</h5>
+<div class="otsf-incut note">Для корректной обработки на стороне СПРУТ оценок, транслируемых из СЭО 3КL, в СЭО 3КL должны быть созданы и корректно заполнены (согласно справочника АСУ «Спрут») настраиваемые поля курса coursecontroltype, lesson и subjcode.</div>
+<p>1) В поле «Курсы. Конфигурация настраиваемых полей» (Администрирование-&gt;Плагины-&gt;Локальные плагины-&gt;Настраиваемые поля-&gt;) необходимо вставить нижеприведенный yaml-код (Рис. 3.3.1.а):</p>
+<pre style="text-align: left;">class:
+   coursecontroltype:
+      type: text
+      label: Тип испытания
+   lesson:
+      type: text
+      label: Номер (номер семестра)
+   subjcode:
+      type: text
+      label: Код дисциплины
+   submit:
+      type: submit
+      label: Сохранить</pre>
+<p style="text-align: left;"><img class="otsf-screenshot" src="https://kb.opentechnology.ru/index.php?action=attachment&amp;id=6276" alt="" width="1803" height="1150" /></p>
+<div class="otsf-screenshot-description" style="text-align: left;">Рис. 3.3.1.а. Поле «Курсы. Конфигурация настраиваемых полей» на странице настроек плагина «Настраиваемые поля для объектов».</div>
+<div class="otsf-incut note" style="text-align: left;">Если при сохранении настроек возникает ошибка, то проверьте величину отступа в коде: количество пробелов должно быть равно 3</div>
+<div class="otsf-incut note" style="text-align: left;">Подробнее о синтаксисе YAML <a href="https://kb.opentechnology.ru/index.php?solution_id=1245#qq11">здесь</a><strong>.</strong></div>
+<p style="text-align: left;">2) Перейти в курс и убедиться, что на странице «Курс «<em>Название курса</em>». Редактирование настраиваемых полей» (Управление курсом-&gt;«Курс «<em>Название курса</em>». Редактирование настраиваемых полей») появились добавленные поля (Рис. 3.3.1.б, Рис. 3.3.1.в).</p>
+<p style="text-align: left;"><img class="otsf-screenshot" src="https://kb.opentechnology.ru/index.php?action=attachment&amp;id=6279" width="1910" height="895" /></p>
+<div class="otsf-screenshot-description" style="text-align: left;">Рис. 3.3.1.б. Переход к странице «Курс «Космонавтика (space)». Редактирование настраиваемых полей».</div>
+<p style="text-align: left;"><img class="otsf-screenshot" src="https://kb.opentechnology.ru/index.php?action=attachment&amp;id=6278" alt="" width="783" height="346" /></p>
+<div class="otsf-screenshot-description" style="text-align: left;">Рис. 3.3..1.в. Добавленные настраиваемые поля в курсе.</div>
+<div class="otsf-incut note" style="text-align: left;">Дополнительная информация о настраиваемых полях в статье <a href="https://kb.opentechnology.ru/index.php?solution_id=1314">«Локальный плагин «Настраиваемые поля для объектов»</a>.</div>
+<p style="text-align: left;"><a href="#q0">-Вернуться к содержанию-</a></p>
+<h5><a id="q332"></a>3.3.2. Настройка подключения к буферной БД</h5>
+<p>1) Перейти на страницу «Управление подключениями к внешним БД» (Администрирование-&gt;Управление подключениями к внешним БД) и создать новое подключение, используя <a href="#q3">реквизиты подключения к внешней БД</a> (Рис.3.3.2.а).</p>
+<p><img class="otsf-screenshot" src="https://kb.opentechnology.ru/index.php?action=attachment&amp;id=6290" width="1811" height="977" /></p>
+<div class="otsf-screenshot-description">Рис. 3.3.2.а. Пример создания нового подключения к внешней базе данных.</div>
+<p>2) Нажав на ссылку «Проверить подключение», появившуюся в интерфейсе сохраненного подключения, протестировать корректность заданных настроек (Рис. 3.3.2.б).</p>
+<p><img class="otsf-screenshot" src="https://kb.opentechnology.ru/index.php?action=attachment&amp;id=6291" width="690" height="567" /></p>
+<div class="otsf-screenshot-description">Рис. 3.3.2.б. Проверка созданного подключения.</div>
+<p>В случае, если подключение было настроено правильно, отобразится соответствующее сообщение об этом (Рис. 3.3.2.в).</p>
+<p><img class="otsf-screenshot" src="https://kb.opentechnology.ru/index.php?action=attachment&amp;id=6283" alt="" width="392" height="172" /></p>
+<div class="otsf-screenshot-description">Рис. 3.3.2.в. Пример сообщения об успешной проверке.</div>
+<div class="otsf-incut note">Если проверка завершилась ошибкой, уточните корректность самих реквизитов и правильность ввода их в форму при создании подключения.</div>
+<div class="otsf-incut note">Дополнительная информация о настройке подключений к внешним базам данных и таблицам в них в статье <a href="https://kb.opentechnology.ru/index.php?solution_id=1489">«Единый интерфейс подключения к внешним БД»</a>.</div>
+<p style="text-align: left;"><a href="#q0">-Вернуться к содержанию-</a></p>
+<h5><a id="q333"></a>3.3.3. Настройка Панели обработки прецедентов для выгрузки оценок</h5>
+<p>1) В разделе настроек «Выгрузка оценок во внешнюю базу данных» Панели обработки прецедентов (Администрирование-&gt;Плагины-&gt;Локальные плагины-&gt;Панель обработки прецедентов) определить следующие параметры (Рис. 3.3.3.а):</p>
+<p>Опция «Включить экспорт оценок во внешнюю базу данных» - установлена <br />Соединение с базой данных = <a href="#q332"><em>ваше настроенное подключение</em></a><br />Имя таблицы = <em>название таблицы данных пользователей</em><br />Какие оценки выгружать? = За курсы<br />Формат оценки для экспорта = Значение<br />Формат времени выставления оценки = YYYY-MM-DD<br />Формат времени выгрузки оценок = YYYY-MM-DD.</p>
+<p><img class="otsf-screenshot" src="https://kb.opentechnology.ru/index.php?action=attachment&amp;id=6292" width="1632" height="596" /></p>
+<div class="otsf-screenshot-description">Рис. 3.3.3.а. Пример настроек раздела «Выгрузка оценок во внешнюю базу данных» Панели обработки прецедентов.</div>
+<p>2) После сохранения настроек, установленных на первом шаге, в разделе «Выгрузка оценок во внешнюю базу данных» становятся доступны поля для идентификации и сопоставления данных. Необходимо установить следующие соответствия (Табл. 12):</p>
+<table class="table table-bordered" style="width: 981px;">
+<tbody>
+<tr>
+<td style="width: 1464.93px; text-align: center;"><strong>Поле</strong></td>
+<td style="width: 340.067px; text-align: center;"><strong>Значение</strong></td>
+<td style="width: 971px; text-align: center;"><strong>Примечание</strong></td>
+</tr>
+<tr>
+<td style="width: 1464.93px;">Какие оценки выгружать?</td>
+<td style="width: 340.067px;">За курсы</td>
+<td style="width: 971px;"> </td>
+</tr>
+<tr>
+<td style="width: 1464.93px;">За какие модули выгружать оценки?</td>
+<td style="width: 340.067px;">За все модули</td>
+<td style="width: 971px;"> </td>
+</tr>
+<tr>
+<td style="width: 1464.93px;">Идентификатор пользователя</td>
+<td style="width: 340.067px;"><em>Ваше поле профиля пользователя в СЭО 3КL, соответствующее идентификатору пользователя в системе СПРУТ </em></td>
+<td style="width: 971px;"> </td>
+</tr>
+<tr>
+<td style="width: 1464.93px;">Поле идентификатора пользователя</td>
+<td style="width: 340.067px;">PIN</td>
+<td style="width: 971px;"> </td>
+</tr>
+<tr>
+<td style="width: 1464.93px;">Идентификатор элемента курса</td>
+<td style="width: 340.067px;">Не связывать поле</td>
+<td style="width: 971px;"> </td>
+</tr>
+<tr>
+<td style="width: 1464.93px;">Поле идентификатора элемента курса</td>
+<td style="width: 340.067px;">SubjCode</td>
+<td style="width: 971px;"> </td>
+</tr>
+<tr>
+<td style="width: 1464.93px;">Идентификатор курса</td>
+<td style="width: 340.067px;">Идентификатор курса</td>
+<td style="width: 971px;"> </td>
+</tr>
+<tr>
+<td style="width: 1464.93px;">Поле идентификатора курса</td>
+<td style="width: 340.067px;">idKurs</td>
+<td style="width: 971px;"> </td>
+</tr>
+<tr>
+<td style="width: 1464.93px;">Сопоставление данных (Идентификатор курса)</td>
+<td style="width: 340.067px;">idKurs</td>
+<td style="width: 971px;"> </td>
+</tr>
+<tr>
+<td style="width: 1464.93px;">Сопоставление данных (Оценка за курс)</td>
+<td style="width: 340.067px;">MarkCode</td>
+<td style="width: 971px;"> </td>
+</tr>
+<tr>
+<td style="width: 1464.93px;">Сопоставление данных (Время получения оценки за курс)</td>
+<td style="width: 340.067px;">MarkDate</td>
+<td style="width: 971px;"> </td>
+</tr>
+<tr>
+<td style="width: 1464.93px;">Сопоставление данных (Идентификатор элемента курса)</td>
+<td style="width: 340.067px;">Не выгружать</td>
+<td style="width: 971px;"> </td>
+</tr>
+<tr>
+<td style="width: 1464.93px;">Сопоставление данных (<em>поле профиля пользователя СЭО 3КL, которое соотвествует идентификатору пользователя в вашей АСУ «Спрут»</em>)</td>
+<td style="width: 340.067px;">PIN</td>
+<td style="width: 971px;"> </td>
+</tr>
+<tr>
+<td style="width: 1464.93px;">Сопоставление данных (Время экспорта оценки)</td>
+<td style="width: 340.067px;">DateVig</td>
+<td style="width: 971px;"> </td>
+</tr>
+<tr>
+<td style="width: 1464.93px;">Сопоставление данных (Код дисциплины)</td>
+<td style="width: 340.067px;">SubjCode</td>
+<td style="width: 971px;"> </td>
+</tr>
+<tr>
+<td style="width: 1464.93px;">Сопоставление данных (Тип испытания)</td>
+<td style="width: 340.067px;">MarkTypeCode</td>
+<td style="width: 971px;"> </td>
+</tr>
+<tr>
+<td style="width: 1464.93px;">Сопоставление данных (Номер (номер семестра))</td>
+<td style="width: 340.067px;">Lesson</td>
+<td style="width: 971px;"> </td>
+</tr>
+</tbody>
+</table>
+<div class="otsf-screenshot-description" style="margin-top: -20px;">Табл. 12. Поля и значения для настройки выгрузки оценок в СПРУТ.</div>
+<p>Для остальных полей использовать значение «Не выгружать» или установленное по умолчанию ( Рис. 3.3.3.б).</p>
+<p><img class="otsf-screenshot" src="https://kb.opentechnology.ru/index.php?action=attachment&amp;id=6296" alt="" width="1708" height="2801" /></p>
+<div class="otsf-screenshot-description">Рис. 3.3.3.б. Пример настроек выгрузки оценок за курс. Поле профиля пользователя в СЭО 3КL, соответствующее идентификатору пользователя в системе СПРУТ = Индивидуальный номер.</div>
+<div class="otsf-incut note">Подробнее о сценариях, реализуемых при помощи плагина «Панель обработки прецедентов» в статье <a href="https://kb.opentechnology.ru/index.php?solution_id=1271">«Панель обработки прецедентов. Локальный плагин»</a>.</div>
+<p style="text-align: left;"><a href="#q0">-Вернуться к содержанию-</a></p>
+<h5><a id="q334"></a>3.3.4. Включение выгрузки оценок по расписанию</h5>
+<p>В разделе настроек «Выгрузка существующих оценок во внешнюю базу данных по расписанию» Панели обработки прецедентов (Администрирование-&gt;Плагины-&gt;Локальные плагины-&gt;Панель обработки прецедентов) установить опцию «Включить выгрузку существующих оценок по расписанию» (Рис. 3.3.4.а).</p>
+<p><img class="otsf-screenshot" src="https://kb.opentechnology.ru/index.php?action=attachment&amp;id=6297" alt="" width="1703" height="194" /></p>
+<div class="otsf-screenshot-description">Рис. 3.3.4.а. Раздел настроек «Выгрузка существующих оценок во внешнюю базу данных по расписанию» Панели обработки прецедентов.</div>
+<p>Выгрузка оценок в СПРУТ будет выполняться по задаче «Ежедневная обработка прецедентов» (\local_pprocessing\task\daily\local_pprocessing\task\daily) планировщика задач (Администрирование-&gt;Сервер-&gt;Задачи-&gt;Планировщик задач) (Рис. 3.3.4.б).</p>
+<p><img class="otsf-screenshot" src="https://kb.opentechnology.ru/index.php?action=attachment&amp;id=6298" alt="" width="1681" height="991" /></p>
+<div class="otsf-screenshot-description">Рис. 3.3.4.б. Задача «Ежедневная обработка прецедентов» в Планировщике задач.</div>
+<p>Перейти к настройкам и изменить время выполнения задачи можно нажав на иконку <img class="" src="https://kb.opentechnology.ru/index.php?action=attachment&amp;id=6300" alt="" width="19" height="22" /> в строке таблицы Планировщика задач (Рис. 3.3.4.в).</p>
+<p><img class="otsf-screenshot" src="https://kb.opentechnology.ru/index.php?action=attachment&amp;id=6299" alt="" width="1225" height="833" /></p>
+<div class="otsf-screenshot-description">Рис. 3.3.4.в. Страница настроек задачи «Ежедневная обработка прецедентов».</div>
+<div class="otsf-incut note">Задача по выгрузке оценок в СПРУТ будет выполняться, если в системе включен и корректно настроен <a href="https://kb.opentechnology.ru/index.php?solution_id=1543#Cron">планировщик cron</a>.</div>
+<p> </p>
+<p>+в таблицу оценок для в2 добавить еще два поля: оценка в формате оценка (здесь: в данной версии синхронизация не используется, поле добавлено на перспективу), оценка в формате шкала ( здесь: такие-то рекомендованные значения).</p>
+<p>+сценарий с подписками, чтобы можно было управлять подписками на курсы СЭО 3КL через плагин «Подписка по внешней БД»</p>
+<p> </p>
+<p><a href="#q0">-Вернуться к содержанию-</a></p>
+<h3><a id="q4"></a>4. Настройка интеграции СЭО 3КL с АСУ «Спрут» (версия 2)<span class="otsf-admin-required">требуются права администратора</span></h3>
+<div class="otsf-incut attention">Важно! Действия в данной инструкции с меткой <span class="admneed otsf-admin-required">требуются права администратора</span> можно выполнить только при наличии доступа «Полный Администратор». По умолчанию мы предоставляем доступ «Диспетчер-Администратор». Для изменения глобальных конфигураций мы рекомендуем выбрать набор требуемых опций по данной инструкции и обратиться в техническую поддержку с заявкой на конфигурирование системы. Подробнее в статье «<strong><a href="https://kb.opentechnology.ru/index.php?solution_id=1010">Полный административный доступ</a></strong>».</div>
+<div class="otsf-incut note">Обратите внимание: из каждого курса может быть выгружена только <strong>одна оценка</strong>. Если итоговая оценка изменилась, то будет выгружена последняя оценка с последней датой простановки.</div>
+<div class="otsf-incut note">Подразумевается, что на момент настройки интеграции, буферная база данных и все необходимые таблицы в ней уже созданы и соответствуют требованиям <a href="#q2">спецификации</a>.</div>
+<p>Реквизиты, необходимые для настройки интеграции (на стороне СЭО 3КL):</p>
+<p><em><strong>Подключение к внешней БД</strong></em></p>
+<ul>
+<li>Адрес сервера БД</li>
+<li>Название БД</li>
+<li>Имя пользователя БД</li>
+<li>Пароль к БД</li>
+<li>Название таблицы данных пользователей</li>
+<li>Название таблицы оценок</li>
+</ul>
+<div class="otsf-incut note">Таблицы данных пользователей и оценок могут быть расположены в разных базах данных. В этом случае, потребуются реквизиты обеих БД.</div>
+<p><em><strong>Подключение к файловому хранилищу</strong></em></p>
+<ul>
+<li>Адрес файлового хранилища СПРУТ</li>
+<li>Имя пользователя для подключения к файловому хранилищу СПРУТ</li>
+<li>Пароль к файловому хранилищу СПРУТ</li>
+</ul>
+<h4><a id="q41"></a>4.1. Настройка сценария «Передача пользовательских данных из АСУ «Спрут» в СЭО 3КL»</h4>
+<p><a href="#q0">-Вернуться к содержанию-</a></p>
+<h4><a id="q42"></a>4.2. Настройка сценария «Передача pdf-документов из «Спрут» в СЭО 3КL»</h4>
+<div class="otsf-incut note">Для отработки сценария необходимо, чтобы в СЭО 3КL был включен и корректно настроен плагин блока <a href="https://kb.opentechnology.ru/index.php?solution_id=1308">«Внешние данные»</a>(otexternaldata), а сам блок размещен в личном кабинете пользователя.</div>
+<p><a href="#q0">-Вернуться к содержанию-</a></p>
+<h4><a id="q43"></a>4.3. Настройка сценария «Передача оценок из СЭО 3КL в АСУ «Спрут»</h4>
+<div class="otsf-incut note">Для отработки сценария необходимо, чтобы в СЭО 3КL были: :<br />   • включены и корректно настроены <a href="https://kb.opentechnology.ru/index.php?solution_id=1543#Cron">планировщик cron</a> и плагины «История обучения» (local_learninghistory), <a href="https://kb.opentechnology.ru/index.php?solution_id=1271">«Панель обработки прецедентов»</a> (local_pprocessing), <a href="https://kb.opentechnology.ru/index.php?solution_id=1314">«Настраиваемые поля для объектов»</a> (local_mcov);<br />   • созданы необходимые настраиваемые поля курсов и заполнены в соответствии со справочником СПРУТ;<br />   • задача «Ежедневная обработка прецедентов» (\local_pprocessing\task\daily) включена в Планировщике задач и настроена на регулярное исполнение.</div>
+<p>Настройка сценария состоит из следующих этапов:</p>
+<ul>
+<li>создание настраиваемых полей;</li>
+<li>настройка подключения к буферной БД;</li>
+<li>настройка Панели обработки прецедентов для выгрузки оценок;</li>
+<li>настройка Панели обработки прецедентов для выгрузки данных по курсам;</li>
+<li>настройка Панели обработки прецедентов для выгрузки данных по категориям курсов;</li>
+<li>включение выгрузки оценок по расписанию.</li>
+</ul>
+<p><a href="#q0">-Вернуться к содержанию-</a></p>
+<h5><a id="q431"></a>4.3.1. Создание настраиваемых полей</h5>
+<div class="otsf-incut note" style="text-align: left;">Дополнительная информация о настраиваемых полях в статье <a href="https://kb.opentechnology.ru/index.php?solution_id=1314">«Локальный плагин «Настраиваемые поля для объектов»</a>.</div>
+<p style="text-align: left;"><a href="#q0">-Вернуться к содержанию-</a></p>
+<h5><a id="q432"></a>4.3.2. Настройка подключения к буферной БД</h5>
+<div class="otsf-incut note">Если проверка завершилась ошибкой, уточните корректность самих реквизитов и правильность ввода их в форму при создании подключения.</div>
+<div class="otsf-incut note">Дополнительная информация о настройке подключений к внешним базам данных и таблицам в них в статье <a href="https://kb.opentechnology.ru/index.php?solution_id=1489">«Единый интерфейс подключения к внешним БД»</a>.</div>
+<p style="text-align: left;"><a href="#q0">-Вернуться к содержанию-</a></p>
+<h5><a id="q433"></a>4.3.3. Настройка Панели обработки прецедентов для выгрузки оценок</h5>
+<div class="otsf-incut note">Подробнее о сценариях, реализуемых при помощи плагина «Панель обработки прецедентов» в статье <a href="https://kb.opentechnology.ru/index.php?solution_id=1271">«Панель обработки прецедентов. Локальный плагин»</a>.</div>
+<p style="text-align: left;"><a href="#q0">-Вернуться к содержанию-</a></p>
+<h5><a id="q434"></a>4.3.4. Настройка Панели обработки прецедентов для выгрузки данных по курсам</h5>
+<div class="otsf-incut note">Подробнее о сценариях, реализуемых при помощи плагина «Панель обработки прецедентов» в статье <a href="https://kb.opentechnology.ru/index.php?solution_id=1271">«Панель обработки прецедентов. Локальный плагин»</a>.</div>
+<p style="text-align: left;"><a href="#q0">-Вернуться к содержанию-</a></p>
+<h5><a id="q435"></a>4.3.5. Настройка Панели обработки прецедентов для выгрузки данных по категориям курсов</h5>
+<div class="otsf-incut note">Подробнее о сценариях, реализуемых при помощи плагина «Панель обработки прецедентов» в статье <a href="https://kb.opentechnology.ru/index.php?solution_id=1271">«Панель обработки прецедентов. Локальный плагин»</a>.</div>
+<p style="text-align: left;"><a href="#q0">-Вернуться к содержанию-</a></p>
+<h5><a id="q436"></a>4.3.6. Включение выгрузки оценок по расписанию</h5>
+<div class="otsf-incut note">Задача по выгрузке оценок в СПРУТ будет выполняться, если в системе включен и корректно настроен <a href="https://kb.opentechnology.ru/index.php?solution_id=1543#Cron">планировщик cron</a>.</div>
+<p><a href="#q0">-Вернуться к содержанию-</a></p>
+<h3><a id="q5"></a>5. Примеры и решения</h3>
+<p><a href="#q0">-Вернуться к содержанию-</a></p>
+                    
+                    Теги: <a title="интеграция" href="/tags/2/integracia.html">интеграция</a>
+                    
+                    
+                    
+                    <aside id="faqAccordion" class="accordion related-faqs hidden-print">
+                        <div class="accordion-group">
+                            <div class="accordion-heading">
+                                <a class="accordion-toggle" href="#collapseRelatedFaqs" data-parent="#faqAccordion" data-toggle="collapse">
+                                    Связанные статьи
+                                </a>
+                            </div>
+                            <div id="collapseRelatedFaqs" class="accordion-body collapse">
+                                <div class="accordion-inner"><ul><li><a title="Что такое интеграция? Какие существуют интеграции и возможности обмена данными в СЭО 3KL? (заглавная статья)" href="/content/5/7/ru/cto-takoe-integracia-kakie-susestvuut-integracii-i-vozmoznosti-obmena-dannymi-v-seo-3kl-zaglavnaa-statʹa.html">Что такое интеграция? Какие существуют интеграции и возможности обмена данными в СЭО 3KL? (заглавная статья)</a></li><li><a title="Интеграция со сторонними сервисами" href="/content/27/33/ru/integracia-so-storonnimi-servisami.html">Интеграция со сторонними сервисами</a></li><li><a title=" Плагин  «Антиплагиат.ру». Проверка работ слушателей на заимствования с помощью сервиса «Антиплагиат»" href="/content/5/35/ru/plagin-«antiplagiatru»-proverka-rabot-slusatelej-na-zaimstvovania-s-pomosʹu-servisa-«antiplagiat».html"> Плагин  «Антиплагиат.ру». Проверка работ слушателей на заимствования с помощью сервиса «Антиплагиат»</a></li><li><a title="Получение данных портфолио через внешние службы" href="/content/97/653/ru/polucenie-dannyh-portfolio-cerez-vnesnie-sluzby.html">Получение данных портфолио через внешние службы</a></li><li><a title="Каков порядок установки и системные требования среды электронного обучения 3KL (Русский Moodle) на сервер клиента?" href="/content/29/117/ru/kakov-poradok-ustanovki-i-sistemnye-trebovania-sredy-elektronnogo-obucenia-3kl-russkij-moodle-na-server-klienta.html">Каков порядок установки и системные требования среды электронного обучения 3KL (Русский Moodle) на сервер клиента?</a></li></ul></div>
+                            </div>
+                        </div>
+                    </aside>
+                    
+                    
+                    <aside id="faqAccordion" class="accordion related-categories hidden-print">
+                        <div class="accordion-group">
+                            <div class="accordion-heading">
+                                <a class="accordion-toggle" href="#collapseRelatedCategories" data-parent="#faqAccordion" data-toggle="collapse">
+                                    Категории для этой статьи
+                                </a>
+                            </div>
+                            <div id="collapseRelatedCategories" class="accordion-body collapse">
+                                <div class="accordion-inner"><ul class="breadcrumb-related-categories"></ul><ul class="breadcrumb-related-categories"></ul><ul class="breadcrumb-related-categories"></ul><ul class="breadcrumb-related-categories"></ul><ul class="breadcrumb-related-categories"></ul><ul class="breadcrumb-related-categories"></ul><ul class="breadcrumb-related-categories"></ul><ul class="breadcrumb-related-categories"></ul><ul class="breadcrumb-related-categories"></ul><ul class="breadcrumb-related-categories"></ul><ul class="breadcrumb-related-categories"></ul></div>
+                            </div>
+                        </div>
+                    </aside>
+                    
+                </div>
+            </article>
+            <ul id="tab" class="nav nav-tabs hidden-print">
+                <li class="active"><a href="#votingForm" data-toggle="tab">Пожалуйста оцените этот ответ:</a></li>
+                
+                
+            </ul>
+            <div class="tab-content pmf-faq-info">
+                <div class="tab-pane active hidden-print" id="votingForm">
+                    <form action="#" method="post" class="form-inline">
+                        <input type="hidden" name="artikel" value="638">
+                        <div id="votings"></div>
+                        <div class="pmf-stars">
+                            <div class="pmf-star-rating" data-rating="Рейтинг ответа:">
+                                <span data-stars="5">☆</span>
+                                <span data-stars="4">☆</span>
+                                <span data-stars="3">☆</span>
+                                <span data-stars="2">☆</span>
+                                <span data-stars="1">☆</span>
+                            </div>
+                        </div>
+                        <div class="pull-right">
+                            <strong>Рейтинг ответа:</strong><span id="rating"> <span data-rating="0">0</span> (0 оценок)</span>
+                        </div>
+                    </form>
+                </div>
+                <div class="tab-pane hidden-print" id="switchAvailableLanguage">
+                    
+                </div>
+                <div class="tab-pane hidden-print" id="addTranslation">
+                    <form action="/index.php?action=translate&amp;cat=41&amp;id=638&amp;srclang=ru" method="post" class="form-inline" accept-charset="utf-8">
+                        <select class="form-control" name="translation" id="translation" size="1">
+	<option value="ar">Arabic</option>
+	<option value="eu">Basque</option>
+	<option value="bn">Bengali</option>
+	<option value="bs">Bosnian</option>
+	<option value="pt-br">Brazilian Portuguese</option>
+	<option value="zh">Chinese (Simplified)</option>
+	<option value="tw">Chinese (Traditional)</option>
+	<option value="cs">Czech</option>
+	<option value="da">Danish</option>
+	<option value="nl">Dutch</option>
+	<option value="en">English</option>
+	<option value="fi">Finnish</option>
+	<option value="fr">French</option>
+	<option value="fr-ca">French (Canada)</option>
+	<option value="de">German</option>
+	<option value="el">Greek</option>
+	<option value="he">Hebrew</option>
+	<option value="hi">Hindi</option>
+	<option value="hu">Hungarian</option>
+	<option value="id">Indonesian</option>
+	<option value="it">Italian</option>
+	<option value="ja">Japanese</option>
+	<option value="ko">Korean</option>
+	<option value="lv">Latvian</option>
+	<option value="lt">Lithuanian</option>
+	<option value="ms">Malay</option>
+	<option value="nb">Norwegian Bokm&aring;l</option>
+	<option value="fa">Persian</option>
+	<option value="pl">Polish</option>
+	<option value="pt">Portuguese</option>
+	<option value="ro">Romanian</option>
+	<option value="sr">Serbian</option>
+	<option value="sk">Slovak</option>
+	<option value="sl">Slovenian</option>
+	<option value="es">Spanish</option>
+	<option value="sv">Swedish</option>
+	<option value="th">Thai</option>
+	<option value="tr">Turkish</option>
+	<option value="uk">Ukrainian</option>
+	<option value="vi">Vietnamese</option>
+	<option value="cy">Welsh</option>
+</select>
+                        <button class="btn btn-primary" type="submit" name="submit">
+                            Старт перевода...
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <p class="hidden-print">Комментарии запрещены</p>
+            <aside class="pmf-create-comment hide" id="pmf-create-comment">
+                <hr>
+                <div id="loader"></div>
+                <h2><i aria-hidden="true" class="fa fa-heart"></i> Комментировать этот ответ</h2>
+                <form id="formValues" action="#" method="post" class="form-horizontal" accept-charset="utf-8">
+                    <input type="hidden" name="id" id="id" value="638">
+                    <input type="hidden" name="lang" id="lang" value="ru">
+                    <input type="hidden" name="type" id="type" value="faq">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <input type="text" name="user" id="user" class="form-control input-lg" required
+                                   placeholder="Ваше имя:" value="">
+                        </div>
+                        
+                        
+                        <div class="col-md-6">
+                            <input type="email" name="mail" id="mail" class="form-control input-lg" required
+                                   placeholder="Адрес Email"  value="">
+                        </div>
+	                    
+	                    
+                    </div>
+                    <textarea rows="10" name="comment_text" id="comment_text" class="form-control input-lg"
+                              placeholder="Ваши комментарии:"></textarea>
+                    <div class="form-group"><label class="col-sm-3 control-label">Пожалуйста введите символы изображённые но картинке</label>    <div class="col-sm-4">        <p class="form-control-static"><img id="captchaImage" src="/index.php?action=writecomment&amp;gen=img&amp;ck=1774514835" height="40" width="165" alt="Chuck Norris has counted to infinity. Twice." title="click to refresh">        </p>    </div>    <div class="col-sm-5">        <div class="input-group"><input type="text" class="form-control" name="captcha" id="captcha" size="6" autocomplete="off" required>            <span class="input-group-btn"><a class="btn btn-primary" id="captcha-button" data-action="writecomment"><i aria-hidden="true" class="fa fa-refresh"></i></a>            </span>        </div>    </div></div>
+                    
+                    <div class="pmf-buttons clearfix">
+                        <button class="btn btn-primary" id="submitcomment" type="submit">
+                            Отправить
+                        </button>
+                    </div>
+                </form>
+            </aside>
+            <aside class="pmf-comments" id="comments">
+                <hr>
+                
+            </aside>
+        </section>
+        <script src="assets/js/libs/highlight.pack.js"></script>
+        <style>
+        body {
+            position: relative;
+        }
+        </style>
+        <link rel="stylesheet" href="assets/js/libs/default.css">
+        <script>
+            $(document).ready(function() {
+                $(function() {
+                    $('div.pmf-stars > div.pmf-star-rating > span').on('click', function(e) {
+                        var numStars = $(e.target).data('stars');
+                        saveVoting('faq', 638, numStars, 'ru');
+                    });
+                });
+                $('pre code').each(function(i, block) {
+                    hljs.highlightBlock(block);
+                });
+                $('button.pmf-popover').popover();
+            });
+        </script>
+            </div>
+            <aside class="col-lg-3 pmf-aside">
+                        
+        <section class="pmf-aside-widget">
+            <div class="pmf-aside-widget-body pmf-social-links">
+                <a target="_blank" href="/pdf.php?cat=41&id=638&artlang=ru" rel="nofollow" title="Скомпилировать PDF файл">
+                    <span class="fa-stack fa-lg">
+                        <i aria-hidden="true" class="fa fa-square-o fa-stack-2x"></i>
+                        <i aria-hidden="true" class="fa fa-file-pdf-o fa-stack-1x"></i>
+                    </span>
+                </a>
+                <a href="javascript:window.print();" rel="nofollow" title="Отправить на печать">
+                    <span class="fa-stack fa-lg">
+                        <i aria-hidden="true" class="fa fa-square-o fa-stack-2x"></i>
+                        <i aria-hidden="true" class="fa fa-print fa-stack-1x"></i>
+                    </span>
+                </a>
+            </div>
+        </section>
+        
+        
+		
+            <div class="pmf-aside-widget">
+                <header>
+                    <h3>ВАЖНОЕ:</h3>
+                </header>
+                <div class="pmf-aside-widget-body">
+                    <ul class="pmf-list">
+                        <li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="Способы регистрации и аутентификации пользователей" href="/content/5/15/ru/sposoby-registracii-i-autentifikacii-polʹzovatelej.html">Способы регистрации и аутентификации пользователей</a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title=" Плагин  «Антиплагиат.ру». Проверка работ слушателей на заимствования с помощью сервиса «Антиплагиат»" href="/content/5/35/ru/plagin-«antiplagiatru»-proverka-rabot-slusatelej-na-zaimstvovania-s-pomosʹu-servisa-«antiplagiat».html"> Плагин «Антиплагиат.ру». Проверка работ слушателей на заимствования с ...</a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="Интеграция вебинаров в СЭО 3KL" href="/content/5/68/ru/integracia-vebinarov-v-seo-3kl.html">Интеграция вебинаров в СЭО 3KL</a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="Отчеты в СЭО 3KL " href="/content/41/100/ru/otcety-v-seo-3kl.html">Отчеты в СЭО 3KL </a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="Сертификат СЭО 3KL" href="/content/27/106/ru/sertifikat-seo-3kl.html">Сертификат СЭО 3KL</a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="Отслеживание времени непрерывного обучения в курсе" href="/content/24/153/ru/otslezivanie-vremeni-nepreryvnogo-obucenia-v-kurse.html">Отслеживание времени непрерывного обучения в курсе</a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="Как узнать о СЭО 3KL подробнее?" href="/content/1/157/ru/kak-uznatʹ-o-seo-3kl-podrobnee.html">Как узнать о СЭО 3KL подробнее?</a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="Логика курса 3KL, часть 1. Принцип работы, добавление и настройка элемента" href="/content/27/168/ru/logika-kursa-3kl-castʹ-1-princip-raboty-dobavlenie-i-nastrojka-elementa.html">Логика курса 3KL, часть 1. Принцип работы, добавление и ...</a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="Настройка внешнего вида СЭО 3КL" href="/content/27/183/ru/nastrojka-vnesnego-vida-seo-3kl.html">Настройка внешнего вида СЭО 3КL</a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="Плагин «Подписка 3KL» часть 2. Глобальные настройки" href="/content/27/216/ru/plagin-«podpiska-3kl»-castʹ-2-globalʹnye-nastrojki.html">Плагин «Подписка 3KL» часть 2. Глобальные настройки</a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="Портфолио ч. 1. Введение" href="/content/24/218/ru/portfolio-c-1-vvedenie.html">Портфолио ч. 1. Введение</a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="Глобальные сценарии 3KL. Локальный плагин" href="/content/27/271/ru/globalʹnye-scenarii-3kl-lokalʹnyj-plagin.html">Глобальные сценарии 3KL. Локальный плагин</a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="Панель управления СЭО 3KL. Локальный плагин" href="/content/41/375/ru/panelʹ-upravlenia-seo-3kl-lokalʹnyj-plagin.html">Панель управления СЭО 3KL. Локальный плагин</a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="Персональная информация пользователя. Страницы «О пользователе» и «Личный кабинет»" href="/content/27/480/ru/personalʹnaa-informacia-polʹzovatela-stranicy-«o-polʹzovatele»-i-«licnyj-kabinet».html">Персональная информация пользователя. Страницы «О пользователе» и «Личный кабинет» ...</a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="Элемент курса «Занятие 3КL»" href="/content/4/492/ru/element-kursa-«zanatie-3kl».html">Элемент курса «Занятие 3КL»</a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="Витрина курсов 3KL. Путеводитель" href="/content/27/536/ru/vitrina-kursov-3kl-putevoditelʹ.html">Витрина курсов 3KL. Путеводитель</a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="Справка СЭО 3КL" href="/content/27/542/ru/spravka-seo-3kl.html">Справка СЭО 3КL</a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="Термины и определения базы знаний" href="/content/2/543/ru/terminy-i-opredelenia-bazy-znanij.html">Термины и определения базы знаний</a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="Политики сайта и пользовательские соглашения" href="/content/1/593/ru/politiki-sajta-i-polʹzovatelʹskie-soglasenia.html">Политики сайта и пользовательские соглашения</a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="Расширенный анонс релиза 3.9.20a" href="/content/43/614/ru/rassirennyj-anons-reliza-3920a.html">Расширенный анонс релиза 3.9.20a</a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="Настройка внешнего вида СЭО 3КL версии 3.9" href="/content/27/633/ru/nastrojka-vnesnego-vida-seo-3kl-versii-39.html">Настройка внешнего вида СЭО 3КL версии 3.9</a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="Миграция СЭО 3КL с релиза 3.9 на 4.1. Вопросы и решения" href="/content/6/634/ru/migracia-seo-3kl-s-reliza-39-na-41-voprosy-i-resenia.html">Миграция СЭО 3КL с релиза 3.9 на 4.1. Вопросы ...</a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="Инструменты WEB API в СЭО 3КL. Возможности и примеры" href="/content/41/642/ru/instrumenty-web-api-v-seo-3kl-vozmoznosti-i-primery.html">Инструменты WEB API в СЭО 3КL. Возможности и примеры ...</a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="Расширенный анонс релиза 3.9.25a" href="/content/43/660/ru/rassirennyj-anons-reliza-3925a.html">Расширенный анонс релиза 3.9.25a</a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="21.05.2024 г., III конференция «СЭО Moodle для образования» и конкурс статей" href="/content/45/691/ru/21052024-g-iii-konferencia-«seo-moodle-dla-obrazovania»-i-konkurs-statej.html">21.05.2024 г., III конференция «СЭО Moodle для образования» и ...</a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="Организация открытого мероприятия (онлайн-конференции) на базе СЭО 3KL" href="/content/1/697/ru/organizacia-otkrytogo-meropriatia-onlajn_konferencii-na-baze-seo-3kl.html">Организация открытого мероприятия (онлайн-конференции) на базе СЭО 3KL</a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="Интеграция Cреды электронного обучения 3KL и Moodle  с ГИС СЦОС" href="/content/27/698/ru/integracia-credy-elektronnogo-obucenia-3kl-i-moodle-s-gis-scos.html">Интеграция Cреды электронного обучения 3KL и Moodle с ГИС ...</a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="Расширенный анонс релиза 4.5.4b-beta" href="/content/43/728/ru/rassirennyj-anons-reliza-454b_beta.html">Расширенный анонс релиза 4.5.4b-beta</a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="Расширенный анонс релиза 4.5.6b" href="/content/43/817/ru/rassirennyj-anons-reliza-456b.html">Расширенный анонс релиза 4.5.6b</a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="Расширенный анонс релиза 4.5.7a" href="/content/43/833/ru/rassirennyj-anons-reliza-457a.html">Расширенный анонс релиза 4.5.7a</a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="Главное и интересное. 3КL-осень 2025" href="/content/46/843/ru/glavnoe-i-interesnoe-3kl_osenʹ-2025.html">Главное и интересное. 3КL-осень 2025</a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="Расширенный анонс релиза 4.1.22a" href="/content/44/852/ru/rassirennyj-anons-reliza-4122a.html">Расширенный анонс релиза 4.1.22a</a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="Расширенный анонс релиза 4.5.10b" href="/content/43/879/ru/rassirennyj-anons-reliza-4510b.html">Расширенный анонс релиза 4.5.10b</a></li>
+                    </ul>
+                </div>
+            </div>
+        
+        <section class="pmf-aside-widget">
+            <header>
+                <h3>Записей в этой категории</h3>
+            </header>
+            <div class="pmf-aside-widget-body">
+                <ul class="phpmyfaq_ul"><li><a title="Выгрузка списка предварительно отобранных пользователей на странице «Действия над несколькими пользователями»" href="/content/41/884/ru/vygruzka-spiska-predvaritelʹno-otobrannyh-polʹzovatelej-na-stranice-«dejstvia-nad-neskolʹkimi-polʹzovatelami».html">Выгрузка списка предварительно отобранных пользователей на странице «Действия над несколькими пользователями»</a></li><li><a title="Формирование выборки пользователей на странице «Действия над несколькими пользователями»" href="/content/41/883/ru/formirovanie-vyborki-polʹzovatelej-na-stranice-«dejstvia-nad-neskolʹkimi-polʹzovatelami».html">Формирование выборки пользователей на странице «Действия над несколькими пользователями»</a></li><li><a title="Поиск пользователя СЭО 3KL по неполным данным с помощью страницы «Список пользователей»" href="/content/41/882/ru/poisk-polʹzovatela-seo-3kl-po-nepolnym-dannym-s-pomosʹu-stranicy-«spisok-polʹzovatelej».html">Поиск пользователя СЭО 3KL по неполным данным с помощью страницы «Список пользователей»</a></li><li><a title="Быстрый доступ к странице профиля пользователя с помощью страницы «Список пользователей»" href="/content/41/881/ru/bystryj-dostup-k-stranice-profila-polʹzovatela-s-pomosʹu-stranicy-«spisok-polʹzovatelej».html">Быстрый доступ к странице профиля пользователя с помощью страницы «Список пользователей»</a></li><li><a title="Вебинар от 30.10.2025г. Организация вебинара «Mirapolis Virtual Room» с оплатой через Robokassa. Инструкция по СЭО 3KL версии 4.5" href="/content/41/862/ru/vebinar-ot-30102025g-organizacia-vebinara-«mirapolis-virtual-room»-s-oplatoj-cerez-robokassa-instrukcia-po-seo-3kl-versii-45.html">Вебинар от 30.10.2025г. Организация вебинара «Mirapolis Virtual Room» с оплатой через Robokassa. Инструкция по СЭО 3KL версии 4.5</a></li><li><a title="Вебинар от 24.11.2025г. Слепое оценивание в СЭО Moodle и 3KL. Решение для СЭО 3KL v 4.5." href="/content/41/858/ru/vebinar-ot-24112025g-slepoe-ocenivanie-v-seo-moodle-i-3kl-resenie-dla-seo-3kl-v-45.html">Вебинар от 24.11.2025г. Слепое оценивание в СЭО Moodle и 3KL. Решение для СЭО 3KL v 4.5.</a></li><li><a title="Расширенный анонс релиза 4.5.8a" href="/content/41/851/ru/rassirennyj-anons-reliza-458a.html">Расширенный анонс релиза 4.5.8a</a></li><li><a title="Расширенный анонс релиза 4.5.7b" href="/content/41/841/ru/rassirennyj-anons-reliza-457b.html">Расширенный анонс релиза 4.5.7b</a></li><li><a title="Почему записанный на курс слушатель не видит роли некоторых пользователей, записанных на этот же курс?" href="/content/41/840/ru/pocemu-zapisannyj-na-kurs-slusatelʹ-ne-vidit-roli-nekotoryh-polʹzovatelej-zapisannyh-na-etot-ze-kurs.html">Почему записанный на курс слушатель не видит роли некоторых пользователей, записанных на этот же курс?</a></li><li><a title="Как массово сменить провайдер в уже настроенных элементах курса «‎Занятие 3KL»?" href="/content/41/837/ru/kak-massovo-smenitʹ-provajder-v-uze-nastroennyh-elementah-kursa-«‎zanatie-3kl».html">Как массово сменить провайдер в уже настроенных элементах курса «‎Занятие 3KL»?</a></li><li><a title="Вебинар от 25.07.2025г. Кураторство: реализация функций куратора образовательного процесса в СЭО 3KL" href="/content/41/832/ru/vebinar-ot-25072025g-kuratorstvo-realizacia-funkcij-kuratora-obrazovatelʹnogo-processa-v-seo-3kl.html">Вебинар от 25.07.2025г. Кураторство: реализация функций куратора образовательного процесса в СЭО 3KL</a></li><li><a title="Вебинар от 26.12.2024г. Личный кабинет слушателя ДО в СЭО 3KL. Решение по СЭО 3KL версии 4.1" href="/content/41/831/ru/vebinar-ot-26122024g-licnyj-kabinet-slusatela-do-v-seo-3kl-resenie-po-seo-3kl-versii-41.html">Вебинар от 26.12.2024г. Личный кабинет слушателя ДО в СЭО 3KL. Решение по СЭО 3KL версии 4.1</a></li><li><a title="Вебинар от 27.11.2024г. Личный кабинет слушателя ДПО в СЭО 3KL. Решение по СЭО 3KL версии 4.1" href="/content/41/830/ru/vebinar-ot-27112024g-licnyj-kabinet-slusatela-dpo-v-seo-3kl-resenie-po-seo-3kl-versii-41.html">Вебинар от 27.11.2024г. Личный кабинет слушателя ДПО в СЭО 3KL. Решение по СЭО 3KL версии 4.1</a></li><li><a title="Вебинар от 02.11.2024г. Личный кабинет сотрудника в СЭО 3KL. Решение по СЭО 3KL версии 4.1" href="/content/41/829/ru/vebinar-ot-02112024g-licnyj-kabinet-sotrudnika-v-seo-3kl-resenie-po-seo-3kl-versii-41.html">Вебинар от 02.11.2024г. Личный кабинет сотрудника в СЭО 3KL. Решение по СЭО 3KL версии 4.1</a></li><li><a title="Вебинар от 26.09.2024г. Личный кабинет студента в СЭО 3KL. Решение по СЭО 3KL версии 4.1" href="/content/41/828/ru/vebinar-ot-26092024g-licnyj-kabinet-studenta-v-seo-3kl-resenie-po-seo-3kl-versii-41.html">Вебинар от 26.09.2024г. Личный кабинет студента в СЭО 3KL. Решение по СЭО 3KL версии 4.1</a></li><li><a title="Вебинар от 29.08.2024г. Личный кабинет в СЭО 3KL. Основные настройки и блоки. Видеоинструкция по СЭО 3KL версии 4.1" href="/content/41/826/ru/vebinar-ot-29082024g-licnyj-kabinet-v-seo-3kl-osnovnye-nastrojki-i-bloki-videoinstrukcia-po-seo-3kl-versii-41.html">Вебинар от 29.08.2024г. Личный кабинет в СЭО 3KL. Основные настройки и блоки. Видеоинструкция по СЭО 3KL версии 4.1</a></li><li><a title="Вебинар от 24.07.2024г. Дополнительная кнопка доступа к курсу. Видеоинструкция по СЭО 3KL версии 4.1." href="/content/41/825/ru/vebinar-ot-24072024g-dopolnitelʹnaa-knopka-dostupa-k-kursu-videoinstrukcia-po-seo-3kl-versii-41.html">Вебинар от 24.07.2024г. Дополнительная кнопка доступа к курсу. Видеоинструкция по СЭО 3KL версии 4.1.</a></li><li><a title="Вебинар от 26.06.2024г. Плагин «Сертификат СЭО 3KL». Видеоинструкция по СЭО 3KL v 4.1." href="/content/41/824/ru/vebinar-ot-26062024g-plagin-«sertifikat-seo-3kl»-videoinstrukcia-po-seo-3kl-v-41.html">Вебинар от 26.06.2024г. Плагин «Сертификат СЭО 3KL». Видеоинструкция по СЭО 3KL v 4.1.</a></li><li><a title="Вебинар от 30.05.2024г. Взаимная оценка. Видеоинструкция по СЭО 3KL v 4.1" href="/content/41/819/ru/vebinar-ot-30052024g-vzaimnaa-ocenka-videoinstrukcia-po-seo-3kl-v-41.html">Вебинар от 30.05.2024г. Взаимная оценка. Видеоинструкция по СЭО 3KL v 4.1</a></li><li><a title="Вебинар от 03.05.2024г. Справка СЭО 3KL. Видеоинструкция по СЭО 3KL v 4.1" href="/content/41/818/ru/vebinar-ot-03052024g-spravka-seo-3kl-videoinstrukcia-po-seo-3kl-v-41.html">Вебинар от 03.05.2024г. Справка СЭО 3KL. Видеоинструкция по СЭО 3KL v 4.1</a></li><li><a title="Вебинар от 28.03.2024г. Блок «Спросить преподавателя». Видеоинструкция по СЭО 3KL v 4.1" href="/content/41/816/ru/vebinar-ot-28032024g-blok-«sprositʹ-prepodavatela»-videoinstrukcia-po-seo-3kl-v-41.html">Вебинар от 28.03.2024г. Блок «Спросить преподавателя». Видеоинструкция по СЭО 3KL v 4.1</a></li><li><a title="Инструмент «Целостность данных 3KL»" href="/content/41/798/ru/instrument-«celostnostʹ-dannyh-3kl».html">Инструмент «Целостность данных 3KL»</a></li><li><a title="Вебинар от 29.05.2025г. Витрина для организаций с большим количеством курсов. Инструкция по СЭО 3KL версии 4.1" href="/content/41/764/ru/vebinar-ot-29052025g-vitrina-dla-organizacij-s-bolʹsim-kolicestvom-kursov-instrukcia-po-seo-3kl-versii-41.html">Вебинар от 29.05.2025г. Витрина для организаций с большим количеством курсов. Инструкция по СЭО 3KL версии 4.1</a></li><li><a title="Вебинар от 20.06.2025г. Витрина курсов СЭО 3KL. Описательная страница курса / Лендинг курса" href="/content/41/763/ru/vebinar-ot-20062025g-vitrina-kursov-seo-3kl-opisatelʹnaa-stranica-kursa-_-lending-kursa.html">Вебинар от 20.06.2025г. Витрина курсов СЭО 3KL. Описательная страница курса / Лендинг курса</a></li><li><a title="Вебинар от 27.02.2025г. Витрина для организаций с небольшим количеством курсов. Инструкция по СЭО 3KL версии 4.1" href="/content/41/757/ru/vebinar-ot-27022025g-vitrina-dla-organizacij-s-nebolʹsim-kolicestvom-kursov-instrukcia-po-seo-3kl-versii-41.html">Вебинар от 27.02.2025г. Витрина для организаций с небольшим количеством курсов. Инструкция по СЭО 3KL версии 4.1</a></li><li><a title="Вебинар от 27.03.2025г. Витрина курсов для организаций со средним количеством курсов. Инструкция по СЭО 3KL версии 4.1" href="/content/41/756/ru/vebinar-ot-27032025g-vitrina-kursov-dla-organizacij-so-srednim-kolicestvom-kursov-instrukcia-po-seo-3kl-versii-41.html">Вебинар от 27.03.2025г. Витрина курсов для организаций со средним количеством курсов. Инструкция по СЭО 3KL версии 4.1</a></li><li><a title="Вебинар от 30.01.2025г. Витрина курсов. Введение. Назначение и возможности. Инструкция по СЭО 3KL версии 4.1" href="/content/41/755/ru/vebinar-ot-30012025g-vitrina-kursov-vvedenie-naznacenie-i-vozmoznosti-instrukcia-po-seo-3kl-versii-41.html">Вебинар от 30.01.2025г. Витрина курсов. Введение. Назначение и возможности. Инструкция по СЭО 3KL версии 4.1</a></li><li><a title="Страница «Среда (Версии ПО)»" href="/content/41/716/ru/stranica-«sreda-versii-po».html">Страница «Среда (Версии ПО)»</a></li><li><a title="Плагин «Подписка 3КL». Видео инструкция по СЭО 3KL 4.1" href="/content/41/694/ru/plagin-«podpiska-3kl»-video-instrukcia-po-seo-3kl-41.html">Плагин «Подписка 3КL». Видео инструкция по СЭО 3KL 4.1</a></li><li><a title="Вебинар от 07.09.2023г. Скрытие неучебных курсов и сведений о подписке в блоке «История обучения 3KL». Решение для СЭО 3KL v4.1 (СЭО 3КL версии 4.1.5с)" href="/content/41/673/ru/vebinar-ot-07092023g-skrytie-neucebnyh-kursov-i-svedenij-o-podpiske-v-bloke-«istoria-obucenia-3kl»-resenie-dla-seo-3kl-v41-seo-3kl-versii-415s.html">Вебинар от 07.09.2023г. Скрытие неучебных курсов и сведений о подписке в блоке «История обучения 3KL». Решение для СЭО 3KL v4.1 (СЭО 3КL версии 4.1.5с)</a></li><li><a title="Вебинар от 04.08.2023г. Блок «‎Самопроверка на заимствования 3KL»‎. Видеоинструкция по СЭО 3KL v 4.1 (СЭО 3КL версии 4.1.4b)" href="/content/41/672/ru/vebinar-ot-04082023g-blok-«‎samoproverka-na-zaimstvovania-3kl»‎-videoinstrukcia-po-seo-3kl-v-41-seo-3kl-versii-414b.html">Вебинар от 04.08.2023г. Блок «‎Самопроверка на заимствования 3KL»‎. Видеоинструкция по СЭО 3KL v 4.1 (СЭО 3КL версии 4.1.4b)</a></li><li><a title="Вебинар от 07.09.2023г. Элемент курса «‎Библиотека ресурсов»‎. Видеоинструкция по СЭО 3KL v 4.1 (СЭО 3КL версии 4.1.5а)" href="/content/41/671/ru/vebinar-ot-07092023g-element-kursa-«‎biblioteka-resursov»‎-videoinstrukcia-po-seo-3kl-v-41-seo-3kl-versii-415a.html">Вебинар от 07.09.2023г. Элемент курса «‎Библиотека ресурсов»‎. Видеоинструкция по СЭО 3KL v 4.1 (СЭО 3КL версии 4.1.5а)</a></li><li><a title="Капча (CAPTCHA) в СЭО 3KL" href="/content/41/654/ru/kapca-captcha-v-seo-3kl.html">Капча (CAPTCHA) в СЭО 3KL</a></li><li><a title="Инструменты WEB API в СЭО 3КL. Возможности и примеры" href="/content/41/642/ru/instrumenty-web-api-v-seo-3kl-vozmoznosti-i-primery.html">Инструменты WEB API в СЭО 3КL. Возможности и примеры</a></li><li><a title="Интеграция АСУ «Спрут» с СЭО 3KL (СДО Русский Moodle)" href="/content/41/638/ru/integracia-asu-«sprut»-s-seo-3kl-sdo-russkij-moodle.html">Интеграция АСУ «Спрут» с СЭО 3KL (СДО Русский Moodle)</a></li><li><a title="Отчет «Общая статистика»" href="/content/41/561/ru/otcet-«obsaa-statistika».html">Отчет «Общая статистика»</a></li><li><a title="Путеводитель по вебинарам" href="/content/41/556/ru/putevoditelʹ-po-vebinaram.html">Путеводитель по вебинарам</a></li><li><a title="Термины и определения базы знаний" href="/content/41/543/ru/terminy-i-opredelenia-bazy-znanij.html">Термины и определения базы знаний</a></li><li><a title="Витрина курсов 3KL. Путеводитель" href="/content/41/536/ru/vitrina-kursov-3kl-putevoditelʹ.html">Витрина курсов 3KL. Путеводитель</a></li><li><a title="Расширенный анонс релиза 3.9.11b" href="/content/41/528/ru/rassirennyj-anons-reliza-3911b.html">Расширенный анонс релиза 3.9.11b</a></li><li><a title="Глобальные настройки пользователей" href="/content/41/522/ru/globalʹnye-nastrojki-polʹzovatelej.html">Глобальные настройки пользователей</a></li><li><a title="Можно ли обновить СЭО 3KL до версии 3.9 и выше, если на сервере установлена Ubuntu 16.04?" href="/content/41/505/ru/mozno-li-obnovitʹ-seo-3kl-do-versii-39-i-vyse-esli-na-servere-ustanovlena-ubuntu-1604.html">Можно ли обновить СЭО 3KL до версии 3.9 и выше, если на сервере установлена Ubuntu 16.04?</a></li><li><a title="Требования к API внешней ЭБС, для интеграции с модулем &#34;Библиотека ресурсов 3КL&#34; (материал для разработчиков)" href="/content/41/483/ru/trebovania-k-api-vnesnej-ebs-dla-integracii-s-modulem-&N34biblioteka-resursov-3kl&N34-material-dla-razrabotcikov.html">Требования к API внешней ЭБС, для интеграции с модулем &#34;Библиотека ресурсов 3КL&#34; (материал для разработчиков)</a></li><li><a title="Панель управления СЭО 3KL. Локальный плагин" href="/content/41/375/ru/panelʹ-upravlenia-seo-3kl-lokalʹnyj-plagin.html">Панель управления СЭО 3KL. Локальный плагин</a></li><li><a title="Локальный плагин «Техническая поддержка СЭО 3KL». Страница информации о продукте" href="/content/41/351/ru/lokalʹnyj-plagin-«tehniceskaa-podderzka-seo-3kl»-stranica-informacii-o-produkte.html">Локальный плагин «Техническая поддержка СЭО 3KL». Страница информации о продукте</a></li><li><a title="Блок «Витрина курсов 3KL»" href="/content/41/350/ru/blok-«vitrina-kursov-3kl».html">Блок «Витрина курсов 3KL»</a></li><li><a title="Отображение слайдера на страницах «Портфолио» пользователя" href="/content/41/349/ru/otobrazenie-slajdera-na-stranicah-«portfolio»-polʹzovatela.html">Отображение слайдера на страницах «Портфолио» пользователя</a></li><li><a title="ЭД-018. Электронный деканат. Шаблоны расписания. Фактическое расписание" href="/content/41/329/ru/ed_018-elektronnyj-dekanat-sablony-raspisania-fakticeskoe-raspisanie.html">ЭД-018. Электронный деканат. Шаблоны расписания. Фактическое расписание</a></li><li><a title="Локальный плагин «Настраиваемые поля для объектов»" href="/content/41/314/ru/lokalʹnyj-plagin-«nastraivaemye-pola-dla-obʺektov».html">Локальный плагин «Настраиваемые поля для объектов»</a></li><li><a title="Блок «Внешние данные 3KL»" href="/content/41/308/ru/blok-«vnesnie-dannye-3kl».html">Блок «Внешние данные 3KL»</a></li><li><a title="Библиотека ресурсов 3KL: интеграция с  ЭБС, базами знаний и внешними источниками контента" href="/content/41/303/ru/biblioteka-resursov-3kl-integracia-s-ebs-bazami-znanij-i-vnesnimi-istocnikami-kontenta.html">Библиотека ресурсов 3KL: интеграция с  ЭБС, базами знаний и внешними источниками контента</a></li><li><a title="Элемент курса «Взаимная оценка 3KL»" href="/content/41/295/ru/element-kursa-«vzaimnaa-ocenka-3kl».html">Элемент курса «Взаимная оценка 3KL»</a></li><li><a title="Партнерская сеть. Электронный Деканат" href="/content/41/280/ru/partnerskaa-setʹ-elektronnyj-dekanat.html">Партнерская сеть. Электронный Деканат</a></li><li><a title="Самостоятельное системное администрирование сервера с СЭО 3KL, подготовленного специалистами компании «Открытые технологии»" href="/content/41/276/ru/samostoatelʹnoe-sistemnoe-administrirovanie-servera-s-seo-3kl-podgotovlennogo-specialistami-kompanii-«otkrytye-tehnologii».html">Самостоятельное системное администрирование сервера с СЭО 3KL, подготовленного специалистами компании «Открытые технологии»</a></li><li><a title="Настраиваемые поля курса. Применение в поиске курсов через Витрину курсов 3KL" href="/content/41/245/ru/nastraivaemye-pola-kursa-primenenie-v-poiske-kursov-cerez-vitrinu-kursov-3kl.html">Настраиваемые поля курса. Применение в поиске курсов через Витрину курсов 3KL</a></li><li><a title="Портфолио ч. 5. Права и решения" href="/content/41/222/ru/portfolio-c-5-prava-i-resenia.html">Портфолио ч. 5. Права и решения</a></li><li><a title="Плагин «Подписка 3KL» часть 3. Настройка подписки 3KL на курс" href="/content/41/215/ru/plagin-«podpiska-3kl»-castʹ-3-nastrojka-podpiski-3kl-na-kurs.html">Плагин «Подписка 3KL» часть 3. Настройка подписки 3KL на курс</a></li><li><a title="Уведомление об орфографической ошибке" href="/content/41/202/ru/uvedomlenie-ob-orfograficeskoj-osibke.html">Уведомление об орфографической ошибке</a></li><li><a title="Настройка внешнего вида СЭО 3КL" href="/content/41/183/ru/nastrojka-vnesnego-vida-seo-3kl.html">Настройка внешнего вида СЭО 3КL</a></li><li><a title="Настройка Витрины курсов 3KL. Бриф на Витрину курсов 3KL" href="/content/41/182/ru/nastrojka-vitriny-kursov-3kl-brif-na-vitrinu-kursov-3kl.html">Настройка Витрины курсов 3KL. Бриф на Витрину курсов 3KL</a></li><li><a title="Платные сервисы и расширенная техническая поддержка" href="/content/41/176/ru/platnye-servisy-i-rassirennaa-tehniceskaa-podderzka.html">Платные сервисы и расширенная техническая поддержка</a></li><li><a title="Логика курса 3KL, часть 3. Примеры использования" href="/content/41/173/ru/logika-kursa-3kl-castʹ-3-primery-ispolʹzovania.html">Логика курса 3KL, часть 3. Примеры использования</a></li><li><a title="Что будет, если не продлить лицензию или SaaS  СЭО  3KL?" href="/content/41/171/ru/cto-budet-esli-ne-prodlitʹ-licenziu-ili-saas-seo-3kl.html">Что будет, если не продлить лицензию или SaaS  СЭО  3KL?</a></li><li><a title="Ограничения доступности, управление ограничениями" href="/content/41/169/ru/ogranicenia-dostupnosti-upravlenie-ograniceniami.html">Ограничения доступности, управление ограничениями</a></li><li><a title="Добавление нового курса" href="/content/41/167/ru/dobavlenie-novogo-kursa.html">Добавление нового курса</a></li><li><a title="Добавление кастомных (настраиваемых) полей в профиль пользователя" href="/content/41/165/ru/dobavlenie-kastomnyh-nastraivaemyh-polej-v-profilʹ-polʹzovatela.html">Добавление кастомных (настраиваемых) полей в профиль пользователя</a></li><li><a title="Настройка упрощенной регистрации пользователей через email и СМС" href="/content/41/162/ru/nastrojka-uprosennoj-registracii-polʹzovatelej-cerez-email-i-sms.html">Настройка упрощенной регистрации пользователей через email и СМС</a></li><li><a title="Отслеживание времени непрерывного обучения в курсе" href="/content/41/153/ru/otslezivanie-vremeni-nepreryvnogo-obucenia-v-kurse.html">Отслеживание времени непрерывного обучения в курсе</a></li><li><a title="Тип вопроса «Объекты на изображении»" href="/content/41/144/ru/tip-voprosa-«obʺekty-na-izobrazenii».html">Тип вопроса «Объекты на изображении»</a></li><li><a title="Инструкция по работе с блоком «Слайдер 3KL»" href="/content/41/142/ru/instrukcia-po-rabote-s-blokom-«slajder-3kl».html">Инструкция по работе с блоком «Слайдер 3KL»</a></li><li><a title="Тип вопроса «Случайный вопрос с учетом правил выдачи»" href="/content/41/137/ru/tip-voprosa-«slucajnyj-vopros-s-ucetom-pravil-vydaci».html">Тип вопроса «Случайный вопрос с учетом правил выдачи»</a></li><li><a title="Как происходит резервное копирование данных в СЭО 3KL?" href="/content/41/130/ru/kak-proishodit-rezervnoe-kopirovanie-dannyh-v-seo-3kl.html">Как происходит резервное копирование данных в СЭО 3KL?</a></li><li><a title="Могу ли я использовать СЭО 3KL с операционной системой &#34;N&#34; (подставьте любое название)?" href="/content/41/129/ru/mogu-li-a-ispolʹzovatʹ-seo-3kl-s-operacionnoj-sistemoj-&N34n&N34-podstavʹte-luboe-nazvanie.html">Могу ли я использовать СЭО 3KL с операционной системой &#34;N&#34; (подставьте любое название)?</a></li><li><a title="Могу ли я установить СДО Русский Moodle 3KL самостоятельно?" href="/content/41/120/ru/mogu-li-a-ustanovitʹ-sdo-russkij-moodle-3kl-samostoatelʹno.html">Могу ли я установить СДО Русский Moodle 3KL самостоятельно?</a></li><li><a title="Какое сетевое имя (адрес, доменное имя, URL) будет у нашей СЭО?" href="/content/41/119/ru/kakoe-setevoe-ima-adres-domennoe-ima-url-budet-u-nasej-seo.html">Какое сетевое имя (адрес, доменное имя, URL) будет у нашей СЭО?</a></li><li><a title="Каков порядок установки и системные требования среды электронного обучения 3KL (Русский Moodle) на сервер клиента?" href="/content/41/117/ru/kakov-poradok-ustanovki-i-sistemnye-trebovania-sredy-elektronnogo-obucenia-3kl-russkij-moodle-na-server-klienta.html">Каков порядок установки и системные требования среды электронного обучения 3KL (Русский Moodle) на сервер клиента?</a></li><li><a title="Мы уже используем community-версию Moodle, можем ли мы перейти на профессиональную версию СЭО 3KL?" href="/content/41/116/ru/my-uze-ispolʹzuem-community_versiu-moodle-mozem-li-my-perejti-na-professionalʹnuu-versiu-seo-3kl.html">Мы уже используем community-версию Moodle, можем ли мы перейти на профессиональную версию СЭО 3KL?</a></li><li><a title="Что такое локальная и публичная (интернет) инсталляция СЭО 3KL?" href="/content/41/115/ru/cto-takoe-lokalʹnaa-i-publicnaa-internet-installacia-seo-3kl.html">Что такое локальная и публичная (интернет) инсталляция СЭО 3KL?</a></li><li><a title="Формат курса «3KL формат»" href="/content/41/114/ru/format-kursa-«3kl-format».html">Формат курса «3KL формат»</a></li><li><a title="Что выбрать: лицензию СЭО 3KL для установки на свой сервер или аренду СЭО в облаке?" href="/content/41/113/ru/cto-vybratʹ-licenziu-seo-3kl-dla-ustanovki-na-svoj-server-ili-arendu-seo-v-oblake.html">Что выбрать: лицензию СЭО 3KL для установки на свой сервер или аренду СЭО в облаке?</a></li><li><a title="Можно ли установить СЭО 3KL на свой сервер?" href="/content/41/111/ru/mozno-li-ustanovitʹ-seo-3kl-na-svoj-server.html">Можно ли установить СЭО 3KL на свой сервер?</a></li><li><a title="Отчеты в СЭО 3KL " href="/content/41/100/ru/otcety-v-seo-3kl.html">Отчеты в СЭО 3KL </a></li><li><a title="Массовая загрузка пользователей через файл csv" href="/content/41/79/ru/massovaa-zagruzka-polʹzovatelej-cerez-fajl-csv.html">Массовая загрузка пользователей через файл csv</a></li><li><a title="Настройка Витрины курсов 3KL" href="/content/41/58/ru/nastrojka-vitriny-kursov-3kl.html">Настройка Витрины курсов 3KL</a></li><li><a title="Интеграция с Webinar.ru. Элемент курса  «Webinar.ru»" href="/content/41/36/ru/integracia-s-webinarru-element-kursa-«webinarru».html">Интеграция с Webinar.ru. Элемент курса  «Webinar.ru»</a></li><li><a title="Интеграция со сторонними сервисами" href="/content/41/33/ru/integracia-so-storonnimi-servisami.html">Интеграция со сторонними сервисами</a></li><li><a title="Способы регистрации и аутентификации пользователей" href="/content/41/15/ru/sposoby-registracii-i-autentifikacii-polʹzovatelej.html">Способы регистрации и аутентификации пользователей</a></li><li><a title="Метод записи на курс «Автозачисление 3KL» — otautoenrol" href="/content/41/9/ru/metod-zapisi-na-kurs-«avtozacislenie-3kl»-—-otautoenrol.html">Метод записи на курс «Автозачисление 3KL» — otautoenrol</a></li></ul>
+            </div>
+        </section>
+        <section class="pmf-aside-widget">
+            <header>
+                <h3>Теги</h3>
+            </header>
+            <div class="pmf-aside-widget-body clearfix">
+                <ul class="pmf-tags">
+                    <li><a title="API (2)" href="/tags/21791/api.html">API</a> </li><li><a title="Crowdfunding (2)" href="/tags/11961/crowdfunding.html">Crowdfunding</a> </li><li><a title="e-learning (2)" href="/tags/15858/e_learning.html">e-learning</a> </li><li><a title="Moodle Mobile (2)" href="/tags/9006/moodle-mobile.html">Moodle Mobile</a> </li><li><a title="автоматизация (2)" href="/tags/22342/avtomatizacia.html">автоматизация</a> </li><li><a title="авторизация (2)" href="/tags/15/avtorizacia.html">авторизация</a> </li><li><a title="администрирование (2)" href="/tags/9/administrirovanie.html">администрирование</a> </li><li><a title="анонс (2)" href="/tags/11374/anons.html">анонс</a> </li><li><a title="Антиплагиат (2)" href="/tags/12474/antiplagiat.html">Антиплагиат</a> </li><li><a title="аутентификация (2)" href="/tags/2890/autentifikacia.html">аутентификация</a> </li><li><a title="база знаний (2)" href="/tags/9214/baza-znanij.html">база знаний</a> </li><li><a title="банк вопросов (2)" href="/tags/34/bank-voprosov.html">банк вопросов</a> </li><li><a title="безопасность (2)" href="/tags/10/bezopasnostʹ.html">безопасность</a> </li><li><a title="блок (2)" href="/tags/14/blok.html">блок</a> </li><li><a title="блоки (2)" href="/tags/12418/bloki.html">блоки</a> </li><li><a title="бэкап (2)" href="/tags/29/bekap.html">бэкап</a> </li><li><a title="вебинар (2)" href="/tags/21/vebinar.html">вебинар</a> </li><li><a title="видео (2)" href="/tags/35/video.html">видео</a> </li><li><a title="видеоинструкция (2)" href="/tags/12958/videoinstrukcia.html">видеоинструкция</a> </li><li><a title="витрина (2)" href="/tags/11740/vitrina.html">витрина</a> </li><li><a title="Витрина курсов (2)" href="/tags/9002/vitrina-kursov.html">Витрина курсов</a> </li><li><a title="внешние данные (2)" href="/tags/9901/vnesnie-dannye.html">внешние данные</a> </li><li><a title="внешний вид (2)" href="/tags/12/vnesnij-vid.html">внешний вид</a> </li><li><a title="время обучения (2)" href="/tags/25206/vrema-obucenia.html">время обучения</a> </li><li><a title="ГИС СЦОС (2)" href="/tags/18994/gis-scos.html">ГИС СЦОС</a> </li><li><a title="главная страница (2)" href="/tags/12979/glavnaa-stranica.html">главная страница</a> </li><li><a title="глобальные группы (2)" href="/tags/19272/globalʹnye-gruppy.html">глобальные группы</a> </li><li><a title="группы (2)" href="/tags/38/gruppy.html">группы</a> </li><li><a title="данные (2)" href="/tags/20654/dannye.html">данные</a> </li><li><a title="данные пользователя (2)" href="/tags/11813/dannye-polʹzovatela.html">данные пользователя</a> </li><li><a title="ДистантТВ (2)" href="/tags/12982/distanttv.html">ДистантТВ</a> </li><li><a title="Задание (2)" href="/tags/40/zadanie.html">Задание</a> </li><li><a title="занятие (2)" href="/tags/8996/zanatie.html">занятие</a> </li><li><a title="запись на курс (2)" href="/tags/21327/zapisʹ-na-kurs.html">запись на курс</a> </li><li><a title="зачисления на курсы (2)" href="/tags/2913/zacislenia-na-kursy.html">зачисления на курсы</a> </li><li><a title="значки (2)" href="/tags/45/znacki.html">значки</a> </li><li><a title="импорт (2)" href="/tags/5/import.html">импорт</a> </li><li><a title="инструктаж (2)" href="/tags/12968/instruktaz.html">инструктаж</a> </li><li><a title="инструменты (2)" href="/tags/12974/instrumenty.html">инструменты</a> </li><li><a title="интеграция (2)" href="/tags/2/integracia.html">интеграция</a> </li><li><a title="использование цифровой образовательной среды (2)" href="/tags/15569/ispolʹzovanie-cifrovoj-obrazovatelʹnoj-sredy.html">использование цифровой образовательной среды</a> </li><li><a title="кастомизация (2)" href="/tags/9562/kastomizacia.html">кастомизация</a> </li><li><a title="категория (2)" href="/tags/3149/kategoria.html">категория</a> </li><li><a title="КБЗ (2)" href="/tags/9213/kbz.html">КБЗ</a> </li><li><a title="коммуникации (2)" href="/tags/19/kommunikacii.html">коммуникации</a> </li><li><a title="компетенции (2)" href="/tags/11842/kompetencii.html">компетенции</a> </li><li><a title="конкурс (2)" href="/tags/14861/konkurs.html">конкурс</a> </li><li><a title="контент (2)" href="/tags/6/kontent.html">контент</a> </li><li><a title="конференция (2)" href="/tags/9228/konferencia.html">конференция</a> </li><li><a title="курс (2)" href="/tags/229/kurs.html">курс</a></li>
+                </ul>
+            </div>
+        </section>
+            </aside>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <div class="pmf-wrapper pmf-footer">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-9">
+                    <ul class="footer-menu">
+                        <li> | 543 гостей and 2 зарегистрированных</li>
+                        <li><a href="https://kb.opentechnology.ru/overview.html">FAQ Overview</a></li>
+                        <li><a href="https://kb.opentechnology.ru/sitemap/A/ru.html">Карта сайта</a></li>
+                        <li><a href="https://kb.opentechnology.ru/glossary.html">Глоссарий</a></li>
+                        <li><a href="https://kb.opentechnology.ru/contact.html">Адм</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <form action="?sid=18447237" method="post" class="pull-right" accept-charset="utf-8">
+                        <select class="form-control" name="language" id="language" size="1" onchange="this.form.submit();">
+	<option value="ar">Arabic</option>
+	<option value="eu">Basque</option>
+	<option value="bn">Bengali</option>
+	<option value="bs">Bosnian</option>
+	<option value="pt-br">Brazilian Portuguese</option>
+	<option value="zh">Chinese (Simplified)</option>
+	<option value="tw">Chinese (Traditional)</option>
+	<option value="cs">Czech</option>
+	<option value="da">Danish</option>
+	<option value="nl">Dutch</option>
+	<option value="en">English</option>
+	<option value="fi">Finnish</option>
+	<option value="fr">French</option>
+	<option value="fr-ca">French (Canada)</option>
+	<option value="de">German</option>
+	<option value="el">Greek</option>
+	<option value="he">Hebrew</option>
+	<option value="hi">Hindi</option>
+	<option value="hu">Hungarian</option>
+	<option value="id">Indonesian</option>
+	<option value="it">Italian</option>
+	<option value="ja">Japanese</option>
+	<option value="ko">Korean</option>
+	<option value="lv">Latvian</option>
+	<option value="lt">Lithuanian</option>
+	<option value="ms">Malay</option>
+	<option value="nb">Norwegian Bokm&aring;l</option>
+	<option value="fa">Persian</option>
+	<option value="pl">Polish</option>
+	<option value="pt">Portuguese</option>
+	<option value="ro">Romanian</option>
+	<option value="ru" selected="selected">Russian</option>
+	<option value="sr">Serbian</option>
+	<option value="sk">Slovak</option>
+	<option value="sl">Slovenian</option>
+	<option value="es">Spanish</option>
+	<option value="sv">Swedish</option>
+	<option value="th">Thai</option>
+	<option value="tr">Turkish</option>
+	<option value="uk">Ukrainian</option>
+	<option value="vi">Vietnamese</option>
+	<option value="cy">Welsh</option>
+</select>
+                        <input type="hidden" name="action" value="" />
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="pmf-wrapper copyright">
+        <div class="container-fluid">
+            <div class="pull-right">
+                powered by <a href="https://www.phpmyfaq.de" target="_blank">phpMyFAQ</a> 2.9.13
+            </div>
+        </div>
+    </div>
+    
+</footer>
+<script>
+    $('.topten').tooltip();
+    $('.latest-entries').tooltip();
+    $('.sticky-faqs').tooltip();
+    $('.table').each(function(){
+        var rows = $(this).children('thead').find('tr');
+        if (rows.length == 1)
+        {
+	    	var cells = rows.find('th,td');
+	    	var ths = cells.filter('th');
+	    	if (ths.length > 0 && ths.length == cells.length)
+	    	{
+	    	    ths.each(function(){
+	    	        $(this).data('sortable', true);
+	    	    });
+	    	    
+	    	    $(this).bootstrapTable();
+	    	}
+    	}
+    	
+    })
+</script>
+ 
+<script>
+        (function(w,d,u){
+                var s=d.createElement('script');s.async=true;s.src=u+'?'+(Date.now()/60000|0);
+                var h=d.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);
+        })(window,document,'https://crm.3072.ru/upload/crm/site_button/loader_4_g3w7tu.js');
+</script>
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+            
+   ym(23244946, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true,
+        webvisor:true
+   });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/23244946" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+</body>
+</html>

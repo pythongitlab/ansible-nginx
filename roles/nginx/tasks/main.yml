@@ -1,0 +1,35 @@
+---
+- name: Install required packages
+  apt:
+    name:
+      - nginx
+      - php-fpm
+      - certbot
+      - python3-certbot-nginx
+    state: present
+    update_cache: yes
+
+- name: Backup nginx.conf if exists
+  copy:
+    src: /etc/nginx/nginx.conf
+    dest: /etc/nginx/nginx.conf.backup
+    remote_src: yes
+  ignore_errors: yes
+
+- name: Deploy separate site config
+  template:
+    src: default.conf.j2
+    dest: /etc/nginx/sites-available/mysite
+  notify: Validate and reload nginx
+
+- name: Enable new site config
+  file:
+    src: /etc/nginx/sites-available/mysite
+    dest: /etc/nginx/sites-enabled/mysite
+    state: link
+
+- name: Ensure nginx is running
+  service:
+    name: nginx
+    state: started
+    enabled: yes

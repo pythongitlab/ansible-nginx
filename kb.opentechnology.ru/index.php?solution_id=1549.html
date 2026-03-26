@@ -1,0 +1,1315 @@
+<!doctype html>
+<!--[if IE 9 ]> <html lang="ru" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="ru" class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <title>База знаний ООО &quot;Открытые технологии&quot; - Интеграция с ФИС ФРДО</title>
+    <meta name="description" content="Интеграция позволяет осуществить печать документов установленного образца на бланках строгой отчетности, а также ...">
+    <meta name="keywords" content="фис фрдо,свидетельство,современная цифровая образовательная среда,выгрузка,ФРДО,ФИС,диплом,сертификат">
+    <meta name="author" content="ООО "Открытые технологии"">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="application-name" content="phpMyFAQ 2.9.13">
+    <meta name="robots" content="index, follow">
+    <meta name="revisit-after" content="7 days">
+    <meta name="apple-itunes-app" content="app-id=977896957">
+    <!-- Share on Facebook -->
+    <meta property="og:title" content="База знаний ООО &quot;Открытые технологии&quot; - Интеграция с ФИС ФРДО">
+    <meta property="og:description" content="Интеграция позволяет осуществить печать документов установленного образца на бланках строгой отчетности, а также ...">
+    <meta property="og:image" content="">
+    <link rel="stylesheet" href="https://kb.opentechnology.ru/assets/template/ot/css/style.min.css?v=1">
+    <link rel="shortcut icon" href="https://kb.opentechnology.ru/assets/template/ot/favicon.ico">
+    <link rel="apple-touch-icon" href="https://kb.opentechnology.ru/assets/template/ot/apple-touch-icon.png">
+    <link rel="canonical" href="https://kb.opentechnology.ru/content/27/549/ru/integracia-s-fis-frdo.html">
+    <script src="https://kb.opentechnology.ru/assets/js/modernizr.min.js"></script>
+    <script src="https://kb.opentechnology.ru/assets/js/phpmyfaq.min.js"></script>
+    <script src="https://kb.opentechnology.ru/assets/js/libs/bootstrap-table/bootstrap-table.min.js"></script>
+    <link rel="alternate" title="News RSS Feed" type="application/rss+xml" href="https://kb.opentechnology.ru/feed/news/rss.php">
+    <link rel="alternate" title="TopTen RSS Feed" type="application/rss+xml" href="https://kb.opentechnology.ru/feed/topten/rss.php">
+    <link rel="alternate" title="Latest FAQ Records RSS Feed" type="application/rss+xml" href="https://kb.opentechnology.ru/feed/latest/rss.php">
+    <link rel="alternate" title="Open Questions RSS Feed" type="application/rss+xml" href="https://kb.opentechnology.ru/feed/openquestions/rss.php">
+    <link rel="search" type="application/opensearchdescription+xml" title="База знаний ООО Открытые технологии - Интеграция с ФИС ФРДО" href="https://kb.opentechnology.ru/opensearch.html">
+    <script>
+        if (self === top) {
+            document.documentElement.style.display = 'block';
+        } else {
+            top.location = self.location;
+        }
+    </script>
+    <style> html{display:none;} </style>
+</head>
+<body dir="ltr">
+<header>
+    <div class="pmf-wrapper pmf-masthead">
+        <div class="container-fluid">
+            <a id="logo" title="База знаний ООО Открытые технологии" href="https://kb.opentechnology.ru/">
+                <img src="https://kb.opentechnology.ru/assets/template/ot/img/logo.png" alt="phpMyFAQ">
+            </a>
+            <div id="mobile-nav-toggle" class="pull-right">
+                <a href="#" data-toggle="collapse" data-target=".pmf-nav .navbar-collapse">
+                    <i aria-hidden="true" class="fa fa-bars"></i>
+                </a>
+            </div>
+            <nav class="pull-right pmf-nav">
+                <div class="collapse navbar-collapse">
+                    <ul class="nav nav-pills navbar-nav">
+                        <li class=""><a href="https://kb.opentechnology.ru/search.html">Расширенный поиск</a></li>
+                        <li class=""><a href="https://kb.opentechnology.ru/showcat.html">Разделы</a></li>
+                        <li class=""><a href="https://kb.opentechnology.ru/addcontent.html">ответ</a></li>
+                        <li class=""><a href="https://kb.opentechnology.ru/ask.html">вопрос</a></li>
+                        <li class=""><a href="https://kb.opentechnology.ru/open.html">Открытые вопросы</a></li>
+                        <li class="dropdown ">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                Вход
+                                <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-right">
+                                
+                                <li></li>
+                                <li><a href="?action=login&auth_driver=rm3kl">Войти через Moodle</a></li>
+                                
+                                
+                                
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <div class="pmf-wrapper pmf-subheader">
+        <div class="container-fluid">
+            <div class="pmf-breadcrumb">
+                
+                <ul class="breadcrumb"></ul>
+                
+            </div>
+            <div class="pmf-searchbox">
+                <form role="search" id="search" action="?action=search" method="get">
+                    <input type="hidden" name="action" value="search">
+                    <button class="searchbutton" type="submit" aria-label="Поиск">
+                        <i aria-hidden="true" class="fa fa-search"></i>
+                    </button>
+                    <input type="text" class="searchfield typeahead" name="search" id="searchbox"
+                           autocomplete="off" placeholder="Поиск ...">
+                </form>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="pmf-wrapper pmf-main">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-9 pmf-maincontent">
+                <section>
+            <article class="pmf-faq">
+                <header>
+                    <div class="pull-right hidden-print" id="solution_id">
+                        <a class="label label-info" href="/index.php?solution_id=1549">
+                            ID #1549
+                        </a>
+                    </div>
+                    <h1>Интеграция с ФИС ФРДО</h1>
+                    <div class="pmf-faq-meta clearfix">
+                        <div class="pmf-faq-author">
+                            <i aria-hidden="true" class="fa fa-user"></i>
+                            <span class="data">Сергей Гусев</span>
+                        </div>
+                        <div class="pmf-faq-date">
+                            <i aria-hidden="true" class="fa fa-calendar"></i>
+                            <span class="data">18.09.2025</span>
+                        </div>
+                        <div class="pmf-faq-comments">
+                            <i aria-hidden="true" class="fa fa-comments"></i>
+                            <span class="data"><a class="show-comment-form" href="#">0 Комментариев</a></span>
+                        </div>
+                        <div class="pmf-faq-edit">
+                            
+                        </div>
+                    </div>
+                </header>
+                <div class="pmf-faq-body">
+                    <div class="otsf-incut advice"><span class="typesummary"><span class="EMoHub tL8wMe" style="text-align: left;"><abbr data-toggle="tooltip" data-placement="bottom" title="Процесс обмена данными между двумя программными продуктами. Интеграция снижает трудоемкость работы оператора и уменьшает количество ошибок ручного ввода. В СЭО 3KL могут быть такие типы интеграций, как Сквозной переход (при клике по ссылке в одной системе осуществляется переход в другую систему), Встраивание (предполагает встраивание в материал или страницу виджета с другого сайта или системы), Объединение процессов (в этом случае процесс, начатый в одной системе, продолжается в другой и завершается в исходной), Встраивание с объединением процессов (встроенный виджет получает от СЭО 3KL начальную информацию, а после завершения своей работы возвращает в СЭО 3KL результат), Отображение данных (внутри одной системы отображаются данные из другой системы), Импорт данных (данные из внешней системы попадают в СЭО 3KL и там ею обрабатываются), Экспорт данных (данные из СЭО 3KL выгружаются во внешнюю систему). Статья «Что такое интеграция? Какие существуют интеграции и возможности обмена данными в СЭО 3KL? (заглавная статья)».">Интеграция</abbr> позволяет осуществить печать документов установленного образца на бланках строгой отчетности, а также подготовить файл с данными этих документов для выгрузки в федеральный реестр сведений о документах об образовании (о квалификации, об обучении).</span></span></div>
+<div class="otsf-incut comment"><span class="typesummary"><span id=":ua.co" class="EMoHub tL8wMe" style="text-align: left;">Функционал, описанный в данной статье, в полном объеме доступен в СЭО 3КL, начиная с версии 4.1.5с.<br />Если вы используете более раннюю версию системы — обратитесь с заявкой на проведение обновления в службу технической поддержки ООО «Открытые технологии».</span></span></div>
+<div class="otsf-incut note"><span class="typesummary"><span class="EMoHub tL8wMe" style="text-align: left;">Дополнительно, вы можете ознакомиться с <a href="https://vkvideo.ru/video-32236440_456239179?t=13m0s" target="_blank" rel="noopener">видеоверсией описания интеграции с ФИС ФРДО</a> и статьей <span id=":ua.co" class="EMoHub tL8wMe" style="text-align: left;"><a href="https://kb.opentechnology.ru/index.php?solution_id=1824">«Вебинар от 30.05.2024г. Сценарий подготовки списка удостоверений для выгрузки в ФИС ФРДО. Решение для СЭО 3KL v 3.9.»</a>.</span></span></span></div>
+<div class="otsf-incut example"><strong><a id="q0"></a>Содержание:</strong><br /> <a href="#q1"><strong><span style="color: #333333;">1.</span> Общая информация</strong></a><br /><strong> </strong> <a href="#q11"><span style="color: #333333;">1.1.</span> Общие условия интеграции</a><br /><a href="#q12"><span style="color: #333333;">  1.2.</span> Права</a><br /><a href="#q2"><strong><span style="color: #333333;">2.</span> Настройка интеграции с ФИС ФРДО</strong></a><br /><a href="#q3"><strong><span style="color: #333333;">3.</span> Дополнительная информация</strong></a><br /><a href="#q31"><span style="color: #333333;">  3.1.</span> Примеры шаблонов</a> <br /><a href="#q311"><strong><span style="color: #333333;">   </span></strong><span style="color: #333333;"> 3.1.1.</span> Свидетельство о профессии рабочего, должности служащего</a><br /><a href="#q312"><span style="color: #333333;">    3.1.2.</span> Удостоверение о повышении квалификации</a><br /><a href="#q32"><span style="color: #333333;">  3.2.</span> Создание вкладки «Выгрузка для ФИС ФРДО» Панели управления СЭО 3КL</a><br /> <a href="#q33"><strong><span style="color: #333333;">  </span></strong><span style="color: #333333;">3.3.</span> Использование фильтра на вкладке «Выгрузка для ФИС ФРДО»</a><br />  <a href="#q34"><span style="color: #333333;">3.4.</span> Валидация вводимых данных</a><br /><a href="#q35"><span style="color: #333333;">  3.5.</span> Отмена печати</a><br /> <a href="#q36"><strong><span style="color: #333333;">  </span></strong><span style="color: #333333;">3.6.</span> Выгрузка в ФИС ФРДО удаленных из системы сертификатов</a><br /><strong>4. <a href="#q4">Примеры и решения</a><br /></strong>  4.1. <a href="#q41">Создание в СЭО 3KL удостоверения о повышении квалификации установленного образца (по ФЗ № 273) с использованием тестового курса</a><span id=":ua.co" class="EMoHub tL8wMe" style="text-align: left;"></span></div>
+<h3><a id="q1"></a>1. Общая информация</h3>
+<p>В рамках интеграции с федеральной информационной системой <a href="http://fis-frdo.ru/">«Федеральный реестр сведений о документах об образовании и (или) о квалификации, документах об обучении»</a> (ФИС ФРДО) в СЭО 3КL реализован набор настроек и сценариев, которые предназначены для:</p>
+<ul>
+<li>генерации и печати документов на бланках строгой отчетности;</li>
+<li>формирования файла с данными этих документов для последующей загрузки в федеральную информационную систему.</li>
+</ul>
+<p><a href="#q0">-Вернуться к содержанию-</a></p>
+<h4><a id="q11"></a>1.1. Общие условия интеграции</h4>
+<p>Для корректной отработки сценария необходимо, чтобы предварительно были выполнены следующие действия:</p>
+<ul>
+<li>образовательная организация <a href="http://fis-frdo.ru/">подключена к ФИС ФРДО</a>;</li>
+<li>в организации назначен ответственный специалист, отвечающий за работу с бланками строгой отчетности и передачу данных в ФИС ФРДО, в СЭО 3КL для него создана отдельная <abbr data-toggle="tooltip" data-placement="bottom" title="Набор разрешений (прав), определенных в масштабах всей системы. Роли могут назначаться пользователям в определенных контекстах системы. Статья «Роли, контекст, ролевая модель».">роль</abbr>, наделенная всеми необходимыми <a href="#q12">правами</a>;</li>
+<li>в системе созданы и верно заполнены все <a href="#m2">необходимые поля профиля пользователя</a>;</li>
+<li>в системе выполнена <a href="https://kb.opentechnology.ru/index.php?solution_id=1106#q4">глобальная настройка</a> плагина <a href="https://kb.opentechnology.ru/index.php?solution_id=1106">«<abbr data-toggle="tooltip" data-placement="bottom" title="Документ, свидетельствующий о соответствии чего-либо определенным требованиям.">Сертификат</abbr> СЭО 3КL»</a>;</li>
+<li>в курсе выполнена <a href="https://kb.opentechnology.ru/index.php?solution_id=1106#q5">настройка сертификата</a> и условий его выдачи, активирована опция «Печать на бланке включена»;</li>
+<li>в <a href="https://kb.opentechnology.ru/index.php?solution_id=1375">Панели управления СЭО 3КL</a> присутствует предустановленная <a href="#q32">вкладка «Выгрузка для ФИС ФРДО»</a>;</li>
+<li><a href="https://kb.opentechnology.ru/index.php?solution_id=1106#m1">шаблон файла для выгрузки сертификатов в ФИС ФРДО</a> соответствует последним требованиям федеральной информационной системы.</li>
+</ul>
+<p><a href="#q0">-Вернуться к содержанию-</a></p>
+<h4><a id="q12"></a>1.2. Права</h4>
+<p><strong>Право печати сертификатов на бланке</strong> (mod/simplecertificate:letterheadprint). По умолчанию присутствует у диспетчера-администратора.</p>
+<p>При отсутствии у пользователя этого права столбец печати на бланке в таблице выданных сертификатов в интерфейсе сертификата не будет отображаться, а при переходе к интерфейсу печати по прямой ссылке пользователь будет перенаправлен с сообщением о невозможности выполнить действие.</p>
+<p><strong>Право для изменения данных сертификата после выгрузки в ФИС ФРДО</strong> (mod/simplecertificate:modifyafterfrdoloading). По умолчанию не доступно ни одной из ролей.</p>
+<p>Право дает возможность:</p>
+<ul>
+<li>переопределять данные выгруженного сертификата, в том числе данные печати;</li>
+<li>удалять выгруженные сертификаты.</li>
+</ul>
+<div class="otsf-incut note">Администраторы СЭО 3КL в любом случае будут иметь возможность переопределять данные выгруженного сертификата и удалять выгруженные сертификаты даже при отсутствии права для изменения данных сертификата после выгрузки в ФИС ФРДО благодаря наличию у них суперправа <abbr data-toggle="tooltip" data-placement="bottom" title="Modular Object-Oriented Dynamic Learning Environment (модульная объектно-ориентированная динамическая учебная среда), платформа обучения или система управления курсами (CMS) — свободно распространяемый по лицензии GNU GPL программный продукт, призванный помочь преподавателям создавать эффективные онлайн-курсы. СЭО 3KL базируется на ядре Moodle. Статья «Принципы работы Moodle».">moodle</abbr> / site: doanything.</div>
+<div class="otsf-incut note">Дополнительная информация о правах в СЭО 3КL в статьях<br /><a href="https://kb.opentechnology.ru/index.php?solution_id=1185">«Определение ролей, настройка прав»</a><br /><a href="https://kb.opentechnology.ru/index.php?solution_id=1195">«Роли, <abbr data-toggle="tooltip" data-placement="bottom" title="Точка в древовидной иерархии объектов СЭО 3KL. Иерархия включает в себя ядро системы, категории курсов, курсы, пользователей и элементы курсов. Контексты используются при назначении ролей, хранении файлов, выполнении настроек и в некоторых других операциях. Полномочия, назначенные в контексте, распространяются на всех дочерние контексты, согласно древовидной иерархии. Не следует путать с контентом. Статья «Роли, контекст, ролевая модель».">контекст</abbr>, ролевая модель»</a></div>
+<p><a href="#q0">-Вернуться к содержанию-</a></p>
+<h3><a id="q2"></a>2. Настройка интеграции с ФИС ФРДО</h3>
+<p><strong>Задача:</strong></p>
+<p>В СЭО 3КL центра ДПО необходимо настроить выдачу удостоверений о повышении квалификации на бланках строгой отчетности (Рис. 2.1) и формирование файла с информацией о выданных удостоверениях для федеральной информационной системы «ФИС ФРДО».</p>
+<p><img class="otsf-screenshot" src="https://kb.opentechnology.ru/index.php?action=attachment&amp;id=5666" alt="" width="1324" height="933" /></p>
+<div class="otsf-screenshot-description">Рис. 2.1. Удостоверение о повышении квалификации, выдаваемое центром ДПО. Пример.</div>
+<div class="otsf-incut note">Подразумевается, что центр ДПО на момент реализации решения уже подключен к ФИС ФРДО.</div>
+<p><strong>Решение:</strong></p>
+<p>1) В организации назначается (при его отсутствии) ответственный специалист, отвечающий за работу с бланками строгой отчетности и передачу данных в ФИС ФРДО. В СЭО 3КL для него создается отдельная роль, наделенная всеми необходимыми правами.</p>
+<div class="otsf-incut note">Для создания такой роли необходимо обратиться с соответствующей заявкой в <a href="https://kb.opentechnology.ru/index.php?solution_id=1197">техническую поддержку ООО «Открытые технологии»</a>. При этом набор необходимых для роли прав (уровень «вмешательства» ответственного специалиста в СЭО 3КL) будет определяться, в первую очередь, внутренними регламентами вашей организации и все последующие действия, описанные в решении, ответственный специалист выполняет самостоятельно, либо при помощи диспетчера-администратора системы.</div>
+<p><a id="m2"></a>2) Ответственный специалист проверяет (Администрирование-&gt;Пользователи-&gt;Учетные записи-&gt;Дополнительные поля профиля) наличие в системе необходимых для корректной генерации файла выгрузки в ФИС ФРДО дополнительных полей профиля пользователя (Рис. 2.2) и, в случае их отсутствия, создает и заполняет их:</p>
+<table class="table table-bordered" style="width: 975px;">
+<tbody>
+<tr>
+<td style="width: 183px; text-align: center;"><strong>Название поля</strong></td>
+<td style="width: 814.75px; text-align: center;"><strong>Описание</strong></td>
+<td style="width: 566.25px; text-align: center;"><strong>Примечание</strong></td>
+</tr>
+<tr>
+<td style="width: 183px;">baseeducationlevel</td>
+<td style="width: 814.75px;">Уровень образования (ВО/СПО)</td>
+<td style="width: 566.25px;">Выпадающий список</td>
+</tr>
+<tr>
+<td style="width: 183px;">basedocumentlastname</td>
+<td style="width: 814.75px;">Фамилия, указываемая в дипломе о ВО/СПО (если оставить незаполненным, в документ будет подставляться фамилия из основного поля)</td>
+<td style="width: 566.25px;">Текстовое поле, до 100 символов</td>
+</tr>
+<tr>
+<td style="width: 183px;">basedocumentserial</td>
+<td style="width: 814.75px;">Серия документа о ВО/СПО</td>
+<td style="width: 566.25px;">Текстовое поле, до 16 символов</td>
+</tr>
+<tr>
+<td style="width: 183px;">basedocumentnumber</td>
+<td style="width: 814.75px;">Номер документа о ВО/СПО</td>
+<td style="width: 566.25px;">Текстовое поле, до 16 символов</td>
+</tr>
+<tr>
+<td style="width: 183px;">birthday</td>
+<td style="width: 814.75px;">Дата рождения получателя документа</td>
+<td style="width: 566.25px;">Дата формата дд.мм.гггг</td>
+</tr>
+<tr>
+<td style="width: 183px;">sex</td>
+<td style="width: 814.75px;">Пол получателя</td>
+<td style="width: 566.25px;">Выпадающий список</td>
+</tr>
+<tr>
+<td style="width: 183px;">snils</td>
+<td style="width: 814.75px;">СНИЛС</td>
+<td style="width: 566.25px;">Формат ввода: 111-222-333 00</td>
+</tr>
+<tr>
+<td style="width: 183px;">citizenship</td>
+<td style="width: 814.75px;">Гражданство получателя</td>
+<td style="width: 566.25px;">Выпадающий список, коды стран по ОКСМ</td>
+</tr>
+</tbody>
+</table>
+<p><img class="otsf-screenshot" src="https://kb.opentechnology.ru/index.php?action=attachment&amp;id=5829" alt="" width="1569" height="866" /></p>
+<div class="otsf-screenshot-description">Рис. 2.2. Дополнительные поля профиля, необходимые для корректной генерации файла выгрузки в ФИС ФРДО.</div>
+<div class="otsf-incut note">Обратите внимание: если к моменту формирования файла для ФИС ФРДО эти поля будут отсутствовать в системе или не будут заполнены у пользователей (Рис. 2.3), чьи данные выгружаются в федеральную информационную систему, то соответствующие столбцы в файле выгрузки останутся пустыми и таблицу придется дозаполнять вручную.</div>
+<p><img class="otsf-screenshot" src="https://kb.opentechnology.ru/index.php?action=attachment&amp;id=5830" alt="" width="1541" height="1637" /></p>
+<div class="otsf-screenshot-description">Рис. 2.3. Пример профиля пользователя с заполненными необходимыми полями.</div>
+<div class="otsf-incut note">Приведенный перечень полей актуален для <a href="https://kb.opentechnology.ru/index.php?solution_id=1106#m1">шаблона по умолчанию</a>. Вы можете использовать в вашей системе поля с иными названиями, но в этом случае для корректного создания файла выгрузки необходимо изменить <a href="https://kb.opentechnology.ru/index.php?solution_id=1106#q45">параметры шаблона</a>.</div>
+<div class="otsf-incut note">Подробная информация по созданию дополнительных полей профиля в статье <a href="https://kb.opentechnology.ru/index.php?solution_id=1165">«Добавление кастомных (настраиваемых) полей в профиль пользователя»</a>.</div>
+<p>3) Ответственный специалист определяет <a href="https://kb.opentechnology.ru/index.php?solution_id=1106#q4">глобальные настройки плагина «Сертификат СЭО 3КL»</a> (Администрирование-&gt;Плагины-&gt;Модули элементов курса-&gt;Сертификат СЭО 3КL):</p>
+<p>Ширина = 297<br />Высота = 210<br />Положение текста по горизонтали = 16<br />Положение текста по вертикали = 28<br />Ширина текстового поля сертификата = 265<br />Минимальная высота текстового поля сертификата = 154<br />Отображение границы текстового поля — опция не установлена<br />Дата печати = Курс завершен<br />Срок хранения в базе удаленного сертификата (в месяцах) = 60<br />Альтернативный <abbr data-toggle="tooltip" data-placement="bottom" title="Уникальный буквенно-числовой код Инсталляции продукта в базе данных Исполнителя, присваиваемый в момент установки или первого запуска Продукта. Связывает Инсталляцию продукта, уникальные сведения о технических параметрах ЭВМ, в память которой записана Инсталляция продукта, секретный ключ и сведения об Активации, условиях и сроках предоставления гарантийной технической поддержки Инсталляции. При перемещении Инсталляции продукта Серийный номер сохраняется. Серийный номер Инсталляции вместе с секретным ключом серийного номера обеспечивают возможность подключения данной Инсталляции продукта к облачным службам Исполнителя и возможность автоматической Активации Продукта при приобретении прав на пакет обновления.">серийный номер</abbr> сертификата — опция не установлена<br />Выводить QR-код сертификата — опция не установлена<br /><strong>Раздел «Настройки печати на бланке и выгрузки для ФИС ФРДО по умолчанию»:</strong><br />Печать на бланке включена — опция установлена<br />Вид документа = Удостоверение о повышении квалификации<br />Дополнительная профессиональная программа = Повышение квалификации<br />Наименование дополнительной профессиональной программы = Оказание первой помощи<br />Наименование области профессиональной деятельности = Медицина<br />Укрупненные группы специальностей — пусто<br />Наименование квалификации, профессии, специальности = Медицинская помощь несовершеннолетним обучающимся<br />Взять год начала обучения из подписки — опция не установлена<br />Год начала обучения для документа о квалификации = 2022<br />Взять год окончания обучения из подписки — опция не установлена<br />Год окончания обучения для документа о квалификации = 2022<br />Срок обучения в часах = 16<br />Форма обучения = очная<br />Источник финансирования обучения — пусто<br />Форма получения образования на момент прекращения образовательных отношений = очная</p>
+<p>4) Ответственный специалист проверяет актуальность <a href="https://kb.opentechnology.ru/index.php?solution_id=1106#m1">шаблона файла для выгрузки в ФИС ФРДО</a> и при необходимости переопределяет его.</p>
+<div class="otsf-incut note">Если у вас дополнительные поля с данными для выгрузки в ФИС ФРДО настроены так же, как в <a href="#m2">предлагаемом решении</a> — переопределять шаблон файла для выгрузки не нужно.<br />Если же в вашей системе эти дополнительные поля называются иначе - необходимо изменить шаблон файла для выгрузки по следующему алгоритму:<br />1) Скопировать в подходящий <a href="https://kb.opentechnology.ru/index.php?solution_id=1543#Tekstovyj_redaktor">текстовый редактор</a> текст шаблона.<br />2) Внести в текст соответствующие правки (заменить названия полей по умолчанию на актуальные).<br />3) Вставить отредактированный текст шаблона в поле «Переопределить шаблон файла для выгрузки сертификатов в ФИС ФРДО» глобальных настроек плагина и сохранить изменения.</div>
+<p>5) Ответственный специалист <a href="https://kb.opentechnology.ru/index.php?solution_id=1230#q11">создает в курсе</a> элемент курса «Сертификат СЭО 3КL», настраивает его:</p>
+<p>Название сертификата = Удостоверение о повышении квалификации<br />Файл с изображением сертификата = <a href="https://kb.opentechnology.ru/index.php?action=attachment&amp;id=5779">Файл подложки</a><br />Текст сертификата = <a href="https://kb.opentechnology.ru/index.php?action=attachment&amp;id=5763">Текстовый файл с html-кодом сертификата</a> (скопированный из файла код необходимо вставить в окно редактора в режиме работы с html-кодом)<br />Включить обратную сторону сертификата  = Нет<br />Альтернативное название курса = Оказание первой помощи<br /> Альтернативный серийный номер сертификата = Номер с серией в формате А001-ХХХХ-ХХХХ<br />Серия для кода = А001<br />Пытаться автоматически сгенерировать при изменении оценки за курс = Да<br />Доставка = Не отправлять студенту сертификат, пользователь получит сертификат иным способом<br />Печать на бланке включена — опция установлена</p>
+<p>6) Ответственный специалист, используя ксерокопии номерного бланка и оборудование (принтер), на котором впоследствии будет выполняться печать , проверяет точность наложения текста документа на бланк при печати. При необходимости вносит правки в настройки документа таким образом, чтобы все поля текста документа точно попадали в нужные места удостоверения (Рис. 2.4).</p>
+<p><img class="otsf-screenshot" src="https://kb.opentechnology.ru/index.php?action=attachment&amp;id=5784" alt="" width="1324" height="933" /></p>
+<div class="otsf-screenshot-description">Рис. 2.4. Пример пробного сертификата. распечатанного на ксерокопии бланка.</div>
+<p>7) Ответственный специалист проверяет наличие в <a href="https://kb.opentechnology.ru/index.php?solution_id=1375">Панели управления СЭО 3КL</a> вкладки <a href="https://kb.opentechnology.ru/index.php?solution_id=1375#q47">«Выгрузка для ФИС ФРДО»</a> (Рис. 2.5) и при необходимости <a href="#q32">создает ее</a>.</p>
+<p><img class="otsf-screenshot" src="https://kb.opentechnology.ru/index.php?action=attachment&amp;id=5831" alt="" width="1534" height="238" /></p>
+<div class="otsf-screenshot-description">Рис. 2.5. Пример интерфейса Панели управления СЭО 3КL.</div>
+<p><strong>Результат:</strong></p>
+<p>1) Пользователи успешно завершают прохождение курса повышения квалификации и система генерирует им сертификаты (Рис. 2.6).</p>
+<p><img class="otsf-screenshot" src="https://kb.opentechnology.ru/index.php?action=attachment&amp;id=5358" alt="" width="1727" height="906" /></p>
+<div class="otsf-screenshot-description">Рис. 2.6. Страница личного кабинета пользователя с выданным сертификатом.</div>
+<p>2) Ответственный специалист настраивает на вкладке «Выгрузка для ФИС ФРДО» отбор сертификатов, которые были выданы в СЭО 3КL за текущий отчетный период, но еще не распечатывались (Рис. 2.7):</p>
+<p>Подлежит печати = Да<br />Дата печати заполнена = Нет<br />Данные уже выгружались в ФИС ФРДО = Нет</p>
+<div class="otsf-incut note">Подробнее об инструменте фильтрации в разделе <a href="https://kb.opentechnology.ru/index.php?solution_id=1549#q33">«Использование фильтра на вкладке «Выгрузка для ФИС ФРДО»</a>.</div>
+<p><img class="otsf-screenshot" src="https://kb.opentechnology.ru/index.php?action=attachment&amp;id=5832" alt="" width="1550" height="997" /></p>
+<div class="otsf-screenshot-description">Рис. 2.7. Вкладка «Выгрузка в ФИС ФРДО» с отфильтрованными сертификатами, которые подлежат печати, но еще не распечатывались и данные о которых не передавались в ФИС ФРДО.</div>
+<p>3) Ответственный специалист по ссылке «Распечатать сертификат» (см. поз. 1 Рис. 2.7) переходит на страницу «Печать сертификата на бланке» (Рис. 2.8). Здесь при необходимости корректирует данные документа в соответствии с приказом по учебному заведению (поз. 1. Рис. 2.8) и нажатием на кнопку «Сохранить» записывает измененные данные.</p>
+<p><img class="otsf-screenshot" src="https://kb.opentechnology.ru/index.php?action=attachment&amp;id=6682" width="827" height="790" /></p>
+<div class="otsf-screenshot-description">Рис. 2.8. Страница «Печать сертификата на бланке».</div>
+<p>4) Ответственный специалист, нажав на ссылку «Скачать файл сертификата без бланка» (см. поз. 2 Рис. 2.8), переходит на вкладку со сгенерированным файлом для печати на бланке строгой отчетности и еще раз проверяет правильность заполнения документа (Рис. 2.9).</p>
+<p><img class="otsf-screenshot" src="https://kb.opentechnology.ru/index.php?action=attachment&amp;id=5362" alt="" width="1918" height="837" /></p>
+<div class="otsf-screenshot-description">Рис. 2.9. Страница просмотра сгенерированного файла. Предусмотрена возможность непосредственно распечатать изображение на подключенном принтере или сохранить pdf-файл на компьютере.</div>
+<div class="otsf-incut note">Обратите внимание: файл в этом случае генерируется <strong>без подложки</strong>, так как будет распечатываться на номерном бланке.</div>
+<p>5) Ответственный специалист распечатывает проверенный файл документа на номерном бланке (Рис. 2.10).</p>
+<p><img class="otsf-screenshot" src="https://kb.opentechnology.ru/index.php?action=attachment&amp;id=5386" alt="" width="1199" height="845" /></p>
+<div class="otsf-screenshot-description">Рис. 2.10. Пример распечатанного свидетельства на бланке с серией АААА и номером 12345.</div>
+<p>6) Ответственный специалист возвращается на страницу «Печать сертификата на бланке» (см. Рис. 2.8) и вносит информацию о серии и номере распечатанного документа в поля «Серия бланка» и «Номер бланка» (Рис. 2.11). Нажав «Сохранить и вернуться» записывает эти данные в СЭО 3КL.</p>
+<p><img class="otsf-screenshot" src="https://kb.opentechnology.ru/index.php?action=attachment&amp;id=6683" width="788" height="798" /></p>
+<div class="otsf-screenshot-description">Рис. 2.11. Внесение данных о номере и серии бланка распечатанного документа.</div>
+<div class="otsf-incut note">Описываемая в пунктах 3) - 6) последовательность действий не является безусловной и будет зависеть от того, как выстроен процесс подготовки документов в вашей организации.</div>
+<p>7) Ответственный специалист повторяет действия, описанные в пунктах 3)-6) для всех пользователей, которым необходимо распечатать сертификаты.</p>
+<p>8) Ответственный специалист настраивает на вкладке «Выгрузка для ФИС ФРДО» отбор сертификатов, которые были выданы в СЭО 3КL за текущий отчетный период, уже распечатаны, но еще не переданы в ФИС ФРДО:</p>
+<p>Подлежит печати = Да<br />Дата печати заполнена = Да<br />Дата начала периода и Дата окончания периода = границы отчетного периода (01.11.2022г. — 02.12.2022г. в примере)<br />Данные уже выгружались в ФИС ФРДО = Нет</p>
+<p>9) Ответственный специалист, выделяет (отмечает галочками) все сертификаты, данные о которых необходимо передать в ФИС ФРДО, и выполняет массовое действие «Сформировать файл для выгрузки в ФИС ФРДО» (Рис. 2.12).</p>
+<p><img class="otsf-screenshot" src="https://kb.opentechnology.ru/index.php?action=attachment&amp;id=5364" alt="" width="1714" height="996" /></p>
+<div class="otsf-screenshot-description">Рис. 2.12. Массовое действие «Сформировать файл для выгрузки в ФИС ФРДО» для выбранных сертификатов на вкладке «Выгрузка для ФИС ФРДО».</div>
+<p>8) Ответственный специалист во вновь открывшемся окне нажимает кнопку «Сформировать файл» (Рис. 2.13) и запускает процесс генерации файла выгрузки, которых будет сохранен на его компьютере (место сохранения зависит от браузера и его настроек, в большинстве случаев, это папка «Загрузки»).</p>
+<p><img class="otsf-screenshot" src="https://kb.opentechnology.ru/index.php?action=attachment&amp;id=5833" alt="" width="536" height="256" /></p>
+<div class="otsf-screenshot-description">Рис. 2.13. <abbr data-toggle="tooltip" data-placement="bottom" title="Окно, появляющееся поверх страницы в ответ на действия пользователя и блокирующее доступ к основному содержимому страницы.">Модальное окно</abbr> генерации файла массового действия «Сформировать файл для выгрузки в ФИС ФРДО».</div>
+<p><a href="https://kb.opentechnology.ru/index.php?action=attachment&amp;id=5834" target="_blank" rel="noopener">Пример файла выгрузки.</a></p>
+<p>8) Ответственный специалист проверяет сгенерированную таблицу, дозаполняет необходимые поля (подтверждение утраты, подтверждение уничтожения и т. п.) и по настроенным каналам связи с федеральной информационной системой передает данные о выданных документах установленного образца (Рис. 2.14).</p>
+<p><img class="otsf-screenshot" src="https://kb.opentechnology.ru/index.php?action=attachment&amp;id=5365" alt="" width="1665" height="361" /></p>
+<div class="otsf-screenshot-description">Рис. 2.14. Фрагмент xls-файла выгрузки для ФИС ФРДО.</div>
+<p><a href="#q0">-Вернуться к содержанию-</a></p>
+<h3><a id="q3"></a>3. Дополнительная информация</h3>
+<h4><a id="q31"></a>3.1. Примеры шаблонов</h4>
+<p>Ниже приведено несколько подготовленных шаблонов (html-код, файл подложки и внешний вид) для «Сертификата СЭО 3КL», с помощью которых можно быстро настроить печать документов установленного образца.</p>
+<h5><a id="q311"></a>3.1.1. Свидетельство о профессии рабочего, должности служащего</h5>
+<p><img class="otsf-screenshot" src="https://kb.opentechnology.ru/index.php?action=attachment&amp;id=5659" alt="" width="1218" height="859" /></p>
+<div class="otsf-screenshot-description">Рис. 3.1.1.а. Пример выданного свидетельства, подготовленного по шаблону и распечатанного на номерном бланке.</div>
+<p><a href="https://kb.opentechnology.ru/index.php?action=attachment&amp;id=5661" target="_blank" rel="noopener"><strong>Подложка свидетельства</strong></a>. Файл необходимо загрузить в поле «Файл с изображением сертификата» настраиваемого элемента курса «Сертификат СЭО 3КL».</p>
+<div class="otsf-incut note">Обратите внимание: данный файл подложки не имеет уникального номера, не является бланком установленного образца и приложен исключительно в качестве примера.</div>
+<div class="otsf-incut note">Подложка используется для получения электронной копии выдаваемого документа. При печати на номерных бланках необходимо выбирать режим печати «Скачать файл сертификата без бланка».</div>
+<p><strong>Html-код текста документа</strong>. Код необходимо скопировать из статьи (или скачать <a href="https://kb.opentechnology.ru/index.php?action=attachment&amp;id=5762">текстовый файл с кодом</a>) и вставить в поле настроек «Текст сертификата», предварительно переключив <a href="https://kb.opentechnology.ru/index.php?solution_id=1239">редактор «Атто»</a> в режим работы с html-кодом (кнопка <img class="" src="https://kb.opentechnology.ru/index.php?action=attachment&amp;id=5662" alt="" width="30" height="27" /> в панели инструментов редактора).</p>
+<p>Табличный вид документа:</p>
+<table style="width: 100%;"><caption> </caption>
+<thead>
+<tr>
+<th><br /> <br /><br /></th>
+<th> </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><span class="" style="color: #566573;">РОССИЙСКАЯ ФЕДЕРАЦИЯ</span><br /> <br /><br /></td>
+<td style="text-align: center;"><span class="" style="color: #566573;">Настоящее </span><span class="" style="color: #566573;">{DOCUMENTTYPE} подтверждает, что</span></td>
+</tr>
+<tr>
+<td style="text-align: center;">Государственное бюджетное профессиональное<br /> <br />образовательное учреждение города Москвы<br /> <br />«Московский государственный образовательный комплекс»<br /> <br /><br /></td>
+<td style="text-align: center;"><span class="" style="font-size: medium;">{LASTNAME}</span><br /> <br /><span class="" style="font-size: medium;">{FIRSTNAME} {MIDDLENAME}</span><br /> <br /><br /></td>
+</tr>
+<tr>
+<td> </td>
+<td style="text-align: center;"><span class="" style="color: #566573;">освоил (а) программу профессионального обучения</span><br /> <br /><br /></td>
+</tr>
+<tr>
+<td> </td>
+<td style="text-align: center;"><span class="" style="font-size: medium;">{DPPROGRAM} {QUALIFICATION}</span><br /> <br /><br /></td>
+</tr>
+<tr>
+<td> </td>
+<td style="text-align: center;"><span class="" style="color: #566573;">(</span><span class="" style="font-size: medium;">{HOURS}</span><span class="" style="font-size: medium;"> </span><span class="" style="color: #566573;">часов)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;"><br /> <br /><br /></td>
+<td> </td>
+</tr>
+<tr>
+<td style="text-align: center;"><br /> <br /><br /></td>
+<td><br /> <br /><br /></td>
+</tr>
+<tr>
+<td style="text-align: center;"><em><span class="" style="color: #566573;">Документ о квалификации</span></em><br /> <br /><br /></td>
+<td><br /> <br /><br /></td>
+</tr>
+<tr>
+<td style="text-align: center;">Регистрационный №<br /> <br />{CERTIFICATECODE}</td>
+<td> </td>
+</tr>
+<tr>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td style="text-align: center;"><span class="" style="color: #566573;">Город</span><br /> <br />{CITY}<br /> <br /><br /> <br /><br /></td>
+<td> </td>
+</tr>
+<tr>
+<td style="text-align: center;"><span class="" style="color: #566573;">Дата выдачи</span><br /> <br /><br /></td>
+<td><em>  <span class="" style="color: #566573;">Председатель</span></em><span class="" style="color: #566573;"> </span><em><span class="" style="color: #566573;">аттеcтационной комиссии</span></em> <br />Шадрина Е.П.<br /> <br /><br /></td>
+</tr>
+<tr>
+<td style="text-align: center;">{ALTISSUEDATE}<br /> <br /><br /></td>
+<td><em>  <span class="" style="color: #566573;">Руководитель</span></em><span class="" style="color: #566573;"> </span><em><span class="" style="color: #566573;">образовательной организации</span></em>        <br /> Климкин Г.В.<em>  </em><br /> <br /><br /></td>
+</tr>
+<tr>
+<td> </td>
+<td>                                                                                 <br /> <span class="" style="color: #566573;">М.П.</span><br /> <br /><br /></td>
+</tr>
+<tr>
+<td> </td>
+<td>                                       <br /> <br /><br /></td>
+</tr>
+<tr>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td> </td>
+<td> </td>
+</tr>
+</tbody>
+</table>
+<p> Html-код:</p>
+<div class="otsf-incut example">
+<table style="width: 100%;"><caption> </caption>
+<thead>
+<tr>
+<th><br /> <br /><br /></th>
+<th> </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><span class="" style="color: #566573;">РОССИЙСКАЯ ФЕДЕРАЦИЯ</span><br /> <br /><br /></td>
+<td style="text-align: center;"><span class="" style="color: #566573;">Настоящее </span><span class="" style="color: #566573;">{DOCUMENTTYPE} подтверждает, что</span></td>
+</tr>
+<tr>
+<td style="text-align: center;">Государственное бюджетное профессиональное<br /> <br />образовательное учреждение города Москвы<br /> <br />«Московский государственный образовательный комплекс»<br /> <br /><br /></td>
+<td style="text-align: center;"><span class="" style="font-size: medium;">{LASTNAME}</span><br /> <br /><span class="" style="font-size: medium;">{FIRSTNAME} {MIDDLENAME}</span><br /> <br /><br /></td>
+</tr>
+<tr>
+<td> </td>
+<td style="text-align: center;"><span class="" style="color: #566573;">освоил (а) программу профессионального обучения</span><br /> <br /><br /></td>
+</tr>
+<tr>
+<td> </td>
+<td style="text-align: center;"><span class="" style="font-size: medium;">{DPPROGRAM} {QUALIFICATION}</span><br /> <br /><br /></td>
+</tr>
+<tr>
+<td> </td>
+<td style="text-align: center;"><span class="" style="color: #566573;">(</span><span class="" style="font-size: medium;">{HOURS}</span><span class="" style="font-size: medium;"> </span><span class="" style="color: #566573;">часов)</span></td>
+</tr>
+<tr>
+<td style="text-align: center;"><br /> <br /><br /></td>
+<td> </td>
+</tr>
+<tr>
+<td style="text-align: center;"><br /> <br /><br /></td>
+<td><br /> <br /><br /></td>
+</tr>
+<tr>
+<td style="text-align: center;"><em><span class="" style="color: #566573;">Документ о квалификации</span></em><br /> <br /><br /></td>
+<td><br /> <br /><br /></td>
+</tr>
+<tr>
+<td style="text-align: center;">Регистрационный №<br /> <br />{CERTIFICATECODE}</td>
+<td> </td>
+</tr>
+<tr>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td style="text-align: center;"><span class="" style="color: #566573;">Город</span><br /> <br />{CITY}<br /> <br /><br /> <br /><br /></td>
+<td> </td>
+</tr>
+<tr>
+<td style="text-align: center;"><span class="" style="color: #566573;">Дата выдачи</span><br /> <br /><br /></td>
+<td><em>  <span class="" style="color: #566573;">Председатель</span></em><span class="" style="color: #566573;"> </span><em><span class="" style="color: #566573;">аттеcтационной комиссии</span></em> style="color: rgb(86, 101, 115);"&gt;             Шадрина Е.П.<br /> <br /><br /></td>
+</tr>
+<tr>
+<td style="text-align: center;">{ALTISSUEDATE}<br /> <br /><br /></td>
+<td><em>  <span class="" style="color: #566573;">Руководитель</span></em><span class="" style="color: #566573;"> </span><em><span class="" style="color: #566573;">образовательной организации</span></em>        <br /> Климкин Г.В.<em>  </em><br /> <br /><br /></td>
+</tr>
+<tr>
+<td> </td>
+<td>                                                                                 <br /> <span class="" style="color: #566573;">М.П.</span><br /> <br /><br /></td>
+</tr>
+<tr>
+<td> </td>
+<td>                                       <br /> <br /><br /></td>
+</tr>
+<tr>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td> </td>
+<td> </td>
+</tr>
+</tbody>
+</table>
+<br /><br /><br /><br /><br />
+<p> </p>
+</div>
+<p>Код формирует следующий текст документа, красным выделены значения, подставляемые  непосредственно из полей системы (Рис. 3.1.1.б).</p>
+<p><img class="otsf-screenshot" src="https://kb.opentechnology.ru/index.php?action=attachment&amp;id=5665" alt="" width="1322" height="932" /></p>
+<div class="otsf-screenshot-description">Рис. 3.1.1.б. Текст свидетельства с выделенными автоподстановками.</div>
+<div class="otsf-incut note">Подробнее о доступных в документе автоподстановках в статье <a href="https://kb.opentechnology.ru/index.php?solution_id=1106#m6">«Сертификат СЭО 3КL»</a>.</div>
+<p><strong>Размеры сертификата, положение текста</strong>. Для правильного позиционирования текста на бланке, установить в разделе «Настройки дизайна» указанные значения (Рис. 3.1.1.в).</p>
+<p><img class="otsf-screenshot" src="https://kb.opentechnology.ru/index.php?action=attachment&amp;id=5664" alt="" width="1720" height="1262" /></p>
+<div class="otsf-screenshot-description">Рис. 3.1.1.в. Параметры размера сертификата и положения текста для шаблона свидетельства.</div>
+<p><a href="#q0">-Вернуться к содержанию-</a></p>
+<h5><a id="q312"></a>3.1.2. Удостоверение о повышении квалификациии</h5>
+<p><img class="otsf-screenshot" src="https://kb.opentechnology.ru/index.php?action=attachment&amp;id=5666" alt="" width="1324" height="933" /></p>
+<div class="otsf-screenshot-description">Рис. 3.1.2.а. Пример выданного удостоверения, подготовленного по шаблону и распечатанного на номерном бланке.</div>
+<p><a href="https://kb.opentechnology.ru/index.php?action=attachment&amp;id=5779" target="_blank" rel="noopener"><strong>Подложка удостоверения</strong></a>. Файл необходимо загрузить в поле «Файл с изображением сертификата» настраиваемого элемента курса «Сертификат СЭО 3КL».</p>
+<div class="otsf-incut note">Обратите внимание: данный файл подложки не является бланком установленного образца и приложен исключительно в качестве примера.</div>
+<div class="otsf-incut note">Подложка используется для получения электронной копии выдаваемого документа. При печати на номерных бланках необходимо выбирать режим печати «Скачать файл сертификата без бланка».</div>
+<p><strong>Html-код текста документа</strong>. Код необходимо скопировать из статьи (или скачать <a href="https://kb.opentechnology.ru/index.php?action=attachment&amp;id=5763">текстовый файл с кодом</a>) и вставить в поле настроек «Текст сертификата», предварительно переключив <a href="https://kb.opentechnology.ru/index.php?solution_id=1239">редактор «Атто»</a> в режим работы с html-кодом (кнопка <img class="" src="https://kb.opentechnology.ru/index.php?action=attachment&amp;id=5662" alt="" width="30" height="27" /> в панели инструментов редактора).</p>
+<p>Табличный вид документа:</p>
+<table style="width: 100%;"><caption> </caption>
+<thead>
+<tr>
+<th style="text-align: center;"><span class="" style="font-weight: normal; color: #566573;"><span class="" style="color: #566573;">РОССИЙСКАЯ ФЕДЕРАЦИЯ</span><br /> <br /><br /> </span></th>
+<th style="text-align: center;"><span class="" style="font-weight: normal; color: #566573;"><span class="" style="color: #566573;">Настоящее {DOCUMENTTYPE}  подтверждает, что</span><br /> <br /><br /> </span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> </td>
+<td style="text-align: center;"><span class="" style="font-size: medium;">{LASTNAME}</span><br /> <br /><span class="" style="font-size: medium;">{FIRSTNAME} {MIDDLENAME}</span><br /> <br /><br /></td>
+</tr>
+<tr>
+<td> </td>
+<td style="text-align: center;"><span class="" style="color: #566573;"><span class="" style="color: #566573;">прошел(а) повышение квалификации в</span><br /> <br /><br /> <br /><br /> </span></td>
+</tr>
+<tr>
+<td>        <br /> <br /><br /></td>
+<td style="text-align: center;"><span class="" style="font-size: medium;">Государственное бюджетное учреждение</span><br /> <br /><span class="" style="font-size: medium;">города Москвы особого типа</span><br /> <br /><span class="" style="font-size: medium;">«Московский центр медицинского сопровождения»</span><br /> <br /><br /></td>
+</tr>
+<tr>
+<td> </td>
+<td><br />
+<div style="text-align: center;">с 03 октября 2022 года по 23 ноября 2022 года<br /> <br /><br /> <br /><br /></div>
+</td>
+</tr>
+<tr>
+<td style="text-align: center;"><em><span class="" style="color: #566573;"><span class="" style="color: #566573;">Документ о квалификации</span><br /><br /></span></em></td>
+<td style="text-align: center;"><span class="" style="color: #566573;">по дополнительной профессиональной программе</span></td>
+</tr>
+<tr>
+<td style="text-align: center;">Регистрационный номер<br /> <br />{CERTIFICATECODE}<br /> <br /><br /></td>
+<td style="text-align: center;"><span class="" style="font-size: medium;">«{PROGRAMNAME}»</span></td>
+</tr>
+<tr>
+<td>                                                                               <br /> <br /><br /></td>
+<td style="text-align: center;"><span class="" style="color: #566573;"><span class="" style="color: #566573;">в объеме</span> <span class="" style="color: #1b2631;">{HOURS}</span> <span class="" style="color: #566573;">часов</span></span></td>
+</tr>
+<tr>
+<td style="text-align: center;"><span class="" style="color: #566573;">Город</span><br /> <br />{CITY}<br /> <br /><br /></td>
+<td> </td>
+</tr>
+<tr>
+<td style="text-align: center;"><span class="" style="color: #808b96;"><span class="" style="color: #566573;">Дата выдачи</span><br /> <br /><br /> <br /><span class="" style="color: #1b2631;">{ALTISSUEDATE}</span><br /> <br /><br /> </span></td>
+<td><em>     Руководитель                   </em> И.М. Исаев<br /> <br /><br /> <br />        <em><em>Секретарь                        </em><br /> <br /> </em>Г.И. Брагина</td>
+</tr>
+<tr>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td> </td>
+<td> </td>
+</tr>
+</tbody>
+</table>
+<p> Html-код:</p>
+<div class="otsf-incut example">
+<table style="width: 100%;"><caption> </caption>
+<thead>
+<tr>
+<th style="text-align: center;"><span class="" style="font-weight: normal; color: #566573;"><span class="" style="color: #566573;">РОССИЙСКАЯ ФЕДЕРАЦИЯ</span><br /> <br /><br /> </span></th>
+<th style="text-align: center;"><span class="" style="font-weight: normal; color: #566573;"><span class="" style="color: #566573;">Настоящее {DOCUMENTTYPE}  подтверждает, что</span><br /> <br /><br /> </span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> </td>
+<td style="text-align: center;"><span class="" style="font-size: medium;">{LASTNAME}</span><br /> <br /><span class="" style="font-size: medium;">{FIRSTNAME} {MIDDLENAME}</span><br /> <br /><br /></td>
+</tr>
+<tr>
+<td> </td>
+<td style="text-align: center;"><span class="" style="color: #566573;"><span class="" style="color: #566573;">прошел(а) повышение квалификации в</span><br /> <br /><br /> <br /><br /> </span></td>
+</tr>
+<tr>
+<td>        <br /> <br /><br /></td>
+<td style="text-align: center;"><span class="" style="font-size: medium;">Государственное бюджетное учреждение</span><br /> <br /><span class="" style="font-size: medium;">города Москвы особого типа</span><br /> <br /><span class="" style="font-size: medium;">«Московский центр медицинского сопровождения»</span><br /> <br /><br /></td>
+</tr>
+<tr>
+<td> </td>
+<td><br />
+<div style="text-align: center;">с 03 октября 2022 года по 23 ноября 2022 года<br /> <br /><br /> <br /><br /></div>
+</td>
+</tr>
+<tr>
+<td style="text-align: center;"><em><span class="" style="color: #566573;"><span class="" style="color: #566573;">Документ о квалификации</span><br /><br /></span></em></td>
+<td style="text-align: center;"><span class="" style="color: #566573;">по дополнительной профессиональной программе</span></td>
+</tr>
+<tr>
+<td style="text-align: center;">Регистрационный номер<br /> <br />{CERTIFICATECODE}<br /> <br /><br /></td>
+<td style="text-align: center;"><span class="" style="font-size: medium;">«{PROGRAMNAME}»</span></td>
+</tr>
+<tr>
+<td>                                                                               <br /> <br /><br /></td>
+<td style="text-align: center;"><span class="" style="color: #566573;"><span class="" style="color: #566573;">в объеме</span> <span class="" style="color: #1b2631;">{HOURS}</span> <span class="" style="color: #566573;">часов</span></span></td>
+</tr>
+<tr>
+<td style="text-align: center;"><span class="" style="color: #566573;">Город</span><br /> <br />{CITY}<br /> <br /><br /></td>
+<td> </td>
+</tr>
+<tr>
+<td style="text-align: center;"><span class="" style="color: #808b96;"><span class="" style="color: #566573;">Дата выдачи</span><br /> <br /><br /> <br /><span class="" style="color: #1b2631;">{ALTISSUEDATE}</span><br /> <br /><br /> </span></td>
+<td><em>     Руководитель                   </em> И.М. Исаев<br /> <br /><br /> <br />        <em><em>Секретарь                        </em><br /> <br /> </em>Г.И. Брагина</td>
+</tr>
+<tr>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td> </td>
+<td> </td>
+</tr>
+</tbody>
+</table>
+<br /><br /><br /><br /><br />
+<p> </p>
+</div>
+<p> Код формирует следующий текст документа, красным выделены значения, подставляемые непосредственно из полей системы (Рис. 3.1.2.б).</p>
+<p><img class="otsf-screenshot" src="https://kb.opentechnology.ru/index.php?action=attachment&amp;id=5668" alt="" width="1323" height="930" /></p>
+<div class="otsf-screenshot-description">Рис. 3.1.2.б. Текст удостоверения с выделенными автоподстановками.</div>
+<div class="otsf-incut note">Подробнее о доступных в документе автоподстановках в статье <a href="https://kb.opentechnology.ru/index.php?solution_id=1106#m6">«Сертификат СЭО 3КL»</a>.</div>
+<p><strong>Размеры сертификата, положение текста</strong>. Для правильного позиционирования текста на бланке установить в разделе «Настройки дизайна» указанные значения (Рис. 3.1.2.в).</p>
+<p><img class="otsf-screenshot" src="https://kb.opentechnology.ru/index.php?action=attachment&amp;id=5669" alt="" width="1715" height="1415" /></p>
+<div class="otsf-screenshot-description">Рис. 3.1.2.в. Параметры размера сертификата и положения текста для шаблона удостоверения.</div>
+<p><a href="#q0">-Вернуться к содержанию-</a></p>
+<h4><a id="q32"></a>3.2. Создание вкладки «Выгрузка для ФИС ФРДО» Панели управления СЭО 3КL</h4>
+<p>Инструмент «Панель управления СЭО 3КL» доступен в Настройки-&gt;Администрирование-&gt;Панель управления СЭО 3КL. Вкладка «Выгрузка для ФИС ФРДО» добавлена в Панель управления СЭО 3КL вкладкой по умолчанию, начиная с релиза 3.9.18а.</p>
+<p>Если вы пользуетесь более ранней версией СЭО 3КL — обратитесь в техническую поддержку ООО «Открытые технологии» с заявкой на обновление.</p>
+<p>Если ваша СЭО 3КL версии 3.9.18а (либо выше) и по каким-то причинам в Панели управления СЭО 3КL этой вкладки нет, ее можно сформировать следующими способами:</p>
+<p><strong>Первый способ:</strong><br />Выполнить сброс вкладок к предустановленному состоянию (перейти на страницу «Конфигурация» и нажать кнопку «Вернуть настройки по умолчанию»).</p>
+<div class="otsf-incut attention">Если у вас ранее были созданы какие-либо кастомные вкладки или модифицированы предустановленные, после сброса они удалятся! Чтобы не потерять их, перед сбросом  рекомендуется скопировать yaml-код из поля «Конфигурация панели управления СЭО 3KL» (О пользователе-&gt;Редактирование настраиваемых полей).</div>
+<p><strong>Второй способ:</strong><br />Добавить yaml-код вкладки в поле «Конфигурация панели управления СЭО 3KL» (О пользователе-&gt;Подробная информация о пользователе-&gt;Редактирование настраиваемых полей).</p>
+<div class="otsf-incut note">Обратите внимание: чтобы не удалить имеющиеся у вас кастомные вкладки, yaml-код необходимо именно <strong>добавлять</strong> к уже существующему в поле «Конфигурация панели управления СЭО 3KL» коду, а не замещать его.<br />Если поле «Конфигурация панели управления СЭО 3KL» пустое, это означает, что пользователем еще не выполнялось никаких действий по изменению/добавлению вкладок. В этом случае необходимо отредактировать через конфигуратор любую из существующих вкладок (например, добавить в нее новое поле) или создать новую пользовательскую вкладку. После этого yaml-код всех вкладок отобразится в поле «Конфигурация панели управления СЭО 3KL».</div>
+<p><strong>Листинг вкладки «Выгрузка для ФИС ФРДО»</strong></p>
+<pre>-
+    displayname: Выгрузка для ФИС ФРДО
+    entitycode: certissues
+    editdisabled: true
+    filterform:
+        f_lhp:
+            type: select
+            label: Подлежит печати
+            options: {3: Не важно, 1: Да, 0: Нет}
+        f_pd:
+            type: select
+            label: Дата печати заполнена
+            options: {3: Не важно, 1: Да, 0: Нет}
+        f_pd1:
+            type: date_selector
+            label: Дата начала периода
+            options: {optional: true}
+            hideif: [f_pd1, f_pd, neq, 1]
+        f_pd2:
+            type: date_selector
+            label: Дата окончания периода
+            options: {optional: true}
+            hideif: [f_pd2, f_pd, neq, 1]
+        f_fd:
+            type: select
+            label: &#39;Данные уже выгружались в ФИС ФРДО&#39;
+            options: {3: Не важно, 1: Да, 0: Нет}
+        submit:
+            type: submit
+            label: Применить
+    filterparams:
+        certissues__printdate__filled: f_pd
+        certissues__letterheadprinting__filled: f_lhp
+        certissues__printdate__start: f_pd1
+        certissues__printdate__end: f_pd2
+        certissues__frdoloaddate__filled: f_fd
+    filters:
+        - {filtercode: printdate_fullness}
+        - {filtercode: letterheadprinting}
+        - {filtercode: printdate_period}
+        - {filtercode: timedeleted_fullness, fullness: false}
+        - {filtercode: frdoloaddate_fullness}
+    fields:
+        -
+            displayname: Курс
+            relationcode: course
+            fields: [{fieldcode: fullname}]
+        -
+            displayname: Сертификат
+            relationcode: certificate
+            fields: [{fieldcode: name}]
+        -
+            displayname: Пользователь
+            relationcode: user
+            fields: [{fieldcode: fullname}]
+        -
+            displayname: Код
+            fieldcode: code
+        -
+            displayname: Подлежит печати
+            relationcode: certificate
+            fields: [{fieldcode: letterheadprinting, modifiers: [fullnessstr]}]
+        -
+            displayname: Дата печати
+            fieldcode: printdate
+            modifiers: [userdate]
+        -
+            displayname: &#39;Печать на бланке&#39;
+            fieldcode: letterheadprint
+        -
+            displayname: &#39;Дата выгрузки в ФИС ФРДО&#39;
+            fieldcode: frdoloaddate
+            modifiers: [userdate]</pre>
+<div class="otsf-incut note">Дополнительная информация в статьях <a href="https://kb.opentechnology.ru/index.php?solution_id=1375#q62">«Панель управления СЭО 3KL. Локальный <abbr data-toggle="tooltip" data-placement="bottom" title="Программный модуль, расширяющий возможности системы.">плагин</abbr>»</a>, <a href="https://kb.opentechnology.ru/index.php?solution_id=1314">«Локальный плагин «<abbr data-toggle="tooltip" data-placement="bottom" title="Специальные поля, значения которых могут нести дополнительную информацию о курсе, о его классификации, специализации, характеристиках. С помощью таких полей можно задавать дополнительные признаки для курсов. Настраиваемые поля используются также для сообщении дополнительной информации о пользователях, о локальных и глобальных группах. Статья «Настраиваемые поля курса. Применение в поиске курсов через Витрину курсов 3KL».">Настраиваемые поля</abbr>»</a>.</div>
+<p><a href="#q0">-Вернуться к содержанию-</a></p>
+<h4><a id="q33"></a>3.3. Использование фильтра на вкладке «Выгрузка для ФИС ФРДО»</h4>
+<p>Применение возможностей фильтрации на вкладке «Выгрузка для ФИС ФРДО» позволяет облегчить работу ответственного специалиста по подготовке сертификатов к печати и формированию файла выгрузки.</p>
+<table class="table table-bordered" style="width: 973px;">
+<tbody>
+<tr>
+<td style="width: 626.75px; text-align: center;"><strong>Настройки фильтра</strong></td>
+<td style="width: 656.25px; text-align: center;"><strong>Результат</strong></td>
+<td style="width: 669px; text-align: center;"><strong>Пояснение</strong></td>
+</tr>
+<tr>
+<td style="width: 626.75px;">Подлежит печати=Да<br />Дата печати заполнена=Нет<br />Данные уже выгружались в ФИС ФРДО=Нет/Не важно</td>
+<td style="width: 656.25px;">В таблице вкладки будут отображены все выпущенные, но не распечатанные на бланках строгой отчетности сертификаты (с незаполненными полями «Серия бланка» и «Номер бланка») по всем курсам, в которых активна опция «Печать на бланке включена».</td>
+<td style="width: 669px;">Ответственный специалист имеет возможность: проверить правильность заполнения и формирования сертификатов; переопределить необходимые значения; выполнить пробную печать и печать на бланке.</td>
+</tr>
+<tr>
+<td style="width: 626.75px;">Подлежит печати=Да<br />Дата печати заполнена=Да (дополнительно может быть выбран временной промежуток отчетного периода)<br />Данные уже выгружались в ФИС ФРДО=Нет</td>
+<td style="width: 656.25px;">В таблице будут отображены документы, распечатанные на бланках строгой отчетности (с заполненными полями «Серия бланка» и «Номер бланка»), по которым еще не формировался файл выгрузки для ФИС ФРДО.</td>
+<td style="width: 669px;">Отметив все необходимые для выгрузки сертификаты, ответственный специалист может сгенерировать файл с данными для ФИС ФРДО (применить массовое действие «Сформировать файл для выгрузки в ФИС ФРДО»).</td>
+</tr>
+<tr>
+<td style="width: 626.75px;">Подлежит печати=Да<br />Дата печати заполнена=Да (дополнительно может быть выбран временной промежуток отчетного периода)<br />Данные уже выгружались в ФИС ФРДО=Да</td>
+<td style="width: 656.25px;">В таблице будут отображены документы, распечатанные на бланках строгой отчетности (с заполненными полями «Серия бланка» и «Номер бланка»), по которым уже был сформирован файл выгрузки для ФИС ФРДО.</td>
+<td style="width: 669px;">Данные таблицы могут быть использованы для внутренних отчетов (например,по какому количеству сертификатов за отчетный период были переданы данные в федеральную информационную систему).</td>
+</tr>
+</tbody>
+</table>
+<p><a href="#q0">-Вернуться к содержанию-</a></p>
+<h4><a id="q34"></a>3.4. Валидация вводимых данных</h4>
+<p>На странице «Печать сертификата на бланке» предусмотрена валидация вводимых пользователем данных.</p>
+<table class="table table-bordered" style="width: 977px;">
+<tbody>
+<tr>
+<td style="width: 420px; text-align: center;"><strong>Проверяемые поля</strong></td>
+<td style="width: 329px; text-align: center;"><strong>Что проверяется</strong></td>
+<td style="width: 227px; text-align: center;"><strong>Когда проверяется</strong></td>
+</tr>
+<tr>
+<td style="width: 420px;">Изменить код сертификата (является регистрационным номером при формировании файла для ФИС ФРДО)</td>
+<td style="width: 329px;">Проверяется уникальность вводимого кода относительно уже существующих в системе</td>
+<td style="width: 227px;">По нажатию «Сохранить» и «Сохранить и вернуться»</td>
+</tr>
+<tr>
+<td style="width: 420px;">Серия бланка, Номер бланка</td>
+<td style="width: 329px;">Проверяется обязательность заполнения полей перед выгрузкой в ФИС ФРДО</td>
+<td style="width: 227px;">По нажатию «Сохранить и вернуться»</td>
+</tr>
+</tbody>
+</table>
+<p><a href="#q0">-Вернуться к содержанию-</a></p>
+<h4><a id="q35"></a>3.5. Отмена печати</h4>
+<p>Для того, чтобы отменить печать, необходимо на странице «Печать сертификата на бланке» очистить поля «Серия бланка» и «Номер бланка», установить опцию «Подтвердить сохранение новых данных печати» и нажать кнопку «Сохранить».</p>
+<p>После этого дата печати будет очищена, сообщение в столбце «Печать на бланке» вкладки «Выгрузка для ФИС ФРДО» Панели управления СЭО 3KL станет иметь вид: Сертификат еще не печатался на бланке.</p>
+<div class="otsf-incut note">При изменении или удалении серии и номера бланка сохраняется слепок предыдущих данных. Таким образом в системе хранится информация о всех бланках, которые были использованы для печати этого сертификата.</div>
+<p><a href="#q0">-Вернуться к содержанию-</a></p>
+<h4><a id="q36"></a>3.6. Выгрузка в ФИС ФРДО удаленных из системы сертификатов</h4>
+<p>В ФИС ФРДО можно выгрузить удаленные сертификаты и сертификаты удаленных модулей (certissue, помеченные удаленными) при условии, что они были распечатаны (был сформирован файл) до удаления.</p>
+<div class="otsf-incut note">Распечатать удаленный сертификат нельзя, так как для формирования файла нужны данные из настроек модуля.</div>
+<p><a href="#q0">-Вернуться к содержанию-</a><span id=":ua.co" class="EMoHub tL8wMe" style="text-align: left;"></span></p>
+<h3><a id="q4"></a>4. Примеры и решения</h3>
+<h4><a id="q41"></a>4.1. Создание в СЭО 3KL удостоверения о повышении квалификации установленного образца (по ФЗ № 273) с использованием тестового курса</h4>
+<p><strong>Ожидаемый результат:</strong></p>
+<p>Применение данного решения позволит получить в вашей СЭО 3KL новый курс «Техника безопасности и охрана труда (пример формирования удостоверения)» с полностью настроенным и подготовленным для печати на бланке строгой отчетности <a href="https://kt-print.ru/blanki-dokumentov-o-povyshenii-kvalifikacii-i-professionalno/blank-udostovereniya-o-povyshenii-kvalifikacii-bez-oblozhki-1" target="_blank" rel="nofollow noopener">«Бланк удостоверения о повышении квалификации, без обложки (ФЗ № 273 от 29.12.2012 г., универсальный, установленный образец, второго вида)»</a> удостоверением о повышении квалификации.</p>
+<div class="otsf-incut note">В качестве примера бланка для сертификата в решении используется бланк действующей типографии (<a href="https://kt-print.ru/">Киржачская типография</a>).</div>
+<div class="otsf-incut note">Если вы планируете настраивать сертификат самостоятельно, в уже существующем курсе — воспользуйтесь информацией в разделе <a href="#q2">«Настройка интеграции с ФИС ФРДО»</a>.</div>
+<p><strong>Алгоритм решения:</strong></p>
+<p>1) Импорт тестового курса из резервной копии.</p>
+<p>2) Проверка корректности выдачи удостоверения.</p>
+<p><strong>Решение:</strong></p>
+<p><strong>Импорт курса «Техника безопасности и охрана труда (пример формирования удостоверения)» из <a href="https://kb.opentechnology.ru/index.php?action=attachment&amp;id=10095">резервной копии</a></strong></p>
+<p>1) Скачать <a href="https://kb.opentechnology.ru/index.php?action=attachment&amp;id=10095">файл</a> на компьютер.</p>
+<p>2) Перейти на страницу «Восстановление курса » (Администрирование -&gt; Курсы -&gt; Восстановление курса) и загрузить курс в настройке «Файл» скачанный файл резервной копии курса (поз. 1 Рис. 4.1.1). Нажать на кнопку «Восстановить» (поз. 2 Рис. 4.1.1).</p>
+<p><img class="otsf-screenshot" src="https://kb.opentechnology.ru/index.php?action=attachment&amp;id=9895" width="1720" height="563" /></p>
+<div class="otsf-screenshot-description">Рис. 4.1.1. Загрузка резервной копии курса.</div>
+<p>3) Нажать на кнопку «Продолжить» (поз. 1 Рис. 4.1.2) для того, чтобы подтвердить загрузку курса.</p>
+<p><img class="otsf-screenshot" src="https://kb.opentechnology.ru/index.php?action=attachment&amp;id=9897" width="1720" height="1728" /></p>
+<div class="otsf-screenshot-description">Рис. 4.1.2. Подтверждение загрузки курса.</div>
+<p>4) Выбрать категорию курса = Разное (поз. 1 Рис. 4.1.3) и нажать на кнопку «Продолжить» (поз. 2 Рис. 4.1.3).</p>
+<p><img class="otsf-screenshot" src="https://kb.opentechnology.ru/index.php?action=attachment&amp;id=9898" alt="" width="1720" height="925" /></p>
+<div class="otsf-screenshot-description">Рис. 4.1.3. Выбор категории курса.</div>
+<p>5) Оставить настройки восстановления без изменений и нажать на кнопку «Далее» (поз. 1 Рис. 4.1.4).</p>
+<p><img class="otsf-screenshot" src="https://kb.opentechnology.ru/index.php?action=attachment&amp;id=9913" width="951" height="1109" /></p>
+<div class="otsf-screenshot-description">Рис. 4.1.4. Настройки восстановления курса.</div>
+<p>6) Оставить настройки курса без изменений и нажать на кнопку «Далее» (поз. 1 Рис. 4.1.5).</p>
+<p><img class="otsf-screenshot" src="https://kb.opentechnology.ru/index.php?action=attachment&amp;id=9901" alt="" width="1323" height="845" /></p>
+<div class="otsf-screenshot-description">Рис. 4.1.5. Настройки курса при импорте.</div>
+<p>7) Подтвердить все настройки импорта, нажав на кнопку «Приступить к восстановлению» (поз. 1 Рис. 4.1.6).</p>
+<p><img class="otsf-screenshot" src="https://kb.opentechnology.ru/index.php?action=attachment&amp;id=9914" width="1187" height="1694" /></p>
+<div class="otsf-screenshot-description">Рис. 4.1.6. Подтверждение настроек восстановления.</div>
+<p>После этого курс будет восстановлен из резервной копии.</p>
+<p><strong>Проверка корректности выдачи удостоверения <br /></strong></p>
+<p>1) Обратите внимание, после миграции СЭО 3KL на версию 4.1 такие настройки, как «Ширина текстового поля сертификата», «Минимальная высота текстового поля сертификата» и «Альтернативный серийный номер сертификата» не переносятся при восстановлении курса из бэкапа, поэтому их необходимо актуализировать вручную после импорта курса. Для этого нужно сначала включить режим редактирования в курсе (поз. 1 Рис. 4.1.7), затем перейти к редактированию настроек сертификата (поз. 2 Рис. 4.1.7).</p>
+<p><img class="otsf-screenshot" src="https://kb.opentechnology.ru/index.php?action=attachment&amp;id=10009" alt="" width="1717" height="803" /></p>
+<div class="otsf-screenshot-description">Рис. 4.1.7. Переход к редактированию настроек сертификата.</div>
+<p>На открывшейся странице уточнить следующие настройки (Рис. 4.1.8):</p>
+<p><img class="otsf-screenshot" src="https://kb.opentechnology.ru/index.php?action=attachment&amp;id=10093" width="1719" height="3891" /></p>
+<div class="otsf-screenshot-description">Рис. 4.1.8. Настройки сертификата.</div>
+<p><strong>Ширина текстового поля сертификата</strong> (см. поз. 1 Рис. 4.1.8) = 265<br /><strong>Минимальная высота текстового поля сертификата</strong> (см. поз. 2 Рис. 4.1.8) = 154<br /><strong>Альтернативный серийный номер сертификата</strong> (см. поз. 3 Рис. 4.1.8) = Порядковый номер с префиксом (настройка «Префикс» (см. поз. 4 Рис. 4.1.8) будет перенесена автоматически)</p>
+<div class="otsf-incut note">В представленном варианте регистрационный номер сертификата будет формироваться из префикса (в примере - АА 77) и порядкового номера выданного сертификата (в примере - 0002), вы можете заменить префикс или оставить поле его настройки пустым, чтобы регистрационный номер состоял только из порядкового номера выданного сертификата. Подробнее об этих настройках читайте в статье <a href="https://kb.opentechnology.ru/index.php?solution_id=1106">«<abbr data-toggle="tooltip" data-placement="bottom" title="Элемент курса, предназначенный для формирования в среде электронного обучения документа о прохождении образовательной программы или документа установленного образца (памятный сертификат, свидетельство о прохождении курса, справка и т. п.), который генерируется по заранее настроенному шаблону при выполнении слушателем заданных условий. Статья «Сертификат СЭО 3KL».">Сертификат СЭО 3KL</abbr>»</a> (<a href="https://kb.opentechnology.ru/index.php?solution_id=1106#q53">«Раздел «Другие настройки»</a>).</div>
+<p>Сохранить внесенные изменения.</p>
+<p>2) Далее нужно зачислить на курс тестового слушателя, который получит сертификат. Для этого на главной странице курса нажать на кнопку «Участники» во вторичной навигации (поз. 1 Рис. 4.1.9), а затем — на кнопку «Зачисление пользователей на курс» (поз. 2 Рис. 4.1.9).</p>
+<p><img class="otsf-screenshot" src="https://kb.opentechnology.ru/index.php?action=attachment&amp;id=9907" alt="" width="1720" height="748" /></p>
+<div class="otsf-screenshot-description">Рис. 4.1.9. Страница зачисления пользователей на курс.</div>
+<p>В открывшемся модальном окне найти с помощью поиска нужного слушателя и выбрать его (поз. 1 Рис. 4.1.10), затем раскрыть все настройки зачисления, нажав на кнопку «Показать больше.../Показать меньше...» (поз. 2 Рис. 4.1.10), отметить опцию «Окончание обучения» (поз. 3 Рис. 4.1.10) и выбрать в ней дату окончания обучения (для примера задайте дату на один день позже зачисления на курс). После этого нажать на кнопку «Зачислить выбранных пользователей и <abbr data-toggle="tooltip" data-placement="bottom" title="Группы пользователей, создаваемые администратором на уровне сайта или на уровне категорий курсов. Статья «Глобальные группы. Синхронизация с глобальной группой».">глобальные группы</abbr>» (поз. 4 Рис. 4.1.10).</p>
+<p><img class="otsf-screenshot" src="https://kb.opentechnology.ru/index.php?action=attachment&amp;id=10084" width="810" height="698" /></p>
+<div class="otsf-screenshot-description">Рис. 4.1.10. Зачисление пользователя в курс.</div>
+<p>3) Авторизоваться в системе под аккаунтом тестового слушателя, войти в курс «Техника безопасности и охрана труда (пример формирования удостоверения)» и перейти к тесту «Тест для получения сертификата (удостоверения)» (поз. 1 Рис. 4.1.11).</p>
+<p><img class="otsf-screenshot" src="https://kb.opentechnology.ru/index.php?action=attachment&amp;id=9906" alt="" width="1718" height="581" /></p>
+<div class="otsf-screenshot-description">Рис. 4.1.11. Переход к Тесту.</div>
+<div class="otsf-incut note">Рекомендуем входить непосредственно под тестовым пользователем, не используя фунцию «Зайти под именем», так как в этом случае сертификат может формироваться некорректно.</div>
+<p>4) Нажать на кнопку «Попытка теста» (Рис. 4.1.12), чтобы перейти непосредственно к тестированию.</p>
+<p><img class="otsf-screenshot" src="https://kb.opentechnology.ru/index.php?action=attachment&amp;id=9911" alt="" width="1428" height="520" /></p>
+<div class="otsf-screenshot-description">Рис. 4.1.12. Кнопка перехода к тестированию.</div>
+<p>На единственный вопрос Теста нужно ответить «Да» (Рис. 4.1.13), чтобы он считался завершенным успешно. Затем необходимо нажать на кнопку «Закончить попытку...». После этого у тестового пользователя появится возможность получить сертификат.</p>
+<p><img class="otsf-screenshot" src="https://kb.opentechnology.ru/index.php?action=attachment&amp;id=9912" alt="" width="1720" height="557" /></p>
+<div class="otsf-screenshot-description">Рис. 4.1.13. Ответ на вопрос Теста.</div>
+<p>5) Перейти к просмотру сертификата (поз. 1 Рис. 4.1.14).</p>
+<p><img class="otsf-screenshot" src="https://kb.opentechnology.ru/index.php?action=attachment&amp;id=9915" alt="" width="1719" height="602" /></p>
+<div class="otsf-screenshot-description">Рис. 4.1.14. Переход к просмотру сертификата.</div>
+<p>Нажать на кнопку «Получить сертификат» (поз. 1 Рис. 4.1.15), чтобы сформировать сертификат для тестового пользователя.</p>
+<p><img class="otsf-screenshot" src="https://kb.opentechnology.ru/index.php?action=attachment&amp;id=9916" alt="" width="1720" height="477" /></p>
+<div class="otsf-screenshot-description">Рис. 4.1.15. Кнопка получения сертификата.</div>
+<p>Тестовый пользователь получит сертификат следующего вида (Рис. 4.1.16).</p>
+<p><img class="otsf-screenshot" src="https://kb.opentechnology.ru/index.php?action=attachment&amp;id=10094" width="1236" height="872" /></p>
+<div class="otsf-screenshot-description">Рис. 4.1.16. Выданный тестовому пользователю сертификат.</div>
+<p><strong>Рекомендации по изменению тестового курса под свои потребности:</strong></p>
+<p>Если вы в дальнейшем планируете использовать этот курс в своей системе, вы можете:</p>
+<ul>
+<li>Изменить название курса. Для того, чтобы это сделать, нужно со страницы курса нажать на кнопку «Настройки» (поз. 1 Рис. 4.1.17) во вторичной навигации и ввести новое название в поле настройки «Полное название курса» (поз. 2 Рис. 4.1.17). В примере это название = «Техника безопасности в работе среднего медицинского персонала».</li>
+</ul>
+<p><img class="otsf-screenshot" src="https://kb.opentechnology.ru/index.php?action=attachment&amp;id=9925" alt="" width="1720" height="788" /></p>
+<div class="otsf-screenshot-description">Рис. 4.1.17. Настройки курса.</div>
+<ul>
+<li>Удалить демонстрационный Тест из курса. Для этого на главной странице курса перейти в режим редактирования (поз. 1 Рис. 4.1.18), нажать на три точки рядом с Тестом (поз. 2 Рис. 4.1.18) и выбрать опцию «Удалить» (поз. 3 Рис. 4.1.18).</li>
+</ul>
+<p><img class="otsf-screenshot" src="https://kb.opentechnology.ru/index.php?action=attachment&amp;id=9927" alt="" width="1721" height="861" /></p>
+<div class="otsf-screenshot-description">Рис. 4.1.18. Удаление демонстрационного Теста из курса.</div>
+<ul>
+<li>Наполнить курс другими элементами курса, от которых будет зависеть выдача сертификата. В качестве примера добавим в курс элемент курса «Задание». Для этого на странице курса нужно перейти в режим редактирования (поз. 1 Рис. 4.1.19), нажать на кнопку «Добавить элемент или <abbr data-toggle="tooltip" data-placement="bottom" title="Статические учебные материалы (тексты, файлы, медиафайлы, ссылки). Статья «Элементы курса и Ресурсы».">ресурс</abbr>» (поз. 2 Рис. 4.1.19) и щелкнуть на иконку Задания (поз. 3 Рис. 4.1.19).</li>
+</ul>
+<p><img class="otsf-screenshot" src="https://kb.opentechnology.ru/index.php?action=attachment&amp;id=9928" alt="" width="1720" height="974" /></p>
+<div class="otsf-screenshot-description">Рис. 4.1.19. Добавление Задания в курс.</div>
+<p>Выполнить настройки Задания (Рис. 4.1.20):</p>
+<p><img class="otsf-screenshot" src="https://kb.opentechnology.ru/index.php?action=attachment&amp;id=9929" alt="" width="1720" height="2365" /></p>
+<div class="otsf-screenshot-description">Рис. 4.1.20. Настройки Задания.</div>
+<p><strong>Название задания</strong> (см. поз. 1 Рис. 4.1.20) = Очное тестирование<br /><strong>Описание</strong> (см. поз. 2 Рис. 4.1.20) = Элемент создан для перенесения оценки за очное тестирование по технике безопасности<br /><strong>Доступность</strong> (см. поз. 3 Рис. 4.1.20) = Все опции раздела <strong>не</strong> должны быть отмечены</p>
+<p>Нажать на кнопку «Сохранить и вернуться к курсу» (см. поз. 4 Рис. 4.1.20).</p>
+<ul>
+<li>Внести правки в форму удостоверения. Для этого включить режим редактирования на главной странице курса (поз. 1 Рис. 4.1.21), нажать на три точки рядом с элементом курса «Сертификат СЭО 3KL» и выбрать опцию «Редактировать настройки» (поз. 2 Рис. 4.1.21).</li>
+</ul>
+<p><img class="otsf-screenshot" src="https://kb.opentechnology.ru/index.php?action=attachment&amp;id=9931" alt="" width="1713" height="909" /></p>
+<div class="otsf-screenshot-description">Рис. 4.1.21. Переход к настройкам сертификата.</div>
+<p>На открывшейся странице редактирования сертификата перейти к настройке «Текст сертификата» и заменить выделенные на Рис. 4.1.22 области своими значениями.</p>
+<p><img class="otsf-screenshot" src="https://kb.opentechnology.ru/index.php?action=attachment&amp;id=10096" width="3048" height="2036" /></p>
+<div class="otsf-screenshot-description">Рис. 4.1.22. Редактирование текста сертификата.</div>
+<p>Вы можете также заменить формат сертификата, загрузив свое изображение подложки в настройке «Файл с изображением сертификата» (см. поз. 1 Рис. 4.1.22).</p>
+<p>В разделе настроек «Ограничение доступа» заменить имеющееся ограничение доступа по выполнению демонстрационного теста на ограничение доступа по выполнению элементов курса. В рассматриваемом примере необходимо выбрать в качестве элемента курса «Очное тестирование» (Рис. 4.1.23).</p>
+<p><img class="otsf-screenshot" src="https://kb.opentechnology.ru/index.php?action=attachment&amp;id=9942" alt="" width="1013" height="390" /></p>
+<div class="otsf-screenshot-description">Рис. 4.1.23. Настройка ограничения доступности.</div>
+<p><a href="#q0">-Вернуться к содержанию-</a></p>
+                    
+                    Теги: <a title="интеграция" href="/tags/2/integracia.html">интеграция</a>
+                    
+                    
+                    
+                    <aside id="faqAccordion" class="accordion related-faqs hidden-print">
+                        <div class="accordion-group">
+                            <div class="accordion-heading">
+                                <a class="accordion-toggle" href="#collapseRelatedFaqs" data-parent="#faqAccordion" data-toggle="collapse">
+                                    Связанные статьи
+                                </a>
+                            </div>
+                            <div id="collapseRelatedFaqs" class="accordion-body collapse">
+                                <div class="accordion-inner"><ul><li><a title="Что такое интеграция? Какие существуют интеграции и возможности обмена данными в СЭО 3KL? (заглавная статья)" href="/content/5/7/ru/cto-takoe-integracia-kakie-susestvuut-integracii-i-vozmoznosti-obmena-dannymi-v-seo-3kl-zaglavnaa-statʹa.html">Что такое интеграция? Какие существуют интеграции и возможности обмена данными в СЭО 3KL? (заглавная статья)</a></li><li><a title="Метод записи на курс «Автозачисление 3KL» — otautoenrol" href="/content/27/9/ru/metod-zapisi-na-kurs-«avtozacislenie-3kl»-—-otautoenrol.html">Метод записи на курс «Автозачисление 3KL» — otautoenrol</a></li><li><a title="Интеграция со сторонними сервисами" href="/content/27/33/ru/integracia-so-storonnimi-servisami.html">Интеграция со сторонними сервисами</a></li><li><a title=" Плагин  «Антиплагиат.ру». Проверка работ слушателей на заимствования с помощью сервиса «Антиплагиат»" href="/content/5/35/ru/plagin-«antiplagiatru»-proverka-rabot-slusatelej-na-zaimstvovania-s-pomosʹu-servisa-«antiplagiat».html"> Плагин  «Антиплагиат.ру». Проверка работ слушателей на заимствования с помощью сервиса «Антиплагиат»</a></li><li><a title="Проект плагина Элемент курса \"Занятие\" ( мини-расписание очных и вебинарских занятий в курсе)" href="/content/317/42/ru/proekt-plagina-element-kursa-zanatie-mini_raspisanie-ocnyh-i-vebinarskih-zanatij-v-kurse.html">Проект плагина Элемент курса "Занятие" ( мини-расписание очных и вебинарских занятий в курсе)</a></li></ul></div>
+                            </div>
+                        </div>
+                    </aside>
+                    
+                    
+                    <aside id="faqAccordion" class="accordion related-categories hidden-print">
+                        <div class="accordion-group">
+                            <div class="accordion-heading">
+                                <a class="accordion-toggle" href="#collapseRelatedCategories" data-parent="#faqAccordion" data-toggle="collapse">
+                                    Категории для этой статьи
+                                </a>
+                            </div>
+                            <div id="collapseRelatedCategories" class="accordion-body collapse">
+                                <div class="accordion-inner"><ul class="breadcrumb-related-categories"></ul><ul class="breadcrumb-related-categories"></ul><ul class="breadcrumb-related-categories"></ul><ul class="breadcrumb-related-categories"></ul><ul class="breadcrumb-related-categories"></ul><ul class="breadcrumb-related-categories"></ul><ul class="breadcrumb-related-categories"></ul><ul class="breadcrumb-related-categories"></ul><ul class="breadcrumb-related-categories"></ul><ul class="breadcrumb-related-categories"></ul><ul class="breadcrumb-related-categories"></ul><ul class="breadcrumb-related-categories"></ul><ul class="breadcrumb-related-categories"></ul></div>
+                            </div>
+                        </div>
+                    </aside>
+                    
+                </div>
+            </article>
+            <ul id="tab" class="nav nav-tabs hidden-print">
+                <li class="active"><a href="#votingForm" data-toggle="tab">Пожалуйста оцените этот ответ:</a></li>
+                
+                
+            </ul>
+            <div class="tab-content pmf-faq-info">
+                <div class="tab-pane active hidden-print" id="votingForm">
+                    <form action="#" method="post" class="form-inline">
+                        <input type="hidden" name="artikel" value="549">
+                        <div id="votings"></div>
+                        <div class="pmf-stars">
+                            <div class="pmf-star-rating" data-rating="Рейтинг ответа:">
+                                <span data-stars="5">☆</span>
+                                <span data-stars="4">☆</span>
+                                <span data-stars="3">☆</span>
+                                <span data-stars="2">☆</span>
+                                <span data-stars="1">☆</span>
+                            </div>
+                        </div>
+                        <div class="pull-right">
+                            <strong>Рейтинг ответа:</strong><span id="rating"> <span data-rating="0">0</span> (0 оценок)</span>
+                        </div>
+                    </form>
+                </div>
+                <div class="tab-pane hidden-print" id="switchAvailableLanguage">
+                    
+                </div>
+                <div class="tab-pane hidden-print" id="addTranslation">
+                    <form action="/index.php?action=translate&amp;cat=27&amp;id=549&amp;srclang=ru" method="post" class="form-inline" accept-charset="utf-8">
+                        <select class="form-control" name="translation" id="translation" size="1">
+	<option value="ar">Arabic</option>
+	<option value="eu">Basque</option>
+	<option value="bn">Bengali</option>
+	<option value="bs">Bosnian</option>
+	<option value="pt-br">Brazilian Portuguese</option>
+	<option value="zh">Chinese (Simplified)</option>
+	<option value="tw">Chinese (Traditional)</option>
+	<option value="cs">Czech</option>
+	<option value="da">Danish</option>
+	<option value="nl">Dutch</option>
+	<option value="en">English</option>
+	<option value="fi">Finnish</option>
+	<option value="fr">French</option>
+	<option value="fr-ca">French (Canada)</option>
+	<option value="de">German</option>
+	<option value="el">Greek</option>
+	<option value="he">Hebrew</option>
+	<option value="hi">Hindi</option>
+	<option value="hu">Hungarian</option>
+	<option value="id">Indonesian</option>
+	<option value="it">Italian</option>
+	<option value="ja">Japanese</option>
+	<option value="ko">Korean</option>
+	<option value="lv">Latvian</option>
+	<option value="lt">Lithuanian</option>
+	<option value="ms">Malay</option>
+	<option value="nb">Norwegian Bokm&aring;l</option>
+	<option value="fa">Persian</option>
+	<option value="pl">Polish</option>
+	<option value="pt">Portuguese</option>
+	<option value="ro">Romanian</option>
+	<option value="sr">Serbian</option>
+	<option value="sk">Slovak</option>
+	<option value="sl">Slovenian</option>
+	<option value="es">Spanish</option>
+	<option value="sv">Swedish</option>
+	<option value="th">Thai</option>
+	<option value="tr">Turkish</option>
+	<option value="uk">Ukrainian</option>
+	<option value="vi">Vietnamese</option>
+	<option value="cy">Welsh</option>
+</select>
+                        <button class="btn btn-primary" type="submit" name="submit">
+                            Старт перевода...
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <p class="hidden-print">Комментарии запрещены</p>
+            <aside class="pmf-create-comment hide" id="pmf-create-comment">
+                <hr>
+                <div id="loader"></div>
+                <h2><i aria-hidden="true" class="fa fa-heart"></i> Комментировать этот ответ</h2>
+                <form id="formValues" action="#" method="post" class="form-horizontal" accept-charset="utf-8">
+                    <input type="hidden" name="id" id="id" value="549">
+                    <input type="hidden" name="lang" id="lang" value="ru">
+                    <input type="hidden" name="type" id="type" value="faq">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <input type="text" name="user" id="user" class="form-control input-lg" required
+                                   placeholder="Ваше имя:" value="">
+                        </div>
+                        
+                        
+                        <div class="col-md-6">
+                            <input type="email" name="mail" id="mail" class="form-control input-lg" required
+                                   placeholder="Адрес Email"  value="">
+                        </div>
+	                    
+	                    
+                    </div>
+                    <textarea rows="10" name="comment_text" id="comment_text" class="form-control input-lg"
+                              placeholder="Ваши комментарии:"></textarea>
+                    <div class="form-group"><label class="col-sm-3 control-label">Пожалуйста введите символы изображённые но картинке</label>    <div class="col-sm-4">        <p class="form-control-static"><img id="captchaImage" src="/index.php?action=writecomment&amp;gen=img&amp;ck=1774514980" height="40" width="165" alt="Chuck Norris has counted to infinity. Twice." title="click to refresh">        </p>    </div>    <div class="col-sm-5">        <div class="input-group"><input type="text" class="form-control" name="captcha" id="captcha" size="6" autocomplete="off" required>            <span class="input-group-btn"><a class="btn btn-primary" id="captcha-button" data-action="writecomment"><i aria-hidden="true" class="fa fa-refresh"></i></a>            </span>        </div>    </div></div>
+                    
+                    <div class="pmf-buttons clearfix">
+                        <button class="btn btn-primary" id="submitcomment" type="submit">
+                            Отправить
+                        </button>
+                    </div>
+                </form>
+            </aside>
+            <aside class="pmf-comments" id="comments">
+                <hr>
+                
+            </aside>
+        </section>
+        <script src="assets/js/libs/highlight.pack.js"></script>
+        <style>
+        body {
+            position: relative;
+        }
+        </style>
+        <link rel="stylesheet" href="assets/js/libs/default.css">
+        <script>
+            $(document).ready(function() {
+                $(function() {
+                    $('div.pmf-stars > div.pmf-star-rating > span').on('click', function(e) {
+                        var numStars = $(e.target).data('stars');
+                        saveVoting('faq', 549, numStars, 'ru');
+                    });
+                });
+                $('pre code').each(function(i, block) {
+                    hljs.highlightBlock(block);
+                });
+                $('button.pmf-popover').popover();
+            });
+        </script>
+            </div>
+            <aside class="col-lg-3 pmf-aside">
+                        
+        <section class="pmf-aside-widget">
+            <div class="pmf-aside-widget-body pmf-social-links">
+                <a target="_blank" href="/pdf.php?cat=27&id=549&artlang=ru" rel="nofollow" title="Скомпилировать PDF файл">
+                    <span class="fa-stack fa-lg">
+                        <i aria-hidden="true" class="fa fa-square-o fa-stack-2x"></i>
+                        <i aria-hidden="true" class="fa fa-file-pdf-o fa-stack-1x"></i>
+                    </span>
+                </a>
+                <a href="javascript:window.print();" rel="nofollow" title="Отправить на печать">
+                    <span class="fa-stack fa-lg">
+                        <i aria-hidden="true" class="fa fa-square-o fa-stack-2x"></i>
+                        <i aria-hidden="true" class="fa fa-print fa-stack-1x"></i>
+                    </span>
+                </a>
+                <a href="https://kb.opentechnology.ru/?action=send2friend&cat=27&id=549&artlang=ru" title="Отправить другу">
+                    <span class="fa-stack fa-lg">
+                        <i aria-hidden="true" class="fa fa-square-o fa-stack-2x"></i>
+                        <i aria-hidden="true" class="fa fa-envelope fa-stack-1x"></i>
+                    </span>
+                </a>
+                <a href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Fkb.opentechnology.ru%2Fcontent%2F27%2F549%2Fru%2Fintegracia-s-fis-frdo.html" target="_blank"><span class="fa-stack fa-lg">
+                        <i aria-hidden="true" class="fa fa-square-o fa-stack-2x"></i>
+                        <i aria-hidden="true" class="fa fa-facebook fa-stack-1x"></i>
+                    </span></a>
+                <a href="https://twitter.com/share?url=https%3A%2F%2Fkb.opentechnology.ru%2Fcontent%2F27%2F549%2Fru%2Fintegracia-s-fis-frdo.html&text=%D0%98%D0%BD%D1%82%D0%B5%D0%B3%D1%80%D0%B0%D1%86%D0%B8%D1%8F+%D1%81+%D0%A4%D0%98%D0%A1+%D0%A4%D0%A0%D0%94%D0%9E+%7C+https%3A%2F%2Fkb.opentechnology.ru%2Fcontent%2F27%2F549%2Fru%2Fintegracia-s-fis-frdo.html" target="_blank"><span class="fa-stack fa-lg">
+                        <i aria-hidden="true" class="fa fa-square-o fa-stack-2x"></i>
+                        <i aria-hidden="true" class="fa fa-twitter fa-stack-1x"></i>
+                    </span></a>
+                
+            </div>
+        </section>
+        
+        <section class="pmf-aside-widget">
+            <header>
+                <h3>Десятка самых популярных вопросов/ответов </h3>
+            </header>
+            <div class="pmf-aside-widget-body">
+                <ol class="tpmf-list">
+                    
+                    <li><a class="topten" data-toggle="tooltip" data-placement="top" title="Что такое интеграция? Какие существуют интеграции и возможности обмена данными в СЭО 3KL? (заглавная статья)" href="https://kb.opentechnology.ru/content/742/7/ru/cto-takoe-integracia-kakie-susestvuut-integracii-i-vozmoznosti-obmena-dannymi-v-seo-3kl-zaglavnaa-statʹa.html">Что такое интеграция? Какие существуют интеграции и возможности обмена ...</a> <small>(32767 просмотров)</small></li>
+                    
+                    <li><a class="topten" data-toggle="tooltip" data-placement="top" title="Способы регистрации и аутентификации пользователей" href="https://kb.opentechnology.ru/content/742/15/ru/sposoby-registracii-i-autentifikacii-polʹzovatelej.html">Способы регистрации и аутентификации пользователей</a> <small>(32767 просмотров)</small></li>
+                    
+                    <li><a class="topten" data-toggle="tooltip" data-placement="top" title="Сертификат СЭО 3KL" href="https://kb.opentechnology.ru/content/742/106/ru/sertifikat-seo-3kl.html">Сертификат СЭО 3KL</a> <small>(32767 просмотров)</small></li>
+                    
+                    <li><a class="topten" data-toggle="tooltip" data-placement="top" title="Плагин аутентификации «OAuth 3КL». Настройка авторизации через социальные сети, внешние системы  и сервисы" href="https://kb.opentechnology.ru/content/742/124/ru/plagin-autentifikacii-«oauth-3kl»-nastrojka-avtorizacii-cerez-socialʹnye-seti-vnesnie-sistemy-i-servisy.html">Плагин аутентификации «OAuth 3КL». Настройка авторизации через социальные сети, ...</a> <small>(32767 просмотров)</small></li>
+                    
+                    <li><a class="topten" data-toggle="tooltip" data-placement="top" title="Отчеты в СЭО 3KL " href="https://kb.opentechnology.ru/content/742/100/ru/otcety-v-seo-3kl.html">Отчеты в СЭО 3KL </a> <small>(32767 просмотров)</small></li>
+                    
+                    <li><a class="topten" data-toggle="tooltip" data-placement="top" title="Отправка электронных писем: варианты и возможные проблемы" href="https://kb.opentechnology.ru/content/27/151/ru/otpravka-elektronnyh-pisem-varianty-i-vozmoznye-problemy.html">Отправка электронных писем: варианты и возможные проблемы</a> <small>(32767 просмотров)</small></li>
+                    
+                    <li><a class="topten" data-toggle="tooltip" data-placement="top" title="Массовая загрузка пользователей через файл csv" href="https://kb.opentechnology.ru/content/742/79/ru/massovaa-zagruzka-polʹzovatelej-cerez-fajl-csv.html">Массовая загрузка пользователей через файл csv</a> <small>(32767 просмотров)</small></li>
+                    
+                    <li><a class="topten" data-toggle="tooltip" data-placement="top" title="Каков порядок установки и системные требования среды электронного обучения 3KL (Русский Moodle) на сервер клиента?" href="https://kb.opentechnology.ru/content/742/117/ru/kakov-poradok-ustanovki-i-sistemnye-trebovania-sredy-elektronnogo-obucenia-3kl-russkij-moodle-na-server-klienta.html">Каков порядок установки и системные требования среды электронного обучения ...</a> <small>(32767 просмотров)</small></li>
+                    
+                    <li><a class="topten" data-toggle="tooltip" data-placement="top" title="Интеграция вебинаров в СЭО 3KL" href="https://kb.opentechnology.ru/content/742/68/ru/integracia-vebinarov-v-seo-3kl.html">Интеграция вебинаров в СЭО 3KL</a> <small>(32767 просмотров)</small></li>
+                    
+                    <li><a class="topten" data-toggle="tooltip" data-placement="top" title="Инструкция по работе с блоком «Слайдер 3KL»" href="https://kb.opentechnology.ru/content/742/142/ru/instrukcia-po-rabote-s-blokom-«slajder-3kl».html">Инструкция по работе с блоком «Слайдер 3KL»</a> <small>(32767 просмотров)</small></li>
+                    
+                    
+                </ol>
+            </div>
+        </section>
+        <section class="pmf-aside-widget">
+            <header>
+                <h3>Пять новых ответов/вопросов: </h3>
+            </header>
+            <div class="pmf-aside-widget-body">
+                <ol class="pmf-list">
+                    
+                    <li><a class="latest-entries" data-toggle="tooltip" data-placement="top" title="Цветной уголок у иконки элемента курса. Что означает?" href="https://kb.opentechnology.ru/content/742/413/ru/cvetnoj-ugolok-u-ikonki-elementa-kursa-cto-oznacaet.html">Цветной уголок у иконки элемента курса. Что означает?</a> <small>(25.03.2026)</small></li>
+                    
+                    <li><a class="latest-entries" data-toggle="tooltip" data-placement="top" title="Поиск пользователя СЭО 3KL по неполным данным с помощью страницы «Список пользователей»" href="https://kb.opentechnology.ru/content/742/882/ru/poisk-polʹzovatela-seo-3kl-po-nepolnym-dannym-s-pomosʹu-stranicy-«spisok-polʹzovatelej».html">Поиск пользователя СЭО 3KL по неполным данным с помощью ...</a> <small>(25.03.2026)</small></li>
+                    
+                    <li><a class="latest-entries" data-toggle="tooltip" data-placement="top" title="В SCORM-пакете, загруженном в СЭО 3KL, не работает звук" href="https://kb.opentechnology.ru/content/742/875/ru/v-scorm_pakete-zagruzennom-v-seo-3kl-ne-rabotaet-zvuk.html">В SCORM-пакете, загруженном в СЭО 3KL, не работает звук ...</a> <small>(24.03.2026)</small></li>
+                    
+                    <li><a class="latest-entries" data-toggle="tooltip" data-placement="top" title="Почему у слушателя, который прошел SCORM-пакет на положительную оценку, оценка обнулилась спустя некоторое время?" href="https://kb.opentechnology.ru/content/742/876/ru/pocemu-u-slusatela-kotoryj-prosel-scorm_paket-na-polozitelʹnuu-ocenku-ocenka-obnulilasʹ-spusta-nekotoroe-vrema.html">Почему у слушателя, который прошел SCORM-пакет на положительную оценку, ...</a> <small>(23.03.2026)</small></li>
+                    
+                    <li><a class="latest-entries" data-toggle="tooltip" data-placement="top" title="Метод записи на курс «Автозачисление 3KL» — otautoenrol" href="https://kb.opentechnology.ru/content/27/9/ru/metod-zapisi-na-kurs-«avtozacislenie-3kl»-—-otautoenrol.html">Метод записи на курс «Автозачисление 3KL» — otautoenrol</a> <small>(20.03.2026)</small></li>
+                    
+                    
+                </ol>
+            </div>
+        </section>
+        
+		
+            <div class="pmf-aside-widget">
+                <header>
+                    <h3>ВАЖНОЕ:</h3>
+                </header>
+                <div class="pmf-aside-widget-body">
+                    <ul class="pmf-list">
+                        <li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="Способы регистрации и аутентификации пользователей" href="/content/5/15/ru/sposoby-registracii-i-autentifikacii-polʹzovatelej.html">Способы регистрации и аутентификации пользователей</a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title=" Плагин  «Антиплагиат.ру». Проверка работ слушателей на заимствования с помощью сервиса «Антиплагиат»" href="/content/5/35/ru/plagin-«antiplagiatru»-proverka-rabot-slusatelej-na-zaimstvovania-s-pomosʹu-servisa-«antiplagiat».html"> Плагин «Антиплагиат.ру». Проверка работ слушателей на заимствования с ...</a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="Интеграция вебинаров в СЭО 3KL" href="/content/5/68/ru/integracia-vebinarov-v-seo-3kl.html">Интеграция вебинаров в СЭО 3KL</a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="Отчеты в СЭО 3KL " href="/content/41/100/ru/otcety-v-seo-3kl.html">Отчеты в СЭО 3KL </a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="Сертификат СЭО 3KL" href="/content/27/106/ru/sertifikat-seo-3kl.html">Сертификат СЭО 3KL</a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="Отслеживание времени непрерывного обучения в курсе" href="/content/24/153/ru/otslezivanie-vremeni-nepreryvnogo-obucenia-v-kurse.html">Отслеживание времени непрерывного обучения в курсе</a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="Как узнать о СЭО 3KL подробнее?" href="/content/1/157/ru/kak-uznatʹ-o-seo-3kl-podrobnee.html">Как узнать о СЭО 3KL подробнее?</a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="Логика курса 3KL, часть 1. Принцип работы, добавление и настройка элемента" href="/content/27/168/ru/logika-kursa-3kl-castʹ-1-princip-raboty-dobavlenie-i-nastrojka-elementa.html">Логика курса 3KL, часть 1. Принцип работы, добавление и ...</a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="Настройка внешнего вида СЭО 3КL" href="/content/27/183/ru/nastrojka-vnesnego-vida-seo-3kl.html">Настройка внешнего вида СЭО 3КL</a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="Плагин «Подписка 3KL» часть 2. Глобальные настройки" href="/content/27/216/ru/plagin-«podpiska-3kl»-castʹ-2-globalʹnye-nastrojki.html">Плагин «Подписка 3KL» часть 2. Глобальные настройки</a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="Портфолио ч. 1. Введение" href="/content/24/218/ru/portfolio-c-1-vvedenie.html">Портфолио ч. 1. Введение</a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="Глобальные сценарии 3KL. Локальный плагин" href="/content/27/271/ru/globalʹnye-scenarii-3kl-lokalʹnyj-plagin.html">Глобальные сценарии 3KL. Локальный плагин</a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="Панель управления СЭО 3KL. Локальный плагин" href="/content/41/375/ru/panelʹ-upravlenia-seo-3kl-lokalʹnyj-plagin.html">Панель управления СЭО 3KL. Локальный плагин</a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="Персональная информация пользователя. Страницы «О пользователе» и «Личный кабинет»" href="/content/27/480/ru/personalʹnaa-informacia-polʹzovatela-stranicy-«o-polʹzovatele»-i-«licnyj-kabinet».html">Персональная информация пользователя. Страницы «О пользователе» и «Личный кабинет» ...</a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="Элемент курса «Занятие 3КL»" href="/content/4/492/ru/element-kursa-«zanatie-3kl».html">Элемент курса «Занятие 3КL»</a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="Витрина курсов 3KL. Путеводитель" href="/content/27/536/ru/vitrina-kursov-3kl-putevoditelʹ.html">Витрина курсов 3KL. Путеводитель</a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="Справка СЭО 3КL" href="/content/27/542/ru/spravka-seo-3kl.html">Справка СЭО 3КL</a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="Термины и определения базы знаний" href="/content/2/543/ru/terminy-i-opredelenia-bazy-znanij.html">Термины и определения базы знаний</a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="Политики сайта и пользовательские соглашения" href="/content/1/593/ru/politiki-sajta-i-polʹzovatelʹskie-soglasenia.html">Политики сайта и пользовательские соглашения</a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="Расширенный анонс релиза 3.9.20a" href="/content/43/614/ru/rassirennyj-anons-reliza-3920a.html">Расширенный анонс релиза 3.9.20a</a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="Настройка внешнего вида СЭО 3КL версии 3.9" href="/content/27/633/ru/nastrojka-vnesnego-vida-seo-3kl-versii-39.html">Настройка внешнего вида СЭО 3КL версии 3.9</a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="Миграция СЭО 3КL с релиза 3.9 на 4.1. Вопросы и решения" href="/content/6/634/ru/migracia-seo-3kl-s-reliza-39-na-41-voprosy-i-resenia.html">Миграция СЭО 3КL с релиза 3.9 на 4.1. Вопросы ...</a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="Инструменты WEB API в СЭО 3КL. Возможности и примеры" href="/content/41/642/ru/instrumenty-web-api-v-seo-3kl-vozmoznosti-i-primery.html">Инструменты WEB API в СЭО 3КL. Возможности и примеры ...</a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="Расширенный анонс релиза 3.9.25a" href="/content/43/660/ru/rassirennyj-anons-reliza-3925a.html">Расширенный анонс релиза 3.9.25a</a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="21.05.2024 г., III конференция «СЭО Moodle для образования» и конкурс статей" href="/content/45/691/ru/21052024-g-iii-konferencia-«seo-moodle-dla-obrazovania»-i-konkurs-statej.html">21.05.2024 г., III конференция «СЭО Moodle для образования» и ...</a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="Организация открытого мероприятия (онлайн-конференции) на базе СЭО 3KL" href="/content/1/697/ru/organizacia-otkrytogo-meropriatia-onlajn_konferencii-na-baze-seo-3kl.html">Организация открытого мероприятия (онлайн-конференции) на базе СЭО 3KL</a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="Интеграция Cреды электронного обучения 3KL и Moodle  с ГИС СЦОС" href="/content/27/698/ru/integracia-credy-elektronnogo-obucenia-3kl-i-moodle-s-gis-scos.html">Интеграция Cреды электронного обучения 3KL и Moodle с ГИС ...</a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="Расширенный анонс релиза 4.5.4b-beta" href="/content/43/728/ru/rassirennyj-anons-reliza-454b_beta.html">Расширенный анонс релиза 4.5.4b-beta</a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="Расширенный анонс релиза 4.5.6b" href="/content/43/817/ru/rassirennyj-anons-reliza-456b.html">Расширенный анонс релиза 4.5.6b</a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="Расширенный анонс релиза 4.5.7a" href="/content/43/833/ru/rassirennyj-anons-reliza-457a.html">Расширенный анонс релиза 4.5.7a</a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="Главное и интересное. 3КL-осень 2025" href="/content/46/843/ru/glavnoe-i-interesnoe-3kl_osenʹ-2025.html">Главное и интересное. 3КL-осень 2025</a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="Расширенный анонс релиза 4.1.22a" href="/content/44/852/ru/rassirennyj-anons-reliza-4122a.html">Расширенный анонс релиза 4.1.22a</a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="Расширенный анонс релиза 4.5.10b" href="/content/43/879/ru/rassirennyj-anons-reliza-4510b.html">Расширенный анонс релиза 4.5.10b</a></li>
+                    </ul>
+                </div>
+            </div>
+        
+            </aside>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <div class="pmf-wrapper pmf-footer">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-9">
+                    <ul class="footer-menu">
+                        <li>482 пользователь онлайн | 480 гостей and 2 зарегистрированных</li>
+                        <li><a href="https://kb.opentechnology.ru/overview.html">FAQ Overview</a></li>
+                        <li><a href="https://kb.opentechnology.ru/sitemap/A/ru.html">Карта сайта</a></li>
+                        <li><a href="https://kb.opentechnology.ru/glossary.html">Глоссарий</a></li>
+                        <li><a href="https://kb.opentechnology.ru/contact.html">Адм</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <form action="?sid=18447237" method="post" class="pull-right" accept-charset="utf-8">
+                        <select class="form-control" name="language" id="language" size="1" onchange="this.form.submit();">
+	<option value="ar">Arabic</option>
+	<option value="eu">Basque</option>
+	<option value="bn">Bengali</option>
+	<option value="bs">Bosnian</option>
+	<option value="pt-br">Brazilian Portuguese</option>
+	<option value="zh">Chinese (Simplified)</option>
+	<option value="tw">Chinese (Traditional)</option>
+	<option value="cs">Czech</option>
+	<option value="da">Danish</option>
+	<option value="nl">Dutch</option>
+	<option value="en">English</option>
+	<option value="fi">Finnish</option>
+	<option value="fr">French</option>
+	<option value="fr-ca">French (Canada)</option>
+	<option value="de">German</option>
+	<option value="el">Greek</option>
+	<option value="he">Hebrew</option>
+	<option value="hi">Hindi</option>
+	<option value="hu">Hungarian</option>
+	<option value="id">Indonesian</option>
+	<option value="it">Italian</option>
+	<option value="ja">Japanese</option>
+	<option value="ko">Korean</option>
+	<option value="lv">Latvian</option>
+	<option value="lt">Lithuanian</option>
+	<option value="ms">Malay</option>
+	<option value="nb">Norwegian Bokm&aring;l</option>
+	<option value="fa">Persian</option>
+	<option value="pl">Polish</option>
+	<option value="pt">Portuguese</option>
+	<option value="ro">Romanian</option>
+	<option value="ru" selected="selected">Russian</option>
+	<option value="sr">Serbian</option>
+	<option value="sk">Slovak</option>
+	<option value="sl">Slovenian</option>
+	<option value="es">Spanish</option>
+	<option value="sv">Swedish</option>
+	<option value="th">Thai</option>
+	<option value="tr">Turkish</option>
+	<option value="uk">Ukrainian</option>
+	<option value="vi">Vietnamese</option>
+	<option value="cy">Welsh</option>
+</select>
+                        <input type="hidden" name="action" value="" />
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="pmf-wrapper copyright">
+        <div class="container-fluid">
+            <div class="pull-right">
+                powered by <a href="https://www.phpmyfaq.de" target="_blank">phpMyFAQ</a> 2.9.13
+            </div>
+        </div>
+    </div>
+    
+</footer>
+<script>
+    $('.topten').tooltip();
+    $('.latest-entries').tooltip();
+    $('.sticky-faqs').tooltip();
+    $('.table').each(function(){
+        var rows = $(this).children('thead').find('tr');
+        if (rows.length == 1)
+        {
+	    	var cells = rows.find('th,td');
+	    	var ths = cells.filter('th');
+	    	if (ths.length > 0 && ths.length == cells.length)
+	    	{
+	    	    ths.each(function(){
+	    	        $(this).data('sortable', true);
+	    	    });
+	    	    
+	    	    $(this).bootstrapTable();
+	    	}
+    	}
+    	
+    })
+</script>
+ 
+<script>
+        (function(w,d,u){
+                var s=d.createElement('script');s.async=true;s.src=u+'?'+(Date.now()/60000|0);
+                var h=d.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);
+        })(window,document,'https://crm.3072.ru/upload/crm/site_button/loader_4_g3w7tu.js');
+</script>
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+            
+   ym(23244946, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true,
+        webvisor:true
+   });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/23244946" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+</body>
+</html>

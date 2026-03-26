@@ -1,0 +1,769 @@
+<!doctype html>
+<!--[if IE 9 ]> <html lang="ru" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="ru" class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <title>База знаний ООО &quot;Открытые технологии&quot; - Массовая загрузка пользователей через файл csv</title>
+    <meta name="description" content="С помощью импорта пользователей через csv файл можно создать новых пользователей ...">
+    <meta name="keywords" content="использование цифровой образовательной среды, импорт пользователей через файл csv, поля для CSV,массовая загрузка пользователей через файл csv">
+    <meta name="author" content="ООО "Открытые технологии"">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="application-name" content="phpMyFAQ 2.9.13">
+    <meta name="robots" content="index, follow">
+    <meta name="revisit-after" content="7 days">
+    <meta name="apple-itunes-app" content="app-id=977896957">
+    <!-- Share on Facebook -->
+    <meta property="og:title" content="База знаний ООО &quot;Открытые технологии&quot; - Массовая загрузка пользователей через файл csv">
+    <meta property="og:description" content="С помощью импорта пользователей через csv файл можно создать новых пользователей ...">
+    <meta property="og:image" content="">
+    <link rel="stylesheet" href="https://kb.opentechnology.ru/assets/template/ot/css/style.min.css?v=1">
+    <link rel="shortcut icon" href="https://kb.opentechnology.ru/assets/template/ot/favicon.ico">
+    <link rel="apple-touch-icon" href="https://kb.opentechnology.ru/assets/template/ot/apple-touch-icon.png">
+    <link rel="canonical" href="https://kb.opentechnology.ru/content/5/79/ru/massovaa-zagruzka-polʹzovatelej-cerez-fajl-csv.html">
+    <script src="https://kb.opentechnology.ru/assets/js/modernizr.min.js"></script>
+    <script src="https://kb.opentechnology.ru/assets/js/phpmyfaq.min.js"></script>
+    <script src="https://kb.opentechnology.ru/assets/js/libs/bootstrap-table/bootstrap-table.min.js"></script>
+    <link rel="alternate" title="News RSS Feed" type="application/rss+xml" href="https://kb.opentechnology.ru/feed/news/rss.php">
+    <link rel="alternate" title="TopTen RSS Feed" type="application/rss+xml" href="https://kb.opentechnology.ru/feed/topten/rss.php">
+    <link rel="alternate" title="Latest FAQ Records RSS Feed" type="application/rss+xml" href="https://kb.opentechnology.ru/feed/latest/rss.php">
+    <link rel="alternate" title="Open Questions RSS Feed" type="application/rss+xml" href="https://kb.opentechnology.ru/feed/openquestions/rss.php">
+    <link rel="search" type="application/opensearchdescription+xml" title="База знаний ООО Открытые технологии - Массовая загрузка пользователей через файл csv" href="https://kb.opentechnology.ru/opensearch.html">
+    <script>
+        if (self === top) {
+            document.documentElement.style.display = 'block';
+        } else {
+            top.location = self.location;
+        }
+    </script>
+    <style> html{display:none;} </style>
+</head>
+<body dir="ltr">
+<header>
+    <div class="pmf-wrapper pmf-masthead">
+        <div class="container-fluid">
+            <a id="logo" title="База знаний ООО Открытые технологии" href="https://kb.opentechnology.ru/">
+                <img src="https://kb.opentechnology.ru/assets/template/ot/img/logo.png" alt="phpMyFAQ">
+            </a>
+            <div id="mobile-nav-toggle" class="pull-right">
+                <a href="#" data-toggle="collapse" data-target=".pmf-nav .navbar-collapse">
+                    <i aria-hidden="true" class="fa fa-bars"></i>
+                </a>
+            </div>
+            <nav class="pull-right pmf-nav">
+                <div class="collapse navbar-collapse">
+                    <ul class="nav nav-pills navbar-nav">
+                        <li class=""><a href="https://kb.opentechnology.ru/search.html">Расширенный поиск</a></li>
+                        <li class=""><a href="https://kb.opentechnology.ru/showcat.html">Разделы</a></li>
+                        <li class=""><a href="https://kb.opentechnology.ru/addcontent.html">ответ</a></li>
+                        <li class=""><a href="https://kb.opentechnology.ru/ask.html">вопрос</a></li>
+                        <li class=""><a href="https://kb.opentechnology.ru/open.html">Открытые вопросы</a></li>
+                        <li class="dropdown ">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                Вход
+                                <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-right">
+                                
+                                <li></li>
+                                <li><a href="?action=login&auth_driver=rm3kl">Войти через Moodle</a></li>
+                                
+                                
+                                
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <div class="pmf-wrapper pmf-subheader">
+        <div class="container-fluid">
+            <div class="pmf-breadcrumb">
+                
+                <ul class="breadcrumb"></ul>
+                
+            </div>
+            <div class="pmf-searchbox">
+                <form role="search" id="search" action="?action=search" method="get">
+                    <input type="hidden" name="action" value="search">
+                    <button class="searchbutton" type="submit" aria-label="Поиск">
+                        <i aria-hidden="true" class="fa fa-search"></i>
+                    </button>
+                    <input type="text" class="searchfield typeahead" name="search" id="searchbox"
+                           autocomplete="off" placeholder="Поиск ...">
+                </form>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="pmf-wrapper pmf-main">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-9 pmf-maincontent">
+                <section>
+            <article class="pmf-faq">
+                <header>
+                    <div class="pull-right hidden-print" id="solution_id">
+                        <a class="label label-info" href="/index.php?solution_id=1079">
+                            ID #1079
+                        </a>
+                    </div>
+                    <h1>Массовая загрузка пользователей через файл csv</h1>
+                    <div class="pmf-faq-meta clearfix">
+                        <div class="pmf-faq-author">
+                            <i aria-hidden="true" class="fa fa-user"></i>
+                            <span class="data">Алексей Городков</span>
+                        </div>
+                        <div class="pmf-faq-date">
+                            <i aria-hidden="true" class="fa fa-calendar"></i>
+                            <span class="data">15.05.2025</span>
+                        </div>
+                        <div class="pmf-faq-comments">
+                            <i aria-hidden="true" class="fa fa-comments"></i>
+                            <span class="data"><a class="show-comment-form" href="#">3 Комментариев</a></span>
+                        </div>
+                        <div class="pmf-faq-edit">
+                            
+                        </div>
+                    </div>
+                </header>
+                <div class="pmf-faq-body">
+                    <div class="otsf-incut advice">С помощью импорта пользователей через <abbr data-toggle="tooltip" data-placement="bottom" title="Comma-Separated Values (значения, разделённые запятыми) — текстовый формат, предназначенный для представления табличных данных. Строка таблицы соответствует строке текста, которая содержит одно или несколько полей, разделенных запятыми. Статья «Массовая загрузка пользователей через файл csv».">csv</abbr> файл можно создать новых пользователей в <abbr data-toggle="tooltip" data-placement="bottom" title="Программный Продукт, разработанный Исполнителем и предназначенный для электронного обучения. В настоящем Регламенте упоминается в связи с предоставлением Исполнителем технической поддержки, предоставлением консультаций или прочих Сервисов по данному Продукту. Статья «Что представляет собой среда электронного обучения 3KL?».">СЭО</abbr> 3KL или отредактировать уже имеющихся пользователей. При этом импортировать можно различные поля профилей пользователей. <span style="color: transparent;">. . . . </span></div>
+<div class="otsf-incut note">Перейти к статье <a href="https://kb.opentechnology.ru/index.php?solution_id=1020">«Способы записи пользователей на <abbr data-toggle="tooltip" data-placement="bottom" title="Структурная единица (раздел сайта) в СЭО 3KL, объединяющий учебные материалы, преподавателей и изучающих материалы пользователей. Курс может включать в себя как набор учебных материалов, так и один единственный учебный материал, отображаемый сразу после входа в курс, также курс может не содержать учебных материалов и выполнять техническую функцию, например, реализовывать сообщество пользователей или элемент для организации учебных траекторий. Курс является минимальной единицей, на которую можно подписывать пользователей. При подписке на курс предполагается, что пользователь освоит его целиком. Статья «Форматы курсов».">курс</abbr>»</a></div>
+<div class="otsf-incut example"><a id="qq0"></a><strong>Содержание</strong><br /><a href="#q1"><strong>1. Импорт пользователей в СЭО 3KL</strong></a><br /><a href="#q11">  1.1. Импорт пользователей с записью на курс</a><br /><a href="#q2"><strong>2. Создание .csv файла</strong></a><br /><a href="#q21">  2.1. Что такое CSV файл</a><br />  <a href="q22">2.2. Поля для заполнения информации о пользователе</a><br />    <a href="#q221">2.2.1. Обязательные поля</a><br />    <a href="#q222">2.2.2. Необязательные поля</a><br />   <a href="#q223"> 2.2.3. Поле password</a><br />    <a href="#q224">2.2.4. Дополнительные поля</a><br />    <a href="#q225">2.2.5. Поля для зачисления на курс</a><br />    <a href="#q226">2.2.6. Поле глобальной группы</a><br />    <a href="#q227">2.2.7. Поле роли системы</a><br />    <a href="#q228">2.2.8. Поля для удаления и блокировки пользователей</a><br />    <a href="#q229">2.2.9. Поле метода аутентификации</a><br /><a href="#q23">  2.3. Структура CSV файла</a><br /><a href="#q3"><strong>3. Загрузка CSV файла</strong></a><br /><a href="#q31">  3.1. Интерфейс загрузки пользователей</a><br /><a href="#q32">  3.2. Загрузка файла с пользователями</a><br /><a href="#q33">  3.3. Настройки загрузки</a><br /><a href="#q4"><strong>4. Примеры использования</strong></a><br /><a href="#q41">  4.1. Примеры полей для файлов CSV (могут быть использованы как шаблоны)<br /></a><a href="#q42">  4.2. Добавление пользователей с записью на несколько курсов с указанием ролей</a><a href="#q42"><br /></a>    <a href="#q421">4.2.1. Создание текстового файла с расширением .CSV</a><br />    <a href="#q422">4.2.2. Загрузка пользователей в СЭО 3KL</a><br />    <a href="#q423">4.2.3. С записью в <abbr data-toggle="tooltip" data-placement="bottom" title="Группы пользователей, создаваемые администратором на уровне сайта или на уровне категорий курсов. Статья «Глобальные группы. Синхронизация с глобальной группой».">глобальные группы</abbr> нужно</a><a href="#q42"><br /></a><a href="#q43">  4.3. Массовое переименование пользователей</a><br /><a href="#q5"><strong>5. Возможные проблемы и ошибки</strong></a><br /><a href="#q51">  5.1. Загрузка пользователей из CSV файла, содержащего <abbr data-toggle="tooltip" data-placement="bottom" title="Специальные поля, значения которых могут нести дополнительную информацию о курсе, о его классификации, специализации, характеристиках. С помощью таких полей можно задавать дополнительные признаки для курсов. Настраиваемые поля используются также для сообщении дополнительной информации о пользователях, о локальных и глобальных группах. Статья «Настраиваемые поля курса. Применение в поиске курсов через Витрину курсов 3KL».">кастомные поля</abbr> Conditional field </a></div>
+<h2><a id="q1"></a>1. Импорт пользователей в СЭО 3KL</h2>
+<p>Для импорта пользователей в систему нужно сформировать таблицу, где обязательно есть <strong>адреса электронной почты</strong> и <strong>логины</strong> участников, их <strong>фамилии</strong> (одним полем) и <strong>имена</strong> или <strong>имена-отчества</strong> (одним полем), <strong>город</strong>, <strong>страна</strong> (можно для всех поставить RU), можно добавить и некоторые другие данные, перечисленные в профайле. <strong>Пароли</strong>, если они отсутствуют, <abbr data-toggle="tooltip" data-placement="bottom" title="Программный Продукт, разработанный Исполнителем и предназначенный для электронного обучения. В настоящем Регламенте упоминается в связи с предоставлением Исполнителем технической поддержки, предоставлением консультаций или прочих Сервисов по данному Продукту. Статья «Что представляет собой среда электронного обучения 3KL?».">система</abbr> создаст сама и вышлет на почту.</p>
+<p>Первая строка таблицы должна содержать заголовки для каждой колонки с данными. Пример:</p>
+<div class="otsf-incut example"><strong>email, username, firstname, lastname, password, city, country, profile_field_icq, phone1, url, description, course1</strong></div>
+<div class="otsf-incut attention">Важно! Четыре первые колонки обязательны для импорта и регистрации.</div>
+<p><a href="#qq0">-Вернуться к содержанию-</a></p>
+<h3><a id="q11"></a>1.1. Импорт пользователей с записью на курс</h3>
+<p>Колонка <strong>course1</strong> позволяет задать короткое имя курса, на который эти пользователи будут автоматически подписаны. Результат (файл с таблицей) надо сохранить в формате CSV (текст с разделителем) и загрузить в СДО через меню: Администрирование -&gt; Пользователи -&gt; Учетные записи -&gt; Загрузить пользователей.</p>
+<p>Нужно обращать внимание на <strong>кодировку символов</strong> и <strong>разделитель</strong>: они должны совпадать с теми, которые будут выбираться при импорте файла. Система предложит предпросмотр данных.</p>
+<p>Перед решением этой задачи рекомендуется сперва потренироваться на тестовых пользователях.</p>
+<p><a href="#qq0">-Вернуться к содержанию-</a></p>
+<h2><a id="q2"></a>2. Создание .csv файла</h2>
+<h3><a id="q21"></a>2.1. Что такое CSV файл</h3>
+<p>CSV — текстовый формат, предназначенный для представления табличных данных, его можно создавать и редактировать в любом текстовом редакторе, добавив в конце имени файла расширение .csv (например, FILE.csv).</p>
+<p><a href="#qq0">-Вернуться к содержанию-</a></p>
+<h3><a id="q22"></a>2.2. Поля для заполнения информации о пользователе</h3>
+<h4><a id="q221"></a>2.2.1. Обязательные поля</h4>
+<p><strong>username</strong> - имя пользователя (должно быть уникально, может содержать только алфавитные строчные буквы, цифры,дефис &#39;-&#39;, подчеркивание &#39;_&#39;,точка &#39;.&#39;, или знак &#39;@&#39;)</p>
+<p><strong>firstname</strong> - настоящее имя пользователя</p>
+<p><strong>lastname</strong> - фамилия пользователя</p>
+<p><strong>email</strong> - адрес электронной почты (должно быть уникально и иметь вид: name@example.com)</p>
+<div class="otsf-incut note">*Для добавления новых пользователей необходимо указать все обязательные поля. Для обновления имеющихся пользователей достаточно поля username.</div>
+<p><a href="#qq0">-Вернуться к содержанию-</a></p>
+<h4><a id="q222"></a>2.2.2. Необязательные поля</h4>
+<p><strong>institution</strong> - учреждение, к которому принадлежит пользователь (ВУЗ, колледж, название рабочей организации);</p>
+<p><strong>department</strong> - подразделение в учреждении, к которому принадлежит пользователь;</p>
+<p><strong>city</strong> - город;</p>
+<p><strong>country</strong> - страна (чтобы страна была корректно импортирована в соответствующее поле профиля пользователя в СЭО 3KL, необходимо указать ее в двухбуквенном формате <a href="https://ru.wikipedia.org/wiki/ISO_3166-1">ISO 3166-1</a> (ISO 3166-1 alpha-2), например: «RU», «KZ»);</p>
+<p><strong>lang</strong> - язык;</p>
+<p><strong>timezone</strong> - часовой пояс;</p>
+<p><strong>idnumber</strong> - индивидуальный номер, используется для указания идентификатора пользователя во внешней системе;</p>
+<p><strong>phone1 </strong>- телефон;<strong><br /></strong></p>
+<p><strong>phone2</strong> - мобильный телефон;</p>
+<p><strong>address</strong> - адрес (улица, дом, квартира);</p>
+<p><strong>description</strong> - описание пользователя (например, личная характеристика или краткая биография);</p>
+<p><strong>autosubscribe</strong> - автоподписка.</p>
+<div class="otsf-incut note">Обратите внимание, начиная с версии СЭО 3KL 4.1, часть полей, которые относились к необязательным полям, стала относиться к <a href="#q224">дополнительным полям</a>. По этой причине рекомендуем проверять соответствие названий полей перед загрузкой данных из CSV файла. Следующие поля профиля пользователя являются дополнительными и их необходимо указывать в формате «profile_field_xxxx» (например, profile_field_icq): Skype ID, <abbr data-toggle="tooltip" data-placement="bottom" title="1. Страница. Гипертекстовый документ, доступный для просмотра через веб-браузер. Веб-страница является комбинацией текста, изображений, видео и других медиаматериалов, а также интерактивных элементов, таких как формы, гиперссылки и кнопки. В СЭО 3KL «Страница» — это также ресурс курса для размещения учебного контента.&#13;&#10;2. Сайт. Информационная единица в интернете, или ресурс, представляющий собой набор веб-страниц, объединенных общей темой и ссылками и размещенных обычно на одном веб-сервере.">Веб-страница</abbr>, Номер ICQ, AIM ID, Yahoo ID, MSN ID.</div>
+<p><a href="#qq0">-Вернуться к содержанию-</a></p>
+<h4><a id="q223"></a>2.2.3. Поле password</h4>
+<p><strong>password</strong></p>
+<p>Если выбрано автоматическое создание пароля для пользователей и не указано поле password, то при создании пользователя пароль будет сгенерирован автоматически и будет отправлено <abbr data-toggle="tooltip" data-placement="bottom" title="Оповещение пользователя заранее определенным способом информирования (электронным письмом, всплывающим сообщением, смс, через мессенджер и т. п.) о наступлении отслеживаемого в системе события. Статья «Уведомления в СЭО 3КL».">уведомление</abbr> с паролем на почту пользователя (задание на отправку приветственного письма выполняется по определенному расписанию в планировщике заданий и приходит пользователям с некоторой задержкой).</p>
+<p><a href="#qq0">-Вернуться к содержанию-</a></p>
+<h4><a id="q224"></a>2.2.4. Дополнительные поля</h4>
+<p><strong>profile_field_xxxxx</strong></p>
+<p>Пользовательские поля профиля: XXXXX - уникальное имя поля (краткое название кастомного поля, обычно пишется латиницей), указываемое после конструкции «profile_field_».</p>
+<p>Cоздавать пользовательские поля необходимо перед импортом. Часть символов ХХХХХ должна быть в нижнем регистре, иначе не будет принято. Запись должна содержать «profile_field_xxxxx».</p>
+<div class="otsf-incut example"><strong>Пример:</strong> <br />1. Если создано пользовательское текстовое поле с названием  «Жанр» и кратким названием «genre», в файле в заголовке таблицы нужно указать короткое имя: «profile_field_genre». <br />2. Для пользовательских полей профиля, которые представляют собой меню, используется соответствующее значение.<br />3. Для пользовательских полей профиля типа дата используется стандарт ISO формате ГГГГ-мм-ДД, например, 2014-06-19. Данные в таком формате будут правильно локализованы в интерфейсе.</div>
+<p><a href="#qq0">-Вернуться к содержанию-</a></p>
+<h4><a id="q225"></a>2.2.5. Поля для зачисления на курс</h4>
+<p>Заголовки полей должны иметь числовой суффикс, например: <strong>type1</strong>, <strong>group1</strong>, <strong>enrolperiod1</strong> и т.д.</p>
+<p><strong>course</strong> - краткое название курса;</p>
+<p><strong>type</strong> - задает <abbr data-toggle="tooltip" data-placement="bottom" title="Набор разрешений (прав), определенных в масштабах всей системы. Роли могут назначаться пользователям в определенных контекстах системы. Статья «Роли, контекст, ролевая модель».">роль</abbr> для зачисления. Значения: <br />1 - роль студента (по умолчанию), <br />2 - задает роль преподавателя,<br />3 - задает роль ассистента;</p>
+<p><strong>role</strong> - используется для указания ролей напрямую, используя для роли короткое имя или ID (из базы данных);</p>
+<p><strong>group</strong> - используется для назначения пользователя в группу, используя имя или ID (названия числовых групп не поддерживаются);</p>
+<p><strong>enrolperiod</strong> - период времени, в течение которого будет активна запись на курс;</p>
+<p><strong>enrolstatus</strong> - позволяет блокировать пользователей курса, когда значение 1 или должно быть оставлено пустым для обучающихся.</p>
+<p><a href="#qq0">-Вернуться к содержанию-</a></p>
+<h4><a id="q226"></a>2.2.6. Поле глобальной группы</h4>
+<p><strong>cohort1</strong></p>
+<div class="otsf-incut note">*Должны использоваться внутренние идентификаторы глобальной группы или нечисловые идентификаторы существующих глобальных групп;<br /> *Имена имеющихся глобальных групп использовать не рекомендуется, так как это повлечет за собой добавление новой глобальной группы с идентификатором в виде имени той глобальной группы, которая указывается.</div>
+<p><a href="#qq0">-Вернуться к содержанию-</a></p>
+<h4><a id="q227"></a>2.2.7. Поле роли системы</h4>
+<p><strong>sysrole1,sysrole2</strong> (и т.д. в зависимости от количества системных ролей, которые нужно присвоить пользователю); используются короткие имена ролей.</p>
+<p><a href="#qq0">-Вернуться к содержанию-</a></p>
+<h4><a id="q228"></a>2.2.8. Поля для удаления и блокировки пользователей</h4>
+<p><strong>deleted</strong> - удаление пользователя из системы (значения 0 - не удалять или 1 - удалять)<br />Чтобы удалить пользователя, нужно указать значения полей username и deleted.</p>
+<p><strong>suspended</strong> - блокировка пользователя в системе (значения 0 - не блокировать или 1 - блокировать)<br />Чтобы заблокировать пользователя, нужно указать значения полей username и suspended.</p>
+<p>Производить добавление и удаление/блокировку пользователей можно загрузкой одного csv файла. Для добавляемых пользователей заполняются все нужные поля, а для удаляемых или блокируемых пользователей заполняются только username и deleted или suspended соответственно.</p>
+<p>При удалении нужно разрешить удаление пользователей.</p>
+<p><a href="#qq0">-Вернуться к содержанию-</a></p>
+<h4><a id="q229"></a>2.2.9. Поле метода аутентификации</h4>
+<p>Наименование поля: <strong>auth</strong></p>
+<p>Этот параметр определяет используемый метод аутентификации при входе пользователя в систему. Следует выбирать только включенные плагины аутентификации, в противном случае пользователь больше не сможет войти в систему.<br /><strong>Основные варианты содержимого:</strong></p>
+<ul>
+<li>Ручная регистрация: manual</li>
+<li>Самостоятельная регистрация по электронной почте: email</li>
+<li>Автоматическая подписка кураторов: enrolmentor</li>
+<li>OTOAuth: otoauth</li>
+<li>Синхронизация с Free Deans Office: dof</li>
+<li>User key authentication: userkey</li>
+<li>Сервер <abbr data-toggle="tooltip" data-placement="bottom" title="1. Плагин. Lightweight Directory Access Protocol, плагин для доступа к службе протоколов по протоколу LDAP (например, Active Directory и OpenLDAP). Используется для авторизации и синхронизации списка пользователей,  имеющих доступ к информационным системам организации, через каталог LDAP. В LDAP предполагается наличие сервера, хранящего каталог пользователей, и клиента, использующего данный каталог пользователей для аутентификации. Статья «Авторизация пользователей через Active Directory».&#13;&#10;2. Протокол. Lightweight Directory Access Protocol, протокол для доступа к службам каталогов для извлечения данных. Статья «Авторизация пользователей через Active Directory».">LDAP</abbr>: ldap</li>
+<li>Внешняя база данных: db</li>
+<li>OAuth 2: oauth2</li>
+<li>Мульти-LDAP: otmultildap</li>
+</ul>
+<p><a href="#qq0">-Вернуться к содержанию-</a></p>
+<h3><a id="q23"></a>2.3. Структура CSV файла</h3>
+<p>1. Необходимо задать обязательные поля для заполнения (по желанию можно добавить необязательные и пользовательские поля);<br />2. Затем в новой строке в той же последовательности, что и перечисленные поля, указать данные пользователя.<br />3. В следующей строке указать данные второго пользователя и т.д. (Рис. 2.3.1).</p>
+<p><img class="otsf-screenshot" src="https://kb.opentechnology.ru/index.php?action=attachment&amp;id=187" alt="" width="500" height="78" /></p>
+<div class="otsf-screenshot-description">Рис. 2.3.1. Пример структуры csv файла.</div>
+<p><strong>Нужно обращать внимание на <span style="text-decoration: underline;">ограничение по длине</span> данных, вводимых в поля (указано в символах):</strong></p>
+<div class="otsf-incut note">login - 100<br />password - 255<br />firstname - 100<br />lastname - 100<br />email - 100<br />city - 120<br />country - 2<br />lang - 30<br />description - неограничено<br />url - 255<br />idnumber - 255<br />institution - 255<br />department - 255<br />phone1 - 20<br />phone2 - 20<br />address - 255<br />firstnamephonetic - 255<br />lastnamephonetic - 255<br />middlename - 255<br />alternatename - 255</div>
+<p>В значениях полей не должно быть переносов строк.</p>
+<div class="otsf-incut example"><strong>Пример:</strong></div>
+<div class="otsf-incut example">username,password,firstname,lastname,email,course1,group1,cohort1</div>
+<div class="otsf-incut example">jonest,verysecret,Tom,Jones,jonest@someplace.edu,math102,Section 1,year 3</div>
+<div class="otsf-incut example">reznort,somesecret,Trent,Reznor,reznort@someplace.edu,math102,Section 3,year 4</div>
+<p><a href="#qq0">-Вернуться к содержанию-</a></p>
+<h2><a id="q3"></a>3. Загрузка CSV файла</h2>
+<h3><a id="q31"></a>3.1. Интерфейс загрузки пользователей</h3>
+<p>Для загрузки CSV файла нужно открыть интерфейс загрузки пользователей, который находится по следующему пути: Администрирование -&gt; Пользователи -&gt; Учетные записи -&gt; Загрузить пользователей (Рис. 3.1.1).</p>
+<p><img class="otsf-screenshot" src="https://kb.opentechnology.ru/index.php?action=attachment&amp;id=2101" alt="" width="1250" height="560" /></p>
+<div class="otsf-screenshot-description">Рис. 3.1.1. Страница «Загрузить пользователей».</div>
+<p>Процедуру загрузки списка пользователей из csv-файла можно разделить на два этапа:</p>
+<p>1) <a href="#q32">Загрузка файла с пользователями в СЭО 3KL</a>.</p>
+<p>2) <a href="#q33">Настройка параметров загрузки пользователей</a>.</p>
+<p><a href="#qq0">-Вернуться к содержанию-</a></p>
+<h3><a id="q32"></a>3.2. Загрузка файла с пользователями</h3>
+<p>1) На странице «Загрузить пользователей» (Администрирование -&gt; Пользователи -&gt; Учетные записи -&gt; Загрузить пользователей) добавить заранее подготовленный csv-файл:</p>
+<ul>
+<li>либо нажав на «Выберите файл...» и указав местоположение файла на своем компьютере (Рис. 3.2.1);</li>
+</ul>
+<p><img class="otsf-screenshot" src="https://kb.opentechnology.ru/index.php?action=attachment&amp;id=189" alt="" width="1742" height="822" /></p>
+<div class="otsf-screenshot-description">Рис. 3.2.1. Выбор файла csv.</div>
+<ul>
+<li>либо перетащив файл из папки в поле загрузки (Рис. 3.2.2).</li>
+</ul>
+<p><img class="otsf-screenshot" src="https://kb.opentechnology.ru/index.php?action=attachment&amp;id=190" alt="" width="1636" height="746" /></p>
+<div class="otsf-screenshot-description">Рис. 3.2.2. Перетаскивание файла csv.</div>
+<p>2) В выпадающем списке параметра «Разделитель для CSV» указать разделитель, соответствующий разделителю в вашем файле (Рис. 3.2.3).</p>
+<p><img class="otsf-screenshot" src="https://kb.opentechnology.ru/index.php?action=attachment&amp;id=191" alt="" width="1761" height="608" /></p>
+<div class="otsf-screenshot-description">Рис. 3.2.3. Выбор разделителя.</div>
+<div class="otsf-incut note">Обратите внимание: если выбрать неправильный разделитель, загрузка пользователей будет выполнена с ошибками.</div>
+<p>Каким именно разделителем отделяются данные в вашем файле можно уточнить, открыв этот файл в редакторе простого текста (Рис. 3.2.4).</p>
+<p><img class="otsf-screenshot" src="https://kb.opentechnology.ru/index.php?action=attachment&amp;id=10125" width="830" height="519" /></p>
+<div class="otsf-screenshot-description">Рис. 3.2.4. Пример файла csv, открытого в редакторе простого текста. В качестве разделителя используется запятая.</div>
+<p>3) В выпадающем списке параметра «Кодировка» выбрать стандарт кодирования символов, в котором создан ваш файл (Рис. 3.2.3).</p>
+<p><img class="otsf-screenshot" src="https://kb.opentechnology.ru/index.php?action=attachment&amp;id=192" alt="" width="1718" height="602" /></p>
+<div class="otsf-screenshot-description">Рис. 3.2.5. Выбор кодировки.</div>
+<p>В подавляющем большинстве случаев это будет UTF-8 или <span class="comment-more-79">windows-1251. Информацию о стандарте кодирования можно уточнить, открыв файл  в «продвинутом» текстовом редакторе (Рис. 3.2.6) или редакторе электронных таблиц (Рис. 3.2.7).<br /></span></p>
+<p><span class="comment-more-79"><img class="otsf-screenshot" src="https://kb.opentechnology.ru/index.php?action=attachment&amp;id=10133" alt="" width="811" height="341" /></span></p>
+<div class="otsf-screenshot-description"><span class="comment-more-79">Рис. 3.2.6. Csv-файл, открытый в редакторе Kate.</span></div>
+<p><img class="otsf-screenshot" src="https://kb.opentechnology.ru/index.php?action=attachment&amp;id=10134" alt="" width="650" height="659" /></p>
+<div class="otsf-screenshot-description">Рис. 3.2.7. Диалоговое окно при открытии csv-файла в LibreOffice Calc.</div>
+<p><a href="#qq0">-Вернуться к содержанию-</a></p>
+<h3><a id="q33"></a>3.3. Настройки параметров загрузки пользователей</h3>
+<h5>3.3.1. Тип загрузки (поз. 1 Рис. 3.3.1):</h5>
+<p>Для требуемого вам варианта импорта пользователей в СЭО 3КL необходимо определить следующие параметры (Рис. 3.3.1):</p>
+<p><img class="otsf-screenshot" src="https://kb.opentechnology.ru/index.php?action=attachment&amp;id=198" alt="" width="944" height="525" /></p>
+<div class="otsf-screenshot-description">Рис. 3.3.1. Выбор типа загрузки.</div>
+<p><strong>Тип загрузки:</strong></p>
+<p><strong>Добавить новых, пропустить имеющихся пользователей</strong> - опция добавляет пользователей в базу данных, но не затрагивает пользователей, уже имеющихся в базе данных;</p>
+<p><strong>Добавить всех, при необходимости добавлять номер к логину</strong> - добавляет всех пользователей из файла, и, если у них имеются повторяющиеся логины, то при загрузке к логину будет добавляться нумерованный суффикс (например: login, login1 или login_1);</p>
+<p><strong>Добавить всех, и обновить имеющихся пользователей</strong> - добавляет всех пользователей из файла и обновляет уже имеющихся пользователей, если изменения затрагивают данную группу пользователей;</p>
+<p><strong>Только обновить имеющихся пользователей</strong> - обновляет пользователей, уже имеющихся в базе данных, если в файле содержатся данные об этих пользователях.</p>
+<h5>3.3.2. Пароли новых пользователей (см. поз. 2 Рис. 3.3.1):</h5>
+<p><strong>Необходимое поле в файле</strong> - если указано поле password в самом CSV файле, будет загружен пароль из файла;</p>
+<p><strong>Создавать пароль при необходимости и рассылать его по электронной почте</strong> - автоматически создает пароль для пользователя и отправляет его по адресу электронной почты пользователя.</p>
+<h5>3.3.3. Данные существующих пользователей (см. поз. 3 Рис. 3.3.1)</h5>
+<p>Это способ обновления данных уже имеющихся пользователей (если в типе загрузки выбран один из пунктов, позволяющий обновлять имеющихся пользователей);</p>
+<h5>3.3.4. Пароли существующих пользователей (см. поз. 4 Рис. 3.3.1)</h5>
+<p>Опцию можно установить в значение «Изменять», если в пункте «Данные существующих пользователей» <span style="text-decoration: underline;">не указано значение</span> «Не изменять»;</p>
+<p><a href="#qq0">-Вернуться к содержанию-</a></p>
+<h2><a id="q4"></a>4. Примеры использования</h2>
+<h3><a id="q41"></a>4.1. Примеры полей для файлов CSV (могут быть использованы как шаблоны)</h3>
+<p>1. Простое добавление пользователя: <strong><a href="https://kb.opentechnology.ru/index.php?action=attachment&amp;id=199">добавление пользователя.csv</a></strong></p>
+<p>2. Добавление пользователя с глобальной ролью: <strong><a href="https://kb.opentechnology.ru/index.php?action=attachment&amp;id=200">добавление пользователя с глобальной ролью.csv</a></strong></p>
+<p>3. Добавление пользователя в глобальную группу: <strong><a href="https://kb.opentechnology.ru/index.php?action=attachment&amp;id=201">глобальные группы.csv</a></strong></p>
+<p>4. Добавление пользователя в курс с указанием локальной группы и локальной роли: <strong><a href="https://kb.opentechnology.ru/index.php?action=attachment&amp;id=202">указание курса, локальной группы, локальной роли.csv</a></strong></p>
+<p>5. Смена пароля у уже умеющегося пользователя : <strong><a href="https://kb.opentechnology.ru/index.php?action=attachment&amp;id=203">изменение пароля.csv</a></strong></p>
+<p>* При смене пароля через .csv необходимо выставить соответствующие настройки загрузки (Рис. 4.1.1):</p>
+<p><img class="otsf-screenshot" src="https://kb.opentechnology.ru/index.php?action=attachment&amp;id=197" alt="" width="875" height="216" /></p>
+<div class="otsf-screenshot-description">Рис. 4.1.1. Настройки загрузки при смене пароля через файл csv.</div>
+<p><a href="#qq0">-Вернуться к содержанию-</a></p>
+<h3><a id="q42"></a>4.2. Добавление пользователей с записью на несколько курсов с указанием ролей</h3>
+<p>Для того чтобы добавить пользователей с записью на несколько курсов (с указанием ролей) нужно создать файл с информацией о пользователях и загрузить его в систему.</p>
+<p><a href="#qq0">-Вернуться к содержанию-</a></p>
+<h4><a id="q421"></a>4.2.1. Создание текстового файла с расширением .CSV</h4>
+<p>Добавить в начало файла строчку:</p>
+<div class="otsf-incut example">username,password,firstname,lastname,email,course1,type1,role1,course2,type2,role2</div>
+<p>на следующей строчке следует указать значения параметров:</p>
+<div class="otsf-incut example">username - логин пользователя,</div>
+<div class="otsf-incut example">password - пароль,</div>
+<div class="otsf-incut example">firstname - Имя,</div>
+<div class="otsf-incut example">lastname - Фамилия,</div>
+<div class="otsf-incut example">email - почта,</div>
+<div class="otsf-incut example">course1,course2 - название курса (краткое название курса),</div>
+<div class="otsf-incut example">type1,type2 - тип роли при регистрации (параметр для студента = 1, для преподавателя = 2)</div>
+<div class="otsf-incut example">role1,role2 - роль в курсе (student = студент, teacher = <abbr data-toggle="tooltip" data-placement="bottom" title="Роль позволяет преподавать в курсах и выставлять оценки без возможности изменять содержание курса. Роль может быть назначена в категории курсов или на уровне курса. Статья «Роли, контекст, ролевая модель».">Ассистент (без права редактирования)</abbr>, editingteacher = Учитель, coursecreator = <abbr data-toggle="tooltip" data-placement="bottom" title="Роль позволяет создавать новые курсы, но не дает возможности редактировать их (в отличии от роли «Методист»). Роль сама по себе не позволяет настраивать курсы и наполнять их контентом, но в созданном курсе такому пользователю автоматически будет назначена роль «Преподаватель». Назначается глобально (для создания новых курсов во всех категориях) или в категории курсов (для создания новых курсов только в тех категориях, в которых роль присвоена). Статья «Роли, контекст, ролевая модель».">Создатель курса</abbr>, manager = <abbr data-toggle="tooltip" data-placement="bottom" title="Роль представляет собой безопасный вариант полного администратора и может быть рекомендована для сотрудника, который отвечает за организацию процесса электронного обучения и выполняет администрирование системы. Позволяет работать с контентом, управлять пользователями, но ограничивает доступ к важным системным настройкам. Назначается глобально. Статья «Роли, контекст, ролевая модель».">Управляющий</abbr>)</div>
+<p><strong>Например</strong>, пользователя нужно записать на два курса «Тестовый» с ролью учителя и «Рабочий» с ролью студента.</p>
+<p><strong>Содержимое файла:</strong></p>
+<div class="otsf-incut example">username,password,firstname,lastname,email,course1,type1,role1,course2,type2,role2</div>
+<div class="otsf-incut example">ivanov@localhost.ru,somesecret,Иван,Иванов,ivanov@localhost.ru,Тестовый,2,editingteacher,Рабочий,1,student</div>
+<p>Ссылка на файл: <strong><a href="https://kb.opentechnology.ru/index.php?action=attachment&amp;id=220">user.csv</a></strong></p>
+<p><a href="#qq0">-Вернуться к содержанию-</a></p>
+<h4><a id="q422"></a>4.2.2. Загрузка пользователей в СЭО 3KL</h4>
+<p>Перейти во вкладку: Администрирование -&gt; Пользователи -&gt; Учетные записи -&gt; Загрузить пользователей (Рис. 4.2.2.а).</p>
+<p><img class="otsf-screenshot" src="https://kb.opentechnology.ru/index.php?action=attachment&amp;id=221" alt="" width="1021" height="772" /></p>
+<div class="otsf-screenshot-description">Рис. 4.2.2.а. Загрузка пользователей в СЭО 3KL.</div>
+<p>Следует выбрать файл с пользователями, указать разделитель между словами (в примере используется запятая), указать кодировку именно ту, в которой у вас сохранен файл (например,Windows1251) и кликнуть на кнопку «Загрузить пользователей» (Рис. 4.2.2.б).</p>
+<p><img class="otsf-screenshot" src="https://kb.opentechnology.ru/index.php?action=attachment&amp;id=222" alt="" width="1360" height="835" /></p>
+<div class="otsf-screenshot-description">Рис. 4.2.2.б. Предварительный просмотр загружаемых пользователей.</div>
+<p>1) <strong>Тип загрузки</strong> - здесь выбирается тип загрузки из доступных:</p>
+<ul>
+<li>Добавить новых, пропустить имеющихся пользователей</li>
+<li>Добавить всех, при необходимости добавлять номер к логину</li>
+<li>Добавить новых и обновить имеющихся пользователей</li>
+<li>Только обновить имеющихся пользователей</li>
+</ul>
+<p>2) <strong>Пароли новых пользователей</strong> - Здесь выбирается, использовать ли пароль из файла или создать новый, если поле не заполнено.</p>
+<ul>
+<li>Необходимое поле в файле</li>
+<li>Создавать пароль при необходимости и отправлять его по электронной почте</li>
+</ul>
+<p>3) <strong>Данные существующих пользователей</strong> - Здесь выбирается, что делать с данными пользователей</p>
+<ul>
+<li>Не изменять</li>
+<li>Заменять данными из файла</li>
+<li>Заменять данными из файла и значениями по умолчанию</li>
+<li>Заполнить пустые поля данными из файла и значениями по умолчанию</li>
+</ul>
+<p>4) <strong>Пароли существующих пользователей</strong> - параметр доступен при типе загрузки «Только обновить имеющихся пользователей»</p>
+<p>5)<strong> Принудительная смена пароля</strong> - Выбирается из параметров:</p>
+<ul>
+<li>Пользователи с простыми паролями</li>
+<li>Пусто</li>
+<li>Все</li>
+</ul>
+<p>6) <strong>Разрешить переименовывать</strong> - параметр доступен при типе загрузки «Только обновить имеющихся пользователей»</p>
+<p>7) <strong>Разрешать удаление</strong> - параметр доступен при типе загрузки «Только обновить имеющихся пользователей».</p>
+<p>8) <strong>Разрешить блокировку и активацию учетных записей</strong> - выбирается включить параметр заблокировать и активацию пользователей.</p>
+<p>9) <strong>Стандартизация логинов</strong> - Механизм убирания пробелов и т.п.</p>
+<p>10) <strong>Выбрать для массовых операций</strong></p>
+<ul>
+<li>Нет</li>
+<li>Новые пользователи</li>
+<li>Обновленные пользователи</li>
+<li>Все пользователи</li>
+</ul>
+<p>После настроек параметров необходимо кликнуть на кнопку «<strong>Загрузить пользователей»</strong>.</p>
+<p>На следующей странице будет отображено количество загруженных пользователей</p>
+<p><em>Создано пользователей: 1</em><br /><em>Пользователи с простыми паролями: 1</em><br /><em>Ошибки: 0</em></p>
+<p>Пользователь загружен в СДО и подписан на соответствующие курсы.</p>
+<p><a href="#qq0">-Вернуться к содержанию-</a></p>
+<h4><a id="q423"></a>4.2.3. С записью в глобальные группы нужно:</h4>
+<p>1. Создать текстовый файл с расширением .CSV</p>
+<p>2. Добавить в начало файла строчку:</p>
+<div class="otsf-incut example">username,password,firstname,lastname,email</div>
+<p>Данные о пользователях:</p>
+<div class="otsf-incut example">ivanov@localhost.ru,somesecret,Иван,Иванов,ivanov@localhost.ru</div>
+<div class="otsf-incut example">petrov@localhost.ru,somesecret2,Петр,Петров,petrov@localhost.ru</div>
+<p>Ссылка на файл: <strong><a href="https://kb.opentechnology.ru/index.php?action=attachment&amp;id=227">add2.csv</a></strong></p>
+<p>3. Загрузка пользователей в СЭО 3KL</p>
+<p>Перейти во вкладку: Администрирование -&gt; Пользователи -&gt; Учетные записи -&gt; Загрузить пользователей (Рис. 4.2.3.а).</p>
+<p><img class="otsf-screenshot" src="https://kb.opentechnology.ru/index.php?action=attachment&amp;id=223" alt="" width="1021" height="772" /></p>
+<div class="otsf-screenshot-description">Рис. 4.2.3.а. Загрузка пользователей в СЭО 3KL.</div>
+<p>Следует выбрать файл с пользователями, указать разделитель между словами (в примере используется запятая), указать кодировку именно ту, в которой у вас сохранен файл (например,Windows1251) и кликнуть на кнопку «Загрузить пользователей» (Рис. 4.2.3.б).</p>
+<p><img class="otsf-screenshot" src="https://kb.opentechnology.ru/index.php?action=attachment&amp;id=224" alt="" width="1265" height="808" /></p>
+<div class="otsf-screenshot-description">Рис. 4.2.3.б. Предварительный просмотр загружаемых пользователей.</div>
+<p>Выбрать тип загрузки - «Только обновить имеющихся пользователей».</p>
+<p>Выбрать для массовых операций - «Все пользователи».</p>
+<p>4. После настроек параметров, следует кликнуть на кнопку «Загрузить пользователей».</p>
+<p>На следующей странице будет отображено количество загруженных пользователей (Рис. 4.2.3.в).</p>
+<p><img class="otsf-screenshot" src="https://kb.opentechnology.ru/index.php?action=attachment&amp;id=225" alt="" width="1262" height="758" /></p>
+<div class="otsf-screenshot-description">Рис. 4.2.3.в. Выбор загружаемых пользователей.</div>
+<p>Выбрать параметр в поле «С выбранными пользователями...»-&gt;Добавить в группу.</p>
+<p>5. Зачисление студентов в глобальную группу</p>
+<p>Откроется окно с добавлением в глобальную группу (Рис. 4.2.3.г):</p>
+<p><img class="otsf-screenshot" src="https://kb.opentechnology.ru/index.php?action=attachment&amp;id=226" alt="" width="1267" height="548" /></p>
+<div class="otsf-screenshot-description">Рис. 4.2.3.г. Зачисление пользователей в глобальную группу.</div>
+<p>Здесь нужно выбрать глобальную группу и нажать на кнопку «Добавить в группу».</p>
+<p><a href="#qq0">-Вернуться к содержанию-</a></p>
+<h3><a id="q43"></a>4.3. Массовое переименование пользователей</h3>
+<p>При помощи экспорта/импорта данных из .csv-файла можно осуществить процедуру массового переименования пользователей.</p>
+<p><strong>1.</strong> Из СЭО выгрузить (в формате .csv) список необходимых пользователей (Администрирование&gt;Пользователи&gt;Учетные записи&gt;Действия над несколькими пользователями).</p>
+<div class="otsf-incut note"> Подробно о выгрузке списка пользователей в статье  <a href="https://kb.opentechnology.ru/index.php?solution_id=1257">«Интерфейсы «Список пользователей» и «Действия над несколькими пользователями»</a>.</div>
+<p><strong>2.</strong> В выгруженном файле любым удобным способом изменить название столбца «username» на «oldusername». Добавить новый столбец с названием «username» и заполнить его новыми логинами.</p>
+<p><strong>3.</strong> Загрузить данные (Администрирование&gt;Пользователи&gt;Учетные записи&gt;Загрузить пользователей) из модифицированного .csv-файла обратно в СЭО, указав в настройках:</p>
+<ul>
+<li><strong>Тип загрузки</strong>= Только обновить имеющихся пользователей.</li>
+<li><strong>Данные существующих пользователей</strong>=Заменять данными из файла.</li>
+<li><strong>Разрешить переименовывать</strong>=Да.</li>
+</ul>
+<p><a href="#qq0">-Вернуться к содержанию-</a></p>
+<h2><a id="q5"></a>5. Возможные проблемы и ошибки</h2>
+<h3><a id="q51"></a>5.1. Загрузка пользователей из CSV файла, содержащего кастомные поля Conditional field</h3>
+<p>Отмечены следующие проблемы:</p>
+<ul>
+<li>Не загружаются пользователи из csv-файла, если в файле присутствуют поля Conditional field и при условии, что поля, входящие в его состав (внутренние) являются обязательными для заполнения.</li>
+<li> При выборе различных вариантов содержимого конкретного поля с последующим сохранением информации в профиле, в блоке информации о пользователе сохраняется содержимое всех полей, а не только тех, которые выбраны в настоящее время.</li>
+</ul>
+<p>Это является особенностью работы плагина.</p>
+<p>При загрузке значения поля Conditional field, делающего обязательным определенное поле профиля, система не позволит загрузить пользователей, даже если указанное поле будет заполнено (будет выдавать ошибку, что поле не заполнено). Если поле просто настроено в системе, но отсутствует в файле (не являясь обязательным), ошибки не возникнет.  <br />Если настроить плагин Conditional field так, чтобы при одном значении отображал и требовал заполнения одной группы полей, а при другом значении отображал и требовал заполнения другой группы, то не получится загрузить пользователей через CSV, заполнив только требуемые поля без значений для скрытой группы полей.</p>
+<div class="otsf-incut note"> Дорполнительная информация доступна в статьях<br /><a href="https://moodle.org/plugins/profilefield_conditional">Conditional field</a><br /><a href="http://kb.foodle.org/content/2/28/en/conditional-profile-field.html#Specifying%C2%A0options">Conditional profile field</a><br /><a href="https://github.com/rezaies/moodle-profilefield_conditional/issues">Moodle-profilefield_conditional</a></div>
+<p><a href="#qq0">-Вернуться к содержанию-</a></p>
+<div class="otsf-incut note">Перейти к статье <a href="https://kb.opentechnology.ru/index.php?solution_id=1020">«Способы записи пользователей на курс»</a></div>
+                    
+                    Теги: <a title="импорт" href="/tags/5/import.html">импорт</a>, <a title="регистрация" href="/tags/18571/registracia.html">регистрация</a>
+                    
+                    
+                    
+                    <aside id="faqAccordion" class="accordion related-faqs hidden-print">
+                        <div class="accordion-group">
+                            <div class="accordion-heading">
+                                <a class="accordion-toggle" href="#collapseRelatedFaqs" data-parent="#faqAccordion" data-toggle="collapse">
+                                    Связанные статьи
+                                </a>
+                            </div>
+                            <div id="collapseRelatedFaqs" class="accordion-body collapse">
+                                <div class="accordion-inner"><ul><li><a title="Метод записи на курс «Автозачисление 3KL» — otautoenrol" href="/content/27/9/ru/metod-zapisi-na-kurs-«avtozacislenie-3kl»-—-otautoenrol.html">Метод записи на курс «Автозачисление 3KL» — otautoenrol</a></li><li><a title="Настройка отображения элементов Витрины курсов 3KL через дополнительные поля курса" href="/content/27/14/ru/nastrojka-otobrazenia-elementov-vitriny-kursov-3kl-cerez-dopolnitelʹnye-pola-kursa.html">Настройка отображения элементов Витрины курсов 3KL через дополнительные поля курса</a></li><li><a title="Интеграция со сторонними сервисами" href="/content/27/33/ru/integracia-so-storonnimi-servisami.html">Интеграция со сторонними сервисами</a></li><li><a title="Настройка Витрины курсов 3KL" href="/content/27/58/ru/nastrojka-vitriny-kursov-3kl.html">Настройка Витрины курсов 3KL</a></li><li><a title="Интеграция вебинаров в СЭО 3KL" href="/content/5/68/ru/integracia-vebinarov-v-seo-3kl.html">Интеграция вебинаров в СЭО 3KL</a></li></ul></div>
+                            </div>
+                        </div>
+                    </aside>
+                    
+                    
+                    <aside id="faqAccordion" class="accordion related-categories hidden-print">
+                        <div class="accordion-group">
+                            <div class="accordion-heading">
+                                <a class="accordion-toggle" href="#collapseRelatedCategories" data-parent="#faqAccordion" data-toggle="collapse">
+                                    Категории для этой статьи
+                                </a>
+                            </div>
+                            <div id="collapseRelatedCategories" class="accordion-body collapse">
+                                <div class="accordion-inner"><ul class="breadcrumb-related-categories"><li itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a href="/category/1/publicnye-materialy.html" itemprop="url" rel="index"><span itemprop="title">Публичные материалы</span></a></li><li itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a href="/category/4/seo-3kl.html" itemprop="url"><span itemprop="title">СЭО 3KL</span></a></li><li itemscope itemtype="http://data-vocabulary.org/Breadcrumb"><a href="/category/5/scenarii-integracii.html" itemprop="url"><span itemprop="title">Сценарии интеграции</span></a></li></ul><ul class="breadcrumb-related-categories"></ul><ul class="breadcrumb-related-categories"></ul><ul class="breadcrumb-related-categories"></ul><ul class="breadcrumb-related-categories"></ul><ul class="breadcrumb-related-categories"></ul><ul class="breadcrumb-related-categories"></ul><ul class="breadcrumb-related-categories"></ul><ul class="breadcrumb-related-categories"></ul><ul class="breadcrumb-related-categories"></ul><ul class="breadcrumb-related-categories"></ul><ul class="breadcrumb-related-categories"></ul><ul class="breadcrumb-related-categories"></ul></div>
+                            </div>
+                        </div>
+                    </aside>
+                    
+                </div>
+            </article>
+            <ul id="tab" class="nav nav-tabs hidden-print">
+                <li class="active"><a href="#votingForm" data-toggle="tab">Пожалуйста оцените этот ответ:</a></li>
+                
+                
+            </ul>
+            <div class="tab-content pmf-faq-info">
+                <div class="tab-pane active hidden-print" id="votingForm">
+                    <form action="#" method="post" class="form-inline">
+                        <input type="hidden" name="artikel" value="79">
+                        <div id="votings"></div>
+                        <div class="pmf-stars">
+                            <div class="pmf-star-rating" data-rating="Рейтинг ответа:">
+                                <span data-stars="5">☆</span>
+                                <span data-stars="4">☆</span>
+                                <span data-stars="3">☆</span>
+                                <span data-stars="2">☆</span>
+                                <span data-stars="1">☆</span>
+                            </div>
+                        </div>
+                        <div class="pull-right">
+                            <strong>Рейтинг ответа:</strong><span id="rating"> <span data-rating="5">5</span> (4 оценок)</span>
+                        </div>
+                    </form>
+                </div>
+                <div class="tab-pane hidden-print" id="switchAvailableLanguage">
+                    
+                </div>
+                <div class="tab-pane hidden-print" id="addTranslation">
+                    <form action="/index.php?action=translate&amp;cat=41&amp;id=79&amp;srclang=ru" method="post" class="form-inline" accept-charset="utf-8">
+                        <select class="form-control" name="translation" id="translation" size="1">
+	<option value="ar">Arabic</option>
+	<option value="eu">Basque</option>
+	<option value="bn">Bengali</option>
+	<option value="bs">Bosnian</option>
+	<option value="pt-br">Brazilian Portuguese</option>
+	<option value="zh">Chinese (Simplified)</option>
+	<option value="tw">Chinese (Traditional)</option>
+	<option value="cs">Czech</option>
+	<option value="da">Danish</option>
+	<option value="nl">Dutch</option>
+	<option value="en">English</option>
+	<option value="fi">Finnish</option>
+	<option value="fr">French</option>
+	<option value="fr-ca">French (Canada)</option>
+	<option value="de">German</option>
+	<option value="el">Greek</option>
+	<option value="he">Hebrew</option>
+	<option value="hi">Hindi</option>
+	<option value="hu">Hungarian</option>
+	<option value="id">Indonesian</option>
+	<option value="it">Italian</option>
+	<option value="ja">Japanese</option>
+	<option value="ko">Korean</option>
+	<option value="lv">Latvian</option>
+	<option value="lt">Lithuanian</option>
+	<option value="ms">Malay</option>
+	<option value="nb">Norwegian Bokm&aring;l</option>
+	<option value="fa">Persian</option>
+	<option value="pl">Polish</option>
+	<option value="pt">Portuguese</option>
+	<option value="ro">Romanian</option>
+	<option value="sr">Serbian</option>
+	<option value="sk">Slovak</option>
+	<option value="sl">Slovenian</option>
+	<option value="es">Spanish</option>
+	<option value="sv">Swedish</option>
+	<option value="th">Thai</option>
+	<option value="tr">Turkish</option>
+	<option value="uk">Ukrainian</option>
+	<option value="vi">Vietnamese</option>
+	<option value="cy">Welsh</option>
+</select>
+                        <button class="btn btn-primary" type="submit" name="submit">
+                            Старт перевода...
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <p class="hidden-print">Комментарии запрещены</p>
+            <aside class="pmf-create-comment hide" id="pmf-create-comment">
+                <hr>
+                <div id="loader"></div>
+                <h2><i aria-hidden="true" class="fa fa-heart"></i> Комментировать этот ответ</h2>
+                <form id="formValues" action="#" method="post" class="form-horizontal" accept-charset="utf-8">
+                    <input type="hidden" name="id" id="id" value="79">
+                    <input type="hidden" name="lang" id="lang" value="ru">
+                    <input type="hidden" name="type" id="type" value="faq">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <input type="text" name="user" id="user" class="form-control input-lg" required
+                                   placeholder="Ваше имя:" value="">
+                        </div>
+                        
+                        
+                        <div class="col-md-6">
+                            <input type="email" name="mail" id="mail" class="form-control input-lg" required
+                                   placeholder="Адрес Email"  value="">
+                        </div>
+	                    
+	                    
+                    </div>
+                    <textarea rows="10" name="comment_text" id="comment_text" class="form-control input-lg"
+                              placeholder="Ваши комментарии:"></textarea>
+                    <div class="form-group"><label class="col-sm-3 control-label">Пожалуйста введите символы изображённые но картинке</label>    <div class="col-sm-4">        <p class="form-control-static"><img id="captchaImage" src="/index.php?action=writecomment&amp;gen=img&amp;ck=1774514955" height="40" width="165" alt="Chuck Norris has counted to infinity. Twice." title="click to refresh">        </p>    </div>    <div class="col-sm-5">        <div class="input-group"><input type="text" class="form-control" name="captcha" id="captcha" size="6" autocomplete="off" required>            <span class="input-group-btn"><a class="btn btn-primary" id="captcha-button" data-action="writecomment"><i aria-hidden="true" class="fa fa-refresh"></i></a>            </span>        </div>    </div></div>
+                    
+                    <div class="pmf-buttons clearfix">
+                        <button class="btn btn-primary" id="submitcomment" type="submit">
+                            Отправить
+                        </button>
+                    </div>
+                </form>
+            </aside>
+            <aside class="pmf-comments" id="comments">
+                <hr>
+                <article class="pmf-comment">    <header class="clearfix">        <div class="pmf-commment-meta">            <h3>Максим</h3>            <span class="pmf-comment-date">03.03.2020</span>        </div>    </header>    <div class="pmf-comment-body">В пункте 2.4 , указано , что по умолчанию нужно оставить кодировку UTF8 , часто требуется <span class="comment-dots-79">&hellip; </span><a data-comment-id="79" class="pmf-comments-show-more comment-show-more-79 pointer">show more</a><span class="comment-more-79 hide">windows-1251 . Подкорректировать статью. </span></div></article><article class="pmf-comment">    <header class="clearfix">        <div class="pmf-commment-meta">            <h3>Татьяна Лындина</h3>            <span class="pmf-comment-date">29.05.2022</span>        </div>    </header>    <div class="pmf-comment-body">Как восстановить случайно удаленного пользователя? </span></div></article><article class="pmf-comment">    <header class="clearfix">        <div class="pmf-commment-meta">            <h3>Сергей Гусев</h3>            <span class="pmf-comment-date">25.08.2022</span>        </div>    </header>    <div class="pmf-comment-body">Недостаточно информации для быстрого и однозначного ответа на Ваш вопрос. Рекомендуем создать соответствующую заявку в техническую <span class="comment-dots-79">&hellip; </span><a data-comment-id="79" class="pmf-comments-show-more comment-show-more-79 pointer">show more</a><span class="comment-more-79 hide">поддержку, в которой подробно описать ситуацию: когда, где и при каких условиях был удален пользователь.  </span></div></article>
+            </aside>
+        </section>
+        <script src="assets/js/libs/highlight.pack.js"></script>
+        <style>
+        body {
+            position: relative;
+        }
+        </style>
+        <link rel="stylesheet" href="assets/js/libs/default.css">
+        <script>
+            $(document).ready(function() {
+                $(function() {
+                    $('div.pmf-stars > div.pmf-star-rating > span').on('click', function(e) {
+                        var numStars = $(e.target).data('stars');
+                        saveVoting('faq', 79, numStars, 'ru');
+                    });
+                });
+                $('pre code').each(function(i, block) {
+                    hljs.highlightBlock(block);
+                });
+                $('button.pmf-popover').popover();
+            });
+        </script>
+            </div>
+            <aside class="col-lg-3 pmf-aside">
+                        
+        <section class="pmf-aside-widget">
+            <div class="pmf-aside-widget-body pmf-social-links">
+                <a target="_blank" href="/pdf.php?cat=41&id=79&artlang=ru" rel="nofollow" title="Скомпилировать PDF файл">
+                    <span class="fa-stack fa-lg">
+                        <i aria-hidden="true" class="fa fa-square-o fa-stack-2x"></i>
+                        <i aria-hidden="true" class="fa fa-file-pdf-o fa-stack-1x"></i>
+                    </span>
+                </a>
+                <a href="javascript:window.print();" rel="nofollow" title="Отправить на печать">
+                    <span class="fa-stack fa-lg">
+                        <i aria-hidden="true" class="fa fa-square-o fa-stack-2x"></i>
+                        <i aria-hidden="true" class="fa fa-print fa-stack-1x"></i>
+                    </span>
+                </a>
+            </div>
+        </section>
+        
+        
+		
+            <div class="pmf-aside-widget">
+                <header>
+                    <h3>ВАЖНОЕ:</h3>
+                </header>
+                <div class="pmf-aside-widget-body">
+                    <ul class="pmf-list">
+                        <li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="Способы регистрации и аутентификации пользователей" href="/content/5/15/ru/sposoby-registracii-i-autentifikacii-polʹzovatelej.html">Способы регистрации и аутентификации пользователей</a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title=" Плагин  «Антиплагиат.ру». Проверка работ слушателей на заимствования с помощью сервиса «Антиплагиат»" href="/content/5/35/ru/plagin-«antiplagiatru»-proverka-rabot-slusatelej-na-zaimstvovania-s-pomosʹu-servisa-«antiplagiat».html"> Плагин «Антиплагиат.ру». Проверка работ слушателей на заимствования с ...</a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="Интеграция вебинаров в СЭО 3KL" href="/content/5/68/ru/integracia-vebinarov-v-seo-3kl.html">Интеграция вебинаров в СЭО 3KL</a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="Отчеты в СЭО 3KL " href="/content/41/100/ru/otcety-v-seo-3kl.html">Отчеты в СЭО 3KL </a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="Сертификат СЭО 3KL" href="/content/27/106/ru/sertifikat-seo-3kl.html">Сертификат СЭО 3KL</a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="Отслеживание времени непрерывного обучения в курсе" href="/content/24/153/ru/otslezivanie-vremeni-nepreryvnogo-obucenia-v-kurse.html">Отслеживание времени непрерывного обучения в курсе</a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="Как узнать о СЭО 3KL подробнее?" href="/content/1/157/ru/kak-uznatʹ-o-seo-3kl-podrobnee.html">Как узнать о СЭО 3KL подробнее?</a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="Логика курса 3KL, часть 1. Принцип работы, добавление и настройка элемента" href="/content/27/168/ru/logika-kursa-3kl-castʹ-1-princip-raboty-dobavlenie-i-nastrojka-elementa.html">Логика курса 3KL, часть 1. Принцип работы, добавление и ...</a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="Настройка внешнего вида СЭО 3КL" href="/content/27/183/ru/nastrojka-vnesnego-vida-seo-3kl.html">Настройка внешнего вида СЭО 3КL</a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="Плагин «Подписка 3KL» часть 2. Глобальные настройки" href="/content/27/216/ru/plagin-«podpiska-3kl»-castʹ-2-globalʹnye-nastrojki.html">Плагин «Подписка 3KL» часть 2. Глобальные настройки</a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="Портфолио ч. 1. Введение" href="/content/24/218/ru/portfolio-c-1-vvedenie.html">Портфолио ч. 1. Введение</a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="Глобальные сценарии 3KL. Локальный плагин" href="/content/27/271/ru/globalʹnye-scenarii-3kl-lokalʹnyj-plagin.html">Глобальные сценарии 3KL. Локальный плагин</a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="Панель управления СЭО 3KL. Локальный плагин" href="/content/41/375/ru/panelʹ-upravlenia-seo-3kl-lokalʹnyj-plagin.html">Панель управления СЭО 3KL. Локальный плагин</a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="Персональная информация пользователя. Страницы «О пользователе» и «Личный кабинет»" href="/content/27/480/ru/personalʹnaa-informacia-polʹzovatela-stranicy-«o-polʹzovatele»-i-«licnyj-kabinet».html">Персональная информация пользователя. Страницы «О пользователе» и «Личный кабинет» ...</a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="Элемент курса «Занятие 3КL»" href="/content/4/492/ru/element-kursa-«zanatie-3kl».html">Элемент курса «Занятие 3КL»</a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="Витрина курсов 3KL. Путеводитель" href="/content/27/536/ru/vitrina-kursov-3kl-putevoditelʹ.html">Витрина курсов 3KL. Путеводитель</a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="Справка СЭО 3КL" href="/content/27/542/ru/spravka-seo-3kl.html">Справка СЭО 3КL</a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="Термины и определения базы знаний" href="/content/2/543/ru/terminy-i-opredelenia-bazy-znanij.html">Термины и определения базы знаний</a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="Политики сайта и пользовательские соглашения" href="/content/1/593/ru/politiki-sajta-i-polʹzovatelʹskie-soglasenia.html">Политики сайта и пользовательские соглашения</a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="Расширенный анонс релиза 3.9.20a" href="/content/43/614/ru/rassirennyj-anons-reliza-3920a.html">Расширенный анонс релиза 3.9.20a</a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="Настройка внешнего вида СЭО 3КL версии 3.9" href="/content/27/633/ru/nastrojka-vnesnego-vida-seo-3kl-versii-39.html">Настройка внешнего вида СЭО 3КL версии 3.9</a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="Миграция СЭО 3КL с релиза 3.9 на 4.1. Вопросы и решения" href="/content/6/634/ru/migracia-seo-3kl-s-reliza-39-na-41-voprosy-i-resenia.html">Миграция СЭО 3КL с релиза 3.9 на 4.1. Вопросы ...</a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="Инструменты WEB API в СЭО 3КL. Возможности и примеры" href="/content/41/642/ru/instrumenty-web-api-v-seo-3kl-vozmoznosti-i-primery.html">Инструменты WEB API в СЭО 3КL. Возможности и примеры ...</a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="Расширенный анонс релиза 3.9.25a" href="/content/43/660/ru/rassirennyj-anons-reliza-3925a.html">Расширенный анонс релиза 3.9.25a</a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="21.05.2024 г., III конференция «СЭО Moodle для образования» и конкурс статей" href="/content/45/691/ru/21052024-g-iii-konferencia-«seo-moodle-dla-obrazovania»-i-konkurs-statej.html">21.05.2024 г., III конференция «СЭО Moodle для образования» и ...</a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="Организация открытого мероприятия (онлайн-конференции) на базе СЭО 3KL" href="/content/1/697/ru/organizacia-otkrytogo-meropriatia-onlajn_konferencii-na-baze-seo-3kl.html">Организация открытого мероприятия (онлайн-конференции) на базе СЭО 3KL</a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="Интеграция Cреды электронного обучения 3KL и Moodle  с ГИС СЦОС" href="/content/27/698/ru/integracia-credy-elektronnogo-obucenia-3kl-i-moodle-s-gis-scos.html">Интеграция Cреды электронного обучения 3KL и Moodle с ГИС ...</a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="Расширенный анонс релиза 4.5.4b-beta" href="/content/43/728/ru/rassirennyj-anons-reliza-454b_beta.html">Расширенный анонс релиза 4.5.4b-beta</a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="Расширенный анонс релиза 4.5.6b" href="/content/43/817/ru/rassirennyj-anons-reliza-456b.html">Расширенный анонс релиза 4.5.6b</a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="Расширенный анонс релиза 4.5.7a" href="/content/43/833/ru/rassirennyj-anons-reliza-457a.html">Расширенный анонс релиза 4.5.7a</a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="Главное и интересное. 3КL-осень 2025" href="/content/46/843/ru/glavnoe-i-interesnoe-3kl_osenʹ-2025.html">Главное и интересное. 3КL-осень 2025</a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="Расширенный анонс релиза 4.1.22a" href="/content/44/852/ru/rassirennyj-anons-reliza-4122a.html">Расширенный анонс релиза 4.1.22a</a></li><li><a class="sticky-faqs" data-toggle="tooltip" data-placement="top" title="Расширенный анонс релиза 4.5.10b" href="/content/43/879/ru/rassirennyj-anons-reliza-4510b.html">Расширенный анонс релиза 4.5.10b</a></li>
+                    </ul>
+                </div>
+            </div>
+        
+        <section class="pmf-aside-widget">
+            <header>
+                <h3>Записей в этой категории</h3>
+            </header>
+            <div class="pmf-aside-widget-body">
+                <ul class="phpmyfaq_ul"><li><a title="Выгрузка списка предварительно отобранных пользователей на странице «Действия над несколькими пользователями»" href="/content/41/884/ru/vygruzka-spiska-predvaritelʹno-otobrannyh-polʹzovatelej-na-stranice-«dejstvia-nad-neskolʹkimi-polʹzovatelami».html">Выгрузка списка предварительно отобранных пользователей на странице «Действия над несколькими пользователями»</a></li><li><a title="Формирование выборки пользователей на странице «Действия над несколькими пользователями»" href="/content/41/883/ru/formirovanie-vyborki-polʹzovatelej-na-stranice-«dejstvia-nad-neskolʹkimi-polʹzovatelami».html">Формирование выборки пользователей на странице «Действия над несколькими пользователями»</a></li><li><a title="Поиск пользователя СЭО 3KL по неполным данным с помощью страницы «Список пользователей»" href="/content/41/882/ru/poisk-polʹzovatela-seo-3kl-po-nepolnym-dannym-s-pomosʹu-stranicy-«spisok-polʹzovatelej».html">Поиск пользователя СЭО 3KL по неполным данным с помощью страницы «Список пользователей»</a></li><li><a title="Быстрый доступ к странице профиля пользователя с помощью страницы «Список пользователей»" href="/content/41/881/ru/bystryj-dostup-k-stranice-profila-polʹzovatela-s-pomosʹu-stranicy-«spisok-polʹzovatelej».html">Быстрый доступ к странице профиля пользователя с помощью страницы «Список пользователей»</a></li><li><a title="Вебинар от 30.10.2025г. Организация вебинара «Mirapolis Virtual Room» с оплатой через Robokassa. Инструкция по СЭО 3KL версии 4.5" href="/content/41/862/ru/vebinar-ot-30102025g-organizacia-vebinara-«mirapolis-virtual-room»-s-oplatoj-cerez-robokassa-instrukcia-po-seo-3kl-versii-45.html">Вебинар от 30.10.2025г. Организация вебинара «Mirapolis Virtual Room» с оплатой через Robokassa. Инструкция по СЭО 3KL версии 4.5</a></li><li><a title="Вебинар от 24.11.2025г. Слепое оценивание в СЭО Moodle и 3KL. Решение для СЭО 3KL v 4.5." href="/content/41/858/ru/vebinar-ot-24112025g-slepoe-ocenivanie-v-seo-moodle-i-3kl-resenie-dla-seo-3kl-v-45.html">Вебинар от 24.11.2025г. Слепое оценивание в СЭО Moodle и 3KL. Решение для СЭО 3KL v 4.5.</a></li><li><a title="Расширенный анонс релиза 4.5.8a" href="/content/41/851/ru/rassirennyj-anons-reliza-458a.html">Расширенный анонс релиза 4.5.8a</a></li><li><a title="Расширенный анонс релиза 4.5.7b" href="/content/41/841/ru/rassirennyj-anons-reliza-457b.html">Расширенный анонс релиза 4.5.7b</a></li><li><a title="Почему записанный на курс слушатель не видит роли некоторых пользователей, записанных на этот же курс?" href="/content/41/840/ru/pocemu-zapisannyj-na-kurs-slusatelʹ-ne-vidit-roli-nekotoryh-polʹzovatelej-zapisannyh-na-etot-ze-kurs.html">Почему записанный на курс слушатель не видит роли некоторых пользователей, записанных на этот же курс?</a></li><li><a title="Как массово сменить провайдер в уже настроенных элементах курса «‎Занятие 3KL»?" href="/content/41/837/ru/kak-massovo-smenitʹ-provajder-v-uze-nastroennyh-elementah-kursa-«‎zanatie-3kl».html">Как массово сменить провайдер в уже настроенных элементах курса «‎Занятие 3KL»?</a></li><li><a title="Вебинар от 25.07.2025г. Кураторство: реализация функций куратора образовательного процесса в СЭО 3KL" href="/content/41/832/ru/vebinar-ot-25072025g-kuratorstvo-realizacia-funkcij-kuratora-obrazovatelʹnogo-processa-v-seo-3kl.html">Вебинар от 25.07.2025г. Кураторство: реализация функций куратора образовательного процесса в СЭО 3KL</a></li><li><a title="Вебинар от 26.12.2024г. Личный кабинет слушателя ДО в СЭО 3KL. Решение по СЭО 3KL версии 4.1" href="/content/41/831/ru/vebinar-ot-26122024g-licnyj-kabinet-slusatela-do-v-seo-3kl-resenie-po-seo-3kl-versii-41.html">Вебинар от 26.12.2024г. Личный кабинет слушателя ДО в СЭО 3KL. Решение по СЭО 3KL версии 4.1</a></li><li><a title="Вебинар от 27.11.2024г. Личный кабинет слушателя ДПО в СЭО 3KL. Решение по СЭО 3KL версии 4.1" href="/content/41/830/ru/vebinar-ot-27112024g-licnyj-kabinet-slusatela-dpo-v-seo-3kl-resenie-po-seo-3kl-versii-41.html">Вебинар от 27.11.2024г. Личный кабинет слушателя ДПО в СЭО 3KL. Решение по СЭО 3KL версии 4.1</a></li><li><a title="Вебинар от 02.11.2024г. Личный кабинет сотрудника в СЭО 3KL. Решение по СЭО 3KL версии 4.1" href="/content/41/829/ru/vebinar-ot-02112024g-licnyj-kabinet-sotrudnika-v-seo-3kl-resenie-po-seo-3kl-versii-41.html">Вебинар от 02.11.2024г. Личный кабинет сотрудника в СЭО 3KL. Решение по СЭО 3KL версии 4.1</a></li><li><a title="Вебинар от 26.09.2024г. Личный кабинет студента в СЭО 3KL. Решение по СЭО 3KL версии 4.1" href="/content/41/828/ru/vebinar-ot-26092024g-licnyj-kabinet-studenta-v-seo-3kl-resenie-po-seo-3kl-versii-41.html">Вебинар от 26.09.2024г. Личный кабинет студента в СЭО 3KL. Решение по СЭО 3KL версии 4.1</a></li><li><a title="Вебинар от 29.08.2024г. Личный кабинет в СЭО 3KL. Основные настройки и блоки. Видеоинструкция по СЭО 3KL версии 4.1" href="/content/41/826/ru/vebinar-ot-29082024g-licnyj-kabinet-v-seo-3kl-osnovnye-nastrojki-i-bloki-videoinstrukcia-po-seo-3kl-versii-41.html">Вебинар от 29.08.2024г. Личный кабинет в СЭО 3KL. Основные настройки и блоки. Видеоинструкция по СЭО 3KL версии 4.1</a></li><li><a title="Вебинар от 24.07.2024г. Дополнительная кнопка доступа к курсу. Видеоинструкция по СЭО 3KL версии 4.1." href="/content/41/825/ru/vebinar-ot-24072024g-dopolnitelʹnaa-knopka-dostupa-k-kursu-videoinstrukcia-po-seo-3kl-versii-41.html">Вебинар от 24.07.2024г. Дополнительная кнопка доступа к курсу. Видеоинструкция по СЭО 3KL версии 4.1.</a></li><li><a title="Вебинар от 26.06.2024г. Плагин «Сертификат СЭО 3KL». Видеоинструкция по СЭО 3KL v 4.1." href="/content/41/824/ru/vebinar-ot-26062024g-plagin-«sertifikat-seo-3kl»-videoinstrukcia-po-seo-3kl-v-41.html">Вебинар от 26.06.2024г. Плагин «Сертификат СЭО 3KL». Видеоинструкция по СЭО 3KL v 4.1.</a></li><li><a title="Вебинар от 30.05.2024г. Взаимная оценка. Видеоинструкция по СЭО 3KL v 4.1" href="/content/41/819/ru/vebinar-ot-30052024g-vzaimnaa-ocenka-videoinstrukcia-po-seo-3kl-v-41.html">Вебинар от 30.05.2024г. Взаимная оценка. Видеоинструкция по СЭО 3KL v 4.1</a></li><li><a title="Вебинар от 03.05.2024г. Справка СЭО 3KL. Видеоинструкция по СЭО 3KL v 4.1" href="/content/41/818/ru/vebinar-ot-03052024g-spravka-seo-3kl-videoinstrukcia-po-seo-3kl-v-41.html">Вебинар от 03.05.2024г. Справка СЭО 3KL. Видеоинструкция по СЭО 3KL v 4.1</a></li><li><a title="Вебинар от 28.03.2024г. Блок «Спросить преподавателя». Видеоинструкция по СЭО 3KL v 4.1" href="/content/41/816/ru/vebinar-ot-28032024g-blok-«sprositʹ-prepodavatela»-videoinstrukcia-po-seo-3kl-v-41.html">Вебинар от 28.03.2024г. Блок «Спросить преподавателя». Видеоинструкция по СЭО 3KL v 4.1</a></li><li><a title="Инструмент «Целостность данных 3KL»" href="/content/41/798/ru/instrument-«celostnostʹ-dannyh-3kl».html">Инструмент «Целостность данных 3KL»</a></li><li><a title="Вебинар от 29.05.2025г. Витрина для организаций с большим количеством курсов. Инструкция по СЭО 3KL версии 4.1" href="/content/41/764/ru/vebinar-ot-29052025g-vitrina-dla-organizacij-s-bolʹsim-kolicestvom-kursov-instrukcia-po-seo-3kl-versii-41.html">Вебинар от 29.05.2025г. Витрина для организаций с большим количеством курсов. Инструкция по СЭО 3KL версии 4.1</a></li><li><a title="Вебинар от 20.06.2025г. Витрина курсов СЭО 3KL. Описательная страница курса / Лендинг курса" href="/content/41/763/ru/vebinar-ot-20062025g-vitrina-kursov-seo-3kl-opisatelʹnaa-stranica-kursa-_-lending-kursa.html">Вебинар от 20.06.2025г. Витрина курсов СЭО 3KL. Описательная страница курса / Лендинг курса</a></li><li><a title="Вебинар от 27.02.2025г. Витрина для организаций с небольшим количеством курсов. Инструкция по СЭО 3KL версии 4.1" href="/content/41/757/ru/vebinar-ot-27022025g-vitrina-dla-organizacij-s-nebolʹsim-kolicestvom-kursov-instrukcia-po-seo-3kl-versii-41.html">Вебинар от 27.02.2025г. Витрина для организаций с небольшим количеством курсов. Инструкция по СЭО 3KL версии 4.1</a></li><li><a title="Вебинар от 27.03.2025г. Витрина курсов для организаций со средним количеством курсов. Инструкция по СЭО 3KL версии 4.1" href="/content/41/756/ru/vebinar-ot-27032025g-vitrina-kursov-dla-organizacij-so-srednim-kolicestvom-kursov-instrukcia-po-seo-3kl-versii-41.html">Вебинар от 27.03.2025г. Витрина курсов для организаций со средним количеством курсов. Инструкция по СЭО 3KL версии 4.1</a></li><li><a title="Вебинар от 30.01.2025г. Витрина курсов. Введение. Назначение и возможности. Инструкция по СЭО 3KL версии 4.1" href="/content/41/755/ru/vebinar-ot-30012025g-vitrina-kursov-vvedenie-naznacenie-i-vozmoznosti-instrukcia-po-seo-3kl-versii-41.html">Вебинар от 30.01.2025г. Витрина курсов. Введение. Назначение и возможности. Инструкция по СЭО 3KL версии 4.1</a></li><li><a title="Страница «Среда (Версии ПО)»" href="/content/41/716/ru/stranica-«sreda-versii-po».html">Страница «Среда (Версии ПО)»</a></li><li><a title="Плагин «Подписка 3КL». Видео инструкция по СЭО 3KL 4.1" href="/content/41/694/ru/plagin-«podpiska-3kl»-video-instrukcia-po-seo-3kl-41.html">Плагин «Подписка 3КL». Видео инструкция по СЭО 3KL 4.1</a></li><li><a title="Вебинар от 07.09.2023г. Скрытие неучебных курсов и сведений о подписке в блоке «История обучения 3KL». Решение для СЭО 3KL v4.1 (СЭО 3КL версии 4.1.5с)" href="/content/41/673/ru/vebinar-ot-07092023g-skrytie-neucebnyh-kursov-i-svedenij-o-podpiske-v-bloke-«istoria-obucenia-3kl»-resenie-dla-seo-3kl-v41-seo-3kl-versii-415s.html">Вебинар от 07.09.2023г. Скрытие неучебных курсов и сведений о подписке в блоке «История обучения 3KL». Решение для СЭО 3KL v4.1 (СЭО 3КL версии 4.1.5с)</a></li><li><a title="Вебинар от 04.08.2023г. Блок «‎Самопроверка на заимствования 3KL»‎. Видеоинструкция по СЭО 3KL v 4.1 (СЭО 3КL версии 4.1.4b)" href="/content/41/672/ru/vebinar-ot-04082023g-blok-«‎samoproverka-na-zaimstvovania-3kl»‎-videoinstrukcia-po-seo-3kl-v-41-seo-3kl-versii-414b.html">Вебинар от 04.08.2023г. Блок «‎Самопроверка на заимствования 3KL»‎. Видеоинструкция по СЭО 3KL v 4.1 (СЭО 3КL версии 4.1.4b)</a></li><li><a title="Вебинар от 07.09.2023г. Элемент курса «‎Библиотека ресурсов»‎. Видеоинструкция по СЭО 3KL v 4.1 (СЭО 3КL версии 4.1.5а)" href="/content/41/671/ru/vebinar-ot-07092023g-element-kursa-«‎biblioteka-resursov»‎-videoinstrukcia-po-seo-3kl-v-41-seo-3kl-versii-415a.html">Вебинар от 07.09.2023г. Элемент курса «‎Библиотека ресурсов»‎. Видеоинструкция по СЭО 3KL v 4.1 (СЭО 3КL версии 4.1.5а)</a></li><li><a title="Капча (CAPTCHA) в СЭО 3KL" href="/content/41/654/ru/kapca-captcha-v-seo-3kl.html">Капча (CAPTCHA) в СЭО 3KL</a></li><li><a title="Инструменты WEB API в СЭО 3КL. Возможности и примеры" href="/content/41/642/ru/instrumenty-web-api-v-seo-3kl-vozmoznosti-i-primery.html">Инструменты WEB API в СЭО 3КL. Возможности и примеры</a></li><li><a title="Интеграция АСУ «Спрут» с СЭО 3KL (СДО Русский Moodle)" href="/content/41/638/ru/integracia-asu-«sprut»-s-seo-3kl-sdo-russkij-moodle.html">Интеграция АСУ «Спрут» с СЭО 3KL (СДО Русский Moodle)</a></li><li><a title="Отчет «Общая статистика»" href="/content/41/561/ru/otcet-«obsaa-statistika».html">Отчет «Общая статистика»</a></li><li><a title="Путеводитель по вебинарам" href="/content/41/556/ru/putevoditelʹ-po-vebinaram.html">Путеводитель по вебинарам</a></li><li><a title="Термины и определения базы знаний" href="/content/41/543/ru/terminy-i-opredelenia-bazy-znanij.html">Термины и определения базы знаний</a></li><li><a title="Витрина курсов 3KL. Путеводитель" href="/content/41/536/ru/vitrina-kursov-3kl-putevoditelʹ.html">Витрина курсов 3KL. Путеводитель</a></li><li><a title="Расширенный анонс релиза 3.9.11b" href="/content/41/528/ru/rassirennyj-anons-reliza-3911b.html">Расширенный анонс релиза 3.9.11b</a></li><li><a title="Глобальные настройки пользователей" href="/content/41/522/ru/globalʹnye-nastrojki-polʹzovatelej.html">Глобальные настройки пользователей</a></li><li><a title="Можно ли обновить СЭО 3KL до версии 3.9 и выше, если на сервере установлена Ubuntu 16.04?" href="/content/41/505/ru/mozno-li-obnovitʹ-seo-3kl-do-versii-39-i-vyse-esli-na-servere-ustanovlena-ubuntu-1604.html">Можно ли обновить СЭО 3KL до версии 3.9 и выше, если на сервере установлена Ubuntu 16.04?</a></li><li><a title="Требования к API внешней ЭБС, для интеграции с модулем &#34;Библиотека ресурсов 3КL&#34; (материал для разработчиков)" href="/content/41/483/ru/trebovania-k-api-vnesnej-ebs-dla-integracii-s-modulem-&N34biblioteka-resursov-3kl&N34-material-dla-razrabotcikov.html">Требования к API внешней ЭБС, для интеграции с модулем &#34;Библиотека ресурсов 3КL&#34; (материал для разработчиков)</a></li><li><a title="Панель управления СЭО 3KL. Локальный плагин" href="/content/41/375/ru/panelʹ-upravlenia-seo-3kl-lokalʹnyj-plagin.html">Панель управления СЭО 3KL. Локальный плагин</a></li><li><a title="Локальный плагин «Техническая поддержка СЭО 3KL». Страница информации о продукте" href="/content/41/351/ru/lokalʹnyj-plagin-«tehniceskaa-podderzka-seo-3kl»-stranica-informacii-o-produkte.html">Локальный плагин «Техническая поддержка СЭО 3KL». Страница информации о продукте</a></li><li><a title="Блок «Витрина курсов 3KL»" href="/content/41/350/ru/blok-«vitrina-kursov-3kl».html">Блок «Витрина курсов 3KL»</a></li><li><a title="Отображение слайдера на страницах «Портфолио» пользователя" href="/content/41/349/ru/otobrazenie-slajdera-na-stranicah-«portfolio»-polʹzovatela.html">Отображение слайдера на страницах «Портфолио» пользователя</a></li><li><a title="ЭД-018. Электронный деканат. Шаблоны расписания. Фактическое расписание" href="/content/41/329/ru/ed_018-elektronnyj-dekanat-sablony-raspisania-fakticeskoe-raspisanie.html">ЭД-018. Электронный деканат. Шаблоны расписания. Фактическое расписание</a></li><li><a title="Локальный плагин «Настраиваемые поля для объектов»" href="/content/41/314/ru/lokalʹnyj-plagin-«nastraivaemye-pola-dla-obʺektov».html">Локальный плагин «Настраиваемые поля для объектов»</a></li><li><a title="Блок «Внешние данные 3KL»" href="/content/41/308/ru/blok-«vnesnie-dannye-3kl».html">Блок «Внешние данные 3KL»</a></li><li><a title="Библиотека ресурсов 3KL: интеграция с  ЭБС, базами знаний и внешними источниками контента" href="/content/41/303/ru/biblioteka-resursov-3kl-integracia-s-ebs-bazami-znanij-i-vnesnimi-istocnikami-kontenta.html">Библиотека ресурсов 3KL: интеграция с  ЭБС, базами знаний и внешними источниками контента</a></li><li><a title="Элемент курса «Взаимная оценка 3KL»" href="/content/41/295/ru/element-kursa-«vzaimnaa-ocenka-3kl».html">Элемент курса «Взаимная оценка 3KL»</a></li><li><a title="Партнерская сеть. Электронный Деканат" href="/content/41/280/ru/partnerskaa-setʹ-elektronnyj-dekanat.html">Партнерская сеть. Электронный Деканат</a></li><li><a title="Самостоятельное системное администрирование сервера с СЭО 3KL, подготовленного специалистами компании «Открытые технологии»" href="/content/41/276/ru/samostoatelʹnoe-sistemnoe-administrirovanie-servera-s-seo-3kl-podgotovlennogo-specialistami-kompanii-«otkrytye-tehnologii».html">Самостоятельное системное администрирование сервера с СЭО 3KL, подготовленного специалистами компании «Открытые технологии»</a></li><li><a title="Настраиваемые поля курса. Применение в поиске курсов через Витрину курсов 3KL" href="/content/41/245/ru/nastraivaemye-pola-kursa-primenenie-v-poiske-kursov-cerez-vitrinu-kursov-3kl.html">Настраиваемые поля курса. Применение в поиске курсов через Витрину курсов 3KL</a></li><li><a title="Портфолио ч. 5. Права и решения" href="/content/41/222/ru/portfolio-c-5-prava-i-resenia.html">Портфолио ч. 5. Права и решения</a></li><li><a title="Плагин «Подписка 3KL» часть 3. Настройка подписки 3KL на курс" href="/content/41/215/ru/plagin-«podpiska-3kl»-castʹ-3-nastrojka-podpiski-3kl-na-kurs.html">Плагин «Подписка 3KL» часть 3. Настройка подписки 3KL на курс</a></li><li><a title="Уведомление об орфографической ошибке" href="/content/41/202/ru/uvedomlenie-ob-orfograficeskoj-osibke.html">Уведомление об орфографической ошибке</a></li><li><a title="Настройка внешнего вида СЭО 3КL" href="/content/41/183/ru/nastrojka-vnesnego-vida-seo-3kl.html">Настройка внешнего вида СЭО 3КL</a></li><li><a title="Настройка Витрины курсов 3KL. Бриф на Витрину курсов 3KL" href="/content/41/182/ru/nastrojka-vitriny-kursov-3kl-brif-na-vitrinu-kursov-3kl.html">Настройка Витрины курсов 3KL. Бриф на Витрину курсов 3KL</a></li><li><a title="Платные сервисы и расширенная техническая поддержка" href="/content/41/176/ru/platnye-servisy-i-rassirennaa-tehniceskaa-podderzka.html">Платные сервисы и расширенная техническая поддержка</a></li><li><a title="Логика курса 3KL, часть 3. Примеры использования" href="/content/41/173/ru/logika-kursa-3kl-castʹ-3-primery-ispolʹzovania.html">Логика курса 3KL, часть 3. Примеры использования</a></li><li><a title="Что будет, если не продлить лицензию или SaaS  СЭО  3KL?" href="/content/41/171/ru/cto-budet-esli-ne-prodlitʹ-licenziu-ili-saas-seo-3kl.html">Что будет, если не продлить лицензию или SaaS  СЭО  3KL?</a></li><li><a title="Ограничения доступности, управление ограничениями" href="/content/41/169/ru/ogranicenia-dostupnosti-upravlenie-ograniceniami.html">Ограничения доступности, управление ограничениями</a></li><li><a title="Добавление нового курса" href="/content/41/167/ru/dobavlenie-novogo-kursa.html">Добавление нового курса</a></li><li><a title="Добавление кастомных (настраиваемых) полей в профиль пользователя" href="/content/41/165/ru/dobavlenie-kastomnyh-nastraivaemyh-polej-v-profilʹ-polʹzovatela.html">Добавление кастомных (настраиваемых) полей в профиль пользователя</a></li><li><a title="Настройка упрощенной регистрации пользователей через email и СМС" href="/content/41/162/ru/nastrojka-uprosennoj-registracii-polʹzovatelej-cerez-email-i-sms.html">Настройка упрощенной регистрации пользователей через email и СМС</a></li><li><a title="Отслеживание времени непрерывного обучения в курсе" href="/content/41/153/ru/otslezivanie-vremeni-nepreryvnogo-obucenia-v-kurse.html">Отслеживание времени непрерывного обучения в курсе</a></li><li><a title="Тип вопроса «Объекты на изображении»" href="/content/41/144/ru/tip-voprosa-«obʺekty-na-izobrazenii».html">Тип вопроса «Объекты на изображении»</a></li><li><a title="Инструкция по работе с блоком «Слайдер 3KL»" href="/content/41/142/ru/instrukcia-po-rabote-s-blokom-«slajder-3kl».html">Инструкция по работе с блоком «Слайдер 3KL»</a></li><li><a title="Тип вопроса «Случайный вопрос с учетом правил выдачи»" href="/content/41/137/ru/tip-voprosa-«slucajnyj-vopros-s-ucetom-pravil-vydaci».html">Тип вопроса «Случайный вопрос с учетом правил выдачи»</a></li><li><a title="Как происходит резервное копирование данных в СЭО 3KL?" href="/content/41/130/ru/kak-proishodit-rezervnoe-kopirovanie-dannyh-v-seo-3kl.html">Как происходит резервное копирование данных в СЭО 3KL?</a></li><li><a title="Могу ли я использовать СЭО 3KL с операционной системой &#34;N&#34; (подставьте любое название)?" href="/content/41/129/ru/mogu-li-a-ispolʹzovatʹ-seo-3kl-s-operacionnoj-sistemoj-&N34n&N34-podstavʹte-luboe-nazvanie.html">Могу ли я использовать СЭО 3KL с операционной системой &#34;N&#34; (подставьте любое название)?</a></li><li><a title="Могу ли я установить СДО Русский Moodle 3KL самостоятельно?" href="/content/41/120/ru/mogu-li-a-ustanovitʹ-sdo-russkij-moodle-3kl-samostoatelʹno.html">Могу ли я установить СДО Русский Moodle 3KL самостоятельно?</a></li><li><a title="Какое сетевое имя (адрес, доменное имя, URL) будет у нашей СЭО?" href="/content/41/119/ru/kakoe-setevoe-ima-adres-domennoe-ima-url-budet-u-nasej-seo.html">Какое сетевое имя (адрес, доменное имя, URL) будет у нашей СЭО?</a></li><li><a title="Каков порядок установки и системные требования среды электронного обучения 3KL (Русский Moodle) на сервер клиента?" href="/content/41/117/ru/kakov-poradok-ustanovki-i-sistemnye-trebovania-sredy-elektronnogo-obucenia-3kl-russkij-moodle-na-server-klienta.html">Каков порядок установки и системные требования среды электронного обучения 3KL (Русский Moodle) на сервер клиента?</a></li><li><a title="Мы уже используем community-версию Moodle, можем ли мы перейти на профессиональную версию СЭО 3KL?" href="/content/41/116/ru/my-uze-ispolʹzuem-community_versiu-moodle-mozem-li-my-perejti-na-professionalʹnuu-versiu-seo-3kl.html">Мы уже используем community-версию Moodle, можем ли мы перейти на профессиональную версию СЭО 3KL?</a></li><li><a title="Что такое локальная и публичная (интернет) инсталляция СЭО 3KL?" href="/content/41/115/ru/cto-takoe-lokalʹnaa-i-publicnaa-internet-installacia-seo-3kl.html">Что такое локальная и публичная (интернет) инсталляция СЭО 3KL?</a></li><li><a title="Формат курса «3KL формат»" href="/content/41/114/ru/format-kursa-«3kl-format».html">Формат курса «3KL формат»</a></li><li><a title="Что выбрать: лицензию СЭО 3KL для установки на свой сервер или аренду СЭО в облаке?" href="/content/41/113/ru/cto-vybratʹ-licenziu-seo-3kl-dla-ustanovki-na-svoj-server-ili-arendu-seo-v-oblake.html">Что выбрать: лицензию СЭО 3KL для установки на свой сервер или аренду СЭО в облаке?</a></li><li><a title="Можно ли установить СЭО 3KL на свой сервер?" href="/content/41/111/ru/mozno-li-ustanovitʹ-seo-3kl-na-svoj-server.html">Можно ли установить СЭО 3KL на свой сервер?</a></li><li><a title="Отчеты в СЭО 3KL " href="/content/41/100/ru/otcety-v-seo-3kl.html">Отчеты в СЭО 3KL </a></li><li><a title="Массовая загрузка пользователей через файл csv" href="/content/41/79/ru/massovaa-zagruzka-polʹzovatelej-cerez-fajl-csv.html">Массовая загрузка пользователей через файл csv</a></li><li><a title="Настройка Витрины курсов 3KL" href="/content/41/58/ru/nastrojka-vitriny-kursov-3kl.html">Настройка Витрины курсов 3KL</a></li><li><a title="Интеграция с Webinar.ru. Элемент курса  «Webinar.ru»" href="/content/41/36/ru/integracia-s-webinarru-element-kursa-«webinarru».html">Интеграция с Webinar.ru. Элемент курса  «Webinar.ru»</a></li><li><a title="Интеграция со сторонними сервисами" href="/content/41/33/ru/integracia-so-storonnimi-servisami.html">Интеграция со сторонними сервисами</a></li><li><a title="Способы регистрации и аутентификации пользователей" href="/content/41/15/ru/sposoby-registracii-i-autentifikacii-polʹzovatelej.html">Способы регистрации и аутентификации пользователей</a></li><li><a title="Метод записи на курс «Автозачисление 3KL» — otautoenrol" href="/content/41/9/ru/metod-zapisi-na-kurs-«avtozacislenie-3kl»-—-otautoenrol.html">Метод записи на курс «Автозачисление 3KL» — otautoenrol</a></li></ul>
+            </div>
+        </section>
+        <section class="pmf-aside-widget">
+            <header>
+                <h3>Теги</h3>
+            </header>
+            <div class="pmf-aside-widget-body clearfix">
+                <ul class="pmf-tags">
+                    <li><a title="API (2)" href="/tags/21791/api.html">API</a> </li><li><a title="Crowdfunding (2)" href="/tags/11961/crowdfunding.html">Crowdfunding</a> </li><li><a title="e-learning (2)" href="/tags/15858/e_learning.html">e-learning</a> </li><li><a title="Moodle Mobile (2)" href="/tags/9006/moodle-mobile.html">Moodle Mobile</a> </li><li><a title="автоматизация (2)" href="/tags/22342/avtomatizacia.html">автоматизация</a> </li><li><a title="авторизация (2)" href="/tags/15/avtorizacia.html">авторизация</a> </li><li><a title="администрирование (2)" href="/tags/9/administrirovanie.html">администрирование</a> </li><li><a title="анонс (2)" href="/tags/11374/anons.html">анонс</a> </li><li><a title="Антиплагиат (2)" href="/tags/12474/antiplagiat.html">Антиплагиат</a> </li><li><a title="аутентификация (2)" href="/tags/2890/autentifikacia.html">аутентификация</a> </li><li><a title="база знаний (2)" href="/tags/9214/baza-znanij.html">база знаний</a> </li><li><a title="банк вопросов (2)" href="/tags/34/bank-voprosov.html">банк вопросов</a> </li><li><a title="безопасность (2)" href="/tags/10/bezopasnostʹ.html">безопасность</a> </li><li><a title="блок (2)" href="/tags/14/blok.html">блок</a> </li><li><a title="блоки (2)" href="/tags/12418/bloki.html">блоки</a> </li><li><a title="бэкап (2)" href="/tags/29/bekap.html">бэкап</a> </li><li><a title="вебинар (2)" href="/tags/21/vebinar.html">вебинар</a> </li><li><a title="видео (2)" href="/tags/35/video.html">видео</a> </li><li><a title="видеоинструкция (2)" href="/tags/12958/videoinstrukcia.html">видеоинструкция</a> </li><li><a title="витрина (2)" href="/tags/11740/vitrina.html">витрина</a> </li><li><a title="Витрина курсов (2)" href="/tags/9002/vitrina-kursov.html">Витрина курсов</a> </li><li><a title="внешние данные (2)" href="/tags/9901/vnesnie-dannye.html">внешние данные</a> </li><li><a title="внешний вид (2)" href="/tags/12/vnesnij-vid.html">внешний вид</a> </li><li><a title="время обучения (2)" href="/tags/25206/vrema-obucenia.html">время обучения</a> </li><li><a title="ГИС СЦОС (2)" href="/tags/18994/gis-scos.html">ГИС СЦОС</a> </li><li><a title="главная страница (2)" href="/tags/12979/glavnaa-stranica.html">главная страница</a> </li><li><a title="глобальные группы (2)" href="/tags/19272/globalʹnye-gruppy.html">глобальные группы</a> </li><li><a title="группы (2)" href="/tags/38/gruppy.html">группы</a> </li><li><a title="данные (2)" href="/tags/20654/dannye.html">данные</a> </li><li><a title="данные пользователя (2)" href="/tags/11813/dannye-polʹzovatela.html">данные пользователя</a> </li><li><a title="ДистантТВ (2)" href="/tags/12982/distanttv.html">ДистантТВ</a> </li><li><a title="Задание (2)" href="/tags/40/zadanie.html">Задание</a> </li><li><a title="занятие (2)" href="/tags/8996/zanatie.html">занятие</a> </li><li><a title="запись на курс (2)" href="/tags/21327/zapisʹ-na-kurs.html">запись на курс</a> </li><li><a title="зачисления на курсы (2)" href="/tags/2913/zacislenia-na-kursy.html">зачисления на курсы</a> </li><li><a title="значки (2)" href="/tags/45/znacki.html">значки</a> </li><li><a title="импорт (2)" href="/tags/5/import.html">импорт</a> </li><li><a title="инструктаж (2)" href="/tags/12968/instruktaz.html">инструктаж</a> </li><li><a title="инструменты (2)" href="/tags/12974/instrumenty.html">инструменты</a> </li><li><a title="интеграция (2)" href="/tags/2/integracia.html">интеграция</a> </li><li><a title="использование цифровой образовательной среды (2)" href="/tags/15569/ispolʹzovanie-cifrovoj-obrazovatelʹnoj-sredy.html">использование цифровой образовательной среды</a> </li><li><a title="кастомизация (2)" href="/tags/9562/kastomizacia.html">кастомизация</a> </li><li><a title="категория (2)" href="/tags/3149/kategoria.html">категория</a> </li><li><a title="КБЗ (2)" href="/tags/9213/kbz.html">КБЗ</a> </li><li><a title="коммуникации (2)" href="/tags/19/kommunikacii.html">коммуникации</a> </li><li><a title="компетенции (2)" href="/tags/11842/kompetencii.html">компетенции</a> </li><li><a title="конкурс (2)" href="/tags/14861/konkurs.html">конкурс</a> </li><li><a title="контент (2)" href="/tags/6/kontent.html">контент</a> </li><li><a title="конференция (2)" href="/tags/9228/konferencia.html">конференция</a> </li><li><a title="курс (2)" href="/tags/229/kurs.html">курс</a></li>
+                </ul>
+            </div>
+        </section>
+            </aside>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <div class="pmf-wrapper pmf-footer">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-9">
+                    <ul class="footer-menu">
+                        <li> | 495 гостей and 2 зарегистрированных</li>
+                        <li><a href="https://kb.opentechnology.ru/overview.html">FAQ Overview</a></li>
+                        <li><a href="https://kb.opentechnology.ru/sitemap/A/ru.html">Карта сайта</a></li>
+                        <li><a href="https://kb.opentechnology.ru/glossary.html">Глоссарий</a></li>
+                        <li><a href="https://kb.opentechnology.ru/contact.html">Адм</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <form action="?sid=18447237" method="post" class="pull-right" accept-charset="utf-8">
+                        <select class="form-control" name="language" id="language" size="1" onchange="this.form.submit();">
+	<option value="ar">Arabic</option>
+	<option value="eu">Basque</option>
+	<option value="bn">Bengali</option>
+	<option value="bs">Bosnian</option>
+	<option value="pt-br">Brazilian Portuguese</option>
+	<option value="zh">Chinese (Simplified)</option>
+	<option value="tw">Chinese (Traditional)</option>
+	<option value="cs">Czech</option>
+	<option value="da">Danish</option>
+	<option value="nl">Dutch</option>
+	<option value="en">English</option>
+	<option value="fi">Finnish</option>
+	<option value="fr">French</option>
+	<option value="fr-ca">French (Canada)</option>
+	<option value="de">German</option>
+	<option value="el">Greek</option>
+	<option value="he">Hebrew</option>
+	<option value="hi">Hindi</option>
+	<option value="hu">Hungarian</option>
+	<option value="id">Indonesian</option>
+	<option value="it">Italian</option>
+	<option value="ja">Japanese</option>
+	<option value="ko">Korean</option>
+	<option value="lv">Latvian</option>
+	<option value="lt">Lithuanian</option>
+	<option value="ms">Malay</option>
+	<option value="nb">Norwegian Bokm&aring;l</option>
+	<option value="fa">Persian</option>
+	<option value="pl">Polish</option>
+	<option value="pt">Portuguese</option>
+	<option value="ro">Romanian</option>
+	<option value="ru" selected="selected">Russian</option>
+	<option value="sr">Serbian</option>
+	<option value="sk">Slovak</option>
+	<option value="sl">Slovenian</option>
+	<option value="es">Spanish</option>
+	<option value="sv">Swedish</option>
+	<option value="th">Thai</option>
+	<option value="tr">Turkish</option>
+	<option value="uk">Ukrainian</option>
+	<option value="vi">Vietnamese</option>
+	<option value="cy">Welsh</option>
+</select>
+                        <input type="hidden" name="action" value="" />
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="pmf-wrapper copyright">
+        <div class="container-fluid">
+            <div class="pull-right">
+                powered by <a href="https://www.phpmyfaq.de" target="_blank">phpMyFAQ</a> 2.9.13
+            </div>
+        </div>
+    </div>
+    
+</footer>
+<script>
+    $('.topten').tooltip();
+    $('.latest-entries').tooltip();
+    $('.sticky-faqs').tooltip();
+    $('.table').each(function(){
+        var rows = $(this).children('thead').find('tr');
+        if (rows.length == 1)
+        {
+	    	var cells = rows.find('th,td');
+	    	var ths = cells.filter('th');
+	    	if (ths.length > 0 && ths.length == cells.length)
+	    	{
+	    	    ths.each(function(){
+	    	        $(this).data('sortable', true);
+	    	    });
+	    	    
+	    	    $(this).bootstrapTable();
+	    	}
+    	}
+    	
+    })
+</script>
+ 
+<script>
+        (function(w,d,u){
+                var s=d.createElement('script');s.async=true;s.src=u+'?'+(Date.now()/60000|0);
+                var h=d.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);
+        })(window,document,'https://crm.3072.ru/upload/crm/site_button/loader_4_g3w7tu.js');
+</script>
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+            
+   ym(23244946, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true,
+        webvisor:true
+   });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/23244946" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+</body>
+</html>

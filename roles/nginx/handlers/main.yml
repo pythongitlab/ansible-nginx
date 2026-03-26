@@ -1,0 +1,10 @@
+---
+- name: Validate nginx config
+  command: nginx -t
+  listen: Validate and reload nginx
+
+- name: Reload nginx
+  service:
+    name: nginx
+    state: reloaded
+  listen: Validate and reload nginx
