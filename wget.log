@@ -15869,4 +15869,9 @@ Retrying.
 
 --2026-03-26 14:32:36--  (try:18)  https://kb.opentechnology.ru/pdf.php?cat=41&id=375&artlang=ru
 Reusing existing connection to kb.opentechnology.ru:443.
+HTTP request sent, awaiting response... 504 Gateway Timeout
+Retrying.
+
+--2026-03-26 14:40:46--  (try:19)  https://kb.opentechnology.ru/pdf.php?cat=41&id=375&artlang=ru
+Reusing existing connection to kb.opentechnology.ru:443.
 HTTP request sent, awaiting response... 
